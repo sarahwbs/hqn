@@ -11,7 +11,8 @@ Then go to http://localhost:4000/ to see the site in your browser.
 
 To Build the site:
 ```
-jekyll Build```
+jekyll Build
+```
 
 ## Notes
 
