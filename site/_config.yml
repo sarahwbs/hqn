@@ -1,2 +1,4 @@
 firstname: Sarah
 email: sarahwbs@gmail.com
+sass:
+  sass_dir: assets/css/_sass

@@ -3,12 +3,12 @@
 	"file": "styles.css",
 	"sources": [
 		"styles.scss",
-		"_sass/main.scss"
+		"assets/css/_sass/main.scss"
 	],
 	"sourcesContent": [
-		"@import \"main\";\n",
+		"@import \"main.scss\";\n\nbody {\n  font-size: 16px;\n}\n",
 		".current {\n  color: green;\n}\n"
 	],
 	"names": [],
-	"mappings": "ACAA,AAAA,QAAQ,CAAC,EACP,KAAK,EAAE,KAAK,GACb"
+	"mappings": "ACAA,AAAA,QAAQ,CAAC,EACP,KAAK,EAAE,KAAK,GACb;;ADAD,AAAA,IAAI,CAAC,EACH,SAAS,EAAE,IAAI,GAChB"
 }
