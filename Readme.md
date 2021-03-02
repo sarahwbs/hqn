@@ -9,9 +9,9 @@ jekyll serve
 ```
 Then go to http://localhost:4000/ to see the site in your browser.
 
-To Build the site:
+To build the site:
 ```
-jekyll Build
+jekyll build
 ```
 
 ## Notes
