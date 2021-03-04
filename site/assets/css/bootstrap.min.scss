@@ -95,7 +95,7 @@ h6 {
 h1 {
   font-size: calc(1.375rem + 1.5vw);
 }
-@media (min-width: 1200px) {
+@media (min-width: 1226px) {
   .h1,
   h1 {
     font-size: 2.5rem;
@@ -105,7 +105,7 @@ h1 {
 h2 {
   font-size: calc(1.325rem + 0.9vw);
 }
-@media (min-width: 1200px) {
+@media (min-width: 1226px) {
   .h2,
   h2 {
     font-size: 2rem;
@@ -115,7 +115,7 @@ h2 {
 h3 {
   font-size: calc(1.3rem + 0.6vw);
 }
-@media (min-width: 1200px) {
+@media (min-width: 1226px) {
   .h3,
   h3 {
     font-size: 1.75rem;
@@ -125,7 +125,7 @@ h3 {
 h4 {
   font-size: calc(1.275rem + 0.3vw);
 }
-@media (min-width: 1200px) {
+@media (min-width: 1226px) {
   .h4,
   h4 {
     font-size: 1.5rem;
@@ -358,7 +358,7 @@ legend {
   font-size: calc(1.275rem + 0.3vw);
   line-height: inherit;
 }
-@media (min-width: 1200px) {
+@media (min-width: 1226px) {
   legend {
     font-size: 1.5rem;
   }
@@ -420,7 +420,7 @@ progress {
   font-weight: 300;
   line-height: 1.2;
 }
-@media (min-width: 1200px) {
+@media (min-width: 1226px) {
   .display-1 {
     font-size: 5rem;
   }
@@ -430,7 +430,7 @@ progress {
   font-weight: 300;
   line-height: 1.2;
 }
-@media (min-width: 1200px) {
+@media (min-width: 1226px) {
   .display-2 {
     font-size: 4.5rem;
   }
@@ -440,7 +440,7 @@ progress {
   font-weight: 300;
   line-height: 1.2;
 }
-@media (min-width: 1200px) {
+@media (min-width: 1226px) {
   .display-3 {
     font-size: 4rem;
   }
@@ -450,7 +450,7 @@ progress {
   font-weight: 300;
   line-height: 1.2;
 }
-@media (min-width: 1200px) {
+@media (min-width: 1226px) {
   .display-4 {
     font-size: 3.5rem;
   }
@@ -460,7 +460,7 @@ progress {
   font-weight: 300;
   line-height: 1.2;
 }
-@media (min-width: 1200px) {
+@media (min-width: 1226px) {
   .display-5 {
     font-size: 3rem;
   }
@@ -470,7 +470,7 @@ progress {
   font-weight: 300;
   line-height: 1.2;
 }
-@media (min-width: 1200px) {
+@media (min-width: 1226px) {
   .display-6 {
     font-size: 2.5rem;
   }
@@ -566,7 +566,7 @@ progress {
     max-width: 960px;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1226px) {
   .container,
   .container-lg,
   .container-md,
@@ -1273,7 +1273,7 @@ progress {
     --bs-gutter-y: 3rem;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1226px) {
   .col-xl {
     flex: 1 0 0%;
   }
@@ -1777,7 +1777,7 @@ progress {
     -webkit-overflow-scrolling: touch;
   }
 }
-@media (max-width: 1199.98px) {
+@media (max-width: 1225.98px) {
   .table-responsive-xl {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
@@ -3317,7 +3317,7 @@ fieldset:disabled .btn {
     left: auto;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1226px) {
   .dropdown-menu-xl-start {
     --bs-position: start;
   }
@@ -3851,7 +3851,7 @@ fieldset:disabled .btn {
     display: none;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1226px) {
   .navbar-expand-xl {
     flex-wrap: nowrap;
     justify-content: flex-start;
@@ -4661,7 +4661,7 @@ fieldset:disabled .btn {
     border-left-width: 1px;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1226px) {
   .list-group-horizontal-xl {
     flex-direction: row;
   }
@@ -5056,7 +5056,7 @@ fieldset:disabled .btn {
     max-width: 800px;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1226px) {
   .modal-xl {
     max-width: 1140px;
   }
@@ -5147,7 +5147,7 @@ fieldset:disabled .btn {
     border-radius: 0;
   }
 }
-@media (max-width: 1199.98px) {
+@media (max-width: 1225.98px) {
   .modal-fullscreen-xl-down {
     width: 100vw;
     max-width: none;
@@ -5814,7 +5814,7 @@ fieldset:disabled .btn {
     z-index: 1020;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1226px) {
   .sticky-xl-top {
     position: -webkit-sticky;
     position: sticky;
@@ -8288,7 +8288,7 @@ fieldset:disabled .btn {
     text-align: center !important;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1226px) {
   .float-xl-start {
     float: left !important;
   }
@@ -9280,7 +9280,7 @@ fieldset:disabled .btn {
     text-align: center !important;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1226px) {
   .fs-1 {
     font-size: 2.5rem !important;
   }

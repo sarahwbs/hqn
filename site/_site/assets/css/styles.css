@@ -1,5 +1,9 @@
-.current { color: green; }
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap");
+:root { --light-purple: #ad48a4; --purple: #5b25b8; --dark-purple: #2e2159; --dark-purple-v2: #211140; --white: #ffffff; --white-v2: #ffffff33; --black: #000000; --dark-yellow: #eda31d; --light-grey: #efefef; --light-grey-v2: #d1d1d1; --grey: #000033; --grey-v2: #0000004d; --grey-v3: #54585a; --dark-grey: #2d3748; --red: #e65069; --red-v2: #ee3e72; --red-v3: #ff1c50; --light-pink: #f0666757; --pink: #cd1b81; --yellow: #ffef2c; --yellow-v2: #f3ea45; --button-border-radius: 2.4rem; --input-border-radius: 0.6rem; }
 
-body { font-size: 16px; }
+html, body { font-size: 10px; }
+
+body { font-family: "Nunito Sans", sans-serif; }
 
 /*# sourceMappingURL=styles.css.map */
