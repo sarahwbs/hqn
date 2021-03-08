@@ -1,4 +1,4 @@
-<footer>
+<footer class="footer">
   <div class="container">
     <div class="footer-container">
       <div class="row">
@@ -6,11 +6,12 @@
           <img src="{{site.baseurl}}/assets/img/footer-logo.svg" alt="Harlequin Logo" />
         </div>
         <nav aria-label="Legal menu" class="col-12">
-          <ul role="menu" aria-label="Legal links">
+          <ul role="menu" aria-label="Legal links" class="footer-nav-list">
             {% for item in site.data.footer-nav %}
-              <li role="menuitem">
+              <li role="menuitem" class="footer-nav-item">
                 <a href="{{ item.link }}"
                   role="button"
+                  class="footer-nav-link"
                   rel="noreferrer noopener"
                   {% if page.url == item.link %}class="current"{% endif %}>
                   {{ item.name }}
