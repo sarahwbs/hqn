@@ -1,0 +1,12 @@
+.header {
+  background: var(--purple);
+  padding: 4.4rem 0 2.8rem;
+
+  @media screen and (max-width: $screen-lg) {
+    padding-bottom: 4.4rem;
+  }
+}
+
+.header_nav__link {
+  color: white;
+}

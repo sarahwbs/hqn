@@ -1,0 +1,18 @@
+<header class="header">
+  <div class="container">
+    <div class="row">
+      <div class="col header-logo">
+        <img
+          src="{{site.baseurl}}/assets/img/harlequin-plus-logo.svg"
+          alt="Harlequin Plus Logo"
+        />
+      </div>
+
+      <nav class="col header-nav" aria-label="Top Navigation">
+        {% for item in site.data.header-nav %}
+          <a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a>
+        {% endfor %}
+      </nav>
+    </div>
+  </div>
+</header>
