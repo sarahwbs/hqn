@@ -1,0 +1,11 @@
+@mixin purple-gradient {
+  background: transparent
+    linear-gradient(135deg, var(--dark-purple) 0%, var(--purple) 100%) 0% 0%
+    no-repeat padding-box;
+}
+
+@mixin grey-gradient {
+  background: transparent
+    linear-gradient(180deg, var(--white) 0%, var(--light-grey-v2) 100%) 0% 0%
+    no-repeat padding-box;
+}

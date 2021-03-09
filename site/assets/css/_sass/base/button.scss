@@ -1,0 +1,16 @@
+@mixin button {
+  padding: 1.4rem 3.8rem 1.2rem;
+  border-radius: var(--button-border-radius);
+  border: 0.1rem solid transparent;
+}
+
+@mixin outline-button {
+  @include button;
+  border-color: var(--white-v2);
+  color: var(--white);
+}
+
+@mixin pink-button {
+  @include button;
+  background: var(--pink);
+}

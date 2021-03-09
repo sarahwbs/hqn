@@ -3,12 +3,20 @@
 	"file": "styles.css",
 	"sources": [
 		"styles.scss",
-		"assets/css/_sass/main.scss"
+		"assets/css/_sass/main.scss",
+		"assets/css/_sass/base/vars.scss",
+		"assets/css/_sass/base/utils.scss",
+		"assets/css/_sass/base/font.scss",
+		"assets/css/_sass/base/gradient.scss"
 	],
 	"sourcesContent": [
-		"@import \"main.scss\";\n\nbody {\n  font-size: 16px;\n}\n",
-		".current {\n  color: green;\n}\n"
+		"@import \"main.scss\";\n",
+		"@import \"base/vars\";\n@import \"base/utils\";\n@import \"base/font\";\n@import \"base/gradient\";\n\nbody {\n  font-family: \"Nunito Sans\", sans-serif;\n}\n",
+		":root {\n  --light-purple: #ad48a4;\n  --purple: #5b25b8;\n  --dark-purple: #2e2159;\n  --dark-purple-v2: #211140;\n  --white: #ffffff;\n  --white-v2: #ffffff33;\n  --black: #000000;\n  --dark-yellow: #eda31d;\n  --light-grey: #efefef;\n  --light-grey-v2: #d1d1d1;\n  --grey: #000033;\n  --grey-v2: #0000004d;\n  --grey-v3: #54585a;\n  --dark-grey: #2d3748;\n  --red: #e65069;\n  --red-v2: #ee3e72;\n  --red-v3: #ff1c50;\n  --light-pink: #f0666757;\n  --pink: #cd1b81;\n  --yellow: #ffef2c;\n  --yellow-v2: #f3ea45;\n\n  --button-border-radius: 2.4rem;\n  --input-border-radius: 0.6rem;\n}\n\nhtml,\nbody {\n  font-size: 10px;\n}\n",
+		"@mixin dropshadow {\n  box-shadow: 0 0.8rem 2rem var(--grey-v2);\n}\n",
+		"@import url(\"https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap\");\n@import url(\"https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap\");\n\n@mixin banner-text {\n  font-size: 7rem;\n  line-height: 9rem;\n}\n\n@mixin headline-text {\n  font-size: 4.6rem;\n  line-height: 5.4rem;\n}\n\n@mixin xlarge-text {\n  font-size: 4rem;\n  line-height: 5.4rem;\n}\n\n@mixin large-text {\n  font-size: 2.6rem;\n  line-height: 3.6rem;\n}\n\n@mixin large-text-v2 {\n  font-size: 2.6rem;\n  line-height: 3.2rem;\n}\n\n@mixin normal-text {\n  font-size: 1.6rem;\n  line-height: 2.5rem;\n}\n\n@mixin normal-text-v2 {\n  font-size: 1.6rem;\n  line-height: 2rem;\n}\n\n@mixin small-text {\n  font-size: 1.4rem;\n  line-height: 2.5rem;\n}\n\n@mixin small-text-v2 {\n  font-size: 1.4rem;\n  line-height: 2rem;\n}\n\n@mixin xsmall-text {\n  font-size: 1.2rem;\n  line-height: 1.6rem;\n}\n",
+		"@mixin purple-gradient {\n  background: transparent\n    linear-gradient(135deg, var(--dark-purple) 0%, var(--purple) 100%) 0% 0%\n    no-repeat padding-box;\n}\n\n@mixin grey-gradient {\n  background: transparent\n    linear-gradient(180deg, var(--white) 0%, var(--light-grey-v2) 100%) 0% 0%\n    no-repeat padding-box;\n}\n"
 	],
 	"names": [],
-	"mappings": "ACAA,AAAA,QAAQ,CAAC,EACP,KAAK,EAAE,KAAK,GACb;;ADAD,AAAA,IAAI,CAAC,EACH,SAAS,EAAE,IAAI,GAChB"
+	"mappings": "AIAA,OAAO,CAAC,kIAAI;AACZ,OAAO,CAAC,2HAAI;CFDX,AAAD,IAAK,CAAC,EACJ,cAAc,CAAA,QAAC,EACf,QAAQ,CAAA,QAAC,EACT,aAAa,CAAA,QAAC,EACd,gBAAgB,CAAA,QAAC,EACjB,OAAO,CAAA,QAAC,EACR,UAAU,CAAA,UAAC,EACX,OAAO,CAAA,QAAC,EACR,aAAa,CAAA,QAAC,EACd,YAAY,CAAA,QAAC,EACb,eAAe,CAAA,QAAC,EAChB,MAAM,CAAA,QAAC,EACP,SAAS,CAAA,UAAC,EACV,SAAS,CAAA,QAAC,EACV,WAAW,CAAA,QAAC,EACZ,KAAK,CAAA,QAAC,EACN,QAAQ,CAAA,QAAC,EACT,QAAQ,CAAA,QAAC,EACT,YAAY,CAAA,UAAC,EACb,MAAM,CAAA,QAAC,EACP,QAAQ,CAAA,QAAC,EACT,WAAW,CAAA,QAAC,EAEZ,sBAAsB,CAAA,OAAC,EACvB,qBAAqB,CAAA,OAAC,GACvB;;AAED,AAAA,IAAI,EACJ,IAAI,CAAC,EACH,SAAS,EAAE,IAAI,GAChB;;ADzBD,AAAA,IAAI,CAAC,EACH,WAAW,EAAE,yBAAyB,GACvC"
 }
