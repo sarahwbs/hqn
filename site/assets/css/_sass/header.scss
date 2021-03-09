@@ -1,3 +1,6 @@
+@import "base/font";
+@import "base/button";
+
 .header {
   background: var(--purple);
   padding: 4.4rem 0 2.8rem;
@@ -7,6 +10,51 @@
   }
 }
 
-.header_nav__link {
-  color: white;
+.header-logo__img-wrapper {
+  margin-top: 0.5rem;
+}
+
+a.header_nav__link,
+.account__name {
+  font-size: 1.4rem;
+  color: var(--white);
+  margin-right: 2.5rem;
+  font-weight: bold;
+
+  &:hover {
+    color: var(--white);
+  }
+}
+
+.account {
+  margin-right: 2.5rem;
+}
+
+.account__name {
+  font-weight: normal;
+  margin-right: 1.2rem;
+}
+
+.account__img {
+  width: 2.8rem;
+}
+
+.header-button {
+  font-size: 1.5rem;
+}
+
+.pink-button {
+  @include pink-button;
+
+  &:hover, &:active, &:focus {
+    @include pink-button;
+  }
+}
+
+.transparent-button {
+  @include transparent-button;
+
+  &:hover, &:active, &:focus {
+    @include transparent-button;
+  }
 }

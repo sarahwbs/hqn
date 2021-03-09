@@ -12,5 +12,11 @@
 
 @mixin pink-button {
   @include button;
-  background: var(--pink);
+  background-color: var(--pink);
+}
+
+@mixin transparent-button {
+  @include button;
+  border-color: var(--white-v2);
+  background-color: transparent;
 }

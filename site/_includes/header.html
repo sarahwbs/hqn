@@ -1,18 +1,35 @@
 <header class="header">
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
-      <div class="col header-logo">
-        <img
-          src="{{site.baseurl}}/assets/img/harlequin-plus-logo.svg"
-          alt="Harlequin Plus Logo"
+      <div class="col-sm d-flex justify-content-center header-logo">
+        <div class="header-logo__img-wrapper">
+          <img
+            src="{{site.baseurl}}/assets/img/harlequin-plus-logo.svg"
+            alt="Harlequin Plus Logo"
+          />
+        </div>
+      </div>
+
+      <nav class="col-sm-6 d-flex align-items-center header-nav" aria-label="Top Navigation">
+        {% for item in site.data.header-nav %}
+          <a class="header_nav__link" href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a>
+        {% endfor %}
+      </nav>
+
+      <div class="col-sm account d-flex justify-content-end">
+        <div class="account__name d-flex align-self-center">Hi, Brennan</div>
+        <img class="account__img"
+             src="{{site.baseurl}}/assets/img/icons/account-icon.svg"
+             alt="Account Icon"
         />
       </div>
 
-      <nav class="col header-nav" aria-label="Top Navigation">
-        {% for item in site.data.header-nav %}
-          <a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a>
-        {% endfor %}
-      </nav>
+      <div class="col-sm">
+<!--
+        <button type="button" class="btn btn-primary btn-lg header-butto pink-button">My Bookshelf</button>
+-->
+        <button type="button" class="btn btn-primary btn-lg header-button transparent-button">Sign In</button>
+      </div>
     </div>
   </div>
 </header>
