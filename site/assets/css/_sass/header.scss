@@ -28,6 +28,7 @@ a.header_nav__link,
 
 .account {
   margin-right: 2.5rem;
+  justify-content: flex-end;
 }
 
 .account__name {
@@ -46,7 +47,9 @@ a.header_nav__link,
 .pink-button {
   @include pink-button;
 
-  &:hover, &:active, &:focus {
+  &:hover,
+  &:active,
+  &:focus {
     @include pink-button;
   }
 }
@@ -54,7 +57,32 @@ a.header_nav__link,
 .transparent-button {
   @include transparent-button;
 
-  &:hover, &:active, &:focus {
+  &:hover,
+  &:active,
+  &:focus {
     @include transparent-button;
   }
+}
+
+.sign-in-button {
+  margin-left: 0.5rem;
+}
+
+@media screen and (max-width: $screen-md) {
+  .nav {
+    display: none !important;
+  }
+
+  .col-sm {
+    margin: 1rem 0;
+    justify-content: center;
+  }
+
+  .account {
+    justify-content: center;
+  }
+}
+
+.nav {
+  align-items: center;
 }
