@@ -1,15 +1,3 @@
-$screen-xs: 0;
-$screen-sm-min: 575px;
-$screen-sm: 576px;
-$screen-md-min: 767px;
-$screen-md: 768px;
-$screen-lg-min: 991px;
-$screen-lg: 992px;
-$screen-xl-min: 1225px;
-$screen-xl: 1226px;
-$screen-xxl-min: 1399px;
-$screen-xxl: 1400px;
-
 :root {
   --light-purple: #ad48a4;
   --purple: #5b25b8;
@@ -40,14 +28,17 @@ $screen-xxl: 1400px;
   --font-family-primary: "Nunito Sans", sans-serif;
 }
 
-$grid-breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1226px,
-  xxl: 1400px
-);
+$screen-xs: 0;
+$screen-sm-min: 575px;
+$screen-sm: 576px;
+$screen-md-min: 767px;
+$screen-md: 768px;
+$screen-lg-min: 991px;
+$screen-lg: 992px;
+$screen-xl-min: 1225px;
+$screen-xl: 1226px;
+$screen-xxl-min: 1399px;
+$screen-xxl: 1400px;
 
 $container-max-widths: (
   sm: 540px,
