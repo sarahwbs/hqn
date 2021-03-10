@@ -1,20 +1,19 @@
-@import "base/vars";
 @import "base/utils";
 @import "base/font";
 @import "base/gradient";
 
+html,
 body {
-  font-family: "Nunito Sans", sans-serif;
+  font-size: 10px;
+}
+
+body {
+  font-family: --font-family-primary;
   font-weight: 400;
+  background: var(--purple);
+  color: var(--white);
 }
 
 a {
   text-decoration: none;
-}
-
-.container {
-  @media screen and (max-width: $screen-md) {
-    padding-left: 3rem;
-    padding-right: 3rem;
-  }
 }

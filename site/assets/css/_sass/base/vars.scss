@@ -9,7 +9,6 @@ $screen-xl-min: 1225px;
 $screen-xl: 1226px;
 $screen-xxl-min: 1399px;
 $screen-xxl: 1400px;
-
 :root {
   --light-purple: #ad48a4;
   --purple: #5b25b8;
@@ -17,6 +16,7 @@ $screen-xxl: 1400px;
   --dark-purple-v2: #211140;
   --white: #ffffff;
   --white-v2: #ffffff33;
+  --white-v3: #ffffff70;
   --black: #000000;
   --dark-yellow: #eda31d;
   --light-grey: #efefef;
@@ -35,9 +35,36 @@ $screen-xxl: 1400px;
 
   --button-border-radius: 2.4rem;
   --input-border-radius: 0.6rem;
+
+  --font-family-primary: "Nunito Sans", sans-serif;
 }
 
-html,
-body {
-  font-size: 10px;
-}
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1226px,
+  xxl: 1400px
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1166px,
+  xxl: 1320px
+);
+
+$spacers: (
+  0: 0,
+  1: ($spacer * .25),    //4px
+  2: ($spacer * .5),     //8px
+  3: $spacer,            //16px
+  4: ($spacer * 1.5),    //24px
+  5: ($spacer * 2),      //32px
+  6: ($spacer * 2.5),    //40px
+  7: ($spacer * 3),      //48px
+  8: ($spacer * 3.5),    //72px
+  9: ($spacer * 4.5),    //72px
+);

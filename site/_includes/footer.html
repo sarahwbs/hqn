@@ -1,14 +1,14 @@
-<footer class="footer">
-  <div class="container">
+<footer class="pt-9 px-4 pb-9 pb-lg-5">
+  <div class="container d-flex justify-content-center">
     <div class="footer-container">
       <div class="row">
-        <div class="col-12 footer-logo">
-          <img src="{{site.baseurl}}/assets/img/footer-logo.svg" alt="Harlequin Logo" />
+        <div class="col-12 footer-logo mb-8 mb-lg-6 d-flex">
+          <img src="{{site.baseurl}}/assets/img/footer-logo.svg" alt="Harlequin Logo" class="d-block" />
         </div>
         <nav aria-label="Legal menu" class="col-12">
-          <ul role="menu" aria-label="Legal links" class="footer-nav-list">
+          <ul role="menu" aria-label="Legal links" class="footer-nav-list d-flex flex-wrap p-0">
             {% for item in site.data.footer-nav %}
-              <li role="menuitem" class="footer-nav-item">
+              <li role="menuitem" class="footer-nav-item px-3 pb-4">
                 <a href="{{ item.link }}"
                   role="button"
                   class="footer-nav-link"
@@ -20,7 +20,7 @@
             {% endfor %}
           </ul>
         </nav>
-        <div class="copyright">
+        <div class="copyright mt-5 mt-xl-0 mb-4">
           Copyright © 2000-2021 Harlequin Enterprises ULC. All Rights Reserved.
         </div>
       </div>
