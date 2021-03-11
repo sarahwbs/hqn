@@ -5,6 +5,7 @@
   --dark-purple-v2: #211140;
   --white: #ffffff;
   --white-v2: #ffffff33;
+  --white-v3: #ffffff70;
   --black: #000000;
   --dark-yellow: #eda31d;
   --light-grey: #efefef;
@@ -23,9 +24,39 @@
 
   --button-border-radius: 2.4rem;
   --input-border-radius: 0.6rem;
+
+  --font-family-primary: "Nunito Sans", sans-serif;
 }
 
-html,
-body {
-  font-size: 10px;
-}
+$screen-xs: 0;
+$screen-sm-min: 575px;
+$screen-sm: 576px;
+$screen-md-min: 767px;
+$screen-md: 768px;
+$screen-lg-min: 991px;
+$screen-lg: 992px;
+$screen-xl-min: 1225px;
+$screen-xl: 1226px;
+$screen-xxl-min: 1399px;
+$screen-xxl: 1400px;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1166px,
+  xxl: 1226px
+);
+
+$spacers: (
+  0: 0,
+  1: ($spacer * .25),
+  2: ($spacer * .5),
+  3: $spacer,
+  4: ($spacer * 1.5),
+  5: ($spacer * 2),
+  6: ($spacer * 2.5),
+  7: ($spacer * 3),
+  8: ($spacer * 3.5),
+  9: ($spacer * 4.5),
+);

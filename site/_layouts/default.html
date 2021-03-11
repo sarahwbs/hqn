@@ -1,6 +1,4 @@
 ---
-firstname: Sarah
-email: sarahwbs@gmail.com
 ---
 
 <!DOCTYPE html>
@@ -8,12 +6,12 @@ email: sarahwbs@gmail.com
   <head>
     <meta charset="utf-8">
     <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript" src="/assets/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="/assets/css/styles.css">
   </head>
   <body>
-    {% include nav.html %}
     {{ content }}
+    {% include footer.html %}
   </body>
 </html>
