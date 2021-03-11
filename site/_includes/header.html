@@ -2,77 +2,90 @@
   <div class="container-fluid">
     <div class="row">
       {% if site.data.globals.user.logged-in %}
-      <div class="col-sm d-flex justify-content-center header-logo">
-        <div class="header-logo__img-wrapper">
-          <img
-            src="{{site.baseurl}}/assets/img/harlequin-plus-logo.svg"
-            alt="Harlequin Plus Logo"
-          />
-        </div>
-      </div>
-
-      <nav class="col-sm-6 nav d-flex" aria-label="Top Navigation">
-        {% for item in site.data.header-nav %}
-        <a class="header_nav__link" href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a>
-        {% endfor %}
-      </nav>
-
-      <div class="col-sm account d-flex">
-        <div class="account__inner d-flex">
-          <div class="account__name d-flex align-self-center">Hi, Brennan</div>
-
-          <div class="dropdown account__dropdown">
-            <button
-              class="btn btn-default"
-              type="button"
-              id="dropdownMenuButton1"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              <img
-                src="{{site.baseurl}}/assets/img/icons/account-icon.svg"
-                alt="Account Icon"
-              />
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li>
-                <a class="dropdown-item dropdown-item__selections" href="#"
-                ><span class="dropdown-item__selections__number">8</span> Available Selections</a
-                >
-              </li>
-              <li><a class="dropdown-item dropdown-item__selections_summary" href="#">Selection Summary</a></li>
-              <li><hr class="dropdown-divider" /></li>
-
-              {% for item in site.data.header-account-nav %}
-              <li><a class="dropdown-item" href="#">{{ item.name }}</a></li>
-              {% endfor %}
-            </ul>
+        <div class="col-sm header-logo d-flex justify-content-center">
+          <div class="header-logo__img-wrapper">
+            <img
+              src="{{site.baseurl}}/assets/img/harlequin-plus-logo.svg"
+              alt="Harlequin Plus Logo"
+            />
           </div>
         </div>
-      </div>
 
-      {% if site.data.globals.user.subscribed %}
-      <div class="col-sm d-flex">
-        <button
-          type="button"
-          class="btn btn-primary btn-lg header-button pink-button"
-        >
-          My Bookshelf
-        </button>
-      </div>
+        <nav class="col-sm-6 nav d-flex" aria-label="Top Navigation">
+          {% for item in site.data.header-nav %}
+          <a class="header_nav__link" href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a>
+          {% endfor %}
+        </nav>
+
+        <div class="col-sm account d-flex">
+          <div class="account__inner d-flex">
+            <div class="account__name d-flex align-self-center">Hi, Brennan</div>
+
+            <div class="dropdown account__dropdown">
+              <button
+                class="btn btn-default"
+                type="button"
+                id="dropdownMenuButton1"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img
+                  src="{{site.baseurl}}/assets/img/icons/account-icon.svg"
+                  alt="Account Icon"
+                />
+              </button>
+
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <div class="dropdown-menu-arrow-up"></div>
+                <ul>
+                  {% if site.data.globals.user.subscribed %}
+                  <li>
+                    <a class="dropdown-item dropdown-item__selections" href="#"
+                      ><span class="dropdown-item__selections__number">8</span>
+                      Available Selections</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item dropdown-item__selections_summary"
+                      href="#"
+                      >Selection Summary</a
+                    >
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  {% endif %} {% for item in site.data.header-account-nav %}
+                  <li><a class="dropdown-item" href="#">{{ item.name }}</a></li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {% if site.data.globals.user.subscribed %}
+        <div class="col-sm d-flex my-bookshelf-button">
+          <button
+            type="button"
+            class="btn btn-primary btn-lg header-button pink-button"
+          >
+            My Bookshelf
+          </button>
+        </div>
+        {% else %}
+        <div class="col-sm my-bookshelf-button"></div>
+        {% endif %}
+
       {% else %}
-      <div class="col-sm"></div>
-      {% endif %} {% else %}
 
-      <div class="col-sm-10"></div>
-      <div class="col-sm d-flex">
-        <button
-          type="button"
-          class="btn btn-primary btn-lg header-button sign-in-button transparent-button"
-        >
-          Sign In
-        </button>
-      </div>
+        <div class="col-sm-10"></div>
+        <div class="col-sm d-flex">
+          <button
+            type="button"
+            class="btn btn-primary btn-lg header-button sign-in-button transparent-button"
+          >
+            Sign In
+          </button>
+        </div>
       {% endif %}
     </div>
   </div>
