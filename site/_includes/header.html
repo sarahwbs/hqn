@@ -23,9 +23,9 @@
 
             <div class="dropdown account__dropdown">
               <button
-                class="btn btn-default"
+                class="btn btn-default account_desktop_link"
                 type="button"
-                id="dropdownMenuButton1"
+                id="account-dropdown-menu"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
@@ -35,7 +35,14 @@
                 />
               </button>
 
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <a href="#" class="account__mobile_link">
+                <img
+                    src="{{site.baseurl}}/assets/img/icons/account-icon.svg"
+                    alt="Account Icon"
+                />
+              </a>
+
+              <div class="dropdown-menu" aria-labelledby="account-dropdown-menu">
                 <div class="dropdown-menu-arrow-up"></div>
                 <ul>
                   {% if site.data.globals.user.subscribed %}

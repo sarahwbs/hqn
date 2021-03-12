@@ -126,11 +126,23 @@ a.header_nav__link,
   font-size: 1.8rem;
 }
 
+.account_desktop_link {
+  display: inline-block;
+}
+.account__mobile_link {
+  display: none;
+}
+
 @media screen and (max-width: $screen-md) {
   .nav,
   .my-bookshelf-button,
-  .account__name {
+  .account__name,
+  .account_desktop_link {
     display: none !important;
+  }
+
+  .account__mobile_link {
+    display: block;
   }
 
   .col-sm {

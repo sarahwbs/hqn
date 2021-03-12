@@ -2043,7 +2043,11 @@ a.header_nav__link:hover, .account__name:hover { color: var(--white); }
 
 .dropdown-item__selections__number { font-size: 1.8rem; }
 
-@media screen and (max-width: 768px) { .nav, .my-bookshelf-button, .account__name { display: none !important; } .col-sm { margin: 1rem 0; } .row { justify-content: space-around; } .row > * { width: auto; } .account__inner { justify-content: center; } }
+.account_desktop_link { display: inline-block; }
+
+.account__mobile_link { display: none; }
+
+@media screen and (max-width: 768px) { .nav, .my-bookshelf-button, .account__name, .account_desktop_link { display: none !important; } .account__mobile_link { display: block; } .col-sm { margin: 1rem 0; } .row { justify-content: space-around; } .row > * { width: auto; } .account__inner { justify-content: center; } }
 
 .footer-container { max-width: 854px; position: relative; }
 
