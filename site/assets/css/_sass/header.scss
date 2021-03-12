@@ -1,8 +1,4 @@
-@import "base/font";
-@import "base/button";
-
 .header {
-  background: var(--purple);
   padding: 4.4rem 0 2.8rem;
 }
 
@@ -31,28 +27,6 @@ a.header_nav__link,
 
 .header-button {
   font-size: 1.5rem;
-}
-
-.pink-button {
-  @include pink-button;
-
-  // TODO: change that once we get a style guide
-  &:hover,
-  &:active,
-  &:focus {
-    @include pink-button;
-  }
-}
-
-.transparent-button {
-  @include transparent-button;
-
-  // TODO: change that once we get a style guide
-  &:hover,
-  &:active,
-  &:focus {
-    @include transparent-button;
-  }
 }
 
 .sign-in-button {

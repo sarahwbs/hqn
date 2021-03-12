@@ -4,12 +4,6 @@
   border: 0.1rem solid transparent;
 }
 
-@mixin outline-button {
-  @include button;
-  border-color: var(--white-v2);
-  color: var(--white);
-}
-
 @mixin pink-button {
   @include button;
   background-color: var(--pink);
@@ -19,4 +13,26 @@
   @include button;
   border-color: var(--white-v2);
   background-color: transparent;
+}
+
+.pink-button {
+  @include pink-button;
+
+  // TODO: change that once we get a style guide
+  &:hover,
+  &:active,
+  &:focus {
+    @include pink-button;
+  }
+}
+
+.transparent-button {
+  @include transparent-button;
+
+  // TODO: change that once we get a style guide
+  &:hover,
+  &:active,
+  &:focus {
+    @include transparent-button;
+  }
 }
