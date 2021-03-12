@@ -28,6 +28,16 @@
   --font-family-primary: "Nunito Sans", sans-serif;
 }
 
+$body-color: var(--white);
+
+$theme-colors: map-merge(
+  $theme-colors,
+  (
+    "primary":    #5b25b8,
+    "secondary":  #cd1b81,
+  ),
+);
+
 $screen-xs: 0;
 $screen-sm-min: 575px;
 $screen-sm: 576px;
@@ -60,3 +70,5 @@ $spacers: (
   8: ($spacer * 3.5),
   9: ($spacer * 4.5),
 );
+
+$gutters: $spacers;

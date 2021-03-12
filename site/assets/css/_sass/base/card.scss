@@ -1,0 +1,17 @@
+.card-title {
+  @include normal-text;
+  font-weight: 600;
+}
+
+.card-text {
+  @include small-text;
+}
+
+.progress {
+  background-color: #00000020;
+  height: 3px;
+}
+
+.card-link {
+  @include link-style;
+}
