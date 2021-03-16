@@ -1,7 +1,4 @@
 ---
-user:
-logged-in: false
-subscribed: false
 ---
 
 <!DOCTYPE html>
@@ -14,7 +11,7 @@ subscribed: false
     <link rel="stylesheet" href="/assets/css/styles.css">
   </head>
   <body>
-    {% include header.html userstate="singed-out" %}
+    {% include header.html userstate="signed-out" %}
     {{ content }}
     {% include footer.html %}
   </body>

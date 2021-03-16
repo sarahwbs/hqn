@@ -6,12 +6,12 @@
   margin-top: 0.5rem;
 }
 
-a.header_nav__link,
-.account__name {
+a.header_nav__link {
   font-size: 1.4rem;
   color: var(--white);
   margin-right: 2.5rem;
   font-weight: bold;
+  text-transform: uppercase;
 
   &:hover {
     color: var(--white);
@@ -41,6 +41,8 @@ a.header_nav__link,
 }
 
 .account__name {
+  font-size: 1.4rem;
+  color: var(--white);
   font-weight: normal;
   margin-right: 0.25rem;
 }
