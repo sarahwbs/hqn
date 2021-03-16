@@ -108,7 +108,21 @@ a.header_nav__link,
 }
 
 @media screen and (max-width: $screen-md) {
-  .nav,
+  .header {
+    .col-sm {
+      margin: 1rem 0;
+    }
+
+    .row {
+      justify-content: space-around;
+    }
+
+    .row > * {
+      width: auto;
+    }
+  }
+
+  .header .nav,
   .my-bookshelf-button,
   .account__name,
   .account_desktop_link {
@@ -117,18 +131,6 @@ a.header_nav__link,
 
   .account__mobile_link {
     display: block;
-  }
-
-  .col-sm {
-    margin: 1rem 0;
-  }
-
-  .row {
-    justify-content: space-around;
-  }
-
-  .row > * {
-    width: auto;
   }
 
   .account__inner {
