@@ -1,6 +1,7 @@
 .games-list {
   .header {
     justify-content: space-between;
+    align-items: center;
   }
 
   h2 {
@@ -9,5 +10,16 @@
 
   .filter-button {
     @include filter-button;
+  }
+
+  .buttons__sort {
+    align-items: center;
+    margin-left: 10%;
+  }
+
+  .buttons__sort__title {
+    @include small-text;
+    color: var(--white);
+    margin-right: .5rem;
   }
 }

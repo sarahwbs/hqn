@@ -1,13 +1,34 @@
 <div class="games-list">
   <header class="d-flex header">
     <h2>Games</h2>
-    <div class="buttons">
+    <div class="buttons d-flex">
       <button
         type="button"
         class="btn btn-primary buttons__filter filter-button"
       >
-        <div class="filter-button__text">Filter</div>
+        <span class="filter-button__text">Filter</span>
       </button>
+
+      <div class="buttons__sort d-flex">
+        <div class="buttons__sort__title">Sort:</div>
+        <div class="buttons__sort__dropdown">
+          <a
+            class="btn btn-secondary dropdown-toggle"
+            href="#"
+            role="button"
+            id="dropdownMenuLink"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Please select
+          </a>
+
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <li><a class="dropdown-item active" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
   </header>
 </div>
