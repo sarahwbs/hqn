@@ -1,7 +1,7 @@
 <header class="header">
-    <div class="row">
+    <div class="row flex-nowrap">
       {% if include.userstate == "signed-in" %}
-        <div class="col-sm header-logo d-flex justify-content-center">
+        <div class="col header-logo d-flex justify-content-center">
           <div class="header-logo__img-wrapper">
             <img
               src="{{site.baseurl}}/assets/img/harlequin-plus-logo.svg"
@@ -10,13 +10,13 @@
           </div>
         </div>
 
-        <nav class="col-sm-6 nav d-flex" aria-label="Top Navigation">
+        <nav class="col nav d-flex flex-filler" aria-label="Top Navigation">
           {% for item in site.data.header-nav %}
           <a class="header_nav__link" href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a>
           {% endfor %}
         </nav>
 
-        <div class="col-sm account d-flex">
+        <div class="col account d-flex">
           <div class="account__inner d-flex">
             <div class="account__name d-flex align-self-center">Hi, Brennan</div>
 
@@ -69,7 +69,7 @@
         </div>
 
       {% if include.userstate == "signed-in" and include.sub == "true" %}
-        <div class="col-sm d-flex my-bookshelf-button">
+        <div class="col d-flex my-bookshelf-button">
           <button
             type="button"
             class="btn btn-primary btn-lg header-button pink-button"
@@ -78,12 +78,12 @@
           </button>
         </div>
         {% else %}
-        <div class="col-sm my-bookshelf-button"></div>
+        <div class="col my-bookshelf-button"></div>
         {% endif %}
 
       {% else %}
 
-        <div class="col-sm offset-sm-10 d-flex">
+        <div class="col offset-sm-10 d-flex">
           <button
             type="button"
             class="btn btn-primary btn-lg header-button sign-in-button transparent-button"

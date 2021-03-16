@@ -11,15 +11,74 @@
     <header class="header">
     <div class="row flex-nowrap">
       
-
-        <div class="col offset-sm-10 d-flex">
-          <button
-            type="button"
-            class="btn btn-primary btn-lg header-button sign-in-button transparent-button"
-          >
-            Sign In
-          </button>
+        <div class="col header-logo d-flex justify-content-center">
+          <div class="header-logo__img-wrapper">
+            <img
+              src="/assets/img/harlequin-plus-logo.svg"
+              alt="Harlequin Plus Logo"
+            />
+          </div>
         </div>
+
+        <nav class="col nav d-flex flex-filler" aria-label="Top Navigation">
+          
+          <a class="header_nav__link" href="/" >Browse Bundles</a>
+          
+          <a class="header_nav__link" href="/" >Ebook Library</a>
+          
+          <a class="header_nav__link" href="/" >Games</a>
+          
+          <a class="header_nav__link" href="/" >Movies</a>
+          
+        </nav>
+
+        <div class="col account d-flex">
+          <div class="account__inner d-flex">
+            <div class="account__name d-flex align-self-center">Hi, Brennan</div>
+
+            <div class="dropdown account__dropdown">
+              <button
+                class="btn btn-default account_desktop_link"
+                type="button"
+                id="account-dropdown-menu"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img
+                  src="/assets/img/icons/account-icon.svg"
+                  alt="Account Icon"
+                />
+              </button>
+
+              <a href="#" class="account__mobile_link">
+                <img
+                    src="/assets/img/icons/account-icon.svg"
+                    alt="Account Icon"
+                />
+              </a>
+
+              <div class="dropdown-menu" aria-labelledby="account-dropdown-menu">
+                <div class="dropdown-menu-arrow-up"></div>
+                <ul>
+                   
+                  <li><a class="dropdown-item" href="#">My Profile</a></li>
+                  
+                  <li><a class="dropdown-item" href="#">Subscription & Payment</a></li>
+                  
+                  <li><a class="dropdown-item" href="#">Order History</a></li>
+                  
+                  <li><a class="dropdown-item" href="#">Sign Out</a></li>
+                  
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      
+        <div class="col my-bookshelf-button"></div>
+        
+
       
     </div>
 </header>
