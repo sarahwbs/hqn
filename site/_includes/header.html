@@ -44,7 +44,7 @@
               <div class="dropdown-menu" aria-labelledby="account-dropdown-menu">
                 <div class="dropdown-menu-arrow-up"></div>
                 <ul>
-                  {% if site.data.globals.user.subscribed %}
+                  {% if include.userstate == "signed-in" and include.sub == "true" %}
                   <li>
                     <a class="dropdown-item dropdown-item__selections" href="#"
                       ><span class="dropdown-item__selections__number">8</span>
@@ -68,7 +68,7 @@
           </div>
         </div>
 
-        {% if site.data.globals.user.subscribed %}
+      {% if include.userstate == "signed-in" and include.sub == "true" %}
         <div class="col-sm d-flex my-bookshelf-button">
           <button
             type="button"
