@@ -1,0 +1,13 @@
+.games-list {
+  .header {
+    justify-content: space-between;
+  }
+
+  h2 {
+    @include h2-playfair;
+  }
+
+  .filter-button {
+    @include filter-button;
+  }
+}

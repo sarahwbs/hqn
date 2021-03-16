@@ -4,6 +4,15 @@
   border: 0.1rem solid transparent;
 }
 
+@mixin input-button {
+  @include grey-gradient;
+  @include dropshadow-v2;
+  padding: 1rem 1.5rem;
+  border-radius: var(--input-border-radius);
+  font-size: 1.5rem;
+  color: var(--dark-grey);
+}
+
 @mixin pink-button {
   @include button;
   background-color: var(--pink);
@@ -35,4 +44,15 @@
   &:focus {
     @include transparent-button;
   }
+}
+
+@mixin filter-button {
+  @include input-button;
+  @include grey-gradient-with-image-bg(
+    url("../img/icons/filter.svg") no-repeat center right 1.5rem
+  );
+}
+
+.filter-button__text {
+  padding-right: 7rem;
 }
