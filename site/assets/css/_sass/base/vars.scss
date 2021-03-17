@@ -3,6 +3,8 @@
   --purple: #5b25b8;
   --dark-purple: #2e2159;
   --dark-purple-v2: #211140;
+  --medium-purple: #451D89;
+  --medium-purple-v2: #300F72;
   --white: #ffffff;
   --white-v2: #ffffff33;
   --white-v3: #ffffff70;
@@ -27,6 +29,16 @@
 
   --font-family-primary: "Nunito Sans", sans-serif;
 }
+
+$body-color: var(--white);
+
+$theme-colors: map-merge(
+  $theme-colors,
+  (
+    "primary":    #5b25b8,
+    "secondary":  #cd1b81,
+  ),
+);
 
 $screen-xs: 0;
 $screen-sm-min: 575px;
@@ -60,3 +72,5 @@ $spacers: (
   8: ($spacer * 3.5),
   9: ($spacer * 4.5),
 );
+
+$gutters: $spacers;

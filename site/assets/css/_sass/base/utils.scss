@@ -1,3 +1,35 @@
-@mixin dropshadow {
-  box-shadow: 0 0.8rem 2rem var(--grey-v2);
+@mixin link-style {
+  color: var(--white);
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: var(--white-v3);
+  }
+}
+
+@mixin footer-link-style {
+  color: var(--white-v3);
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: var(--white);
+  }
+}
+
+.bg-primary-gradient {
+  @include purple-gradient-2;
+}
+
+.drop-shadow-1 {
+  box-shadow: 0 0.6rem 2rem var(--grey-v2);
+}
+
+.drop-shadow-2 {
+  box-shadow: 0 0.8rem 3rem var(--grey-v2);
+}
+
+.drop-shadow-3 {
+  box-shadow: 0 1.5rem 3rem var(--grey-v2);
 }

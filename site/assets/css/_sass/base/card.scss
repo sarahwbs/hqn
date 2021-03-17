@@ -1,0 +1,45 @@
+.card-title {
+  @include normal-text;
+  font-weight: 600;
+}
+
+.card-text {
+  @include small-text;
+}
+
+.progress {
+  background-color: #00000020;
+  height: 3px;
+}
+
+.card-link {
+  @include link-style;
+}
+
+.card-bundle {
+  &, & img {
+    border-radius: 4px 4px 0 0;
+    border-width: 0;
+  }
+}
+
+.card-ebook {
+  border-radius: 0;
+  border-width: 0;
+
+  img {
+    border: 1px solid var(--medium-purple);
+    border-radius: 0;
+  }
+}
+
+.card-game,
+.card-movie {
+  border-radius: 0;
+  border-width: 0;
+
+  img {
+    border: 1px solid var(--medium-purple-v2);
+    border-radius: 0;
+  }
+}
