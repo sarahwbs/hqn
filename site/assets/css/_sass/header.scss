@@ -27,6 +27,7 @@ a.header_nav__link {
 
 .header-button {
   font-size: 1.5rem;
+  white-space: nowrap;
 }
 
 .sign-in-button {
@@ -45,6 +46,7 @@ a.header_nav__link {
   color: var(--white);
   font-weight: normal;
   margin-right: 0.25rem;
+  white-space: nowrap;
 }
 
 .account__inner {
