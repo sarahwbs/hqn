@@ -1,22 +1,22 @@
 <div class="games-list">
   <div class="row align-items-center">
     <div class="col-sm-2">
-      <h2>Games</h2>
+      <h2 class="games-list__heading">Games</h2>
     </div>
 
     <div class="col-sm-10">
-      <div class="buttons d-flex">
+      <div class="games-list__buttons d-flex">
         <button
           type="button"
-          class="btn btn-primary buttons__filter filter-button"
+          class="btn btn-primary buttons__filter games-list__filter-button"
         >
           <span class="filter-button__text">Filter</span>
         </button>
 
-        <div class="buttons__sort d-flex">
-          <div class="buttons__sort__title">Sort:</div>
-          <div class="buttons__sort__dropdown">
-            <select class="sort-select" aria-label="Sort by select">
+        <div class="games-list__sort d-flex">
+          <div class="games-list__sort__title">Sort:</div>
+          <div class="games-list__sort__dropdown">
+            <select class="games-list__sort-select" aria-label="Sort by select">
               <option value="1">Title A-Z</option>
               <option value="2">Title Z-A</option>
               <option value="3">Relevance</option>
