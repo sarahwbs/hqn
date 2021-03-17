@@ -1,0 +1,8 @@
+- name: My Profile
+  link: /
+- name: Subscription & Payment
+  link: /
+- name: Order History
+  link: /
+- name: Sign Out
+  link: /

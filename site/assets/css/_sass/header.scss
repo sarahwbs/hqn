@@ -1,0 +1,104 @@
+.header {
+  padding: 4.4rem 0 2.8rem;
+}
+
+a.header_nav__link {
+  font-size: 1.4rem;
+  color: var(--white);
+  margin-right: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  &:hover {
+    color: var(--white);
+  }
+}
+
+.nav {
+  align-items: center;
+  margin-left: 7rem;
+}
+
+// Buttons
+
+.header-button {
+  font-size: 1.5rem;
+  white-space: nowrap;
+}
+
+.sign-in-button {
+  margin-left: 0.5rem;
+}
+
+// User account menu
+
+.account {
+  margin-right: 2.5rem;
+  justify-content: flex-end;
+}
+
+.account__name {
+  font-size: 1.4rem;
+  font-weight: normal;
+  margin-right: 0.25rem;
+  white-space: nowrap;
+}
+
+.account__inner {
+  align-items: center;
+
+  @media screen and (max-width: $screen-md) {
+    justify-content: center;
+  }
+}
+
+// Dropdown menu
+
+.dropdown-menu {
+  background: var(--dark-purple-v2);
+  box-shadow: 0 8px 40px var(--grey-v4);
+  padding: 1.2rem 2.5rem 1.2rem 1.2rem;
+  border-radius: 0.5rem;
+  left: -195% !important;
+}
+
+.dropdown-menu-arrow-up {
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 10px solid var(--dark-purple-v2);
+  position: absolute;
+  top: -2%;
+  left: 48%;
+}
+
+.dropdown-item {
+  color: var(--white);
+  font-size: 1.3rem;
+  font-weight: 100;
+  padding: 0.8rem 0;
+
+  &:hover {
+    color: var(--white);
+    background-color: transparent;
+  }
+}
+
+.dropdown-divider {
+  color: var(--white);
+  margin: 1.2rem 0 0 0;
+}
+
+.dropdown-item__selections {
+  font-weight: 500;
+  padding: 0.8rem 0 0 0;
+}
+
+.dropdown-item__selections_summary {
+  padding: 0 0 0.8rem 0;
+}
+
+.dropdown-item__selections__number {
+  font-size: 1.8rem;
+}
