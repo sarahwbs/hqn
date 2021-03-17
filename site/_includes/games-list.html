@@ -1,32 +1,31 @@
 <div class="games-list">
   <header class="d-flex header">
-    <h2>Games</h2>
-    <div class="buttons d-flex">
-      <button
-        type="button"
-        class="btn btn-primary buttons__filter filter-button"
-      >
-        <span class="filter-button__text">Filter</span>
-      </button>
+    <div class="row flex-nowrap">
+      <div class="col">
+        <h2>Games</h2>
+      </div>
 
-      <div class="buttons__sort d-flex">
-        <div class="buttons__sort__title">Sort:</div>
-        <div class="buttons__sort__dropdown">
-          <a
-            class="btn btn-secondary dropdown-toggle"
-            href="#"
-            role="button"
-            id="dropdownMenuLink"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
+      <div class="col d-flex justify-content-end">
+        <div class="buttons d-flex">
+          <button
+            type="button"
+            class="btn btn-primary buttons__filter filter-button"
           >
-            Please select
-          </a>
+            <span class="filter-button__text">Filter</span>
+          </button>
 
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-            <li><a class="dropdown-item active" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-          </ul>
+          <div class="buttons__sort d-flex">
+            <div class="buttons__sort__title">Sort:</div>
+            <div class="buttons__sort__dropdown">
+              <select class="sort-select" aria-label="Sort by select">
+                <option value="1">Title A-Z</option>
+                <option value="2">Title Z-A</option>
+                <option value="3">Relevance</option>
+                <option value="4" selected>Most Recent</option>
+                <option value="5">Popularity</option>
+              </select>
+            </div>
+          </div>
         </div>
       </div>
     </div>

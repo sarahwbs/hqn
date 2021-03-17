@@ -53,6 +53,11 @@
   );
 }
 
+@mixin select-dropdown {
+  @include input-button;
+
+}
+
 .filter-button__text {
   padding-right: 7rem;
 }
