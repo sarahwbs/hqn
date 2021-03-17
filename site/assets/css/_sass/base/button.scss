@@ -6,7 +6,7 @@
 
 @mixin input-button {
   @include grey-gradient;
-  @include dropshadow-v2;
+  @include dropshadow;
   padding: 1rem 1.5rem;
   border-radius: var(--input-border-radius);
   font-size: 1.5rem;
