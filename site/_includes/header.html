@@ -1,16 +1,14 @@
 <header class="header">
     <div class="row flex-nowrap">
       {% if include.userstate == "signed-in" %}
-        <div class="col header-logo d-flex justify-content-center">
-          <div class="header-logo__img-wrapper">
-            <img
-              src="{{site.baseurl}}/assets/img/harlequin-plus-logo.svg"
-              alt="Harlequin Plus Logo"
-            />
-          </div>
+        <div class="col d-flex">
+          <img
+            src="{{site.baseurl}}/assets/img/harlequin-plus-logo.svg"
+            alt="Harlequin Plus Logo"
+          />
         </div>
 
-        <nav class="col nav d-flex flex-filler" aria-label="Top Navigation">
+        <nav class="col nav d-flex flex-filler d-none d-lg-block" aria-label="Top Navigation">
           {% for item in site.data.header-nav %}
           <a class="header_nav__link" href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a>
           {% endfor %}
@@ -18,11 +16,11 @@
 
         <div class="col account d-flex">
           <div class="account__inner d-flex">
-            <div class="account__name d-flex align-self-center">Hi, Brennan</div>
+            <div class="account__name d-flex align-self-center d-none d-lg-block">Hi, Brennan</div>
 
             <div class="dropdown account__dropdown">
               <button
-                class="btn btn-default account_desktop_link"
+                class="btn btn-default d-none d-lg-block"
                 type="button"
                 id="account-dropdown-menu"
                 data-bs-toggle="dropdown"
@@ -34,7 +32,7 @@
                 />
               </button>
 
-              <a href="#" class="account__mobile_link">
+              <a href="#" class="d-block d-lg-none">
                 <img
                     src="{{site.baseurl}}/assets/img/icons/account-icon.svg"
                     alt="Account Icon"
@@ -69,7 +67,7 @@
         </div>
 
       {% if include.userstate == "signed-in" and include.sub == "true" %}
-        <div class="col d-flex my-bookshelf-button">
+        <div class="col d-flex d-none d-lg-block">
           <button
             type="button"
             class="btn btn-primary btn-lg header-button pink-button"
@@ -78,7 +76,7 @@
           </button>
         </div>
         {% else %}
-        <div class="col my-bookshelf-button"></div>
+          <div class="col d-none d-lg-block"></div>
         {% endif %}
 
       {% else %}

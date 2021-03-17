@@ -2,10 +2,6 @@
   padding: 4.4rem 0 2.8rem;
 }
 
-.header-logo__img-wrapper {
-  margin-top: 0.5rem;
-}
-
 a.header_nav__link {
   font-size: 1.4rem;
   color: var(--white);
@@ -20,7 +16,7 @@ a.header_nav__link {
 
 .nav {
   align-items: center;
-  margin-left: 4%;
+  margin-left: 7rem;
 }
 
 // Buttons
@@ -43,7 +39,6 @@ a.header_nav__link {
 
 .account__name {
   font-size: 1.4rem;
-  color: var(--white);
   font-weight: normal;
   margin-right: 0.25rem;
   white-space: nowrap;
@@ -51,12 +46,16 @@ a.header_nav__link {
 
 .account__inner {
   align-items: center;
+
+  @media screen and (max-width: $screen-md) {
+    justify-content: center;
+  }
 }
 
 // Dropdown menu
 
 .dropdown-menu {
-  background: var(--dark-purple-v2) 0 0 no-repeat padding-box;
+  background: var(--dark-purple-v2);
   box-shadow: 0 8px 40px var(--grey-v4);
   padding: 1.2rem 2.5rem 1.2rem 1.2rem;
   border-radius: 0.5rem;
@@ -102,42 +101,4 @@ a.header_nav__link {
 
 .dropdown-item__selections__number {
   font-size: 1.8rem;
-}
-
-.account_desktop_link {
-  display: inline-block;
-}
-.account__mobile_link {
-  display: none;
-}
-
-@media screen and (max-width: $screen-md) {
-  .header {
-    .col-sm {
-      margin: 1rem 0;
-    }
-
-    .row {
-      justify-content: space-around;
-    }
-
-    .row > * {
-      width: auto;
-    }
-  }
-
-  .header .nav,
-  .my-bookshelf-button,
-  .account__name,
-  .account_desktop_link {
-    display: none !important;
-  }
-
-  .account__mobile_link {
-    display: block;
-  }
-
-  .account__inner {
-    justify-content: center;
-  }
 }
