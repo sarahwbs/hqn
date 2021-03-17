@@ -3,3 +3,8 @@
   color: var(--white);
   font-size: 3.8rem;
 }
+
+@mixin h2-playfair-mobile {
+  @include h2-playfair;
+  font-size: 3rem;
+}

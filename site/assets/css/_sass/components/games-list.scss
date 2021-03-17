@@ -1,4 +1,8 @@
 .games-list {
+  .row {
+    margin: 2rem 0;
+  }
+
   .header {
     justify-content: space-between;
     align-items: center;
@@ -12,9 +16,13 @@
     @include filter-button;
   }
 
+  .buttons {
+    justify-content: flex-end;
+  }
+
   .buttons__sort {
     align-items: center;
-    margin-left: 10%;
+    margin-left: 2%;
   }
 
   .buttons__sort__title {
@@ -25,5 +33,21 @@
 
   .sort-select {
     @include select-dropdown;
+  }
+
+  img {
+    border: 1px solid var(--medium-purple);
+    border-radius: 0;
+  }
+
+  @media screen and (max-width: $screen-md) {
+    h2 {
+      @include h2-playfair-mobile;
+    }
+
+    .buttons {
+      justify-content: space-between;
+      margin: 2rem 0;
+    }
   }
 }

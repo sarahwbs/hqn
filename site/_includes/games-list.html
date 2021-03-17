@@ -1,33 +1,48 @@
 <div class="games-list">
-  <header class="d-flex header">
-    <div class="row flex-nowrap">
-      <div class="col">
-        <h2>Games</h2>
-      </div>
+  <div class="row align-items-center">
+    <div class="col-sm-2">
+      <h2>Games</h2>
+    </div>
 
-      <div class="col d-flex justify-content-end">
-        <div class="buttons d-flex">
-          <button
-            type="button"
-            class="btn btn-primary buttons__filter filter-button"
-          >
-            <span class="filter-button__text">Filter</span>
-          </button>
+    <div class="col-sm-10">
+      <div class="buttons d-flex">
+        <button
+          type="button"
+          class="btn btn-primary buttons__filter filter-button"
+        >
+          <span class="filter-button__text">Filter</span>
+        </button>
 
-          <div class="buttons__sort d-flex">
-            <div class="buttons__sort__title">Sort:</div>
-            <div class="buttons__sort__dropdown">
-              <select class="sort-select" aria-label="Sort by select">
-                <option value="1">Title A-Z</option>
-                <option value="2">Title Z-A</option>
-                <option value="3">Relevance</option>
-                <option value="4" selected>Most Recent</option>
-                <option value="5">Popularity</option>
-              </select>
-            </div>
+        <div class="buttons__sort d-flex">
+          <div class="buttons__sort__title">Sort:</div>
+          <div class="buttons__sort__dropdown">
+            <select class="sort-select" aria-label="Sort by select">
+              <option value="1">Title A-Z</option>
+              <option value="2">Title Z-A</option>
+              <option value="3">Relevance</option>
+              <option value="4" selected>Most Recent</option>
+              <option value="5">Popularity</option>
+            </select>
           </div>
         </div>
       </div>
     </div>
-  </header>
+  </div>
+
+
+  {% for i in (1..5) %}
+    <div class="row g-5 mb-5 row-cols-2 row-cols-md-3 row-cols-lg-4">
+      {% for j in (1..4) %}
+        <div class="col">
+          <a href="#">
+            <img
+              src="{{site.baseurl}}/assets/img/game-thumb-{{ j }}.png"
+              alt="alt text"
+              class="card-img-top drop-shadow-4"
+            />
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+  {% endfor %}
 </div>
