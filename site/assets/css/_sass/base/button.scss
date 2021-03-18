@@ -55,7 +55,16 @@
 
 @mixin select-dropdown {
   @include input-button;
-
+  @include grey-gradient-with-image-bg(
+    url("../img/icons/down-arrow.svg") no-repeat center right 1.5rem
+  );
+  padding-right: 8rem;
+  /* remove the original arrow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  position: relative;
 }
 
 .filter-button__text {
