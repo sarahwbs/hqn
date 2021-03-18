@@ -5,7 +5,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Home</title>
+    <title>Harlequin+</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script
       type="text/javascript"
@@ -14,9 +14,10 @@
     <link rel="stylesheet" href="/assets/css/styles.css" />
   </head>
   <body class="bg-primary text-body">
-    <div class="container px-5">
-      {% include header.html userstate="signed-out" %} {{ content }} {% include
-      footer.html %}
+    <div class="container d-flex flex-column align-items-end h-100 px-5">
+      {% include header.html userstate="signed-out" %}
+      <div class="w-100">{{ content }}</div>
+      {% include footer.html %}
     </div>
   </body>
 </html>
