@@ -4,7 +4,11 @@
   link: /subscriber-home.html
 - name: Subscriber Home Page (subscribed users)
   link: /subscriber-home-subbed.html
-- name: Games Page
-  link: /games.html
+- name: Bundles Page
+  link: /bundles.html
 - name: eBook Library Page
   link: /ebooks.html
+- name: Games Page
+  link: /games.html
+- name: Movies Page
+  link: /movies.html
