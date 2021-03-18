@@ -1,8 +1,12 @@
 ---
-layout: signed-in-sub
+layout: default
 ---
 
-{% include card-list.html cardtype="bundle" cardnum="3" %}
-{% include card-list.html cardtype="ebook" cardnum="6" %}
-{% include card-list.html cardtype="game" cardnum="4" %}
-{% include card-list.html cardtype="movie" cardnum="6" %}
+<div class="h-100 w-100 d-flex flex-column justify-content-center align-items-center">
+  <h1 class="">Static HTML Page Templates</h1>
+  <ul class="fs-4">
+    {% for item in site.data.page-nav %}
+      <li><a href="{{ item.link }}">{{ item.name }}</a></li>
+    {% endfor %}
+  </ul>
+</div>

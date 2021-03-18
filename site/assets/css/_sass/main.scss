@@ -8,6 +8,7 @@
 html,
 body {
   font-size: 10px;
+  height: 100%;
 }
 
 body {
@@ -16,5 +17,6 @@ body {
 }
 
 a {
+  @include link-style;
   text-decoration: none;
 }
