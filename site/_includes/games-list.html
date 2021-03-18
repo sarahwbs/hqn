@@ -1,0 +1,45 @@
+<div class="games-list">
+  <div class="row align-items-center">
+    <div class="col-md-2 p-0">
+      <h2 class="games-list__heading">Games</h2>
+    </div>
+
+    <div class="col-md-10 p-0">
+      <div class="games-list__buttons d-flex">
+        <button
+          type="button"
+          class="btn btn-primary buttons__filter games-list__filter-button"
+        >
+          <span class="filter-button__text">Filter</span>
+        </button>
+
+        <div class="games-list__sort d-flex">
+          <div class="games-list__sort__title">Sort:</div>
+          <div class="games-list__sort__dropdown">
+            <select class="games-list__sort-select" aria-label="Sort by select">
+              <option value="1">Title A-Z</option>
+              <option value="2">Title Z-A</option>
+              <option value="3">Relevance</option>
+              <option value="4" selected>Most Recent</option>
+              <option value="5">Popularity</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row g-5 mb-5 mx-n3 row-cols-2 row-cols-md-3 row-cols-lg-4">
+    {% for i in (1..20) %}
+      <div class="col">
+        <div class="card card-game">
+          <a href="#">
+            <img src="{{site.baseurl}}/assets/img/game-thumb-{{ i | modulo: 4 | plus: 1 }}.png"
+            alt="alt text"
+            class="card-img-top drop-shadow-3" />
+          </a>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>

@@ -4,6 +4,15 @@
   border: 0.1rem solid transparent;
 }
 
+@mixin input-button {
+  @include grey-gradient;
+  @include dropshadow;
+  padding: 1rem 1.5rem;
+  border-radius: var(--input-border-radius);
+  font-size: 1.5rem;
+  color: var(--dark-grey);
+}
+
 @mixin pink-button {
   @include button;
   background-color: var(--pink);
@@ -35,4 +44,29 @@
   &:focus {
     @include transparent-button;
   }
+}
+
+@mixin filter-button {
+  @include input-button;
+  @include grey-gradient-with-image-bg(
+    url("../img/icons/filter.svg") no-repeat center right 1.5rem
+  );
+}
+
+@mixin select-dropdown {
+  @include input-button;
+  @include grey-gradient-with-image-bg(
+    url("../img/icons/down-arrow.svg") no-repeat center right 1.5rem
+  );
+  padding-right: 8rem;
+  /* remove the original arrow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  position: relative;
+}
+
+.filter-button__text {
+  padding-right: 7rem;
 }

@@ -8,13 +8,13 @@
           />
         </div>
 
-        <nav class="col nav d-flex flex-filler d-none d-lg-block" aria-label="Top Navigation">
+        <nav class="col nav d-none d-lg-flex flex-filler align-items-center" aria-label="Top Navigation">
           {% for item in site.data.header-nav %}
           <a class="header_nav__link" href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a>
           {% endfor %}
         </nav>
 
-        <div class="col account d-flex">
+        <div class="col account d-flex me-lg-6">
           <div class="account__inner d-flex">
             <div class="account__name d-flex align-self-center d-none d-lg-block">Hi, Brennan</div>
 

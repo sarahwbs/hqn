@@ -18,6 +18,10 @@
   }
 }
 
+@mixin dropshadow {
+  box-shadow: 0 0.8rem 2rem var(--grey-v4);
+}
+
 .bg-primary-gradient {
   @include purple-gradient-2;
 }
@@ -32,6 +36,10 @@
 
 .drop-shadow-3 {
   box-shadow: 0 1.5rem 3rem var(--grey-v2);
+}
+
+.drop-shadow-4 {
+    box-shadow: 0 1.5rem 3rem var(--grey-v4);
 }
 
 .flex-filler {

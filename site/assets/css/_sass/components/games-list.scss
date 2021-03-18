@@ -1,0 +1,48 @@
+.games-list__heading {
+  @include h2-playfair;
+}
+
+.games-list__buttons {
+  justify-content: flex-end;
+}
+
+.games-list__filter-button {
+  @include filter-button;
+}
+
+.games-list__sort {
+  align-items: center;
+  margin-left: 2%;
+}
+
+.games-list__sort__title {
+  @include small-text;
+  color: var(--white);
+  margin-right: 0.8rem;
+}
+
+.games-list__sort-select {
+  @include select-dropdown;
+}
+
+.games-list {
+  .row {
+    margin: 2rem 0;
+  }
+
+  img {
+    border: 1px solid var(--medium-purple);
+    border-radius: 0;
+  }
+}
+
+@media screen and (max-width: $screen-md) {
+  .games-list__heading {
+    @include h2-playfair-mobile;
+  }
+
+  .games-list__buttons {
+    justify-content: space-between;
+    margin: 2rem 0;
+  }
+}
