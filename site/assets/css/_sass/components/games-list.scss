@@ -37,7 +37,7 @@
 }
 
 @media screen and (max-width: $screen-md) {
-  games-list__heading {
+  .games-list__heading {
     @include h2-playfair-mobile;
   }
 
