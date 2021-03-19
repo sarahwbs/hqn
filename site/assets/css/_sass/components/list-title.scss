@@ -1,0 +1,25 @@
+.list-title__heading {
+  @include h2-playfair;
+}
+
+.list-title__sub-heading {
+  margin-top: 1.2rem;
+}
+
+.list-title__sub-heading-text {
+  @include small-text;
+  line-height: unset;
+  margin-left: 1rem;
+}
+
+.list-title__sub-heading-rect {
+  width: 0.4rem;
+  height: 2rem;
+  background: var(--pink);
+}
+
+@media screen and (max-width: $screen-md) {
+  .list-title__heading {
+    @include h2-playfair-mobile;
+  }
+}

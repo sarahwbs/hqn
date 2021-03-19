@@ -1,0 +1,29 @@
+.filter-sort-btns {
+  justify-content: flex-end;
+}
+
+.filter-sort-btns__filter-button {
+  @include filter-button;
+}
+
+.filter-sort-btns__sort {
+  align-items: center;
+  margin-left: 2%;
+}
+
+.filter-sort-btns__sort__title {
+  @include small-text;
+  color: var(--white);
+  margin-right: 0.8rem;
+}
+
+.filter-sort-btns__sort-select {
+  @include select-dropdown;
+}
+
+@media screen and (max-width: $screen-lg) {
+  .filter-sort-btns {
+    justify-content: space-between;
+    margin: 2rem 0;
+  }
+}
