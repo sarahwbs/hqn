@@ -1,19 +1,7 @@
-.ebooks-list__heading {
-  @include h2-playfair;
+.ebooks-list__copy {
+  margin: 5rem 0;
 }
 
-.ebooks-list__sub-heading {
-  margin-top: 1.2rem;
-}
-
-.ebooks-list__sub-heading-text {
-  @include small-text;
-  line-height: unset;
-  margin-left: 1rem;
-}
-
-.ebooks-list__sub-heading-rect {
-  width: 0.4rem;
-  height: 2rem;
-  background: var(--pink);
+.ebooks-list__row {
+  margin-bottom: 6rem;
 }

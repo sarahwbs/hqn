@@ -1,7 +1,3 @@
-.games-list__heading {
-  @include h2-playfair;
-}
-
 .games-list {
   .row {
     margin: 2rem 0;
@@ -10,11 +6,5 @@
   img {
     border: 1px solid var(--medium-purple);
     border-radius: 0;
-  }
-}
-
-@media screen and (max-width: $screen-md) {
-  .games-list__heading {
-    @include h2-playfair-mobile;
   }
 }

@@ -1,15 +1,31 @@
 <div class="ebooks-list">
-  <div class="row align-items-center">
+  <div class="row gx-0 align-items-end">
     <div class="col-md-4 p-0">
-      <h2 class="ebooks-list__heading">eBook Library</h2>
-        <div class="ebooks-list__sub-heading d-flex">
-            <div class="ebooks-list__sub-heading-rect"></div>
-            <div class="ebooks-list__sub-heading-text">Available until Dec. 31</div>
-        </div>
+      {% include list-title.html title="eBook Library" subtitle="Available until
+      Dec. 31" %}
     </div>
 
     <div class="col-md-8 p-0">
       {% include filter-sort-btns.html %}
     </div>
   </div>
+
+  <div class="row gx-5 ebooks-list__copy">
+    <div class="col-md-8 px-0">
+      {% include body-copy.html copy="Free ebooks available to read during a
+      limited time. These books can be found and read directly here, in the
+      Ebook Library, and will not be found in your personal Bookshelf." %}
+    </div>
+  </div>
+
+  {% for j in (1..4) %}
+  <div class="row gx-5 ebooks-list__row row-cols-2 row-cols-md-4 row-cols-lg-6">
+    {% for i in (1..6) %}
+      {% capture percentage %}{{ i | times: 10 }}{% endcapture %}
+      <div class="col">
+        {% include card.html cardtype="ebook" percentage=percentage %}
+      </div>
+    {% endfor %}
+  </div>
+  {% endfor %}
 </div>
