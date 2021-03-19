@@ -21,7 +21,7 @@
   @include select-dropdown;
 }
 
-@media screen and (max-width: $screen-md) {
+@media screen and (max-width: $screen-lg) {
   .filter-sort-btns {
     justify-content: space-between;
     margin: 2rem 0;
