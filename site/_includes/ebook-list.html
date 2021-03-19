@@ -18,14 +18,12 @@
     </div>
   </div>
 
-  {% for j in (1..4) %}
   <div class="row gx-5 ebooks-list__row row-cols-2 row-cols-md-4 row-cols-lg-6">
-    {% for i in (1..6) %}
-      {% capture percentage %}{{ i | times: 10 }}{% endcapture %}
-      <div class="col">
-        {% include card.html cardtype="ebook" percentage=percentage %}
+    {% for i in (1..24) %}
+      <div class="col ebooks-list__col">
+        {% capture percentage %}{{ i | times: 10 }}{% endcapture %}
+        {% include card.html cardtype="ebook" percentage=percentage filter="ebook" %}
       </div>
     {% endfor %}
   </div>
-  {% endfor %}
 </div>
