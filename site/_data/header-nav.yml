@@ -1,8 +1,8 @@
 - name: Browse Bundles
-  link: /bundles.html
+  link: bundles
 - name: eBook Library
   link: ebooks
 - name: Games
   link: games
 - name: Movies
-  link: /movies.html
+  link: movies
