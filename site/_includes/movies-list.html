@@ -1,0 +1,27 @@
+<div class="movies-list">
+  <div class="row ms-0 me-0 align-items-center">
+    <div class="col-md-4 p-0">
+      {% include list-title.html title="Movies" %}
+    </div>
+
+    <div class="col-md-8 p-0">
+      {% include filter-sort-btns.html %}
+    </div>
+  </div>
+
+  <div class="row g-5 mb-5 mx-n3 row-cols-2 row-cols-md-4 row-cols-lg-6">
+    {% for i in (1..24) %}
+    <div class="col mt-10"> <!--gx-lg-0 mt-10-->
+      <div class="card card-game">
+        <a href="#">
+          <img
+            src="{{site.baseurl}}/assets/img/movie-thumb-{{ i | modulo: 4 | plus: 1 }}.png"
+            alt="alt text"
+            class="card-movie card-img-top drop-shadow-4"
+          />
+        </a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>

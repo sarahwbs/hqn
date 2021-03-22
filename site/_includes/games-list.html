@@ -1,22 +1,22 @@
 <div class="games-list">
-  <div class="row align-items-center">
-    <div class="col-md-2 p-0">
+  <div class="row ms-0 me-0 mb-3 align-items-center">
+    <div class="col-md-4 p-0">
       {% include list-title.html title="Games" %}
     </div>
 
-    <div class="col-md-10 p-0">
+    <div class="col-md-8 p-0">
       {% include filter-sort-btns.html %}
     </div>
   </div>
 
   <div class="row g-5 mb-5 mx-n3 row-cols-2 row-cols-md-3 row-cols-lg-4">
     {% for i in (1..20) %}
-      <div class="col">
+      <div class="col mt-9">
         <div class="card card-game">
           <a href="#">
             <img src="{{site.baseurl}}/assets/img/game-thumb-{{ i | modulo: 4 | plus: 1 }}.png"
             alt="alt text"
-            class="card-img-top drop-shadow-3" />
+            class="card-game card-img-top drop-shadow-3" />
           </a>
         </div>
       </div>
