@@ -1,0 +1,10 @@
+- name: Home
+  link: /
+- name: Shop Bundles
+  link: bundles
+- name: eBook Library
+  link: ebooks
+- name: Games
+  link: games
+- name: Movies
+  link: movies

@@ -56,7 +56,7 @@
 @mixin select-dropdown {
   @include input-button;
   @include grey-gradient-with-image-bg(
-    url("../img/icons/down-arrow.svg") no-repeat center right 1.5rem
+    url("../img/icons/arrow-down.svg") no-repeat center right 1.5rem
   );
   padding-right: 8rem;
   /* remove the original arrow */

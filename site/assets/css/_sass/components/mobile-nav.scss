@@ -1,0 +1,37 @@
+.modal-header .menu-modal__btn-close {
+  background: none;
+  border: 0;
+  padding: 0;
+  margin: 1% 0 0 0;
+}
+
+.menu-modal__modal-header {
+  border: 0;
+  margin: 0 1.5%;
+}
+
+.menu-modal__content {
+  background-color: var(--purple-v2);
+}
+
+.menu-modal__body {
+  margin: 0 2%;
+}
+
+.menu-modal__pink-button {
+  @include normal-text;
+  line-height: unset;
+}
+
+.menu-modal__link {
+  @include normal-text;
+  padding: 1.5rem .5rem 1.5rem 0;
+}
+
+.menu-modal__nav-container {
+  border-top: 1px solid var(--light-grey-v3);
+}
+
+.menu-modal__nav-row {
+  border-bottom: 1px solid var(--light-grey-v3);
+}

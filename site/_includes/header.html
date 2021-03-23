@@ -62,17 +62,15 @@
             </div>
           </div>
         </div>
-      </div>
 
-      {% if include.userstate == 'signed-in' and include.sub == 'true' %}
-      <div class="col d-flex d-none d-lg-block">
-        <button
-          type="button"
-          class="btn btn-primary btn-lg header-button pink-button"
-        >
-          My Bookshelf
-        </button>
-      </div>
+      {% if include.userstate == "signed-in" and include.sub == "true" %}
+        <div class="col d-flex d-none d-lg-block">
+          {% include button.html type="rounded-pink" label="My Bookshelf" extraClasses="header-button" %}
+        </div>
+        {% else %}
+          <div class="col d-none d-lg-block"></div>
+        {% endif %}
+
       {% else %}
       <div class="col d-none d-lg-block"></div>
       {% endif %} {% else %}

@@ -1,6 +1,7 @@
 :root {
   --light-purple: #ad48a4;
   --purple: #5b25b8;
+  --purple-v2: #351869;
   --dark-purple: #2e2159;
   --dark-purple-v2: #211140;
   --medium-purple: #451d89;
@@ -14,6 +15,7 @@
   --dark-yellow: #eda31d;
   --light-grey: #efefef;
   --light-grey-v2: #d1d1d1;
+  --light-grey-v3: rgba(227,227,227, .2);
   --grey: #000033;
   --grey-v2: #0000004d;
   --grey-v3: #54585a;
@@ -70,13 +72,15 @@ $spacers: (
   1: $spacer * 0.25,
   2: $spacer * 0.5,
   3: $spacer,
-  4: $spacer * 1.5,
-  5: $spacer * 2,
-  6: $spacer * 2.5,
-  7: $spacer * 3,
-  8: $spacer * 3.5,
-  9: $spacer * 4.5,
-  10: $spacer * 5.5,
+  4: ($spacer * 1.5),
+  5: ($spacer * 2),
+  6: ($spacer * 2.5),
+  7: ($spacer * 3),
+  8: ($spacer * 3.5),
+  9: ($spacer * 4.5),
+  10: ($spacer * 5.5),
+  11: ($spacer * 6),
+  12: ($spacer * 6.5),
 );
 
 $gutters: $spacers;
