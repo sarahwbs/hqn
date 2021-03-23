@@ -1,94 +1,107 @@
-<header class="header w-100 pb-lg-6">
-    <div class="row flex-nowrap header-row">
-      {% if include.userstate == "signed-in" %}
-        <div class="col d-flex">
-          <img
-            src="{{site.baseurl}}/assets/img/harlequin-plus-logo.svg"
-            alt="Harlequin Plus Logo"
-          />
+<header class="header w-100">
+  <div class="row flex-nowrap header-row">
+    {% if include.userstate == 'signed-in' %}
+    <div class="col d-flex">
+      <a href="index" class="d-flex"
+        ><img
+          src="{{site.baseurl}}/assets/img/harlequin-plus-logo.svg"
+          alt="Harlequin Plus Logo"
+          class="d-inline-block"
+      /></a>
+    </div>
+
+    <nav
+      class="col nav d-none d-lg-flex flex-filler align-items-center"
+      aria-label="Top Navigation"
+    >
+      {% for item in site.data.header-nav %}
+      <a
+        class="header_nav__link"
+        href="{{ item.link }}"
+        class="{% if page.url == item.link %}current{% endif %}"
+        >{{ item.name }}</a
+      >
+      {% endfor %}
+    </nav>
+
+    <div class="col account d-flex me-lg-6">
+      <div class="account__inner d-flex">
+        <div class="account__name d-flex align-self-center d-none d-lg-block">
+          Hi, Brennan
         </div>
 
-        <nav class="col nav d-none d-lg-flex flex-filler align-items-center" aria-label="Top Navigation">
-          {% for item in site.data.header-nav %}
-          <a class="header_nav__link" href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a>
-          {% endfor %}
-        </nav>
+        <div class="dropdown account__dropdown">
+          <button
+            class="btn btn-default d-none d-lg-block"
+            type="button"
+            id="account-dropdown-menu"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <img
+              src="{{site.baseurl}}/assets/img/icons/account-icon.svg"
+              alt="Account Icon"
+            />
+          </button>
 
-        <div class="col account d-flex me-lg-6">
-          <div class="account__inner d-flex">
-            <div class="account__name d-flex align-self-center d-none d-lg-block">Hi, Brennan</div>
+          <a href="#" class="d-block d-lg-none">
+            <img
+              src="{{site.baseurl}}/assets/img/icons/account-icon.svg"
+              alt="Account Icon"
+            />
+          </a>
 
-            <div class="dropdown account__dropdown">
-              <button
-                class="btn btn-default d-none d-lg-block"
-                type="button"
-                id="account-dropdown-menu"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                <img
-                  src="{{site.baseurl}}/assets/img/icons/account-icon.svg"
-                  alt="Account Icon"
-                />
-              </button>
-
-              <a href="#" class="d-block d-lg-none">
-                <img
-                    src="{{site.baseurl}}/assets/img/icons/account-icon.svg"
-                    alt="Account Icon"
-                />
-              </a>
-
-              <div class="dropdown-menu" aria-labelledby="account-dropdown-menu">
-                <div class="dropdown-menu-arrow-up"></div>
-                <ul>
-                  {% if include.userstate == "signed-in" and include.sub == "true" %}
-                  <li>
-                    <a class="dropdown-item dropdown-item__selections" href="#"
-                      ><span class="dropdown-item__selections__number">8</span>
-                      Available Selections</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      class="dropdown-item dropdown-item__selections_summary"
-                      href="#"
-                      >Selection Summary</a
-                    >
-                  </li>
-                  <li><hr class="dropdown-divider" /></li>
-                  {% endif %} {% for item in site.data.header-account-nav %}
-                  <li><a class="dropdown-item" href="#">{{ item.name }}</a></li>
-                  {% endfor %}
-                </ul>
-              </div>
-            </div>
+          <div class="dropdown-menu" aria-labelledby="account-dropdown-menu">
+            <div class="dropdown-menu-arrow-up"></div>
+            <ul>
+              {% if include.userstate == 'signed-in' and include.sub == 'true'
+              %}
+              <li>
+                <a class="dropdown-item dropdown-item__selections" href="#"
+                  ><span class="dropdown-item__selections__number">8</span>
+                  Available Selections</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item dropdown-item__selections_summary"
+                  href="#"
+                  >Selection Summary</a
+                >
+              </li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+              {% endif %} {% for item in site.data.header-account-nav %}
+              <li><a class="dropdown-item" href="#">{{ item.name }}</a></li>
+              {% endfor %}
+            </ul>
           </div>
         </div>
-
-      {% if include.userstate == "signed-in" and include.sub == "true" %}
-        <div class="col d-flex d-none d-lg-block">
-          <button
-            type="button"
-            class="btn btn-primary btn-lg header-button pink-button"
-          >
-            My Bookshelf
-          </button>
-        </div>
-        {% else %}
-          <div class="col d-none d-lg-block"></div>
-        {% endif %}
-
-      {% else %}
-
-        <div class="col offset-sm-10 d-flex">
-          <button
-            type="button"
-            class="btn btn-primary btn-lg header-button sign-in-button transparent-button"
-          >
-            Sign In
-          </button>
-        </div>
-      {% endif %}
+      </div>
     </div>
+
+    {% if include.userstate == 'signed-in' and include.sub == 'true' %}
+    <div class="col d-flex d-none d-lg-block">
+      <button
+        type="button"
+        class="btn btn-primary btn-lg header-button pink-button"
+      >
+        My Bookshelf
+      </button>
+    </div>
+    {% else %}
+    <div class="col d-none d-lg-block"></div>
+    {% endif %} {% else %}
+
+    <div class="col offset-sm-10 d-flex">
+      <button
+        type="button"
+        class="btn btn-primary btn-lg header-button sign-in-button transparent-button"
+      >
+        Sign In
+      </button>
+    </div>
+    {% endif %}
+  </div>
 </header>

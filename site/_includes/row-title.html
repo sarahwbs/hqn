@@ -1,0 +1,16 @@
+<div class="d-flex mt-7 mb-3 mb-lg-6 align-items-end">
+  <div class="row-title d-flex flex-column flex-lg-row align-items-lg-end">
+    <h1 class="row-title__heading">{{ include.title }}</h1>
+    {% if include.subtitle %}
+    <div class="row-title__sub-heading d-flex">
+      <div class="row-title__sub-heading-rect"></div>
+      <div class="row-title__sub-heading-text">{{ include.subtitle }}</div>
+    </div>
+    {% endif %}
+  </div>
+  <div class="row-title__view-all">
+    <a href="{{ include.rowtype }}" class="row-title__view-all-link text-nowrap"
+      >View All</a
+    >
+  </div>
+</div>
