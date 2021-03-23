@@ -12,16 +12,17 @@
   }
 }
 
-.carousel-pause {
-  background: url("../img/icons/pause.svg") center right / 12px 14px no-repeat;
+.carousel-pause-play {
   height: 14px;
   width: 12px;
 }
 
+.carousel-pause {
+  background: url("../img/icons/pause.svg") center right / 12px 14px no-repeat;
+}
+
 .carousel-play {
   background: url("../img/icons/play.svg") center right / 12px 12px no-repeat;
-  height: 14px;
-  width: 12px;
 }
 
 .carousel-prev,
