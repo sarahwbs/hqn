@@ -4,10 +4,8 @@
 
 .ebooks-list__col {
   margin-bottom: 6rem;
-}
 
-@media screen and (max-width: $screen-md) {
-  .ebooks-list__col {
+  @media screen and (max-width: $screen-lg) {
     margin-bottom: 2.5rem;
   }
 }

@@ -1,0 +1,9 @@
+<div class="movies-row">
+  {% include row-title.html title="Movies" rowtype="movies" %}
+
+  <div class="row g-5 mb-5 row-cols-2 row-cols-md-4 row-cols-lg-6">
+    {% for i in (1..6) %}
+    <div class="col">{% include card.html cardtype="movie" %}</div>
+    {% endfor %}
+  </div>
+</div>

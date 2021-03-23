@@ -1,0 +1,77 @@
+.cta-carousel {
+  padding-bottom: 3.7rem;
+}
+
+.carousel-indicators {
+  bottom: -3.7rem;
+
+  & .carousel-dot {
+    border-radius: 4px;
+    height: 7px;
+    width: 7px;
+  }
+}
+
+.carousel-pause {
+  background: url("../img/icons/pause.svg") center right / 12px 14px no-repeat;
+  height: 14px;
+  width: 12px;
+}
+
+.carousel-play {
+  background: url("../img/icons/play.svg") center right / 12px 12px no-repeat;
+  height: 14px;
+  width: 12px;
+}
+
+.carousel-prev,
+.carousel-next {
+  pointer-events: none;
+}
+
+.carousel-prev {
+  left: 0;
+}
+
+.carousel-next {
+  right: 0;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  opacity: 1;
+  width: 6rem;
+  pointer-events: auto;
+
+  &:hover &-icon {
+    background-color: var(--medium-purple-v3-75);
+  }
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: var(--medium-purple-v3-50);
+  background-image: none;
+  border-radius: 3rem;
+  height: 6rem;
+  width: 6rem;
+
+  &::after {
+    background: url("../img/icons/right-arrow.svg") center right / 20px 9px
+      no-repeat;
+    content: "";
+    display: inline-block;
+    height: 9px;
+    margin-bottom: auto;
+    margin-top: auto;
+    width: 20px;
+  }
+}
+
+.carousel-control-prev-icon {
+  &::after {
+    background: url("../img/icons/right-arrow.svg") center right / 20px 9px
+      no-repeat;
+    transform: rotate(180deg);
+  }
+}

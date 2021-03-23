@@ -1,0 +1,24 @@
+.cta {
+  &,
+  & img {
+    border-radius: 8px;
+  }
+}
+
+.cta-top {
+  margin-bottom: 3rem;
+
+  @media screen and (min-width: $screen-lg) {
+    margin-bottom: 4rem;
+  }
+}
+
+.cta-bottom {
+  margin-bottom: 3.5rem;
+  margin-top: 6rem;
+
+  @media screen and (min-width: $screen-lg) {
+    margin-bottom: 6rem;
+    margin-top: 10rem;
+  }
+}
