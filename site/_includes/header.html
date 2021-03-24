@@ -1,83 +1,87 @@
 <header class="header w-100 pb-lg-6">
-    <div class="row flex-nowrap header-row">
-      {% if include.userstate == "signed-in" %}
-        {% include nav/mobile/mobile-nav.html menu="main" %}
+  <div class="row flex-nowrap header-row">
+    {% if include.userstate == "signed-in" %} {% include
+    nav/mobile/mobile-nav.html menu="main" %}
 
-        <div class="col d-flex">
-          <img
-            src="{{site.baseurl}}/assets/img/harlequin-plus-logo.svg"
-            alt="Harlequin Plus Logo"
-          />
+    <div class="col d-flex">
+      <a href="index" class="d-flex"
+        ><img
+          src="{{site.baseurl}}/assets/img/harlequin-plus-logo.svg"
+          alt="Harlequin Plus Logo"
+          class="d-inline-block"
+      /></a>
+    </div>
+
+    {% include nav/desktop-nav.html %}
+
+    <div class="col account d-flex me-lg-6">
+      <div class="account__inner d-flex">
+        <div class="account__name d-flex align-self-center d-none d-lg-block">
+          Hi, Brennan
         </div>
 
-        {% include nav/desktop-nav.html %}
+        <div class="dropdown account__dropdown">
+          <button
+            class="btn btn-default d-none d-lg-block"
+            type="button"
+            id="account-dropdown-menu"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <img
+              src="{{site.baseurl}}/assets/img/icons/account.svg"
+              alt="Account Icon"
+            />
+          </button>
 
-        <div class="col account d-flex me-lg-6">
-          <div class="account__inner d-flex">
-            <div class="account__name d-flex align-self-center d-none d-lg-block">Hi, Brennan</div>
+          {% include nav/mobile/mobile-nav.html menu="user-account"
+          userstate=include.userstate sub=include.sub %}
 
-            <div class="dropdown account__dropdown">
-              <button
-                class="btn btn-default d-none d-lg-block"
-                type="button"
-                id="account-dropdown-menu"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                <img
-                  src="{{site.baseurl}}/assets/img/icons/account.svg"
-                  alt="Account Icon"
-                />
-              </button>
-
-              {% include nav/mobile/mobile-nav.html menu="user-account" userstate=include.userstate sub=include.sub %}
-
-              <div class="dropdown-menu" aria-labelledby="account-dropdown-menu">
-                <div class="dropdown-menu-arrow-up"></div>
-                <ul>
-                  {% if include.userstate == "signed-in" and include.sub == "true" %}
-                  <li>
-                    <a href="#" class="dropdown-item dropdown-item__selections">
-                      <span class="dropdown-item__selections__number">8</span>
-                      Available Selections
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="dropdown-item dropdown-item__selections_summary">Selection Summary</a>
-                  </li>
-                  <li><hr class="dropdown-divider" /></li>
-                  {% endif %}
-
-                  {% for item in site.data.header-account-nav %}
-                  <li><a class="dropdown-item" href="#">{{ item.name }}</a></li>
-                  {% endfor %}
-                </ul>
-              </div>
-            </div>
+          <div class="dropdown-menu" aria-labelledby="account-dropdown-menu">
+            <div class="dropdown-menu-arrow-up"></div>
+            <ul>
+              {% if include.userstate == "signed-in" and include.sub == "true"
+              %}
+              <li>
+                <a href="#" class="dropdown-item dropdown-item__selections">
+                  <span class="dropdown-item__selections__number">8</span>
+                  Available Selections
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="dropdown-item dropdown-item__selections_summary"
+                  >Selection Summary</a
+                >
+              </li>
+              <li><hr class="dropdown-divider" /></li>
+              {% endif %} {% for item in site.data.header-account-nav %}
+              <li><a class="dropdown-item" href="#">{{ item.name }}</a></li>
+              {% endfor %}
+            </ul>
           </div>
         </div>
-
-      {% if include.userstate == "signed-in" and include.sub == "true" %}
-        <div class="col d-flex d-none d-lg-block">
-          {% include button.html type="rounded-pink" label="My Bookshelf" extraClasses="header-button" %}
-        </div>
-        {% else %}
-          <div class="col d-none d-lg-block"></div>
-        {% endif %}
-
-      {% else %}
-      <div class="col d-none d-lg-block"></div>
-      {% endif %} {% else %}
-
-      <div class="col offset-sm-10 d-flex">
-        <button
-          type="button"
-          class="btn btn-primary btn-lg header-button sign-in-button transparent-button"
-        >
-          Sign In
-        </button>
       </div>
-      {% endif %}
     </div>
+
+    {% if include.userstate == "signed-in" and include.sub == "true" %}
+    <div class="col d-flex d-none d-lg-block">
+      {% include button.html type="rounded-pink" label="My Bookshelf"
+      extraClasses="header-button" %}
+    </div>
+    {% else %}
+    <div class="col d-none d-lg-block"></div>
+    {% endif %} {% else %}
+
+    <div class="col offset-sm-10 d-flex">
+      <button
+        type="button"
+        class="btn btn-primary btn-lg header-button sign-in-button transparent-button"
+      >
+        Sign In
+      </button>
+    </div>
+    {% endif %}
   </div>
 </header>
