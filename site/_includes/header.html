@@ -25,7 +25,9 @@
         {% endfor %}
       </nav>
 
-      <div class="col account d-flex me-lg-6">
+      <div
+        class="col account d-flex{% if include.sub == 'false' %} pe-0{% else %} me-lg-6{% endif %}"
+      >
         <div class="account__inner d-flex">
           <div class="account__name d-flex align-self-center d-none d-lg-block">
             Hi, Brennan
@@ -33,7 +35,7 @@
 
           <div class="dropdown account__dropdown">
             <button
-              class="btn btn-default d-none d-lg-block"
+              class="btn btn-default d-none d-lg-block{% if include.sub == 'false' %} pe-0{% endif %}"
               type="button"
               id="account-dropdown-menu"
               data-bs-toggle="dropdown"
