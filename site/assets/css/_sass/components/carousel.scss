@@ -1,5 +1,10 @@
 .cta-carousel {
+  margin-bottom: 3rem;
   padding-bottom: 3.7rem;
+
+  @media screen and (min-width: $screen-lg) {
+    margin-bottom: 4rem;
+  }
 }
 
 .carousel-indicators {
