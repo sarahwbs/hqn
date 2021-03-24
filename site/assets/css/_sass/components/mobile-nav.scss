@@ -23,6 +23,7 @@
 }
 
 .menu-modal__pink-btn {
+  @include dropshadow;
   @include normal-text;
   line-height: unset;
 }
