@@ -1,0 +1,57 @@
+<div
+  class="modal fade md-effect-1 g-0 menu-modal"
+  id="userAccountMenuModal"
+  tabindex="-1"
+  aria-labelledby="userAccountMenuModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content menu-modal__content">
+      <div class="modal-header menu-modal__modal-header mb-8">
+        <button
+          type="button"
+          class="btn-close menu-modal__btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        >
+          <img
+            src="{{site.baseurl}}/assets/img/icons/close.svg"
+            alt="Menu Icon"
+          />
+        </button>
+      </div>
+
+      {% if include.userstate == "signed-in" and include.sub == "true" %}
+      <div class="menu-modal__selections">
+        <div class="col py-8 d-flex align-items-end justify-content-between">
+          <a href="#" class="d-block">
+            <span class="d-block menu-modal__selections-number">8</span>
+            <span class="d-block menu-modal__selections-text">Available Selections</span>
+          </a>
+          <a href="#" class="d-block menu-modal__selections-text menu-modal__selections-summary">Selection Summary</a>
+        </div>
+      </div>
+      {% endif %}
+
+      <div class="modal-body menu-modal__body">
+        <div class="row menu-modal__nav-container mt-9">
+          <nav class="col" aria-label="Mobile Navigation" role="navigation">
+            {% for item in site.data.header-account-nav %}
+            <div class="row menu-modal__nav-row">
+              <div class="col d-flex justify-content-between px-0">
+                <a class="menu-modal__link w-100" href="{{ item.link }}">{{ item.name }}</a>
+                <a class="menu-modal__link" href="{{ item.link }}">
+                  <img
+                    src="{{site.baseurl}}/assets/img/icons/arrow-right.svg"
+                    alt="Menu Icon"
+                  />
+                </a>
+              </div>
+            </div>
+            {% endfor %}
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
