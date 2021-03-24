@@ -3,7 +3,7 @@
     {% include row-title.html title="eBook Library" subtitle="Make your monthly
     selection by Dec. 31" rowtype="ebooks" %}
 
-    <div class="row g-5 row-cols-2 row-cols-md-4 row-cols-lg-6">
+    <div class="row g-5 row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6">
       {% for i in (1..6) %} {% capture percentage %}{{ i | times: 10 }}{%
       endcapture %}
       <div class="col">
