@@ -1,6 +1,10 @@
 .card-title {
-  @include normal-text;
-  font-weight: 600;
+  @include small-text;
+  font-weight: 700;
+
+  @media screen and (min-width: $screen-lg) {
+    @include normal-text;
+  }
 }
 
 .card-text {
@@ -17,8 +21,8 @@
 }
 
 .card-bundle {
-  &, & img {
-    border-radius: 4px 4px 0 0;
+  &,
+  & img {
     border-width: 0;
   }
 }
@@ -42,4 +46,8 @@
     border: 1px solid var(--medium-purple-v2);
     border-radius: 0;
   }
+}
+
+.progress-bar {
+  background-color: var(--pink-v2);
 }

@@ -3,8 +3,10 @@
   --purple: #5b25b8;
   --dark-purple: #2e2159;
   --dark-purple-v2: #211140;
-  --medium-purple: #451D89;
-  --medium-purple-v2: #300F72;
+  --medium-purple: #451d89;
+  --medium-purple-v2: #300f72;
+  --medium-purple-v3-75: #35186975;
+  --medium-purple-v3-50: #35186950;
   --white: #ffffff;
   --white-v2: #ffffff33;
   --white-v3: #ffffff70;
@@ -22,6 +24,7 @@
   --red-v3: #ff1c50;
   --light-pink: #f0666757;
   --pink: #cd1b81;
+  --pink-v2: #e31d74;
   --yellow: #ffef2c;
   --yellow-v2: #f3ea45;
 
@@ -37,9 +40,9 @@ $body-color: var(--white);
 $theme-colors: map-merge(
   $theme-colors,
   (
-    "primary":    #5b25b8,
-    "secondary":  #cd1b81,
-  ),
+    "primary": #5b25b8,
+    "secondary": #cd1b81,
+  )
 );
 
 $screen-xs: 0;
@@ -59,21 +62,21 @@ $container-max-widths: (
   md: 720px,
   lg: 960px,
   xl: 1166px,
-  xxl: 1226px
+  xxl: 1226px,
 );
 
 $spacers: (
   0: 0,
-  1: ($spacer * .25),
-  2: ($spacer * .5),
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
   3: $spacer,
-  4: ($spacer * 1.5),
-  5: ($spacer * 2),
-  6: ($spacer * 2.5),
-  7: ($spacer * 3),
-  8: ($spacer * 3.5),
-  9: ($spacer * 4.5),
-  10: ($spacer * 5.5),
+  4: $spacer * 1.5,
+  5: $spacer * 2,
+  6: $spacer * 2.5,
+  7: $spacer * 3,
+  8: $spacer * 3.5,
+  9: $spacer * 4.5,
+  10: $spacer * 5.5,
 );
 
 $gutters: $spacers;

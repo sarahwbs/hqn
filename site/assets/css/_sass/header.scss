@@ -1,5 +1,9 @@
 .header {
-  padding: 4.4rem 0 2.8rem;
+  margin: 4.4rem 0 6rem;
+
+  @media screen and (max-width: $screen-lg) {
+    margin: 1.4rem 0 4rem;
+  }
 }
 
 .header-row {
@@ -49,7 +53,7 @@ a.header_nav__link {
 .account__inner {
   align-items: center;
 
-  @media screen and (max-width: $screen-md) {
+  @media screen and (max-width: $screen-lg) {
     justify-content: center;
   }
 }

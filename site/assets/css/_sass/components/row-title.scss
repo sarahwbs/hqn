@@ -1,0 +1,52 @@
+.row-title__heading {
+  @include h1-nunito;
+  margin-bottom: 0;
+  padding-right: 3rem;
+
+  @media screen and (max-width: $screen-lg) {
+    @include h1-nunito-mobile;
+  }
+}
+
+.row-title__sub-heading {
+  @include h1-nunito-mobile;
+  margin-bottom: 0.2rem;
+  margin-top: 0.5rem;
+}
+
+.row-title__sub-heading-text {
+  @include small-text;
+  line-height: unset;
+  margin-left: 1rem;
+}
+
+.row-title__sub-heading-rect {
+  background: var(--pink);
+  height: 2rem;
+  width: 0.4rem;
+}
+
+.row-title__view-all {
+  margin-left: auto;
+  margin-bottom: 0.6rem;
+
+  @media screen and (min-width: $screen-lg) {
+    margin-bottom: 0;
+  }
+}
+
+.row-title__view-all-link {
+  @include small-text-v2;
+
+  &::after {
+    background: url("../img/icons/right-arrow.svg") center right no-repeat;
+    content: "";
+    height: 9px;
+    width: 28px;
+
+    @media screen and (min-width: $screen-lg) {
+      @include normal-text-v2;
+      display: inline-block;
+    }
+  }
+}

@@ -1,25 +1,37 @@
 <footer class="pt-9 pb-9 pb-lg-5 mt-auto w-100">
-  <div class="container footer-container position-relative p-0">
-    <div class="d-flex footer-logo pb-8 pb-lg-6">
-      <img src="{{site.baseurl}}/assets/img/footer-logo.svg" alt="Harlequin Logo" class="d-block" />
-    </div>
-    <nav aria-label="Legal menu">
-      <ul role="menu" aria-label="Legal links" class="footer-nav-list d-flex flex-wrap p-0 my-0 mx-n3">
-        {% for item in site.data.footer-nav %}
+  <div class="container-md p-0">
+    <div class="container footer-container position-relative p-0">
+      <div class="d-flex footer-logo pb-8 pb-lg-6">
+        <img
+          src="{{site.baseurl}}/assets/img/footer-logo.svg"
+          alt="Harlequin Logo"
+          class="d-block"
+        />
+      </div>
+      <nav aria-label="Legal menu">
+        <ul
+          role="menu"
+          aria-label="Legal links"
+          class="footer-nav-list d-flex flex-wrap p-0 my-0 mx-n3"
+        >
+          {% for item in site.data.footer-nav %}
           <li role="menuitem" class="footer-nav-item px-3 pb-4">
-            <a href="{{ item.link }}"
+            <a
+              href="{{ item.link }}"
               role="button"
               class="footer-nav-link"
               rel="noreferrer noopener"
-              {% if page.url == item.link %}class="current"{% endif %}>
+              class="{% if page.url == item.link %}current{% endif %}"
+            >
               {{ item.name }}
             </a>
           </li>
-        {% endfor %}
-      </ul>
-    </nav>
-    <div class="copyright pt-5 pt-xl-0 pb-4">
-      Copyright © 2000-2021 Harlequin Enterprises ULC. All Rights Reserved.
+          {% endfor %}
+        </ul>
+      </nav>
+      <div class="copyright pt-5 pt-xl-0 pb-4">
+        Copyright © 2000-2021 Harlequin Enterprises ULC. All Rights Reserved.
+      </div>
     </div>
   </div>
 </footer>

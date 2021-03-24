@@ -17,7 +17,8 @@
 }
 
 @mixin grey-gradient-with-image-bg($img-bg) {
-  background: $img-bg, transparent
-  linear-gradient(180deg, var(--white) 0%, var(--light-grey-v2) 100%) 0% 0%
-  no-repeat padding-box;
+  background: $img-bg,
+    transparent
+      linear-gradient(180deg, var(--white) 0%, var(--light-grey-v2) 100%) 0% 0%
+      no-repeat padding-box;
 }
