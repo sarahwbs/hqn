@@ -22,10 +22,10 @@ $bundle-shadow-size: 3.8rem;
 }
 
 .bundles-col {
-  max-width: 290px;
+  max-width: 29rem;
 
   @media screen and (min-width: $screen-sm) {
-    max-width: 350px;
+    max-width: 35rem;
   }
 
   @media screen and (min-width: $screen-md) {
