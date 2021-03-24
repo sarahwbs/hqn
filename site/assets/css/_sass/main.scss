@@ -16,6 +16,10 @@ body {
   font-weight: 400;
 }
 
+.main {
+  overflow-x: hidden;
+}
+
 a {
   @include link-style;
   text-decoration: none;

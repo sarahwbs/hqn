@@ -1,29 +1,31 @@
-<div class="ebooks-list">
-  <div class="row gx-0 align-items-end">
-    <div class="col-lg-4 p-0">
-      {% include list-title.html title="eBook Library" subtitle="Available until
-      Dec. 31" %}
-    </div>
-
-    <div class="col-lg-8 p-0">
-      {% include filter-sort-btns.html %}
-    </div>
-  </div>
-
-  <div class="row gx-5 ebooks-list__copy">
-    <div class="col-lg-8 px-0">
-      {% include body-copy.html copy="Free ebooks available to read during a
-      limited time. These books can be found and read directly here, in the
-      Ebook Library, and will not be found in your personal Bookshelf." %}
-    </div>
-  </div>
-
-  <div class="row gx-5 ebooks-list__row row-cols-2 row-cols-md-4 row-cols-lg-6">
-    {% for i in (1..24) %}
-      <div class="col ebooks-list__col">
-        {% capture percentage %}{{ i | times: 10 }}{% endcapture %}
-        {% include card.html cardtype="ebook" percentage=percentage filter="ebook" %}
+<div class="container-md p-0">
+  <div class="ebooks-list">
+    <div class="row gx-0 align-items-end">
+      <div class="col-lg-4 p-0">
+        {% include list-title.html title="eBook Library" subtitle="Available
+        until Dec. 31" %}
       </div>
-    {% endfor %}
+
+      <div class="col-lg-8 p-0">{% include filter-sort-btns.html %}</div>
+    </div>
+
+    <div class="row gx-5 ebooks-list__copy">
+      <div class="col-lg-8 px-0">
+        {% include body-copy.html copy="Free ebooks available to read during a
+        limited time. These books can be found and read directly here, in the
+        Ebook Library, and will not be found in your personal Bookshelf." %}
+      </div>
+    </div>
+
+    <div
+      class="row gx-5 ebooks-list__row row-cols-2 row-cols-md-4 row-cols-lg-6"
+    >
+      {% for i in (1..24) %}
+      <div class="col ebooks-list__col">
+        {% capture percentage %}{{ i | times: 10 }}{% endcapture %} {% include
+        card.html cardtype="ebook" percentage=percentage filter="ebook" %}
+      </div>
+      {% endfor %}
+    </div>
   </div>
 </div>

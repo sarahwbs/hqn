@@ -18,7 +18,9 @@
     <link rel="stylesheet" href="{{site.baseurl}}/assets/css/styles.css" />
   </head>
   <body class="bg-primary text-body">
-    <div class="container d-flex flex-column align-items-end h-100 px-5">
+    <div
+      class="container-fluid d-flex flex-column align-items-end h-100 px-5 main"
+    >
       {% include header.html userstate="signed-in" sub="true" %}
       <div class="w-100">{{ content }}</div>
       {% include footer.html %}

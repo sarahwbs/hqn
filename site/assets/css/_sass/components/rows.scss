@@ -4,3 +4,31 @@
 .movies-row {
   margin-bottom: 6rem;
 }
+
+$bundle-shadow-size: 3.8rem;
+
+.bundles-row-inner {
+  @media screen and (max-width: $screen-md) {
+    margin: -$bundle-shadow-size (-($bundle-shadow-size + 1));
+    overflow-x: scroll;
+    padding: $bundle-shadow-size;
+
+    &::after {
+      width: $bundle-shadow-size;
+      content: "";
+      flex: 0 0 auto;
+    }
+  }
+}
+
+.bundles-col {
+  max-width: 290px;
+
+  @media screen and (min-width: $screen-sm) {
+    max-width: 350px;
+  }
+
+  @media screen and (min-width: $screen-md) {
+    max-width: none;
+  }
+}

@@ -1,12 +1,14 @@
-<div class="ebooks-row">
-  {% include row-title.html title="From Your Bookshelf" rowlink="bookshelf" %}
+<div class="container-md p-0">
+  <div class="ebooks-row">
+    {% include row-title.html title="From Your Bookshelf" rowlink="bookshelf" %}
 
-  <div class="row g-5 mb-5 row-cols-2 row-cols-md-4 row-cols-lg-6">
-    {% for i in (1..6) %} {% capture percentage %}{{ i | times: 10 }}{%
-    endcapture %}
-    <div class="col">
-      {% include card.html cardtype="ebook" percentage=percentage %}
+    <div class="row g-5 row-cols-2 row-cols-md-4 row-cols-lg-6">
+      {% for i in (1..6) %} {% capture percentage %}{{ i | times: 10 }}{%
+      endcapture %}
+      <div class="col">
+        {% include card.html cardtype="ebook" percentage=percentage %}
+      </div>
+      {% endfor %}
     </div>
-    {% endfor %}
   </div>
 </div>
