@@ -1,0 +1,14 @@
+<nav
+  class="col nav d-none d-lg-flex flex-filler align-items-center"
+  aria-label="Top Navigation"
+  role="navigation"
+>
+  {% for item in site.data.header-nav %}
+  <a
+    class="header_nav__link"
+    href="{{ item.link }}"
+    class="{% if page.url == item.link %}current{% endif %}"
+    >{{ item.name }}</a
+  >
+  {% endfor %}
+</nav>

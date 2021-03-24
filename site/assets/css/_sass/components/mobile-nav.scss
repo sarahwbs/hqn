@@ -1,0 +1,62 @@
+.menu-modal__btn {
+  padding: 0;
+}
+
+.modal-header .menu-modal__btn-close {
+  background: none;
+  border: 0;
+  padding: 0;
+  margin: 1rem 0 0 0;
+}
+
+.menu-modal__modal-header {
+  border: 0;
+  margin: 0 1.5rem;
+}
+
+.menu-modal__content {
+  background-color: var(--purple-v2);
+}
+
+.menu-modal__body {
+  margin: 0 2rem;
+}
+
+.menu-modal__pink-btn {
+  @include dropshadow;
+  @include normal-text;
+  line-height: unset;
+}
+
+.menu-modal__link {
+  @include normal-text;
+  padding: 1.5rem .5rem 1.5rem 0;
+}
+
+.menu-modal__nav-container {
+  border-top: 1px solid var(--light-grey-v3);
+}
+
+.menu-modal__nav-row {
+  border-bottom: 1px solid var(--light-grey-v3);
+}
+
+.menu-modal__selections {
+  background-color: var(--dark-purple-v3);
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
+.menu-modal__selections-number {
+  font-size: 3.6rem;
+  line-height: 3.6rem;
+}
+
+.menu-modal__selections-text {
+  @include small-text;
+  line-height: unset;
+}
+
+.menu-modal__selections-summary {
+  color: var(--grey-v5);
+}

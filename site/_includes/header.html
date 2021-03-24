@@ -1,7 +1,10 @@
-<header class="header w-100">
+<header class="header w-100 pb-lg-6">
   <div class="container-md p-0">
     <div class="row flex-nowrap header-row">
-      {% if include.userstate == 'signed-in' %}
+      {% if include.userstate == "signed-in" %}
+
+      {% include nav/mobile/mobile-nav.html menu="main" %}
+
       <div class="col d-flex">
         <a href="index" class="d-flex"
           ><img
@@ -11,19 +14,7 @@
         /></a>
       </div>
 
-      <nav
-        class="col nav d-none d-lg-flex flex-filler align-items-center"
-        aria-label="Top Navigation"
-      >
-        {% for item in site.data.header-nav %}
-        <a
-          class="header_nav__link"
-          href="{{ item.link }}"
-          class="{% if page.url == item.link %}current{% endif %}"
-          >{{ item.name }}</a
-        >
-        {% endfor %}
-      </nav>
+      {% include nav/desktop-nav.html %}
 
       <div class="col account d-flex me-lg-6">
         <div class="account__inner d-flex">
@@ -40,40 +31,34 @@
               aria-expanded="false"
             >
               <img
-                src="{{site.baseurl}}/assets/img/icons/account-icon.svg"
+                src="{{site.baseurl}}/assets/img/icons/account.svg"
                 alt="Account Icon"
               />
             </button>
 
-            <a href="#" class="d-block d-lg-none">
-              <img
-                src="{{site.baseurl}}/assets/img/icons/account-icon.svg"
-                alt="Account Icon"
-              />
-            </a>
+            {% include nav/mobile/mobile-nav.html menu="user-account" userstate=include.userstate sub=include.sub %}
 
             <div class="dropdown-menu" aria-labelledby="account-dropdown-menu">
               <div class="dropdown-menu-arrow-up"></div>
               <ul>
-                {% if include.userstate == 'signed-in' and include.sub == 'true'
-                %}
+                {% if include.userstate == "signed-in" and include.sub == "true" %}
                 <li>
-                  <a class="dropdown-item dropdown-item__selections" href="#"
-                    ><span class="dropdown-item__selections__number">8</span>
-                    Available Selections</a
-                  >
+                  <a href="#" class="dropdown-item dropdown-item__selections">
+                    <span class="dropdown-item__selections__number">8</span>
+                    Available Selections
+                  </a>
                 </li>
                 <li>
                   <a
-                    class="dropdown-item dropdown-item__selections_summary"
                     href="#"
+                    class="dropdown-item dropdown-item__selections_summary"
                     >Selection Summary</a
                   >
                 </li>
-                <li>
-                  <hr class="dropdown-divider" />
-                </li>
-                {% endif %} {% for item in site.data.header-account-nav %}
+                <li><hr class="dropdown-divider" /></li>
+                {% endif %}
+
+                {% for item in site.data.header-account-nav %}
                 <li><a class="dropdown-item" href="#">{{ item.name }}</a></li>
                 {% endfor %}
               </ul>
@@ -82,18 +67,15 @@
         </div>
       </div>
 
-      {% if include.userstate == 'signed-in' and include.sub == 'true' %}
+      {% if include.userstate == "signed-in" and include.sub == "true" %}
       <div class="col d-flex d-none d-lg-block">
-        <button
-          type="button"
-          class="btn btn-primary btn-lg header-button pink-button"
-        >
-          My Bookshelf
-        </button>
+        {% include button.html type="rounded-pink" label="My Bookshelf" extraClasses="header-button" %}
       </div>
       {% else %}
       <div class="col d-none d-lg-block"></div>
-      {% endif %} {% else %}
+      {% endif %}
+
+      {% else %}
 
       <div class="col offset-sm-10 d-flex">
         <button
