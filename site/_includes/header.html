@@ -3,7 +3,7 @@
     <div class="row flex-nowrap header-row">
       {% if include.userstate == "signed-in" %}
 
-      {% include nav/mobile/mobile-nav.html menu="main" %}
+      {% include nav/mobile/mobile-nav.html menu="main" userstate=include.userstate sub=include.sub %}
 
       <div class="col d-flex">
         <a href="index" class="d-flex"

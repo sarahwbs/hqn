@@ -14,7 +14,7 @@
       />
     </button>
 
-    {% include nav/mobile/main-menu-modal.html %}
+    {% include nav/mobile/main-menu-modal.html userstate=include.userstate sub=include.sub %}
 
   {% else if include.menu == "user-account" %}
     <button
