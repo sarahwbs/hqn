@@ -1,15 +1,37 @@
 <div class="container-md p-0">
-  <div class="ebooks-list">
+  <div class="bundles-list">
     <div class="row gx-0 align-items-end">
       <div class="col p-0">
-        {% include list-title.html title="December Bundles" subtitle="Make your
-        monthly selection by Dec. 31" %}
+        {% include list-title.html title="December Bundles" subtitle="Make your monthly selection by Dec. 31" %}
       </div>
     </div>
 
-    <div class="row gx-0 mt-10 d-flex justify-content-between">
+    <div class="row bundles-list__container gx-0 d-flex justify-content-between">
       <div class="col-lg-4 p-0">
-        AAA BBB
+        <div
+          class="btn-group bundles-list__radio-filter"
+          role="group"
+          aria-label="Filter radio toggle button group"
+        >
+          <input
+            type="radio"
+            class="btn-check"
+            name="btnradio"
+            id="btnradio1"
+            autocomplete="off"
+            checked
+          />
+          <label class="btn btn-outline-primary" for="btnradio1">eBook</label>
+
+          <input
+            type="radio"
+            class="btn-check"
+            name="btnradio"
+            id="btnradio3"
+            autocomplete="off"
+          />
+          <label class="btn btn-outline-primary" for="btnradio3">Print</label>
+        </div>
       </div>
 
       <div class="col-lg-8 p-0">
@@ -17,9 +39,11 @@
       </div>
     </div>
 
-    <div class="row gx-5 row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3">
+    <div
+      class="row bundles-list__container gx-5 row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3"
+    >
       {% for i in (1..25) %}
-      <div class="col mt-10">
+      <div class="col mb-5 mb-sm-6 mb-md-7 mb-lg-8 mb-xl-12">
         {% include card.html cardtype="bundle" %}
       </div>
       {% endfor %}
