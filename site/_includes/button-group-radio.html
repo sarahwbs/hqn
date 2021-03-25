@@ -1,0 +1,26 @@
+{% if include.layout == "two-radio-btns" %}
+    <div
+      class="btn-group bundles-list__radio-filter"
+      role="group"
+      aria-label="Radio toggle button group"
+    >
+      <input
+        type="radio"
+        class="btn-check"
+        name="btnradio"
+        id="btnradio1"
+        autocomplete="off"
+        checked
+      />
+      <label class="btn btn-outline-primary" for="btnradio1">{{ include.radio1-label }}</label>
+
+      <input
+        type="radio"
+        class="btn-check"
+        name="btnradio"
+        id="btnradio2"
+        autocomplete="off"
+      />
+      <label class="btn btn-outline-primary" for="btnradio2">{{ include.radio2-label }}</label>
+    </div>
+{% endif %}

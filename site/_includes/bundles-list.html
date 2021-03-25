@@ -8,30 +8,7 @@
 
     <div class="row bundles-list__container gx-0 d-flex justify-content-between">
       <div class="col-lg-4 p-0">
-        <div
-          class="btn-group bundles-list__radio-filter"
-          role="group"
-          aria-label="Filter radio toggle button group"
-        >
-          <input
-            type="radio"
-            class="btn-check"
-            name="btnradio"
-            id="btnradio1"
-            autocomplete="off"
-            checked
-          />
-          <label class="btn btn-outline-primary" for="btnradio1">eBook</label>
-
-          <input
-            type="radio"
-            class="btn-check"
-            name="btnradio"
-            id="btnradio3"
-            autocomplete="off"
-          />
-          <label class="btn btn-outline-primary" for="btnradio3">Print</label>
-        </div>
+        {% include button-group-radio.html layout="two-radio-btns" radio1-label="eBook" radio2-label="Print"  %}
       </div>
 
       <div class="col-lg-8 p-0">
