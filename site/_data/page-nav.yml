@@ -6,6 +6,10 @@
   link: /subscriber-home-subbed
 - name: Bundles Page
   link: /bundles
+- name: Bundles Details (Thank You Modal)
+  link: /bundle-thank-you-modal
+- name: Bundles Details (Thank You Modal 2)
+  link: /bundle-thank-you-modal-2
 - name: eBook Library Page
   link: /ebooks
 - name: Games Page
@@ -16,3 +20,5 @@
   link: /ebook-details
 - name: Movie Detail Page
   link: /movie-details
+- name: Movie Detail Page (Access Modal)
+  link: /movie-details-modal

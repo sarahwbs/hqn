@@ -3,7 +3,7 @@
   aria-modal="true"
   aria-hidden="false"
 >
-  <div class="popup-modal_content {{ include.modaltype }}">
+  <div class="popup-modal_content-wrapper {{ include.modaltype }}">
     <button
       type="button"
       class="popup-modal__btn-close"
@@ -17,13 +17,11 @@
       />
     </button>
 
-    {% if include.modaltype == "default" %}
-    <div class="text-center">
-      <div class="popup_modal__body-text">{{ include.bodyText }}</div>
-
-      {% include button.html type="rounded-pink" label=include.buttonText
-      extraClasses="normal-text mt-6 px-8" %}
-    </div>
+    {% if include.modaltype == "default" %}<!--  -->
+    {% include modal-default.html %}<!--  -->
+    {% elsif include.modaltype == "thank-you" or include.modaltype ==
+    "thank-you-2"%}<!--  -->
+    {% include modal-thank-you.html %}<!--  -->
     {% endif %}
   </div>
 </div>

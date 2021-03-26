@@ -13,41 +13,14 @@
   }
 }
 
-.popup-modal_content {
-  @include normal-text;
-  background: var(--white);
-  border-radius: 0.4rem;
-  color: var(--dark-grey);
-  z-index: 1;
-  position: relative;
-
-  &.default {
-    width: 90%;
-    max-width: 50rem;
-    padding: 7rem 3rem;
-
-    @media screen and (min-width: $screen-lg) {
-      max-width: inherit;
-      width: 60rem;
-      padding: 8rem 3rem;
-    }
-
-    .popup_modal__body-text {
-      max-width: 31rem;
-      margin-left: auto;
-      margin-right: auto;
-    }
-  }
-}
-
 .popup-modal__btn-close {
   background: none;
   border: 0;
   padding: 0;
   margin: 0;
   position: absolute;
-  right: 1.5rem;
-  top: 1.5rem;
+  right: 2rem;
+  top: 2rem;
   width: 1.3rem;
   height: 1.3rem;
   cursor: pointer;
@@ -55,5 +28,108 @@
   @media screen and (min-width: $screen-lg) {
     top: 3rem;
     right: 3rem;
+  }
+}
+
+.popup-modal__content {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.popup-modal__title {
+  @include large-text-v3;
+  font-weight: 600;
+
+  @media screen and (min-width: $screen-lg) {
+    @include large-text;
+  }
+}
+
+.popup-modal__body-text {
+  @include normal-text;
+
+  strong {
+    font-weight: 600;
+  }
+}
+
+.popup-modal_content-wrapper {
+  background: var(--white);
+  border-radius: 0.4rem;
+  color: var(--dark-grey);
+  z-index: 1;
+  position: relative;
+  width: 90%;
+  padding: 7rem 2.5rem;
+
+  @media screen and (min-width: $screen-lg) {
+    max-width: inherit;
+    padding: 8rem 3rem;
+  }
+
+  &.default {
+    max-width: 50rem;
+
+    @media screen and (min-width: $screen-lg) {
+      width: 60rem;
+      max-width: inherit;
+    }
+
+    .popup-modal__content {
+      max-width: 31rem;
+    }
+  }
+
+  &.thank-you,
+  &.thank-you-2 {
+    max-width: 50rem;
+    padding: 6.3rem 2.5rem 5.1rem;
+
+    @media screen and (min-width: $screen-md) {
+      max-width: 60rem;
+    }
+
+    @media screen and (min-width: $screen-lg) {
+      padding: 8rem 3rem 7.2rem;
+      width: 81rem;
+      max-width: inherit;
+    }
+
+    .popup-modal__content {
+      max-width: 60rem;
+    }
+
+    .popup-modal__buttons button {
+      width: 100%;
+      margin-bottom: 1rem;
+
+      @media screen and (min-width: $screen-md) {
+        width: inherit;
+        margin-bottom: 0;
+        margin-left: 1rem;
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &.thank-you-2 {
+    text-align: center;
+    padding-left: 3.6rem;
+    padding-right: 3.6rem;
+
+    @media screen and (min-width: $screen-md) {
+      text-align: left;
+    }
+
+    @media screen and (min-width: $screen-lg) {
+      max-width: inherit;
+    }
   }
 }
