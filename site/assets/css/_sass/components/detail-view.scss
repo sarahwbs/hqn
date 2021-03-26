@@ -8,7 +8,10 @@
 }
 
 .detail-view__image {
-  max-width: 25rem;
+  max-width: 16rem;
+  @media screen and (min-width: $screen-md) {
+    max-width: 25rem;
+  }
   @media screen and (min-width: $screen-lg) {
     max-width: inherit;
   }
