@@ -15,7 +15,7 @@
           aria-label="Close"
         >
           <img
-            src="{{site.baseurl}}/assets/img/icons/close.svg"
+            src="{{site.baseurl}}/assets/img/icons/close-white.svg"
             alt="Menu Icon"
           />
         </button>
@@ -26,9 +26,15 @@
         <div class="col py-8 d-flex align-items-end justify-content-between">
           <a href="#" class="d-block">
             <span class="d-block menu-modal__selections-number">8</span>
-            <span class="d-block menu-modal__selections-text">Available Selections</span>
+            <span class="d-block menu-modal__selections-text"
+              >Available Selections</span
+            >
           </a>
-          <a href="#" class="d-block menu-modal__selections-text menu-modal__selections-summary">Selection Summary</a>
+          <a
+            href="#"
+            class="d-block menu-modal__selections-text menu-modal__selections-summary"
+            >Selection Summary</a
+          >
         </div>
       </div>
       {% endif %}
@@ -39,7 +45,9 @@
             {% for item in site.data.header-account-nav %}
             <div class="row menu-modal__nav-row">
               <div class="col d-flex justify-content-between px-0">
-                <a class="menu-modal__link w-100" href="{{ item.link }}">{{ item.name }}</a>
+                <a class="menu-modal__link w-100" href="{{ item.link }}"
+                  >{{ item.name }}</a
+                >
                 <a class="menu-modal__link" href="{{ item.link }}">
                   <img
                     src="{{site.baseurl}}/assets/img/icons/right-arrow-thin.svg"

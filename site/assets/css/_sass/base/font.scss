@@ -26,6 +26,16 @@
   line-height: 3.2rem;
 }
 
+@mixin large-text-v3 {
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+
+@mixin large-text-v4 {
+  font-size: 1.8rem;
+  line-height: 2.6rem;
+}
+
 @mixin normal-text {
   font-size: 1.6rem;
   line-height: 2.5rem;
@@ -49,4 +59,9 @@
 @mixin xsmall-text {
   font-size: 1.2rem;
   line-height: 1.6rem;
+}
+
+@mixin xsmall-text-v2 {
+  font-size: 1.2rem;
+  line-height: 2rem;
 }

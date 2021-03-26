@@ -1,0 +1,62 @@
+.detail-view {
+  @media screen and (max-width: $screen-lg-min) {
+    max-width: 50rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.detail-view__image {
+  @media screen and (max-width: $screen-lg-min) {
+    max-width: 25rem;
+  }
+}
+
+.detail-view_info h1 {
+  @include headline-text;
+  @include h2-playfair;
+
+  @media screen and (max-width: $screen-lg-min) {
+    @include large-text-v3;
+    font-family: var(--font-family-primary);
+  }
+}
+
+.detail-view__meta {
+  @include normal-text;
+  p {
+    margin-bottom: 2.5rem;
+
+    @media screen and (max-width: $screen-lg-min) {
+      @include small-text-v2;
+      margin-bottom: 2.2rem;
+    }
+  }
+}
+
+.detail-view__description {
+  strong {
+    font-weight: 600;
+  }
+
+  p {
+    @include large-text-v4;
+    font-weight: 300;
+    margin-bottom: 2.5rem;
+
+    @media screen and (max-width: $screen-lg-min) {
+      @include small-text-v2;
+      margin-bottom: 2.2rem;
+    }
+  }
+}
+
+.detail-view__progress {
+  p {
+    @include xsmall-text-v2;
+    letter-spacing: 0.084rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+  }
+}

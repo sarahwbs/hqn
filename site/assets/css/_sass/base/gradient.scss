@@ -10,6 +10,12 @@
     no-repeat padding-box;
 }
 
+@mixin purple-gradient-3 {
+  background: transparent
+    linear-gradient(142deg, var(--dark-purple) 0%, var(--purple) 100%) 0% 0%
+    no-repeat padding-box;
+}
+
 @mixin grey-gradient {
   background: transparent
     linear-gradient(180deg, var(--white) 0%, var(--light-grey-v2) 100%) 0% 0%
