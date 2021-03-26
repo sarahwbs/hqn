@@ -14,8 +14,9 @@
     />
   </button>
 
-  {% include nav/mobile/main-menu-modal.html %} {% else if include.menu ==
-  "user-account" %}
+  {% include nav/mobile/main-menu-modal.html userstate=include.userstate
+  sub=include.sub %}<!-- -->
+  {% else if include.menu == "user-account" %}
   <button
     type="button"
     class="btn btn-primary menu-modal__btn d-block d-lg-none"
@@ -27,5 +28,6 @@
   </button>
 
   {% include nav/mobile/user-account-modal.html userstate=include.userstate
-  sub=include.sub %} {% endif %}
+  sub=include.sub %}<!-- -->
+  {% endif %}
 </div>
