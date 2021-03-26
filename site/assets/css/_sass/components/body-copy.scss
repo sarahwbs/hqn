@@ -1,6 +1,50 @@
 .body-copy {
+  @include small-text-v2;
   padding: 0;
-  font-size: 1.6rem;
   font-weight: 100;
-  line-height: 2.5rem;
+
+  p {
+    margin-bottom: 2rem;
+  }
+
+  @media screen and (min-width: $screen-lg) {
+    @include normal-text;
+  }
+}
+
+.info__container {
+  @media screen and (min-width: $screen-lg) {
+    max-width: 81rem;
+  }
+}
+
+.info__heading {
+  @include heading-playfair-mobile;
+
+  @media screen and (min-width: $screen-lg) {
+    @include heading-playfair;
+  }
+}
+
+.info__subheading {
+  @include heading-nunito-mobile;
+
+  @media screen and (min-width: $screen-lg) {
+    @include heading-nunito;
+  }
+}
+
+.info__button {
+  margin-bottom: 4rem;
+  margin-top: 7rem;
+
+  @media screen and (min-width: $screen-lg) {
+    margin-bottom: 8rem;
+    margin-top: 10rem;
+  }
+}
+
+.subscription-info__button {
+  font-size: 1.6rem;
+  white-space: nowrap;
 }

@@ -1,16 +1,16 @@
-@mixin h1-nunito {
+@mixin heading-nunito {
   color: var(--white);
   font-family: var(--font-family-primary);
   font-size: 2.6rem;
   font-weight: 600;
 }
 
-@mixin h1-nunito-mobile {
-  @include h1-nunito;
+@mixin heading-nunito-mobile {
+  @include heading-nunito;
   font-size: 2rem;
 }
 
-@mixin h2-playfair {
+@mixin heading-playfair {
   color: var(--white);
   font-family: var(--font-family-playfair);
   font-size: 4.6rem;
@@ -18,7 +18,7 @@
   font-weight: 600;
 }
 
-@mixin h2-playfair-mobile {
-  @include h2-playfair;
+@mixin heading-playfair-mobile {
+  @include heading-playfair;
   font-size: 2.8rem;
 }

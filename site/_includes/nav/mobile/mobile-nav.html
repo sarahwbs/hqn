@@ -1,37 +1,33 @@
-<div class="col d-flex d-lg-none align-items-center">
+<div class="col d-flex d-lg-none align-items-center order-first">
   <!-- Button trigger modal -->
   {% if include.menu == "main" %}
-    <button
-      type="button"
-      class="btn btn-primary menu-modal__btn"
-      data-bs-toggle="modal"
-      data-bs-target="#mainMenuModal"
-      data-bs-backdrop="false"
-    >
-      <img
-        src="{{site.baseurl}}/assets/img/icons/hamburger.svg"
-        alt="Menu Icon"
-      />
-    </button>
+  <button
+    type="button"
+    class="btn btn-primary menu-modal__btn"
+    data-bs-toggle="modal"
+    data-bs-target="#mainMenuModal"
+    data-bs-backdrop="false"
+  >
+    <img
+      src="{{site.baseurl}}/assets/img/icons/hamburger.svg"
+      alt="Menu Icon"
+    />
+  </button>
 
-    {% include nav/mobile/main-menu-modal.html userstate=include.userstate sub=include.sub %}
-
+  {% include nav/mobile/main-menu-modal.html userstate=include.userstate
+  sub=include.sub %}<!-- -->
   {% else if include.menu == "user-account" %}
-    <button
-      type="button"
-      class="btn btn-primary menu-modal__btn d-block d-lg-none"
-      data-bs-toggle="modal"
-      data-bs-target="#userAccountMenuModal"
-      data-bs-backdrop="false"
-    >
-      <img
-        src="{{site.baseurl}}/assets/img/icons/account.svg"
-        alt="Menu Icon"
-      />
-    </button>
+  <button
+    type="button"
+    class="btn btn-primary menu-modal__btn d-block d-lg-none"
+    data-bs-toggle="modal"
+    data-bs-target="#userAccountMenuModal"
+    data-bs-backdrop="false"
+  >
+    <img src="{{site.baseurl}}/assets/img/icons/account.svg" alt="Menu Icon" />
+  </button>
 
-    {% include nav/mobile/user-account-modal.html userstate=include.userstate sub=include.sub %}
-
+  {% include nav/mobile/user-account-modal.html userstate=include.userstate
+  sub=include.sub %}<!-- -->
   {% endif %}
 </div>
-
