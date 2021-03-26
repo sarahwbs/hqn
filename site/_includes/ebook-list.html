@@ -1,16 +1,16 @@
 <div class="container-md p-0">
   <div class="ebooks-list">
     <div class="row gx-0 align-items-end">
-      <div class="col-lg-4 p-0">
+      <div class="col-lg-4 p-0 order-1">
         {% include list-title.html title="eBook Library" subtitle="Available
         until Dec. 31" %}
       </div>
 
-      <div class="col-lg-8 p-0">{% include filter-sort-btns.html %}</div>
-    </div>
+      <div class="col-lg-8 p-0 mt-5 mb-9 my-lg-0 order-3 order-lg-2">
+        {% include filter-sort-btns.html %}
+      </div>
 
-    <div class="row gx-5 ebooks-list__copy">
-      <div class="col-lg-8 px-0">
+      <div class="col-lg-8 px-0 mt-5 mb-0 my-lg-10 order-2 order-lg-3">
         {% include body-copy.html copy="Free ebooks available to read during a
         limited time. These books can be found and read directly here, in the
         Ebook Library, and will not be found in your personal Bookshelf." %}
