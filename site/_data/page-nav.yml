@@ -1,18 +1,18 @@
 - name: Landing Page (non-logged in visitors)
-  link: /landing.html
+  link: /landing
 - name: Subscriber Home Page (non-subscribed users)
-  link: /subscriber-home.html
+  link: /subscriber-home
 - name: Subscriber Home Page (subscribed users)
-  link: /subscriber-home-subbed.html
+  link: /subscriber-home-subbed
 - name: Bundles Page
-  link: /bundles.html
+  link: /bundles
 - name: eBook Library Page
-  link: /ebooks.html
+  link: /ebooks
 - name: Games Page
-  link: /games.html
+  link: /games
 - name: Movies Page
-  link: /movies.html
+  link: /movies
 - name: Book Detail Page
-  link: /ebook-details.html
+  link: /ebook-details
 - name: Movie Detail Page
-  link: /movie-details.html
+  link: /movie-details

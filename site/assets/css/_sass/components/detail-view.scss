@@ -13,7 +13,6 @@
 }
 
 .detail-view_info h1 {
-  @include headline-text;
   @include h2-playfair;
 
   @media screen and (max-width: $screen-lg-min) {
@@ -23,7 +22,6 @@
 }
 
 .detail-view__meta {
-  @include normal-text;
   p {
     margin-bottom: 2.5rem;
 
