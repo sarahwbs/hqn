@@ -1,0 +1,6 @@
+<select class="select-dropdown" aria-label="{{ include.aria-label }}">
+  {% for option in include.options %}
+    {% capture i %}{{ forloop.index }}{% endcapture %}
+    <option value="{{ i }}" {% if include.selected == i %}selected{% endif %}>{{ option }}</option>
+  {% endfor %}
+</select>
