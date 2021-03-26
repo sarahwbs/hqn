@@ -5,7 +5,8 @@ window.addEventListener("load", function () {
 
   if (popupModal) {
     function closePopupModal() {
-      popupModal.remove();
+      popupModal.setAttribute("aria-hidden", "true");
+      popupModal.classList.add("d-none");
     }
 
     popupModalCloseBtn.addEventListener("click", closePopupModal);
