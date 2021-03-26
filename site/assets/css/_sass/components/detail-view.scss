@@ -21,7 +21,8 @@
   @include large-text-v3;
   font-family: var(--font-family-primary);
   @media screen and (min-width: $screen-lg) {
-    @include h2-playfair;
+    @include heading-playfair;
+    @include headline-text;
   }
 }
 

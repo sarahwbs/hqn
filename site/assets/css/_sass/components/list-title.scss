@@ -1,5 +1,9 @@
 .list-title__heading {
-  @include h2-playfair;
+  @include heading-playfair-mobile;
+
+  @media screen and (min-width: $screen-lg) {
+    @include heading-playfair;
+  }
 }
 
 .list-title__sub-heading {
@@ -16,10 +20,4 @@
   width: 0.4rem;
   height: 2rem;
   background: var(--pink);
-}
-
-@media screen and (max-width: $screen-lg) {
-  .list-title__heading {
-    @include h2-playfair-mobile;
-  }
 }

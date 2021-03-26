@@ -1,0 +1,25 @@
+---
+---
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Harlequin+</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script
+      type="text/javascript"
+      src="{{site.baseurl}}/assets/js/bootstrap.bundle.min.js"
+    ></script>
+    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/styles.css" />
+  </head>
+  <body class="bg-primary text-body">
+    <div
+      class="container-fluid d-flex flex-column align-items-end h-100 px-5 main"
+    >
+      {% include header.html infopage="true" userstate="signed-out" %}
+      <div class="w-100">{{ content }}</div>
+      {% include footer.html %}
+    </div>
+  </body>
+</html>
