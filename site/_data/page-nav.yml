@@ -1,5 +1,7 @@
 - name: Landing Page (non-logged in visitors)
   link: /landing
+- name: Subscription Info
+  link: /subscription-info
 - name: Subscriber Home Page (non-subscribed users)
   link: /subscriber-home
 - name: Subscriber Home Page (subscribed users)
