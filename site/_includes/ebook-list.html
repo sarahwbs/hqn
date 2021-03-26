@@ -6,10 +6,16 @@
         until Dec. 31" %}
       </div>
 
-      <div class="col-lg-8 p-0">{% include filter-sort-btns.html %}</div>
+      <div class="col px-0 mt-6 mb-5 d-block d-lg-none">
+        {% include body-copy.html copy="Free ebooks available to read during a
+        limited time. These books can be found and read directly here, in the
+        Ebook Library, and will not be found in your personal Bookshelf." %}
+      </div>
+
+      <div class="col-lg-8 p-0 ebooks-list__filter-sort-btns">{% include filter-sort-btns.html %}</div>
     </div>
 
-    <div class="row gx-5 ebooks-list__copy">
+    <div class="row gx-5 my-10 mx-0 d-none d-lg-block">
       <div class="col-lg-8 px-0">
         {% include body-copy.html copy="Free ebooks available to read during a
         limited time. These books can be found and read directly here, in the
