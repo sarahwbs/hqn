@@ -1,4 +1,4 @@
-window.onload = function () {
+window.addEventListener("load", function () {
   // look for the carousel
   var homePageCarousel = document.querySelector("#homePageCarousel");
 
@@ -26,4 +26,4 @@ window.onload = function () {
       e.target.classList.toggle("carousel-play");
     });
   }
-};
+});

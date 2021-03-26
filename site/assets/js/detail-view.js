@@ -1,4 +1,4 @@
-window.onload = function () {
+window.addEventListener("load", function () {
   if (document.querySelector(".detail-view")) {
     if (
       document.querySelector(
@@ -61,4 +61,4 @@ window.onload = function () {
     window.addEventListener("resize", shiftProgressBarAndActionButtons);
     shiftProgressBarAndActionButtons();
   }
-};
+});
