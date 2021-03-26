@@ -28,7 +28,6 @@
 
 .detail-view__meta {
   p {
-    @include small-text-v2;
     margin-bottom: 2.2rem;
 
     @media screen and (min-width: $screen-lg) {
