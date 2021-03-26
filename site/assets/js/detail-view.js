@@ -8,7 +8,7 @@ window.addEventListener("load", function () {
       // Update buttons when mark as complete is clicked
       function markBookAsComplete() {
         document.querySelector(".detail-view__progress p").innerText =
-          "100% OF BOOK READ";
+          "100% of Book Read";
         document.querySelector(
           ".detail-view__progress .progress-bar"
         ).style.width = "100%";
