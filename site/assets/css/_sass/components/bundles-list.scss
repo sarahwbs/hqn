@@ -1,0 +1,51 @@
+.bundles-list__radio-filter.btn-group {
+  background-color: var(--dark-purple-v3);
+  border-radius: 2.4rem;
+}
+
+.bundles-list__container {
+  margin-top: 5rem;
+}
+
+.bundles-list__radio-filter.btn-group > .btn-check:checked + .btn,
+.bundles-list__radio-filter.btn-group > .btn-check:focus + .btn,
+.bundles-list__radio-filter.btn-group > .btn:focus,
+.bundles-list__radio-filter.btn-group > .btn:active,
+.bundles-list__radio-filter.btn-group > .btn.active {
+  color: var(--white);
+  background-color: var(--medium-purple-v4);
+  border-radius: 2.4rem;
+}
+
+/* non selected btn */
+.bundles-list__radio-filter.btn-group .btn {
+  background-color: transparent;
+  color: var(--grey-v5);
+  @include small-text;
+  line-height: 4rem;
+  width: 9.8rem;
+  height: 4.7rem;
+  border: 0;
+}
+
+.bundles-list__radio-filter.btn-group > .btn:nth-child(n + 3),
+.bundles-list__radio-filter.btn-group > :not(.btn-check) + .btn,
+.bundles-list__radio-filter.btn-group > .btn-group:not(:first-child) > .btn,
+.bundles-list__radio-filter.btn-group > .btn:not(:last-child):not(.dropdown-toggle),
+.bundles-list__radio-filter.btn-group > .bundles-list__radio-filter.btn-group:not(:last-child) > .btn {
+  border-radius: 2.4rem;
+}
+
+.bundles-list__radio-filter.btn-group > .btn:hover {
+  background-color: transparent;
+}
+
+@media screen and (max-width: $screen-lg) {
+  .bundles-list__radio-filter.btn-group {
+    width: 100%;
+  }
+
+  .bundles-list__container {
+    margin-top: 2.3rem;
+  }
+}
