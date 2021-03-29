@@ -26,7 +26,7 @@ window.addEventListener("load", function () {
       });
 
       if (!activeOpt) {
-        // Set the first option as the default option if there's no action option.
+        // Set the first option as the default option if there's no active option.
         selectMenuBtn.innerText = activeOptionElement.innerText;
       }
     }
