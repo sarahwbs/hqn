@@ -1,0 +1,67 @@
+<div class="container-md p-0">
+  <div class="detail-view mb-12">
+    {% include button.html type="rounded-transparent" label="Back"
+    extraClasses="normal-text back-arrow-button ps-8 pe-8" %}
+
+    <div class="row gx-5 mt-7">
+      <div
+        class="detail-view_col-1 col-lg-3 text-center text-lg-start mb-7 mb-0-lg"
+      >
+        <img
+          src="/assets/img/ebook-detail.png"
+          class="w-100 drop-shadow-1 detail-view__image"
+          alt="Preview Image"
+        />
+      </div>
+
+      <div class="detail-view_col-2 col-lg-6">
+        <div class="detail-view_info px-6">
+          <h1 class="mb-6 text-center text-lg-start">
+            Sawyer &amp; Cowboy Above the Law
+          </h1>
+          <div class="detail-view__meta mb-10 text-center text-lg-start">
+            {% include body-copy.html copy="By Lori Foster / Pub Month: December
+            2020<br />Genre: Western Romance" %}
+            <!--  -->
+            {% include body-copy.html copy="Miniseries: Albin Academy (Book #2)"
+            %}
+          </div>
+          <div class="detail-view__description">
+            {% include body-copy.html copy='
+            <strong class="text-uppercase">A Safe Haven</strong>' %}
+            <!--  -->
+            {% include body-copy.html copy="As the only doctor in Buckhorn
+            County, Kentucky, Sawyer Hudson knows a thing or two about saving
+            lives. But when he rescues the beautiful Honey Malone from a car
+            wreck and invites her to stay at his home so he can nurse her back
+            to health, he finds himself dreading the day she’s well enough to
+            walk away. Because now that he’s met the woman of his dreams, he’s
+            not about to let her go." %}
+            <!--  -->
+            {% include body-copy.html copy="Honey’s been on the run for days,
+            but when a car accident lands her in Sawyer’s arms, she’s never felt
+            safer. Can he convince her that it’s okay to stop running—and build
+            a future in the one place that’s finally felt like home?" %}
+          </div>
+        </div>
+      </div>
+
+      <div class="detail-view_col-3 col-lg-3">
+        <div class="detail-view__progress mb-8">
+          {% include body-copy.html copy="80% of Book Read" %}
+          <!--  -->
+          {% include progress-bar.html percentage=80 %}
+        </div>
+        <div class="detail-view__controls mb-10 mb-lg-0">
+          {% include button.html type="rounded-full-width" label="Mark as Read"
+          extraClasses="detail-view__mark-button normal-text black-v2
+          checkmark-button mb-5" %}
+          <!--  -->
+          {% include button.html type="rounded-full-width" label="Read Now"
+          extraClasses="detail-view__read-button normal-text light-purple
+          drop-shadow-5" %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

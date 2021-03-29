@@ -14,3 +14,7 @@
   link: /games
 - name: Movies Page
   link: /movies
+- name: Book Detail Page
+  link: /ebook-details
+- name: Movie Detail Page
+  link: /movie-details

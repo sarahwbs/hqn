@@ -1,8 +1,15 @@
-{% if include.type == "rounded-pink" %}
-    <button
-      type="button"
-      class="btn btn-primary btn-lg pink-button {{ include.extraClasses }}"
-    >
-      {{ include.label }}
-    </button>
-{% endif %}
+{% case include.type %}<!--  -->
+{% when "rounded-full-width" %}<!--  -->
+{% assign buttonClass = "full-width-button" %}<!--  -->
+{% when "rounded-transparent" %}<!--  -->
+{% assign buttonClass = "transparent-button" %}<!--  -->
+{% else %}<!--  -->
+{% assign buttonClass = "default-button pink" %}<!--  -->
+{% endcase %}<!--  -->
+
+<button
+  type="button"
+  class="btn btn-primary btn-lg {{ buttonClass }} {{ include.extraClasses }}"
+>
+  {{ include.label }}
+</button>

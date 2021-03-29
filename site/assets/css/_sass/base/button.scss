@@ -2,6 +2,11 @@
   padding: 1.4rem 2rem 1.2rem;
   border-radius: var(--button-border-radius);
   border: 0.1rem solid transparent;
+
+  &.normal-text {
+    @include normal-text;
+    font-weight: 600;
+  }
 }
 
 @mixin input-button {
@@ -13,9 +18,12 @@
   color: var(--dark-grey);
 }
 
-@mixin pink-button {
+@mixin default-button {
   @include button;
-  background-color: var(--pink);
+
+  &.pink {
+    background-color: var(--pink);
+  }
 }
 
 @mixin transparent-button {
@@ -24,14 +32,37 @@
   background-color: transparent;
 }
 
-.pink-button {
-  @include pink-button;
+@mixin full-width-button {
+  @include button;
+  width: 100%;
+
+  &.light-purple {
+    background-color: var(--light-purple);
+  }
+
+  &.black-v2 {
+    background-color: var(--black-v2);
+  }
+
+  &.white {
+    background: var(--white);
+    color: var(--dark-purple-v4);
+  }
+
+  &.transparent {
+    border-color: var(--white-v2);
+    background-color: transparent;
+  }
+}
+
+.default-button {
+  @include default-button;
 
   // TODO: change that once we get a style guide
   &:hover,
   &:active,
   &:focus {
-    @include pink-button;
+    @include default-button;
   }
 }
 
@@ -43,6 +74,17 @@
   &:active,
   &:focus {
     @include transparent-button;
+  }
+}
+
+.full-width-button {
+  @include full-width-button;
+
+  // TODO: change that once we get a style guide
+  &:hover,
+  &:active,
+  &:focus {
+    @include full-width-button;
   }
 }
 
@@ -69,4 +111,42 @@
 
 .filter-button__text {
   padding-right: 7rem;
+}
+
+.back-arrow-button {
+  display: flex;
+  align-items: center;
+  &:before {
+    content: "";
+    display: block;
+    position: relative;
+    background: url("../img/icons/right-arrow.svg") center right / 2rem 0.9rem
+      no-repeat;
+    transform: rotate(180deg);
+    width: 2rem;
+    height: 0.9rem;
+    margin-right: 0.8rem;
+    top: -0.1rem;
+  }
+}
+
+.checkmark-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:before {
+    content: "";
+    display: block;
+    background: url("../img/icons/checkmark-white.svg") center right / 1.8rem
+      1.4rem no-repeat;
+    width: 1.8rem;
+    height: 1.4rem;
+    margin-right: 1.1rem;
+  }
+
+  &.checked-button {
+    &:before {
+      background-image: url("../img/icons/checkmark-dark-purple.svg");
+    }
+  }
 }

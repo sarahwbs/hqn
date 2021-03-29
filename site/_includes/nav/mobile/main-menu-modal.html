@@ -15,7 +15,7 @@
           aria-label="Close"
         >
           <img
-            src="{{site.baseurl}}/assets/img/icons/close.svg"
+            src="{{site.baseurl}}/assets/img/icons/close-white.svg"
             alt="Menu Icon"
           />
         </button>
@@ -34,7 +34,9 @@
             {% for item in site.data.mobile-nav %}
             <div class="row menu-modal__nav-row">
               <div class="col d-flex justify-content-between px-0">
-                <a class="menu-modal__link w-100" href="{{ item.link }}">{{ item.name }}</a>
+                <a class="menu-modal__link w-100" href="{{ item.link }}"
+                  >{{ item.name }}</a
+                >
                 <a class="menu-modal__link" href="{{ item.link }}">
                   <img
                     src="{{site.baseurl}}/assets/img/icons/right-arrow-thin.svg"
