@@ -1,6 +1,24 @@
-<select class="select-dropdown" aria-label="{{ include.aria-label }}">
+<!--<select class="select-dropdown" aria-label="{{ include.aria-label }}">
   {% for option in include.options %}
     {% capture i %}{{ forloop.index }}{% endcapture %}
     <option value="{{ i }}" {% if include.selected == i %}selected{% endif %}>{{ option }}</option>
   {% endfor %}
-</select>
+</select>-->
+
+<div class="dropdown">
+  <button
+    class="btn dropdown-toggle select-dropdown"
+    type="button"
+    id="selectDropdownButton"
+    data-bs-toggle="dropdown"
+    aria-expanded="false"
+  >
+    Dropdown button
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="selectDropdownButton">
+    {% for option in include.options %}
+      {% capture i %}{{ forloop.index }}{% endcapture %}
+      <li><a class="dropdown-item" href="#" val="{{ i }}" {% if include.selected == i %}active{% endif %}>{{ option }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
