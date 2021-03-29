@@ -121,6 +121,8 @@
   min-height: 4rem;
   text-align: left;
   border: 0;
+  position: relative;
+  z-index: 2;
 
   &:after {
     content: none;
@@ -134,10 +136,11 @@
 
 @mixin select-dropdown-options-menu {
   min-width: 22rem;
-  padding: 0;
+  padding: 1rem 0;
   border: 0;
   box-shadow: 0 0.8rem 4rem var(--grey-v4);
   top: -1rem !important;
+  z-index: 1;;
 
   a {
     @include small-text;

@@ -7,10 +7,12 @@ window.addEventListener("load", function () {
       ".select-dropdown-control-btn"
     );
     const allOptions = selectOptionsMenu.querySelectorAll(".dropdown-item");
+    const mainContentDiv = document.querySelector(".main-content");
     let activeOptionElement = allOptions[0];
 
     setActiveOption();
     attachClickEventsToAllOptions();
+    stackElements();
 
     function setActiveOption() {
       let activeOpt = false;
@@ -45,8 +47,28 @@ window.addEventListener("load", function () {
               option.removeAttribute("active");
             }
           });
+
+          if (mainContentDiv.hasAttribute("style")) {
+            stackElements("removeStack");
+          }
         });
       });
+    }
+
+    /**
+     * This function will stack Bootstrap's dropdown elements on top of the main-content div in order
+     * to fix an issue where the Bootstrap's dropdown will stack beneath the main content.
+     */
+    function stackElements(action) {
+      if (action === "removeStack") {
+        mainContentDiv.style.position = "static";
+        mainContentDiv.style.zIndex = "unset";
+      } else {
+        selectMenuBtn.addEventListener("show.bs.dropdown", (event) => {
+          mainContentDiv.style.position = "relative";
+          mainContentDiv.style.zIndex = 0;
+        });
+      }
     }
   }
 });
