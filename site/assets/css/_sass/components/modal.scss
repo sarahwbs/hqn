@@ -72,6 +72,41 @@
   }
 }
 
+.popup-modal__error {
+  border: 0.1rem solid var(--red-v3);
+  padding: 1.4rem 2.5rem 1.6rem 5.1rem;
+  border-radius: 0.4rem;
+  position: relative;
+
+  @media screen and (min-width: $screen-lg) {
+    padding: 1.4rem 5.1rem 1.6rem;
+  }
+
+  &:before {
+    content: "";
+    background: url("../img/icons/warning.svg") no-repeat top left;
+    background-size: cover;
+    width: 2.4rem;
+    height: 2.4rem;
+    display: block;
+    position: absolute;
+    top: 1.3rem;
+    left: 1.5rem;
+  }
+
+  p {
+    @include normal-text;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  a {
+    color: var(--red-v4);
+  }
+}
+
 .popup-modal_content-wrapper {
   background: var(--white);
   border-radius: 0.4rem;

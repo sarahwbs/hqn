@@ -23,6 +23,10 @@
 
   <div class="popup-modal__body-text mb-9 mb-lg-11">{{ include.bodyText }}</div>
 
+  {% if include.error %}
+  <div class="popup-modal__error mb-9" role="alert">{{ include.error }}</div>
+  {% endif %}
+
   <div
     class="popup-modal__buttons d-flex justify-content-end justify-content-lg-end"
   >

@@ -1,0 +1,18 @@
+---
+layout: signed-in-sub
+---
+
+<!-- Include bundle detail page when created -->
+{% include modal.html modaltype="bundle-selection" title="Your Selection"
+bodyText="
+<p>
+  Once you confirm your selection, the books in this bundle will be found on the
+  <strong>My Bookshelf</strong> page.
+</p>
+" bundleName="6 eBook" bundleImage="bundle-image.png" error="
+<p>
+  You already own this bundle. <a href=\"#\">Browse bundles</a> to find new
+  options.
+</p>
+" cancelButtonText="Cancel" buttonText="Confirm Selection"
+mobileButtonText="Confirm" %}
