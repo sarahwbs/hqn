@@ -45,6 +45,16 @@
   }
 }
 
+.popup-modal__sub-title {
+  @include large-text-v5;
+  display: block;
+  font-weight: 600;
+
+  @media screen and (min-width: $screen-lg) {
+    @include large-text-v4;
+  }
+}
+
 .popup-modal__body-text {
   @include normal-text;
 
@@ -160,7 +170,7 @@
       @media screen and (min-width: $screen-md) {
         width: inherit;
         margin-bottom: 0;
-        margin-left: 1rem;
+        margin-left: 1.2rem;
       }
 
       &:first-child {
@@ -196,7 +206,8 @@
     }
 
     .popup-modal__buttons button {
-      margin-left: 1rem;
+      margin-left: 1.2rem;
+
       &:first-child {
         margin-left: 0;
       }
@@ -204,6 +215,36 @@
 
     .popup-modal__content {
       max-width: 61rem;
+    }
+  }
+
+  &.delete-card,
+  &.delete-subscription {
+    max-width: 50rem;
+
+    @media screen and (min-width: $screen-lg) {
+      width: 60rem;
+      max-width: inherit;
+    }
+
+    .popup-modal__buttons button {
+      margin-left: 1.2rem;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+
+    .popup-modal__content {
+      max-width: 46rem;
+    }
+
+    .popup-modal__body-text p {
+      margin-bottom: 2.5rem;
+
+      @media screen and (min-width: $screen-lg) {
+        margin-bottom: 3rem;
+      }
     }
   }
 }

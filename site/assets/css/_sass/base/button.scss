@@ -24,6 +24,10 @@
   &.pink {
     background-color: var(--pink);
   }
+
+  &.red {
+    background-color: var(--red-v3);
+  }
 }
 
 @mixin transparent-button {

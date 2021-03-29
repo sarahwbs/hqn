@@ -10,3 +10,7 @@
   link: /bundle-selection-error-modal-2
 - name: Movie Detail Page (Access Modal)
   link: /movie-details-modal
+- name: Billing & Shipping (Delete Card Modal)
+  link: /delete-card-modal
+- name: Payment & Shipping (Delete Subscription Modal)
+  link: /delete-subscription-modal
