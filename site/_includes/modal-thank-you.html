@@ -1,12 +1,13 @@
 <div class="popup-modal__content">
   <div class="popup-modal__title mb-6 mb-lg-7">{{ include.title }}</div>
+
   <div class="popup-modal__body-text mb-10 mb-lg-14">
     {{ include.bodyText }}
   </div>
 
   <div class="popup-modal__buttons d-md-flex justify-content-end">
     {% include button.html type="rounded-pink" label=include.buttonText
-    extraClasses="normal-text px-md-8 py-md-3" %}
+    extraClasses="normal-text px-md-8" %}
     <!--  -->
     {% if include.buttonText2 %}
     <!--  -->

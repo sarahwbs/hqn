@@ -1,27 +1,31 @@
 <div
-  class="popup-modal d-flex justify-content-center align-items-center w-100 h-100 position-fixed top-0 start-0"
+  class="popup-modal w-100 h-100 position-absolute top-0 start-0"
   aria-modal="true"
   aria-hidden="false"
 >
-  <div class="popup-modal_content-wrapper {{ include.modaltype }}">
-    <button
-      type="button"
-      class="popup-modal__btn-close"
-      data-bs-dismiss="modal"
-      aria-label="Close Modal"
-    >
-      <img
-        src="{{site.baseurl}}/assets/img/icons/close-dark-purple.svg"
-        class="w-100 d-block"
-        alt="Close Icon"
-      />
-    </button>
+  <div class="d-flex justify-content-center align-items-center min-vh-100">
+    <div class="popup-modal_content-wrapper my-10 {{ include.modaltype }}">
+      <button
+        type="button"
+        class="popup-modal__btn-close"
+        data-bs-dismiss="modal"
+        aria-label="Close Modal"
+      >
+        <img
+          src="{{site.baseurl}}/assets/img/icons/close-dark-purple.svg"
+          class="w-100 d-block"
+          alt="Close Icon"
+        />
+      </button>
 
-    {% if include.modaltype == "default" %}<!--  -->
-    {% include modal-default.html %}<!--  -->
-    {% elsif include.modaltype == "thank-you" or include.modaltype ==
-    "thank-you-2"%}<!--  -->
-    {% include modal-thank-you.html %}<!--  -->
-    {% endif %}
+      {% if include.modaltype == "default" %}<!--  -->
+      {% include modal-default.html %}<!--  -->
+      {% elsif include.modaltype == "thank-you" or include.modaltype ==
+      "thank-you-2"%}<!--  -->
+      {% include modal-thank-you.html %}<!--  -->
+      {% elsif include.modaltype == "bundle-selection" %}<!--  -->
+      {% include modal-bundle-selection.html %}<!--  -->
+      {% endif %}
+    </div>
   </div>
 </div>

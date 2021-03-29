@@ -30,6 +30,11 @@
   @include button;
   border-color: var(--white-v2);
   background-color: transparent;
+
+  &.dark-grey {
+    border-color: var(--light-grey-v4);
+    color: var(--dark-grey);
+  }
 }
 
 @mixin full-width-button {

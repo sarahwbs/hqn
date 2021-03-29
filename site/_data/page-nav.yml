@@ -12,6 +12,8 @@
   link: /bundle-thank-you-modal
 - name: Bundles Details (Thank You Modal 2)
   link: /bundle-thank-you-modal-2
+- name: Bundles Details (Bundle Selection Modal)
+  link: /bundle-selection-modal
 - name: eBook Library Page
   link: /ebooks
 - name: Games Page

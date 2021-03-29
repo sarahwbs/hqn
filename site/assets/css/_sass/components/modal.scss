@@ -6,7 +6,7 @@
     opacity: 0.75;
     width: 100%;
     height: 100%;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 0;
@@ -49,7 +49,26 @@
   @include normal-text;
 
   strong {
-    font-weight: 600;
+    font-weight: 700;
+  }
+}
+
+.popup-modal__bundle-selection {
+  border-top: 0.1rem solid var(--light-grey-v4);
+  border-bottom: 0.1rem solid var(--light-grey-v4);
+}
+
+.popup-modal__bundle-info {
+  p {
+    @include normal-text;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  strong {
+    font-weight: 700;
   }
 }
 
@@ -130,6 +149,26 @@
 
     @media screen and (min-width: $screen-lg) {
       max-width: inherit;
+    }
+  }
+
+  &.bundle-selection {
+    max-width: 60rem;
+
+    @media screen and (min-width: $screen-lg) {
+      width: 81rem;
+      max-width: inherit;
+    }
+
+    .popup-modal__buttons button {
+      margin-left: 1rem;
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+
+    .popup-modal__content {
+      max-width: 61rem;
     }
   }
 }
