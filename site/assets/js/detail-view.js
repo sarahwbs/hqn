@@ -31,7 +31,7 @@ window.addEventListener("load", function () {
     // Shift the progress bar and action buttons into another column for mobile
     // (This cannot be done via CSS order as the description is within a part of a column)
     function shiftProgressBarAndActionButtons() {
-      var detailDescription = document.querySelector(
+      const detailDescription = document.querySelector(
         ".detail-view__description"
       );
 
