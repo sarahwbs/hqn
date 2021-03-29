@@ -1,4 +1,5 @@
 .menu-modal__btn {
+  border: none;
   padding: 0;
 }
 
@@ -30,7 +31,7 @@
 
 .menu-modal__link {
   @include normal-text;
-  padding: 1.5rem .5rem 1.5rem 0;
+  padding: 1.5rem 0.5rem 1.5rem 0;
 }
 
 .menu-modal__nav-container {
