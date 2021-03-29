@@ -1,0 +1,60 @@
+.order-history__title {
+  @include heading-playfair-mobile;
+
+  @media screen and (min-width: $screen-lg) {
+    @include heading-playfair;
+  }
+}
+
+.order-history__list {
+  thead {
+    border-bottom: 1px solid var(--white-v5);
+
+    th {
+      @include xsmall-text-v2;
+      font-weight: 600;
+      padding: 1rem 2rem 1rem 0;
+      width: 37.5%;
+
+      &:first-child {
+        width: 25%;
+      }
+
+      @media screen and (min-width: $screen-md) {
+        width: inherit;
+        padding: 1rem 2.5rem;
+
+        &:first-child {
+          width: inherit;
+        }
+      }
+
+      @media screen and (min-width: $screen-lg) {
+        @include small-text-v2;
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      border-bottom: 1px solid var(--white-v4);
+
+      td {
+        @include xsmall-text-v2;
+        padding: 2.5rem 2rem 2.5rem 0;
+
+        @media screen and (min-width: $screen-md) {
+          padding: 3rem 2.5rem;
+        }
+
+        @media screen and (min-width: $screen-lg) {
+          @include small-text-v2;
+        }
+
+        a {
+          color: var(--yellow);
+        }
+      }
+    }
+  }
+}

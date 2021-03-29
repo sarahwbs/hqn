@@ -18,3 +18,5 @@
   link: /ebook-details
 - name: Movie Detail Page
   link: /movie-details
+- name: Order History Page
+  link: /order-history

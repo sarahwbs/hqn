@@ -1,0 +1,30 @@
+<div class="container-md p-0">
+  <div class="order-history mb-8 mb-lg-12">
+    <h1 class="order-history__title mb-8 mb-lg-10">Order History</h1>
+
+    {% include body-copy.html copy="Your current Harlequin Plus order status is
+    summarized below. Please note: Order Status details are accessible for 6
+    months." extraClasses="mb-8 mb-lg-10" %}
+
+    <table class="order-history__list w-100">
+      <thead>
+        <tr>
+          <th>Order #</th>
+          <th>Order Date</th>
+          <th class="d-none d-md-block">Status</th>
+          <th>Order Type</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for item in site.data.order-history %}
+        <tr>
+          <td><a href="#">{{ item.order }}</a></td>
+          <td>{{ item.date }}</td>
+          <td class="d-none d-md-block">{{ item.status }}</td>
+          <td>{{ item.type }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,5 +1,6 @@
 .popup-modal {
   z-index: 9;
+
   &:before {
     content: "";
     background: var(--dark-purple-v4);
