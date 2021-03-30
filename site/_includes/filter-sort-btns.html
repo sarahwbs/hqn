@@ -9,6 +9,6 @@
   <div class="filter-sort-btns__sort d-flex">
     <div class="filter-sort-btns__sort__title">Sort:</div>
     {% assign selectOptions = "Title A-Z,Title Z-A,Relevance,Most Recent,Popularity" | split: ',' %}
-    {% include select-dropdown.html options=selectOptions selected="4" %}
+    {% include select-dropdown.html id="sortByDropdown" options=selectOptions selected="4" %}
   </div>
 </div>

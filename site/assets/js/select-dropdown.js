@@ -1,56 +1,75 @@
 window.addEventListener("load", function () {
   if (document.querySelector(".select-dropdown-control")) {
-    const selectOptionsMenu = document.querySelector(
-      ".select-dropdown-control-menu"
-    );
-    const selectMenuBtn = document.querySelector(
+    const selectMenuBtns = document.querySelectorAll(
       ".select-dropdown-control-btn"
     );
-    const allOptions = selectOptionsMenu.querySelectorAll(".dropdown-item");
+    const selectOptionsMenus = document.querySelectorAll(
+      ".select-dropdown-control-menu"
+    );
     const mainContentDiv = document.querySelector(".main-content");
-    let activeOptionElement = allOptions[0];
 
-    setActiveOption();
-    attachClickEventsToAllOptions();
-    stackElements();
-
+    /**
+     * Set 'active' class for the relevant option on all the dropdowns on the page.
+     */
     function setActiveOption() {
-      let activeOpt = false;
+      selectOptionsMenus.forEach((dropdownMenu) => {
+        let activeOpt = false;
+        let allOptions = dropdownMenu.querySelectorAll(".dropdown-item");
+        let activeOptionElement = allOptions[0];
+        let associatedButton = document.querySelector(
+          `.select-dropdown-control-btn[id=${dropdownMenu.getAttribute(
+            "aria-labelledby"
+          )}]`
+        );
 
-      // Set the active option, if there is one.
-      allOptions.forEach((option) => {
-        if (option.hasAttribute("active")) {
-          activeOpt = true;
-          selectMenuBtn.innerText = option.innerText;
+        // Set the active option, if there is one.
+        allOptions.forEach((option) => {
+          if (option.getAttribute("data-active") === "true") {
+            activeOpt = true;
+            associatedButton.innerHTML = option.innerHTML;
+          }
+        });
+
+        if (!activeOpt) {
+          // Set the first option as the default option if there's no active option.
+          associatedButton.innerHTML = activeOptionElement.innerHTML;
         }
       });
-
-      if (!activeOpt) {
-        // Set the first option as the default option if there's no active option.
-        selectMenuBtn.innerText = activeOptionElement.innerText;
-      }
     }
 
+    /**
+     * Attach click event handlers to all the options on all the dropdowns on the page.
+     */
     function attachClickEventsToAllOptions() {
-      allOptions.forEach((option) => {
-        option.addEventListener("click", (event) => {
-          event.preventDefault();
-          selectMenuBtn.innerText = event.target.innerText;
+      selectOptionsMenus.forEach((dropdownMenu) => {
+        let allOptions = dropdownMenu.querySelectorAll(".dropdown-item");
+        let associatedButton = document.querySelector(
+          `.select-dropdown-control-btn[id=${dropdownMenu.getAttribute(
+            "aria-labelledby"
+          )}]`
+        );
 
-          // Set element to active
-          event.target.setAttribute("active", "active");
-          // Remove active attr from all other non-active elements
-          allOptions.forEach((option) => {
-            if (
-              option.getAttribute("val") !== event.target.getAttribute("val")
-            ) {
-              option.removeAttribute("active");
+        allOptions.forEach((option) => {
+          option.addEventListener("click", (event) => {
+            event.preventDefault();
+            associatedButton.innerHTML = event.target.innerHTML;
+
+            // Set element to active
+            event.target.setAttribute("data-active", "true");
+            // Remove active attr from all other non-active elements
+            allOptions.forEach((opt) => {
+              if (
+                parseInt(opt.getAttribute("data-val"), 10) !==
+                parseInt(event.target.getAttribute("data-val"), 10)
+              ) {
+                opt.setAttribute("data-active", "false");
+              }
+            });
+
+            if (mainContentDiv.hasAttribute("style")) {
+              stackElements("removeStack");
             }
           });
-
-          if (mainContentDiv.hasAttribute("style")) {
-            stackElements("removeStack");
-          }
         });
       });
     }
@@ -64,11 +83,17 @@ window.addEventListener("load", function () {
         mainContentDiv.style.position = "static";
         mainContentDiv.style.zIndex = "unset";
       } else {
-        selectMenuBtn.addEventListener("show.bs.dropdown", (event) => {
-          mainContentDiv.style.position = "relative";
-          mainContentDiv.style.zIndex = 0;
+        selectMenuBtns.forEach((btn) => {
+          btn.addEventListener("show.bs.dropdown", () => {
+            mainContentDiv.style.position = "relative";
+            mainContentDiv.style.zIndex = 0;
+          });
         });
       }
     }
+
+    setActiveOption();
+    attachClickEventsToAllOptions();
+    stackElements();
   }
 });

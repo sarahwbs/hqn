@@ -2,14 +2,27 @@
   <button
     class="btn dropdown-toggle select-dropdown-control-btn"
     type="button"
-    id="selectDropdownButton"
+    id="{{ include.id }}"
     data-bs-toggle="dropdown"
     aria-expanded="false"
   ></button>
-  <ul class="dropdown-menu select-dropdown-control-menu" aria-labelledby="selectDropdownButton">
-    {% for option in include.options %}
-      {% capture i %}{{ forloop.index }}{% endcapture %}
-      <li><a class="dropdown-item" href="#" val="{{ i }}" {% if include.selected == i %}active{% endif %}>{{ option }}</a></li>
+  <ul
+    class="dropdown-menu select-dropdown-control-menu"
+    aria-labelledby="{{ include.id }}"
+  >
+    {% for option in include.options %}<!-- -->
+    {% capture i %}{{ forloop.index }}{% endcapture %}
+    <li>
+      <a
+        class="dropdown-item"
+        href="#"
+        data-val="{{ i }}"
+        data-active="{% if include.selected == i %}true{% endif %}"
+        >
+        {{ option }}
+      </a
+      >
+    </li>
     {% endfor %}
   </ul>
 </div>

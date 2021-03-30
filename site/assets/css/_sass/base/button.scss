@@ -12,9 +12,9 @@
 @mixin input-button {
   @include grey-gradient;
   @include dropshadow;
+  @include normal-text;
   padding: 1rem 1.5rem;
   border-radius: var(--input-border-radius);
-  font-size: 1.6rem;
   color: var(--dark-grey);
   font-weight: 300;
 
@@ -113,6 +113,7 @@
 
 @mixin select-dropdown {
   @include input-button;
+  @include dropshadow-v2;
   @include grey-gradient-with-image-bg(
     url("../img/icons/down-arrow.svg") no-repeat center right 1.5rem
   );
@@ -123,6 +124,7 @@
   border: 0;
   position: relative;
   z-index: 2;
+  line-height: unset;
 
   &:after {
     content: none;
@@ -130,7 +132,7 @@
 
   &.btn-check:focus + .btn,
   &.btn:focus {
-    @include dropshadow;
+    @include dropshadow-v2;
   }
 }
 
@@ -146,7 +148,7 @@
     @include small-text;
     line-height: unset;
     padding: 2rem 1.3rem;
-    color: var(--grey-v7);
+    color: var(--grey-v3);
   }
 }
 
