@@ -16,7 +16,7 @@
         {% include body-copy.html copy="<strong>Name of Bundle</strong>"
         extraClasses="mb-0" %}
         <!--  -->
-        {% include body-copy.html copy=include.bundleName %}
+        {% include body-copy.html copy=include.bundleSelectionText %}
       </div>
     </div>
   </div>
@@ -29,9 +29,7 @@
   <div class="popup-modal__error mb-10" role="alert">{{ include.error }}</div>
   {% endif %}
 
-  <div
-    class="popup-modal__buttons d-flex justify-content-end justify-content-lg-end"
-  >
+  <div class="popup-modal__buttons d-flex justify-content-end">
     {% include button.html type="rounded-transparent"
     label=include.cancelButtonText extraClasses="normal-text dark-grey px-7
     px-sm-8" %}
