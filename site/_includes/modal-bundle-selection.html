@@ -21,10 +21,12 @@
     </div>
   </div>
 
-  <div class="popup-modal__body-text mb-9 mb-lg-11">{{ include.bodyText }}</div>
+  <div class="popup-modal__body-text mb-10 mb-lg-12">
+    {{ include.bodyText }}
+  </div>
 
   {% if include.error %}
-  <div class="popup-modal__error mb-9" role="alert">{{ include.error }}</div>
+  <div class="popup-modal__error mb-10" role="alert">{{ include.error }}</div>
   {% endif %}
 
   <div
