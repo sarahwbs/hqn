@@ -24,12 +24,13 @@
         {% if include.userstate == "signed-in" and include.sub == "true" %}
         <div class="row">
           <div class="col px-0">
-            {% include button.html type="rounded-pink" label="My Bookshelf" extraClasses="menu-modal__pink-btn w-100" %}
+            {% include button.html type="rounded-pink" label="My Bookshelf"
+            extraClasses="menu-modal__pink-btn w-100" %}
           </div>
         </div>
         {% endif %}
 
-        <div class="row menu-modal__nav-container mt-9">
+        <div class="row menu-modal__nav-container mt-10">
           <nav class="col" aria-label="Mobile Navigation" role="navigation">
             {% for item in site.data.mobile-nav %}
             <div class="row menu-modal__nav-row">
