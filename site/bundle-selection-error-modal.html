@@ -1,0 +1,20 @@
+---
+layout: signed-in-sub
+---
+
+<!-- Include bundle detail page when created -->
+{% include modal.html modaltype="bundle-selection" title="Your Selection"
+bodyText="
+<p>
+  Once you confirm your selection, the books in this bundle will be found on the
+  <strong>My Bookshelf</strong> page.
+</p>
+" bundleSelectionText="6 eBook" bundleImage="bundle-image.png" error="
+<p>
+  You don't have a monthly selection available to proceed. New selections are
+  added to your account on the 1st of the month. You can
+  <a href=\"#\">upgrade your subscription</a> if you'd like more
+  than one bundle selection per month.
+</p>
+" cancelButtonText="Cancel" buttonText="Confirm Selection"
+mobileButtonText="Confirm" %}

@@ -5,10 +5,23 @@ layout: default
 <div
   class="h-100 w-100 d-flex flex-column justify-content-center align-items-center"
 >
-  <h1 class="">Static HTML Page Templates</h1>
-  <ul class="fs-4">
-    {% for item in site.data.page-nav %}
-    <li><a href="{{ item.link }}">{{ item.name }}</a></li>
-    {% endfor %}
-  </ul>
+  <h1 class="mb-8">Static HTML Page Templates</h1>
+  <div class="row gx-11">
+    <div class="col-6">
+      <h2>Pages</h2>
+      <ul class="fs-4">
+        {% for item in site.data.page-nav %}
+        <li><a href="{{ item.link }}">{{ item.name }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="col-6">
+      <h2>Modals</h2>
+      <ul class="fs-4">
+        {% for item in site.data.modal-nav %}
+        <li><a href="{{ item.link }}">{{ item.name }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
 </div>

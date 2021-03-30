@@ -6,37 +6,10 @@
     opacity: 0.75;
     width: 100%;
     height: 100%;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 0;
-  }
-}
-
-.popup-modal_content {
-  @include normal-text;
-  background: var(--white);
-  border-radius: 0.4rem;
-  color: var(--dark-grey);
-  z-index: 1;
-  position: relative;
-
-  &.default {
-    width: 90%;
-    max-width: 50rem;
-    padding: 7rem 3rem;
-
-    @media screen and (min-width: $screen-lg) {
-      max-width: inherit;
-      width: 60rem;
-      padding: 8rem 3rem;
-    }
-
-    .popup_modal__body-text {
-      max-width: 31rem;
-      margin-left: auto;
-      margin-right: auto;
-    }
   }
 }
 
@@ -46,8 +19,8 @@
   padding: 0;
   margin: 0;
   position: absolute;
-  right: 1.5rem;
-  top: 1.5rem;
+  right: 2rem;
+  top: 2rem;
   width: 1.3rem;
   height: 1.3rem;
   cursor: pointer;
@@ -55,5 +28,223 @@
   @media screen and (min-width: $screen-lg) {
     top: 3rem;
     right: 3rem;
+  }
+}
+
+.popup-modal__content {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.popup-modal__title {
+  @include large-text-v3;
+  font-weight: 600;
+
+  @media screen and (min-width: $screen-lg) {
+    @include large-text;
+  }
+}
+
+.popup-modal__sub-title {
+  @include large-text-v5;
+  display: block;
+  font-weight: 600;
+
+  @media screen and (min-width: $screen-lg) {
+    @include large-text-v4;
+  }
+}
+
+.popup-modal__body-text {
+  @include normal-text;
+
+  strong {
+    font-weight: 700;
+  }
+}
+
+.popup-modal__bundle-selection {
+  border-top: 0.1rem solid var(--light-grey-v4);
+  border-bottom: 0.1rem solid var(--light-grey-v4);
+}
+
+.popup-modal__bundle-info {
+  p {
+    @include normal-text;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  strong {
+    font-weight: 700;
+  }
+}
+
+.popup-modal__error {
+  border: 0.1rem solid var(--red-v3);
+  padding: 1.4rem 2.5rem 1.6rem 5.1rem;
+  border-radius: 0.4rem;
+  position: relative;
+
+  @media screen and (min-width: $screen-lg) {
+    padding: 1.4rem 5.1rem 1.6rem;
+  }
+
+  &:before {
+    content: "";
+    background: url("../img/icons/warning.svg") no-repeat top left;
+    background-size: cover;
+    width: 2.4rem;
+    height: 2.4rem;
+    display: block;
+    position: absolute;
+    top: 1.3rem;
+    left: 1.5rem;
+  }
+
+  p {
+    @include normal-text;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  a {
+    color: var(--red-v4);
+  }
+}
+
+.popup-modal_content-wrapper {
+  background: var(--white);
+  border-radius: 0.4rem;
+  color: var(--dark-grey);
+  z-index: 1;
+  position: relative;
+  width: 90%;
+  padding: 7rem 2.5rem;
+
+  @media screen and (min-width: $screen-lg) {
+    max-width: inherit;
+    padding: 8rem 3rem;
+  }
+
+  &.default {
+    max-width: 50rem;
+
+    @media screen and (min-width: $screen-lg) {
+      width: 60rem;
+      max-width: inherit;
+    }
+
+    .popup-modal__content {
+      max-width: 31rem;
+    }
+  }
+
+  &.thank-you,
+  &.thank-you-2 {
+    max-width: 50rem;
+    padding: 6.3rem 2.5rem 5.1rem;
+
+    @media screen and (min-width: $screen-md) {
+      max-width: 60rem;
+    }
+
+    @media screen and (min-width: $screen-lg) {
+      padding: 8rem 3rem 7.2rem;
+      width: 81rem;
+      max-width: inherit;
+    }
+
+    .popup-modal__content {
+      max-width: 60rem;
+    }
+
+    .popup-modal__buttons button {
+      width: 100%;
+      margin-bottom: 1rem;
+
+      @media screen and (min-width: $screen-md) {
+        width: inherit;
+        margin-bottom: 0;
+        margin-left: 1.2rem;
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &.thank-you-2 {
+    text-align: center;
+    padding-left: 3.6rem;
+    padding-right: 3.6rem;
+
+    @media screen and (min-width: $screen-md) {
+      text-align: left;
+    }
+
+    @media screen and (min-width: $screen-lg) {
+      max-width: inherit;
+    }
+  }
+
+  &.bundle-selection {
+    max-width: 60rem;
+
+    @media screen and (min-width: $screen-lg) {
+      width: 81rem;
+      max-width: inherit;
+    }
+
+    .popup-modal__buttons button {
+      margin-left: 1.2rem;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+
+    .popup-modal__content {
+      max-width: 61rem;
+    }
+  }
+
+  &.delete-card,
+  &.delete-subscription {
+    max-width: 50rem;
+
+    @media screen and (min-width: $screen-lg) {
+      width: 60rem;
+      max-width: inherit;
+    }
+
+    .popup-modal__buttons button {
+      margin-left: 1.2rem;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+
+    .popup-modal__content {
+      max-width: 46rem;
+    }
+
+    .popup-modal__body-text p {
+      margin-bottom: 2.5rem;
+
+      @media screen and (min-width: $screen-lg) {
+        margin-bottom: 3rem;
+      }
+    }
   }
 }

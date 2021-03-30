@@ -20,6 +20,7 @@
   --light-grey: #efefef;
   --light-grey-v2: #d1d1d1;
   --light-grey-v3: rgba(227, 227, 227, 0.2);
+  --light-grey-v4: #2d374833;
   --grey: #000033;
   --grey-v2: #0000004d;
   --grey-v3: #54585a;
@@ -30,6 +31,7 @@
   --red: #e65069;
   --red-v2: #ee3e72;
   --red-v3: #ff1c50;
+  --red-v4: #e11451;
   --light-pink: #f0666757;
   --pink: #cd1b81;
   --pink-v2: #e31d74;
@@ -90,6 +92,8 @@ $spacers: (
   13: $spacer * 6,
   14: $spacer * 6.5,
   15: $spacer * 7,
+  16: $spacer * 7.5,
+  17: $spacer * 8,
 );
 
 $gutters: $spacers;
