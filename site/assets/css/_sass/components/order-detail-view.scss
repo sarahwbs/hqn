@@ -1,0 +1,74 @@
+.order-detail-view__title {
+  @include large-text-v3;
+  font-weight: 400;
+
+  @media screen and (min-width: $screen-lg) {
+    @include large-text;
+  }
+}
+
+.order-detail-view__table {
+  tbody tr {
+    border-bottom: 1px solid var(--white-v5);
+  }
+}
+
+.order-detail-view__summary-box {
+  background: var(--black-v3);
+  padding: 3rem 2.6rem 4rem;
+  border-radius: 0.4rem;
+
+  @media screen and (min-width: $screen-lg) {
+    padding: 2.7rem 4.3rem 5.9rem;
+  }
+
+  strong {
+    font-weight: 600;
+  }
+}
+
+.order-detail-view__summary-title {
+  @include normal-text;
+  font-weight: 700;
+
+  @media screen and (min-width: $screen-lg) {
+    @include large-text-v4;
+  }
+}
+
+.order-detail-view__summary-info-wrapper {
+  @media screen and (min-width: $screen-sm) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  @media screen and (min-width: $screen-lg) {
+    display: block;
+  }
+}
+
+.order-detail-view__summary-content {
+  div:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.order-detail-view__summary-info {
+  margin-bottom: 2.5rem;
+
+  p {
+    @include small-text-v2;
+    margin-bottom: 0;
+  }
+}
+
+.order-detail-view__track-order-button {
+  box-shadow: 0 0.8rem 2rem var(--black-v4);
+  width: 100%;
+
+  @media screen and (min-width: $screen-sm) {
+    width: auto;
+  }
+}
