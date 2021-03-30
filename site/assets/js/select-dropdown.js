@@ -76,7 +76,7 @@ window.addEventListener("load", function () {
 
     /**
      * This function will stack Bootstrap's dropdown elements on top of the main-content div in order
-     * to fix an issue where the Bootstrap's dropdown will stack beneath the main content.
+     * to fix an issue where the Bootstrap's dropdown would stack beneath the main content.
      */
     function stackElements(action) {
       if (action === "removeStack") {
