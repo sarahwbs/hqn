@@ -1,0 +1,27 @@
+.order-history__title {
+  @include heading-playfair-mobile;
+
+  @media screen and (min-width: $screen-lg) {
+    @include heading-playfair;
+  }
+}
+
+.order-history__list {
+  thead {
+    th {
+      width: 37.5%;
+
+      &:first-child {
+        width: 25%;
+      }
+
+      @media screen and (min-width: $screen-md) {
+        width: inherit;
+
+        &:first-child {
+          width: inherit;
+        }
+      }
+    }
+  }
+}

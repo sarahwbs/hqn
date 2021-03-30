@@ -20,5 +20,5 @@
 
 @mixin heading-playfair-mobile {
   @include heading-playfair;
-  font-size: 2.8rem;
+  @include xlarge-text-v2;
 }

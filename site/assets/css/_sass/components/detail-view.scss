@@ -2,6 +2,7 @@
   max-width: 50rem;
   margin-left: auto;
   margin-right: auto;
+
   @media screen and (min-width: $screen-lg) {
     max-width: inherit;
   }
@@ -9,9 +10,11 @@
 
 .detail-view__image {
   max-width: 16rem;
+
   @media screen and (min-width: $screen-md) {
     max-width: 25rem;
   }
+
   @media screen and (min-width: $screen-lg) {
     max-width: inherit;
   }
@@ -20,9 +23,9 @@
 .detail-view_info h1 {
   @include large-text-v3;
   font-family: var(--font-family-primary);
+
   @media screen and (min-width: $screen-lg) {
     @include heading-playfair;
-    @include headline-text;
   }
 }
 
