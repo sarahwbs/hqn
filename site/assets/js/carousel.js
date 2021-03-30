@@ -1,27 +1,19 @@
 window.addEventListener("load", function () {
   // look for the carousel
-  var homePageCarousel = document.querySelector("#homePageCarousel");
+  const homePageCarousel = document.querySelector("#homePageCarousel");
 
   if (homePageCarousel) {
     // if it exists, initialize the carousel
-    var carousel = new bootstrap.Carousel(homePageCarousel, {
+    const carousel = new bootstrap.Carousel(homePageCarousel, {
       interval: 3000,
     });
 
-    const updateSlide = (e) => {
-      // if (announceItem) {
+    // when the slide updates, change the text in the live region for screen readers
+    homePageCarousel.addEventListener("slide.bs.carousel", function (e) {
       const liveregion = homePageCarousel.querySelector(".liveregion");
       const slides = homePageCarousel.querySelectorAll(".carousel-item");
       liveregion.textContent = "Slide " + (e.to + 1) + " of " + slides.length;
-      // }
-    };
-
-    homePageCarousel.addEventListener("slide.bs.carousel", function (e) {
-      updateSlide(e);
     });
-
-    // start the carousel cycling
-    carousel.cycle();
 
     // add pause/play functionality to the pause/play button
     const carouselPausePlay = document.querySelector(".carousel-pause");
@@ -45,5 +37,8 @@ window.addEventListener("load", function () {
       button.classList.toggle("carousel-pause");
       button.classList.toggle("carousel-play");
     });
+
+    // start the carousel cycling
+    carousel.cycle();
   }
 });
