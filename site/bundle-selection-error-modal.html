@@ -2,8 +2,6 @@
 layout: signed-in-sub
 ---
 
-{% capture escapeHref %} "#" {% endcapture %}
-
 <!-- Include bundle detail page when created -->
 {% include modal.html modaltype="bundle-selection" title="Your Selection"
 bodyText="
@@ -11,7 +9,7 @@ bodyText="
   Once you confirm your selection, the books in this bundle will be found on the
   <strong>My Bookshelf</strong> page.
 </p>
-" bundleName="6 eBook" bundleImage="bundle-image.png" error="
+" bundleSelectionText="6 eBook" bundleImage="bundle-image.png" error="
 <p>
   You don't have a monthly selection available to proceed. New selections are
   added to your account on the 1st of the month. You can
