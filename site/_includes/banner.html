@@ -1,12 +1,12 @@
 <div class="container-md p-0">
   <div class="cta cta-bottom">
     <a href="#" class="banner-link">
-      {% capture image %}assets/img/bottom-cta-sm-{{ i }}.png{% endcapture %}<!--  -->
-      {% capture image2x %}assets/img/bottom-cta-sm-{{ i }}@2x.png{% endcapture
+      {% capture image %}assets/img/bottom-cta-sm{{ i }}.png{% endcapture %}<!--  -->
+      {% capture image2x %}assets/img/bottom-cta-sm{{ i }}@2x.png{% endcapture
       %}<!--  -->
-      {% capture imageLarge %}assets/img/bottom-cta-{{ i }}.png{% endcapture %}<!--  -->
-      {% capture imageLarge2x %}assets/img/bottom-cta-{{ i }}@2x.png{%
-      endcapture %}<!--  -->
+      {% capture imageLarge %}assets/img/bottom-cta{{ i }}.png{% endcapture %}<!--  -->
+      {% capture imageLarge2x %}assets/img/bottom-cta{{ i }}@2x.png{% endcapture
+      %}<!--  -->
       {% include picture.html image=image image2x=image2x imageLarge=imageLarge
       imageLarge2x=imageLarge2x altText="alt text" extraClasses="bannger-img
       drop-shadow-4" %}</a
