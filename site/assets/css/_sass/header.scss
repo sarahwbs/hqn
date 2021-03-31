@@ -1,8 +1,8 @@
 .header {
-  margin: 4.4rem 0 6rem;
+  margin: 1.4rem 0 4rem;
 
-  @media screen and (max-width: $screen-lg) {
-    margin: 1.4rem 0 4rem;
+  @media screen and (min-width: $screen-lg) {
+    margin: 4.4rem 0 6rem;
   }
 }
 
