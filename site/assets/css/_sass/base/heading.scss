@@ -21,6 +21,7 @@
 @mixin heading-playfair-mobile {
   @include heading-playfair;
   font-size: 2.8rem;
+  line-height: 3.7rem;
 }
 
 @mixin heading-playfair-landing {
@@ -33,5 +34,5 @@
 
 @mixin heading-playfair-landing-mobile {
   @include heading-playfair-landing;
-  font-size: 2.8rem;
+  font-size: 4rem;
 }

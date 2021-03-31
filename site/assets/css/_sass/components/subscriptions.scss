@@ -3,6 +3,7 @@
     border: 3px solid transparent;
     border-width: 0.3rem 0.3rem 0;
   }
+
   .subscription-option__body {
     border: 3px solid transparent;
     border-width: 0 0.3rem 0.3rem;
@@ -102,10 +103,14 @@
 }
 
 .subscription-option__feature {
-  @include normal-text;
+  @include small-text;
   color: var(--dark-grey);
   list-style-type: none;
   padding: 1rem;
+
+  @media screen and (min-width: $screen-md) {
+    @include normal-text;
+  }
 
   &:nth-child(odd) {
     background-color: var(--light-grey);
