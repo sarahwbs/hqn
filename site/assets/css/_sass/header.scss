@@ -1,13 +1,38 @@
 .header {
-  margin: 4.4rem 0 6rem;
+  margin: 2rem 0 4rem;
 
-  @media screen and (max-width: $screen-lg) {
-    margin: 1.4rem 0 4rem;
+  @media screen and (min-width: $screen-lg) {
+    margin: 4.4rem 0 6rem;
   }
 }
 
 .header-row {
+  align-items: center;
   height: 5rem;
+}
+
+.header__logo {
+  justify-content: center;
+
+  @media screen and (min-width: $screen-lg) {
+    justify-content: start;
+  }
+
+  &-logged-out {
+    justify-content: start;
+  }
+}
+
+.header__logo-image {
+  width: 12rem;
+
+  .header__logo-logged-out & {
+    width: 16rem;
+  }
+
+  @media screen and (min-width: $screen-lg) {
+    width: 17.5rem;
+  }
 }
 
 a.header_nav__link {
