@@ -35,6 +35,8 @@
   --pink-v2: #e31d74;
   --yellow: #ffef2c;
   --yellow-v2: #f3ea45;
+  --orange: #ec8141;
+  --salmon: #e65069;
 
   --button-border-radius: 2.4rem;
   --input-border-radius: 0.6rem;
@@ -90,6 +92,8 @@ $spacers: (
   13: $spacer * 6,
   14: $spacer * 6.5,
   15: $spacer * 7,
+  16: $spacer * 7.5,
+  17: $spacer * 8,
 );
 
 $gutters: $spacers;

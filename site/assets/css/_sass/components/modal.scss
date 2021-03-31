@@ -1,6 +1,6 @@
 .popup-modal {
   z-index: 9;
-  &:before {
+  &::before {
     content: "";
     background: var(--dark-purple-v4);
     opacity: 0.75;
