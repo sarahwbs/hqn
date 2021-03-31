@@ -22,3 +22,16 @@
   @include heading-playfair;
   @include xlarge-text-v2;
 }
+
+@mixin heading-playfair-landing {
+  @include headline-text;
+  color: var(--white);
+  font-size: 7rem;
+  font-family: var(--font-family-playfair);
+  font-weight: 600;
+}
+
+@mixin heading-playfair-landing-mobile {
+  @include heading-playfair-landing;
+  font-size: 2.8rem;
+}

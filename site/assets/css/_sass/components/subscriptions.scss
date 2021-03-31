@@ -1,0 +1,113 @@
+.subscription-option {
+  .subscription-option__header {
+    border: 3px solid transparent;
+    border-width: 0.3rem 0.3rem 0;
+  }
+  .subscription-option__body {
+    border: 3px solid transparent;
+    border-width: 0 0.3rem 0.3rem;
+  }
+
+  &:nth-child(n + 1) {
+    .subscription-option__header {
+      background-color: var(--dark-yellow);
+    }
+  }
+
+  &:nth-child(n + 2) {
+    .subscription-option__header {
+      background-color: var(--orange);
+    }
+  }
+
+  &:nth-child(n + 3) {
+    .subscription-option__header {
+      background-color: var(--salmon);
+    }
+  }
+
+  &:nth-child(n + 4) {
+    .subscription-option__header {
+      background-color: var(--pink-v2);
+    }
+  }
+
+  &.selected {
+    &:nth-child(n + 1) {
+      .subscription-option__header,
+      .subscription-option__body {
+        border-color: var(--dark-yellow);
+      }
+    }
+
+    &:nth-child(n + 2) {
+      .subscription-option__header,
+      .subscription-option__body {
+        border-color: var(--orange);
+      }
+    }
+
+    &:nth-child(n + 3) {
+      .subscription-option__header,
+      .subscription-option__body {
+        border-color: var(--salmon);
+      }
+    }
+
+    &:nth-child(n + 4) {
+      .subscription-option__header,
+      .subscription-option__body {
+        border-color: var(--pink-v2);
+      }
+    }
+  }
+}
+
+.card-subscription-option {
+  border: none;
+  border-radius: 0.8rem;
+  background: var(--white);
+}
+
+.subscription-option__header {
+  &,
+  &:first-child {
+    border-radius: 0.8rem 0.8rem 0 0;
+  }
+}
+
+.subscription-option__body {
+  padding: 0 0 1.5rem;
+  border-radius: 0 0 0.8rem 0.8rem;
+}
+
+.subscription-option__price {
+  @include xlarge-text;
+  font-weight: 600;
+}
+
+.subscription-option__type {
+  @include small-text;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.subscription-option__feature-list {
+  margin: 0 -0.3rem;
+  padding: 0;
+
+  .subscription-option.selected & {
+    margin: 0;
+  }
+}
+
+.subscription-option__feature {
+  @include normal-text;
+  color: var(--dark-grey);
+  list-style-type: none;
+  padding: 1rem;
+
+  &:nth-child(odd) {
+    background-color: var(--light-grey);
+  }
+}
