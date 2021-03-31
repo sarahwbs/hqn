@@ -1,0 +1,35 @@
+.filter-button-control {
+  position: relative;
+}
+
+.filter-button-control__collapse {
+  position: absolute;
+  z-index: 1;
+  right: 1%;
+  min-width: 40rem;
+  margin-top: 0.4rem;
+  border-radius: 4px;
+}
+
+.filter-button-control__btns {
+  border-bottom: 1px solid var(--grey-v7);
+}
+
+.filter-button-control__btn,
+.filter-button-control__btn:hover {
+  @include small-text-v2;
+  color: var(--grey-v3);
+  opacity: 0.8;
+  padding: 0;
+  border: 0;
+}
+
+.filter-button-control__filters {
+  margin-top: 0.1rem;
+  border-top: 1px solid var(--grey-v7);
+}
+
+.filter-button-control__heading {
+  @include small-text-v2;
+  color: var(--grey-v3);
+}

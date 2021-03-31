@@ -1,10 +1,5 @@
 <div class="filter-sort-btns d-flex">
-  <button
-    type="button"
-    class="btn btn-primary buttons__filter filter-sort-btns__filter-button"
-  >
-    <span class="filter-button__text">Filter</span>
-  </button>
+  {% include filter/filter-button.html page=include.page %}
 
   <div class="filter-sort-btns__sort d-flex">
     <div class="filter-sort-btns__sort__title">Sort:</div>
