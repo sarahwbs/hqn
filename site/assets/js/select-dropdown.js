@@ -79,16 +79,18 @@ window.addEventListener("load", function () {
      * to fix an issue where the Bootstrap's dropdown would stack beneath the main content.
      */
     function stackElements(action) {
-      if (action === "removeStack") {
-        mainContentDiv.style.position = "static";
-        mainContentDiv.style.zIndex = "unset";
-      } else {
-        selectMenuBtns.forEach((btn) => {
-          btn.addEventListener("show.bs.dropdown", () => {
-            mainContentDiv.style.position = "relative";
-            mainContentDiv.style.zIndex = 0;
+      if (document.body.contains(mainContentDiv)) {
+        if (action === "removeStack") {
+          mainContentDiv.style.position = "static";
+          mainContentDiv.style.zIndex = "unset";
+        } else {
+          selectMenuBtns.forEach((btn) => {
+            btn.addEventListener("show.bs.dropdown", () => {
+              mainContentDiv.style.position = "relative";
+              mainContentDiv.style.zIndex = 0;
+            });
           });
-        });
+        }
       }
     }
 
