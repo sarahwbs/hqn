@@ -22,6 +22,8 @@
   link: /movie-details
 - name: Order History Page
   link: /order-history
+- name: User Profile Page
+  link: /user-profile
 - name: Selection Summary
   link: /selection-summary
 - name: Order Detail Page

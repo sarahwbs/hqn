@@ -1,0 +1,21 @@
+<div class="profile-edit-box mb-4">
+  <div class="profle-edit-box__content">
+    {% if include.heading != blank %}
+    <!--  -->
+    {% include body-copy.html copy=include.heading extraClasses="mb-0" %}
+    <!--  -->
+    {% endif %}
+
+    <!--  -->
+
+    {% include body-copy.html copy=include.content extraClasses="mb-0" %}
+  </div>
+
+  <a href="#" class="d-block">
+    <img
+      src="{{ site.url }}/assets/img/icons/edit.svg"
+      alt="Edit"
+      class="w-100 d-block"
+    />
+  </a>
+</div>
