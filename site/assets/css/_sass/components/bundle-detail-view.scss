@@ -1,0 +1,115 @@
+.bundle-detail-view__title {
+  @include heading-playfair-mobile;
+
+  @media screen and (min-width: $screen-lg) {
+    @include heading-playfair;
+  }
+}
+
+.bundle-detail-view__availability {
+  @include left-accent-line-text;
+  border-color: var(--pink);
+}
+
+.bundle-detail-view__group {
+  @include small-text-v2;
+  padding: 1.4rem 3.3rem;
+  color: var(--yellow);
+  border: 0.1rem solid var(--yellow);
+}
+
+.bundle-detail-view_info {
+  max-width: 50rem;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: $screen-lg) {
+    max-width: inherit;
+  }
+}
+
+.bundle-detail-view_info-title {
+  @include large-text-v3;
+
+  @media screen and (min-width: $screen-lg) {
+    @include large-text-v2;
+  }
+}
+
+.bundle-detail-view__image {
+  max-width: 16rem;
+
+  @media screen and (min-width: $screen-md) {
+    max-width: 25rem;
+  }
+
+  @media screen and (min-width: $screen-lg) {
+    max-width: inherit;
+  }
+}
+
+.bundle-detail-view__meta {
+  p {
+    margin-bottom: 2.2rem;
+
+    @media screen and (min-width: $screen-lg) {
+      @include normal-text;
+      margin-bottom: 2.5rem;
+    }
+  }
+}
+
+.bundle-detail-view__description {
+  &.show-all-description {
+    display: block !important;
+  }
+
+  strong {
+    font-weight: 600;
+  }
+
+  p {
+    @include small-text-v2;
+    margin-bottom: 2.2rem;
+
+    @media screen and (min-width: $screen-lg) {
+      @include large-text-v4;
+      font-weight: 300;
+      margin-bottom: 2.5rem;
+    }
+  }
+}
+
+.bundle-detail-view__hidden-description {
+  display: none;
+
+  &.show-description {
+    display: block;
+  }
+}
+
+.bundle-detail-view__summary-box {
+  @include box-summary;
+}
+
+.bundle-detail-view__summary-count {
+  @include box-summary-count;
+}
+
+.bundle-detail-view__summary-description {
+  @include box-summary-description;
+}
+
+.bundle-detail-view__select-bundle-button {
+  button {
+    @media screen and (min-width: $screen-sm) and (max-width: $screen-lg-min) {
+      width: 25rem;
+
+      &:hover,
+      &:active,
+      &:focus {
+        width: 25rem;
+      }
+    }
+  }
+}

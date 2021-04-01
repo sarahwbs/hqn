@@ -1,0 +1,19 @@
+<div
+  class="{{ include.class }}__summary-box d-flex d-lg-block align-items-center text-lg-center mb-7"
+>
+  <div
+    class="{{ include.class }}__summary-count pb-lg-5 mb-lg-5 pe-7 pe-lg-0 me-5 me-sm-6 me-lg-0"
+  >
+    {% include body-copy.html copy="<strong>8</strong>" extraClasses="mb-0" %}
+    <!--  -->
+    {% include body-copy.html copy="Available Selections" %}
+  </div>
+
+  <div class="{{ include.class }}__summary-description">
+    {% include body-copy.html copy="Your next subscription selection will be
+    available on:" %}
+    <!--  -->
+    {% include body-copy.html copy="<strong>December 1, 2020</strong>"
+    extraClasses="mt-1" %}
+  </div>
+</div>

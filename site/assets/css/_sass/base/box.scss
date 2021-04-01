@@ -1,0 +1,87 @@
+@mixin box-summary {
+  background: var(--black-v3);
+  padding: 3.5rem 2.5rem;
+  margin: 0 -2.4rem;
+  height: 100%;
+
+  @media screen and (min-width: $screen-sm) {
+    height: inherit;
+  }
+
+  @media screen and (min-width: $screen-md) {
+    margin: 0;
+    border-radius: 0.4rem;
+  }
+
+  @media screen and (min-width: $screen-lg) {
+    padding: 3.5rem;
+  }
+
+  p {
+    @include xsmall-text-v3;
+    margin-bottom: 0;
+
+    @media screen and (min-width: $screen-lg) {
+      @include small-text-v2;
+    }
+  }
+}
+
+@mixin box-summary-count {
+  border-right: 0.1rem solid var(--white);
+  position: relative;
+  padding: 0.3rem 0;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+
+  @media screen and (min-width: 350px) {
+    min-width: 15.5rem;
+  }
+
+  @media screen and (min-width: $screen-sm) {
+    height: inherit;
+    display: block;
+    min-width: inherit;
+  }
+
+  @media screen and (min-width: $screen-lg) {
+    border: none;
+    padding: 0;
+  }
+
+  &::after {
+    content: "";
+
+    @media screen and (min-width: $screen-lg) {
+      width: 3.6rem;
+      position: absolute;
+      bottom: 0;
+      left: calc(50% - 1.8rem);
+      background: var(--white);
+      height: 0.2rem;
+    }
+  }
+
+  p {
+    @include small-text-v3;
+  }
+
+  strong {
+    @include xlarge-text-v3;
+    font-weight: 700;
+    display: block;
+
+    @media screen and (min-width: $screen-lg) {
+      @include large-headline-text;
+    }
+  }
+}
+
+@mixin box-summary-description {
+  strong {
+    font-weight: 600;
+  }
+}
