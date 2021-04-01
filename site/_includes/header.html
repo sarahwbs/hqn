@@ -50,13 +50,13 @@
             {% include nav/mobile/mobile-nav.html menu="user-account"
             userstate=include.userstate sub=include.sub %}
 
-            <div class="dropdown-menu" aria-labelledby="account-dropdown-menu">
-              <div class="dropdown-menu-arrow-up"></div>
+            <div class="dropdown-menu header__dropdown-menu" aria-labelledby="account-dropdown-menu">
+              <div class="header__dropdown-menu-arrow-up"></div>
               <ul>
                 {% if include.userstate == "signed-in" and include.sub == "true"
                 %}
                 <li>
-                  <a href="#" class="dropdown-item dropdown-item__selections">
+                  <a href="#" class="dropdown-item header__dropdown-item dropdown-item__selections">
                     <span class="dropdown-item__selections__number">8</span>
                     Available Selections
                   </a>
@@ -64,14 +64,14 @@
                 <li>
                   <a
                     href="#"
-                    class="dropdown-item dropdown-item__selections_summary"
+                    class="dropdown-item header__dropdown-item dropdown-item__selections_summary"
                     >Selection Summary</a
                   >
                 </li>
-                <li><hr class="dropdown-divider" /></li>
+                <li><hr class="dropdown-divider header__dropdown-divider" /></li>
                 {% endif %}<!--  -->
                 {% for item in site.data.header-account-nav %}
-                <li><a class="dropdown-item" href="#">{{ item.name }}</a></li>
+                <li><a class="dropdown-item header__dropdown-item" href="#">{{ item.name }}</a></li>
                 {% endfor %}
               </ul>
             </div>

@@ -1,0 +1,30 @@
+<div class="select-dropdown-control">
+  <button
+    class="btn dropdown-toggle select-dropdown-control-btn"
+    type="button"
+    id="{{ include.id }}"
+    data-bs-toggle="dropdown"
+    aria-expanded="false"
+    aria-haspopup="listbox"
+  ></button>
+  <ul
+    class="dropdown-menu select-dropdown-control-menu"
+    aria-labelledby="{{ include.id }}"
+    aria-haspopup="listbox"
+  >
+    {% for option in include.options %}<!-- -->
+    {% capture i %}{{ forloop.index }}{% endcapture %}
+    <li>
+      <a
+        class="dropdown-item"
+        href="#"
+        data-val="{{ i }}"
+        data-active="{% if include.selected == i %}true{% endif %}"
+        >
+        {{ option }}
+      </a
+      >
+    </li>
+    {% endfor %}
+  </ul>
+</div>
