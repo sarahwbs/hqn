@@ -22,6 +22,8 @@
   link: /movie-details
 - name: Order History Page
   link: /order-history
+- name: Subscription Confirmation Page
+  link: /subscription-confirm
 - name: User Profile Page
   link: /user-profile
 - name: Selection Summary

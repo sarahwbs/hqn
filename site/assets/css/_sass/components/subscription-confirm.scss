@@ -1,0 +1,107 @@
+.subscription-signup {
+  header {
+    margin-top: 7.5rem;
+
+    @media screen and (min-width: $screen-lg) {
+      margin-top: 4.4rem;
+    }
+
+    .header-row > div {
+      justify-content: center;
+
+      @media screen and (min-width: $screen-lg) {
+        justify-content: flex-start;
+      }
+    }
+  }
+
+  footer {
+    margin-top: 0 !important;
+  }
+}
+
+.subscription-confirm {
+  max-width: 50rem;
+  margin: 4rem auto;
+
+  @media screen and (min-width: $screen-sm) {
+    margin: 6rem auto;
+  }
+
+  @media screen and (min-width: $screen-lg) {
+    max-width: 108rem;
+    margin-top: 3rem;
+    margin-bottom: 11rem;
+  }
+}
+
+.subscription-confirm__col-1 {
+  @media screen and (min-width: $screen-lg) {
+    width: 45%;
+  }
+}
+
+.subscription-confirm__col-2 {
+  @media screen and (min-width: $screen-lg) {
+    width: 55%;
+  }
+}
+
+.subscription-confirm__title {
+  @include heading-playfair-mobile;
+
+  @media screen and (min-width: $screen-lg) {
+    @include heading-playfair;
+  }
+}
+
+.subscription-confirm__subtitle {
+  @include large-text-v3;
+
+  @media screen and (min-width: $screen-lg) {
+    @include large-text;
+    font-weight: 700;
+  }
+}
+
+.subscription-confirm__confirm-info {
+  a {
+    color: var(--yellow);
+  }
+
+  p {
+    @include small-text-v2;
+
+    @media screen and (min-width: $screen-lg) {
+      @include normal-text;
+    }
+  }
+}
+
+.subscription-confirm__download-info {
+  p {
+    @include normal-text;
+  }
+
+  strong {
+    @include large-text-v4;
+    font-weight: 700;
+  }
+}
+
+.subscription-confirm__download {
+  justify-content: space-between;
+
+  @media screen and (min-width: $screen-sm) {
+    justify-content: flex-start;
+  }
+
+  a {
+    width: calc(50% - 1rem);
+
+    @media screen and (min-width: $screen-sm) {
+      width: 18.6rem;
+      margin-right: 2.2rem;
+    }
+  }
+}
