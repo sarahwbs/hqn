@@ -36,7 +36,7 @@
 }
 
 a.header_nav__link {
-  font-size: 1.4rem;
+  @include small-text-v2;
   color: var(--white);
   margin-right: 2.5rem;
   font-weight: bold;
@@ -54,7 +54,7 @@ a.header_nav__link {
 // Buttons
 
 .header-button {
-  font-size: 1.5rem;
+  @include medium-text;
   padding: 1.3rem 4rem 1.2rem;
   white-space: nowrap;
 }
@@ -70,7 +70,7 @@ a.header_nav__link {
 }
 
 .account__name {
-  font-size: 1.4rem;
+  @include small-text;
   font-weight: normal;
   margin-right: 0.25rem;
   white-space: nowrap;
@@ -106,8 +106,8 @@ a.header_nav__link {
 }
 
 .header__dropdown-item {
+  @include small-text-v3;
   color: var(--white);
-  font-size: 1.3rem;
   font-weight: 100;
   padding: 0.8rem 0;
 
@@ -132,5 +132,5 @@ a.header_nav__link {
 }
 
 .dropdown-item__selections__number {
-  font-size: 1.8rem;
+  @include large-text-v4;
 }
