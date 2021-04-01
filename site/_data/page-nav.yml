@@ -20,3 +20,5 @@
   link: /movie-details
 - name: Order History Page
   link: /order-history
+- name: User Profile Page
+  link: /user-profile
