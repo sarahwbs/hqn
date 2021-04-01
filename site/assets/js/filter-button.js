@@ -18,7 +18,6 @@ window.addEventListener("load", function () {
     );
 
     function setCloseButtonEventHandler() {
-      // TODO: change css transition to @include transition($transition-collapse);
       closeButton.addEventListener("click", () => {
         bsFilterCollapsible.hide();
       });
