@@ -11,15 +11,7 @@
     <div class="row main-content g-5 mb-5 mx-n3 row-cols-2 row-cols-md-3 row-cols-lg-4">
       {% for i in (1..20) %}
       <div class="col mt-5 mt-sm-6 mt-md-7 mt-lg-8 mt-xl-11">
-        <div class="card card-game">
-          <a href="#">
-            <img
-              src="{{site.baseurl}}/assets/img/game-thumb-{{ i | modulo: 4 | plus: 1 }}.png"
-              alt="alt text"
-              class="card-game card-img-top drop-shadow-3"
-            />
-          </a>
-        </div>
+        {% include game-card.html %}
       </div>
       {% endfor %}
     </div>

@@ -13,15 +13,7 @@
     >
       {% for i in (1..24) %}
       <div class="col mt-5 mt-sm-6 mt-md-7 mt-lg-8 mt-xl-13">
-        <div class="card card-movie">
-          <a href="#">
-            <img
-              src="{{site.baseurl}}/assets/img/movie-thumb-{{ i | modulo: 4 | plus: 1 }}.png"
-              alt="alt text"
-              class="card-img-top drop-shadow-4"
-            />
-          </a>
-        </div>
+        {% include movie-card.html %}
       </div>
       {% endfor %}
     </div>
