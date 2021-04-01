@@ -20,3 +20,7 @@
   link: /movie-details
 - name: Order History Page
   link: /order-history
+- name: Order Detail Page
+  link: /order-detail
+- name: Order Detail Page (Track Order)
+  link: /order-detail-tracking
