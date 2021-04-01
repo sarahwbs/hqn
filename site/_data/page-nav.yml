@@ -22,3 +22,7 @@
   link: /order-history
 - name: User Profile Page
   link: /user-profile
+- name: Order Detail Page
+  link: /order-detail
+- name: Order Detail Page (Track Order)
+  link: /order-detail-tracking
