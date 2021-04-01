@@ -248,7 +248,12 @@
 }
 
 .subscription-info__button {
-  font-size: 1.6rem;
-  padding: 1.3rem 4rem 1.2rem;
-  white-space: nowrap;
+  &,
+  &:hover,
+  &:active,
+  &:focus {
+    @include normal-text;
+    padding: 1.3rem 4rem 1.2rem;
+    white-space: nowrap;
+  }
 }

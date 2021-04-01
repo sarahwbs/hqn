@@ -130,7 +130,11 @@
 
   @media screen and (min-width: $screen-md) {
     display: inline-block;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
+    width: 20rem;
+  }
+
+  @media screen and (min-width: $screen-lg) {
     width: 23rem;
   }
 }
@@ -139,6 +143,11 @@
   margin-left: -2rem;
   margin-right: -2rem;
   position: relative;
+
+  @media screen and (min-width: $screen-sm) {
+    margin-left: -3rem;
+    margin-right: -3rem;
+  }
 
   @media screen and (min-width: $screen-lg) {
     margin-left: -4rem;
