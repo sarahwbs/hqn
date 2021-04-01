@@ -51,20 +51,16 @@
           aria-label="Slide {{ i }} of 4"
         >
           <a href="#" class="carousel-link">
-            <picture>
-              <source
-                media="(min-width: 768px)"
-                srcset="assets/img/top-cta-{{ i }}@2x.png 2x, assets/img/top-cta-{{ i }}.png 1x"
-              />
-              <source
-                srcset="assets/img/top-cta-sm-{{ i }}@2x.png 2x, assets/img/top-cta-sm-{{ i }}.png 1x"
-              />
-              <img
-                src="assets/img/top-cta-sm-{{ i }}.png"
-                alt="alt text"
-                class="carousel-image d-block w-100"
-              />
-            </picture>
+            {% capture image %}assets/img/top-cta-sm-{{ i }}.png{% endcapture %}<!--  -->
+            {% capture image2x %}assets/img/top-cta-sm-{{ i }}@2x.png{%
+            endcapture %}<!--  -->
+            {% capture imageLarge %}assets/img/top-cta-{{ i }}.png{% endcapture
+            %}<!--  -->
+            {% capture imageLarge2x %}assets/img/top-cta-{{ i }}@2x.png{%
+            endcapture %}<!--  -->
+            {% include picture.html image=image image2x=image2x
+            imageLarge=imageLarge imageLarge2x=imageLarge2x altText="alt text"
+            extraClasses="d-block carousel-image" %}
           </a>
         </div>
         {% endfor %}

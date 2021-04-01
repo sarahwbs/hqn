@@ -17,7 +17,7 @@ body {
   font-weight: 400;
   position: relative;
 
-  &:before {
+  &::before {
     content: "";
     @include purple-gradient-3;
     width: 100%;
