@@ -1,8 +1,8 @@
 .header {
-  margin: 4.4rem 0 6rem;
+  margin: 2rem 0 4rem;
 
-  @media screen and (max-width: $screen-lg) {
-    margin: 1.4rem 0 4rem;
+  @media screen and (min-width: $screen-lg) {
+    margin: 2.7rem 0 6rem;
   }
 }
 
@@ -30,6 +30,7 @@ a.header_nav__link {
 
 .header-button {
   font-size: 1.5rem;
+  padding: 1.3rem 4rem 1.2rem;
   white-space: nowrap;
 }
 
