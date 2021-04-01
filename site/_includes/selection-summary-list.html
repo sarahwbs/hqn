@@ -1,0 +1,58 @@
+<div class="container-md p-0">
+  <div class="selection-summary mb-8 mb-lg-14">
+    <h1 class="selection-summary__title mb-8 mb-lg-14">Selection Summary</h1>
+
+    {% include body-copy.html copy="Below is a summary of all your available
+    monthly selections." extraClasses="mb-7 mb-lg-12" %}
+
+    <div class="row gx-6">
+      <div class="col-lg-3 mb-12 mb-lg-0">
+        <div
+          class="selection-summary__summary-box d-flex d-lg-block align-items-center text-lg-center"
+        >
+          <div
+            class="selection-summary__summary-count pb-lg-5 mb-lg-5 pe-7 pe-lg-0 me-5 me-sm-6 me-lg-0"
+          >
+            {% include body-copy.html copy="<strong>8</strong>"
+            extraClasses="mb-0" %}
+            <!--  -->
+            {% include body-copy.html copy="Available Selections" %}
+          </div>
+
+          <div class="selection-summary__summary-description">
+            {% include body-copy.html copy="Your next subscription selection
+            will be available on:" %}
+            <!--  -->
+            {% include body-copy.html copy="<strong>December 1, 2020</strong>"
+            extraClasses="mt-1" %}
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-9">
+        {% capture tableHeader %}
+        <tr>
+          <th>Selection Issued</th>
+          <th>Expires</th>
+        </tr>
+        {% endcapture %}
+
+        <!--  -->
+
+        {% capture tableBody %}<!--  -->
+        {% for item in site.data.selection-summary %}
+        <tr>
+          <td>{{ item.issued }}</td>
+          <td class="text-end text-sm-start">{{ item.expire }}</td>
+        </tr>
+        {% endfor %}<!--  -->
+        {% endcapture %}
+
+        <!--  -->
+
+        {% include table.html tableHeader=tableHeader tableBody=tableBody
+        extraClasses="selection-summary__table" %}
+      </div>
+    </div>
+  </div>
+</div>

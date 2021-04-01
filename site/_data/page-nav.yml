@@ -20,6 +20,8 @@
   link: /movie-details
 - name: Order History Page
   link: /order-history
+- name: Selection Summary
+  link: /selection-summary
 - name: Order Detail Page
   link: /order-detail
 - name: Order Detail Page (Track Order)
