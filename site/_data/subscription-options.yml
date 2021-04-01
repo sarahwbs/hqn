@@ -1,0 +1,36 @@
+- id: "monthly"
+  price: $14.99
+  type: "monthly"
+  features:
+    - feature: Lorem Ipsum Dolor
+    - feature: Lorem Ipsum Dolor
+    - feature: Lorem Ipsum Dolor
+    - feature: Lorem Ipsum Dolor
+- id: "premiummonthly"
+  price: $24.99
+  type: "premium monthly"
+  features:
+    - feature: Lorem Ipsum Dolor
+    - feature: Lorem Ipsum Dolor
+    - feature: Lorem Ipsum Dolor
+    - feature: Lorem Ipsum Dolor
+    - feature: Lorem Ipsum Dolor
+    - feature: Lorem Ipsum Dolor
+- id: "yearly"
+  price: $159.99
+  type: "yearly"
+  features:
+    - feature: Lorem Ipsum Dolor
+    - feature: Lorem Ipsum Dolor
+    - feature: Lorem Ipsum Dolor
+    - feature: Lorem Ipsum Dolor
+- id: "premiumyearly"
+  price: $199.99
+  type: "premium yearly"
+  features:
+    - feature: Lorem Ipsum Dolor
+    - feature: Lorem Ipsum Dolor
+    - feature: Lorem Ipsum Dolor
+    - feature: Lorem Ipsum Dolor
+    - feature: Lorem Ipsum Dolor
+    - feature: Lorem Ipsum Dolor

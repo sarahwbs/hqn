@@ -49,8 +49,7 @@
 }
 
 .menu-modal__selections-number {
-  font-size: 3.6rem;
-  line-height: 3.6rem;
+  @include xlarge-text-v3;
 }
 
 .menu-modal__selections-text {

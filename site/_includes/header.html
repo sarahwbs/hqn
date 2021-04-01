@@ -1,17 +1,21 @@
 <header class="header w-100">
-  <div class="container-md p-0">
-    <div class="row flex-nowrap header-row">
-      <div class="col d-flex">
-        <a href="index" class="d-flex"
-          ><img
+  <div
+    class="container-md p-0{% if include.landingpage == 'true' %} px-5{% endif %}"
+  >
+    <div class="row flex-nowrap m-0 header-row">
+      <div
+        class="col d-flex p-0 header__logo{% if include.landingpage == 'true' or include.infopage == 'true' %}-logged-out{% endif %}{% if include.landingpage == 'true' %} d-md-none{% endif %}"
+      >
+        <a href="index" class="d-flex">
+          <img
             src="{{site.baseurl}}/assets/img/harlequin-plus-logo.svg"
             alt="Harlequin Plus Logo"
-            class="d-inline-block"
+            class="d-inline-block header__logo-image"
         /></a>
       </div>
-      {% if include.infopage == "true" %}
 
-      <div class="col d-flex justify-content-end">
+      {% if include.infopage == "true" %}
+      <div class="col d-flex p-0 justify-content-end">
         <button
           type="button"
           class="btn btn-primary btn-lg header-button transparent-button px-8"
@@ -82,15 +86,15 @@
       {% if include.userstate == "signed-in" and include.sub == "true" %}
       <div class="col d-flex d-none d-lg-block">
         {% include button.html type="rounded-pink" label="My Bookshelf"
-        extraClasses="header-button" %}
+        extraClasses="header-button drop-shadow-5" %}
       </div>
       {% endif %}<!--  -->
       {% else %}
 
-      <div class="col d-flex justify-content-end">
+      <div class="col d-flex p-0 justify-content-end">
         <button
           type="button"
-          class="btn btn-primary btn-lg header-button sign-in-button transparent-button"
+          class="btn btn-primary btn-lg header-button sign-in-button transparent-button px-9"
         >
           Sign In
         </button>
