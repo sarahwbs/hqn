@@ -22,6 +22,10 @@
   box-shadow: 0 0.8rem 2rem var(--grey-v4);
 }
 
+@mixin dropshadow-v2 {
+  box-shadow: 0 0.3rem 0.6rem var(--grey-v5);
+}
+
 .bg-primary-gradient {
   @include purple-gradient-2;
 }

@@ -12,10 +12,17 @@
 @mixin input-button {
   @include grey-gradient;
   @include dropshadow;
+  @include normal-text;
   padding: 1rem 1.5rem;
   border-radius: var(--input-border-radius);
-  font-size: 1.5rem;
   color: var(--dark-grey);
+  font-weight: 300;
+
+  &:hover,
+  &:visited,
+  &:focus {
+    color: var(--dark-grey);
+  }
 }
 
 @mixin default-button {
@@ -100,22 +107,53 @@
 @mixin filter-button {
   @include input-button;
   @include grey-gradient-with-image-bg(
-    url("../img/icons/filter.svg") no-repeat center right 1.5rem
+    url('/assets/img/icons/filter.svg') no-repeat center right 1.5rem
   );
 }
 
 @mixin select-dropdown {
   @include input-button;
+  @include dropshadow-v2;
   @include grey-gradient-with-image-bg(
-    url("../img/icons/down-arrow.svg") no-repeat center right 1.5rem
+    url('/assets/img/icons/down-arrow.svg') no-repeat center right 1.5rem
   );
-  padding-right: 8rem;
-  /* remove the original arrow */
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -o-appearance: none;
-  appearance: none;
+  padding-right: 6rem;
+  min-width: 22rem;
+  min-height: 4rem;
+  text-align: left;
+  border: 0;
   position: relative;
+  z-index: 2;
+  line-height: unset;
+
+  &:after {
+    content: none;
+  }
+
+  &.btn-check:focus + .btn,
+  &.btn:focus {
+    @include dropshadow-v2;
+  }
+}
+
+@mixin select-dropdown-options-menu {
+  min-width: 22rem;
+  padding: 1rem 0 0 0;
+  border: 0;
+  box-shadow: 0 0.8rem 4rem var(--grey-v4);
+  top: -1rem !important;
+  z-index: 1;;
+
+  a {
+    @include small-text;
+    line-height: unset;
+    padding: 1.5rem 1.3rem;
+    color: var(--grey-v3);
+  }
+
+  li:last-of-type a {
+    padding-bottom: 2rem;
+  }
 }
 
 .filter-button__text {

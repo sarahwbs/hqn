@@ -60,7 +60,7 @@ a.header_nav__link {
 
 // Dropdown menu
 
-.dropdown-menu {
+.header__dropdown-menu {
   background: var(--dark-purple-v2);
   box-shadow: 0 8px 40px var(--grey-v4);
   padding: 1.2rem 2.5rem 1.2rem 1.2rem;
@@ -68,7 +68,7 @@ a.header_nav__link {
   left: -195% !important;
 }
 
-.dropdown-menu-arrow-up {
+.header__dropdown-menu-arrow-up {
   width: 0;
   height: 0;
   border-left: 8px solid transparent;
@@ -79,7 +79,7 @@ a.header_nav__link {
   left: 48%;
 }
 
-.dropdown-item {
+.header__dropdown-item {
   color: var(--white);
   font-size: 1.3rem;
   font-weight: 100;
@@ -91,7 +91,7 @@ a.header_nav__link {
   }
 }
 
-.dropdown-divider {
+.header__dropdown-divider {
   color: var(--white);
   margin: 1.2rem 0 0 0;
 }
