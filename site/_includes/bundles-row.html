@@ -7,9 +7,7 @@
       class="row bundles-row-inner g-5 mb-md-5 row-cols-1 row-cols-md-2 row-cols-lg-3 flex-nowrap flex-md-wrap"
     >
       {% for i in (1..3) %}
-      <div class="col bundles-col">
-        {% include card.html cardtype="bundle" %}
-      </div>
+      <div class="col bundles-col">{% include bundle-card.html %}</div>
       {% endfor %}
     </div>
   </div>
