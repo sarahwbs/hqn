@@ -2,7 +2,9 @@
   @include small-text-v2;
   color: var(--grey-v3);
   padding: 1.7rem 2.2rem 1.4rem 2.2rem;
-  border: 0;
+  border-top: 1px solid var(--grey-v7);
+  border-right: unset;
+  border-left: unset;
 
   &.collapsed {
     border-top: 1px solid var(--grey-v7);
