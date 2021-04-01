@@ -1,0 +1,31 @@
+<div class="container-md p-0">
+  <div class="profile-view mb-8 mb-lg-15">
+    <h1 class="profile-view__title mb-9 mb-lg-11">My Profile</h1>
+
+    <div class="main-content">
+      <div class="profile-view__editable-content mb-11">
+        {% include profile-edit-box.html heading="
+        <strong>Brennan MacDonald</strong>" content=" Date of Birth: 4/11/83" %}
+
+        <!--  -->
+
+        {% include profile-edit-box.html heading="<strong>Email:</strong>"
+        content=" brennan.macdonald@redspace.com" %}
+
+        <!--  -->
+
+        {% include profile-edit-box.html content=" Password: ************" %}
+      </div>
+
+      <div class="profile-view__contact">
+        {% include body-copy.html copy="<strong>Customer Service</strong>"
+        extraClasses="mb-0" %}
+
+        <!--  -->
+
+        {% include body-copy.html copy="Lorem ipsum dolor sit amet consectetur
+        adipiscin:<br />555-555-5555" %}
+      </div>
+    </div>
+  </div>
+</div>

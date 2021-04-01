@@ -2,6 +2,7 @@
 @import "base/utils";
 @import "base/font";
 @import "base/card";
+@import "base/box";
 @import "base/button";
 @import "base/heading";
 
@@ -16,7 +17,7 @@ body {
   font-weight: 400;
   position: relative;
 
-  &:before {
+  &::before {
     content: "";
     @include purple-gradient-3;
     width: 100%;

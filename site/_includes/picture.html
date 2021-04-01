@@ -1,0 +1,16 @@
+<picture>
+  {% if include.imageLarge %}
+  <source
+    media="(min-width: 768px)"
+    srcset="{% if include.imageLarge2x %}{{ include.imageLarge2x }} 2x,{% endif %} {{ include.imageLarge }} 1x"
+  />
+  {% endif %}
+  <source
+    srcset="{% if include.image2x %}{{ include.image2x }} 2x, {% endif %}{{ include.image }} 1x"
+  />
+  <img
+    src="{{ include.image }}"
+    alt="{{ include.altText }}"
+    class="w-100{% if include.extraClasses %} {{ include.extraClasses }}{% endif %}"
+  />
+</picture>

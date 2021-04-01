@@ -1,0 +1,159 @@
+<div class="container-md px-5 px-lg-0 landing-intro">
+  <div class="row">
+    <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+      <div class="landing-intro__image">
+        <img
+          src="{{site.baseurl}}/assets/img/harlequin-plus-logo.svg"
+          alt="Harlequin Plus Logo"
+          class="w-100"
+        />
+      </div>
+      <h1 class="landing-intro__heading mt-17 mt-md-0 mb-5 mb-lg-7">
+        Get more to <em>love</em>.
+      </h1>
+
+      {% include body-copy.html copy='Donec porta, tellus vel efficitur luctus,
+      risus metus tincidunt metus, id vehicula nibh erat eu ligula. Ut vitae
+      felis nec quam facilisis bibendum vel at orci.' extraClasses="my-5 mt-lg-7
+      mb-6 mb-lg-10" %}
+
+      <div>
+        {% include button.html type="rounded-pink" label="Subscribe Now"
+        extraClasses="subscription-info__button drop-shadow-5" %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-md px-5 px-lg-0 landing-bundles">
+  <div class="row align-items-center">
+    <div class="col-12 col-lg-6">
+      <div class="landing-bundles__image">
+        {% capture image %}assets/img/books.png{% endcapture %}<!--  -->
+        {% capture image2x %}assets/img/books@2x.png{% endcapture %}<!--  -->
+        {% include picture.html image=image image2x=image2x altText="alt text"
+        %}
+      </div>
+    </div>
+    <div class="col-12 col-lg-5 offset-lg-1">
+      <h1 class="landing__heading mb-5 mb-lg-7">
+        Lorem ipsum dolor sit amet, consectetur.
+      </h1>
+      {% include body-copy.html copy='Lorem ipsum dolor sit amet, consectetur
+      adipiscing elit. Morbi et lacus ac neque lobortis ultrices. Nam tincidunt
+      in lectus eu ullamcorper. Praesent pharetra, neque in pharetra placerat,
+      metus metus efficitur nisi, auctor rutrum ipsum nisl ut urna.' %}<!-- -->
+      {% include body-copy.html copy='Fusce interdum, enim a lobortis consequat,
+      turpis leo imperdiet tellus, at rutrum purus augue sed mi.' %}
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid px-0 landing-ebooks">
+  <div class="container-md px-5 px-lg-0">
+    <div class="row align-items-center">
+      <div
+        class="col-12 col-lg-6 col-xl-5 offset-xl-1 order-2 order-lg-1 mb-15 mb-lg-0"
+      >
+        <h1 class="landing__heading mb-7">
+          Free library of eBooks each month.
+        </h1>
+        {% include body-copy.html copy='Donec porta, tellus vel efficitur
+        luctus, risus metus tincidunt metus, id vehicula nibh erat eu ligula. Ut
+        vitae felis nec quam facilisis bibendum vel at orci.' %}
+      </div>
+      <div class="col-12 col-lg-6 order-1 order-lg-2 mb-7 mb-lg-0">
+        <div class="landing-ebooks__image">
+          {% capture image %}assets/img/tablet.png{% endcapture %}<!--  -->
+          {% capture image2x %}assets/img/tablet@2x.png{% endcapture %}<!--  -->
+          {% include picture.html image=image image2x=image2x altText="alt text"
+          %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-md px-5 px-lg-0 landing-games-movies">
+  <div class="row align-items-center">
+    <div class="col-12 col-lg-6">
+      <div class="landing-games-movies__image">
+        {% capture image %}assets/img/games-movies.png{% endcapture %}<!--  -->
+        {% capture image2x %}assets/img/games-movies@2x.png{% endcapture %}<!--  -->
+        {% include picture.html image=image image2x=image2x altText="alt text"
+        %}
+      </div>
+    </div>
+    <div class="col-12 col-lg-5 offset-lg-1">
+      <h1 class="landing__heading mb-5 mb-lg-7">
+        Unlimited access to movies and games.
+      </h1>
+      {% include body-copy.html copy='Donec porta, tellus vel efficitur luctus,
+      risus metus tincidunt metus, id vehicula nibh erat eu ligula. Ut vitae
+      felis nec quam facilisis bibendum vel at orci.' %}
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid px-0 landing-devices">
+  <div class="container-md px-5 px-lg-0">
+    <div
+      class="row justify-content-start justify-content-lg-center text-start text-lg-center"
+    >
+      <div
+        class="col-12 d-flex justify-content-center col-lg-4 offset-lg-4 me-auto mb-8 mb-lg-13"
+      >
+        <div class="landing-devices__image">
+          <img
+            src="{{site.baseurl}}/assets/img/devices.svg"
+            alt="alt text"
+            class="w-100"
+          />
+        </div>
+      </div>
+      <div class="col-12 col-lg-6 offset-lg-3 me-auto">
+        <h1 class="landing__heading mb-6 mb-lg-7">At home and on the go.</h1>
+        {% include body-copy.html copy='Donec porta, tellus vel efficitur
+        luctus, risus metus tincidunt metus, id vehicula nibh erat eu ligula. Ut
+        vitae felis nec quam facilisis bibendum vel at orci.' %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-md px-5 px-lg-0 landing-subscription-options">
+  <div class="row justify-content-center text-center">
+    <div class="col">
+      <div class="landing-subscription-options__image mx-auto">
+        <img
+          src="{{site.baseurl}}/assets/img/harlequin-plus-logo.svg"
+          alt="Harlequin Plus Logo"
+          class="w-100"
+        />
+      </div>
+
+      <div
+        class="landing-subscription-options__options subscription-options mt-9 mt-lg-13"
+      >
+        <div class="row g-5">
+          {% for option in site.data.subscription-options %}<!--  -->
+          {% assign selected = false %}<!--  -->
+          {% if option.id == "monthly" %}{% assign selected = true %}{% endif %}
+          <div
+            class="col-12 col-sm-6 col-lg-3 subscription-option{% if selected %} selected{% endif %}"
+          >
+            {% include subscription-option.html selected=selected id=option.id
+            price=option.price type=option.type features=option.features
+            showSelector=false %}
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div>
+        {% include button.html type="rounded-pink" label="Subscribe Now"
+        extraClasses="subscription-info__button drop-shadow-5" %}
+      </div>
+    </div>
+  </div>
+</div>
