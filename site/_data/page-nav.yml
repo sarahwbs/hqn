@@ -8,6 +8,8 @@
   link: /subscriber-home-subbed
 - name: Bundles Page
   link: /bundles
+- name: Bundles Details Page
+  link: /bundle-details
 - name: eBook Library Page
   link: /ebooks
 - name: Games Page
