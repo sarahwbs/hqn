@@ -22,8 +22,8 @@
     >
       {% for i in (1..24) %}
       <div class="col mb-5 mb-sm-6 mb-md-7 mb-lg-8 mb-xl-13">
-        {% capture percentage %}{{ i | times: 10 }}{% endcapture %} {% include
-        card.html cardtype="ebook" percentage=percentage filter="ebook" %}
+        {% capture percentage %}{{ i | times: 10 }}{% endcapture %}<!-- -->
+        {% include ebook-card.html percentage=percentage %}
       </div>
       {% endfor %}
     </div>

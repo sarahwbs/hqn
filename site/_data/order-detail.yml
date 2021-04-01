@@ -1,0 +1,14 @@
+- bundle: Name of Bundle
+  books:
+    - title: Name of Book
+      author: Author's Name
+    - title: Name of Book
+      author: Author's Name
+    - title: Name of Book
+      author: Author's Name
+    - title: Name of Book
+      author: Author's Name
+    - title: Name of Book
+      author: Author's Name
+    - title: Name of Book
+      author: Author's Name
