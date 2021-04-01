@@ -5,16 +5,30 @@ window.addEventListener("load", function () {
       ".filter-button-control__collapse"
     );
     const bsFilterCollapsible = new bootstrap.Collapse(filterCollapsible, {
-      toggle: false
+      toggle: false,
     });
     const closeButton = document.querySelector(
       ".filter-button-control__btn-close"
+    );
+    const clearFiltersButton = document.querySelector(
+      ".filter-button-control__btn-clear"
+    );
+    const allCheckboxes = document.querySelectorAll(
+      ".filter-button-control__checkboxes input[type=checkbox]"
     );
 
     function setCloseButtonEventHandler() {
       // TODO: change css transition to @include transition($transition-collapse);
       closeButton.addEventListener("click", () => {
         bsFilterCollapsible.hide();
+      });
+    }
+
+    function setClearFiltersButtonEventHandler() {
+      clearFiltersButton.addEventListener("click", () => {
+        allCheckboxes.forEach((chkbox) => {
+          chkbox.checked = false;
+        });
       });
     }
 
@@ -37,6 +51,7 @@ window.addEventListener("load", function () {
     }
 
     setCloseButtonEventHandler();
+    setClearFiltersButtonEventHandler();
     stackElements();
   }
 });
