@@ -1,0 +1,30 @@
+<div class="card text-black-50 card-subscription-option">
+  <div class="card-header text-white p-7 subscription-option__header">
+    <div class="subscription-option__price">{{ include.price }}</div>
+    <div class="subscription-option__type">{{ include.type }}</div>
+  </div>
+  <div class="card-body subscription-option__body">
+    <ul class="subscription-option__feature-list">
+      {% for feature in include.features %}
+      <li class="subscription-option__feature">{{ feature.feature }}</li>
+      {% endfor %}
+    </ul>
+    {% if include.showSelector %}
+    <div class="subscription-option__select mt-4">
+      <input
+        type="radio"
+        class="btn-check subscription-option__checkmark"
+        name="subscription-options"
+        id="subscriptionOption{{ include.id }}"
+        autocomplete="off"
+        checked="{% if include.selected %}checked{% endif %}"
+      />
+      <label
+        class="btn subscription-option__button checkmark-button-2{% if include.selected %} checked-button{% endif %}"
+        for="subscriptionOption{{ include.id }}"
+        ><span class="subscription-option__button-text">Choose</span></label
+      >
+    </div>
+    {% endif %}
+  </div>
+</div>
