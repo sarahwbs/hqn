@@ -18,6 +18,14 @@
   }
 }
 
+@mixin link-hover($color) {
+  &:hover,
+  &:active,
+  &:focus {
+    border-bottom: 0.2rem solid $color;
+  }
+}
+
 @mixin dropshadow {
   box-shadow: 0 0.8rem 2rem var(--grey-v4);
 }
