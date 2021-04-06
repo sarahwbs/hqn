@@ -1,5 +1,7 @@
 <div class="filter-sort-btns d-flex">
-  {% include filter/filter-button.html page=include.page %}
+  {% if include.filterButton != false %}
+    {% include filter/filter-button.html page=include.page %}
+  {% endif %}
 
   <div class="filter-sort-btns__sort d-flex">
     <div class="filter-sort-btns__sort__title">Sort:</div>
