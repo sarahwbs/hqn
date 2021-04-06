@@ -1,0 +1,20 @@
+.profile-edit-view__edit-email {
+  max-width: 39.5rem;
+  margin: 0 auto;
+}
+
+.profile-edit-view__title {
+  @include large-text-v3;
+
+  @media screen and (min-width: $screen-lg) {
+    @include large-text;
+  }
+}
+
+.profile-edit-view__email-box-heading {
+  @include small-text-v2;
+}
+
+.profile-edit-view__email-box-value {
+  @include large-text-v4;
+}

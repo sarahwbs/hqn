@@ -46,6 +46,10 @@
     border-color: var(--light-grey-v4);
     color: var(--dark-grey);
   }
+
+  &.white {
+    color: var(--white);
+  }
 }
 
 @mixin full-width-button {

@@ -26,6 +26,8 @@
   link: /subscription-confirm
 - name: User Profile Page
   link: /user-profile
+- name: Edit Email Page
+  link: /user-edit-email
 - name: Selection Summary
   link: /selection-summary
 - name: Order Detail Page
