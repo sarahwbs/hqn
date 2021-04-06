@@ -57,6 +57,12 @@ a.header_nav__link {
   @include medium-text;
   padding: 1.3rem 4rem 1.2rem;
   white-space: nowrap;
+
+  &:hover,
+  &:active,
+  &:focus {
+    padding: 1.3rem 4rem 1.2rem;
+  }
 }
 
 .sign-in-button {

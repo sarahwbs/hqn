@@ -1,0 +1,10 @@
+.search-box {
+  margin-bottom: 3.2rem;
+}
+
+@media screen and (min-width: $screen-lg) {
+  .search-box {
+    width: 39.4rem;
+    margin-bottom: 0rem;
+  }
+}
