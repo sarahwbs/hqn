@@ -1,0 +1,40 @@
+.search-box {
+  margin-bottom: 4.7rem;
+}
+
+.bookshelf-empty-copy {
+  @include large-text-v3;
+  font-weight: 600;
+  margin-top: 2rem;
+}
+
+.bookshelf-select-bundle-copy {
+  @include small-text-v2;
+  margin-top: 2rem;
+  margin-bottom: 15rem;
+
+  a {
+    color: var(--yellow);
+  }
+}
+
+@media screen and (min-width: $screen-lg) {
+  .search-box {
+    width: 39.4rem;
+    margin-bottom: 0;
+  }
+
+  .bookshelf-empty-copy {
+    @include large-text-v2;
+  }
+
+  .bookshelf-select-bundle-copy {
+    @include normal-text;
+    margin-top: 2.6rem;
+
+    a {
+      color: var(--white);
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.search-box {
+  height: 4rem;
+}
+
+.search-box-text {
+  @include normal-text;
+  color: var(--light-grey-v4);
+  padding-left: 1.25rem;
+  border-radius: var(--input-border-radius);
+  border: 0;
+
+  &:focus {
+    border: 0;
+    box-shadow: none;
+  }
+}
+
+.search-box-img {
+  background-color: var(--white);
+  border-radius: var(--input-border-radius);
+  padding: 1.375rem 1.5rem;
+  border: 1px solid transparent;
+}
+
