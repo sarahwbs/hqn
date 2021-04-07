@@ -114,9 +114,8 @@
   }
 
   a {
-    @include link-hover(var(--red-v4));
-
     color: var(--red-v4);
+    @include link-hover(var(--red-v4));
   }
 }
 
