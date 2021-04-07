@@ -19,5 +19,11 @@
       </div>
       {% endfor %}
     </div>
+
+    {% if include.loader == true %}
+    <!--  -->
+    {% include loader.html %}
+    <!--  -->
+    {% endif %}
   </div>
 </div>

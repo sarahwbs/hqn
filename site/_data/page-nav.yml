@@ -16,6 +16,8 @@
   link: /games
 - name: Movies Page
   link: /movies
+- name: Movies Page (With Loader)
+  link: /movies-loader
 - name: Book Detail Page
   link: /ebook-details
 - name: Movie Detail Page

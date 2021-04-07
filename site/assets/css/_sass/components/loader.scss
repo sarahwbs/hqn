@@ -1,0 +1,16 @@
+.loader {
+  &.not-active {
+    display: none;
+  }
+
+  &.active {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.loader__icon {
+  @include spin-animation;
+  width: 3.4rem;
+  height: 3.567rem;
+}
