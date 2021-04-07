@@ -3,9 +3,9 @@
   color: var(--grey-v3);
   padding: 1.7rem 2.2rem 1.4rem 2.2rem;
   border-top: 1px solid var(--grey-v7);
-  border-right: unset;
-  border-left: unset;
-  border-bottom: unset;
+  border-right: none;
+  border-left: none;
+  border-bottom: none;
 
   &.collapsed {
     border-top: 1px solid var(--grey-v7);
@@ -41,7 +41,7 @@
 }
 
 .accordion-collapse {
-  border: unset;
+  border: none;
 }
 
 .accordion-body {
