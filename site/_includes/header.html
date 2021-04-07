@@ -98,8 +98,7 @@
       {% if include.userstate == "signed-in" and include.sub == "true" %}
       <div class="col d-flex d-none d-lg-block">
         {% include button.html type="rounded-pink" label="My Bookshelf"
-        extraClasses="header-button drop-shadow-5" onclick="location.href =
-        '/my-bookshelf'" %}
+        extraClasses="header-button drop-shadow-5" link="/my-bookshelf" %}
       </div>
       {% endif %}<!--  -->
       {% elsif include.userstate != "logo-only" %}

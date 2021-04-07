@@ -36,3 +36,7 @@
   link: /order-detail
 - name: Order Detail Page (Track Order)
   link: /order-detail-tracking
+- name: My Bookshelf Page
+  link: /my-bookshelf
+- name: My Bookshelf Page (Empty)
+  link: /my-bookshelf-empty
