@@ -1,0 +1,120 @@
+<div class="accordion" id="myBookshelfAccordion">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="heading1">
+      <button
+        class="accordion-button"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapse1"
+        aria-expanded="true"
+        aria-controls="collapse1"
+      >
+        Author
+      </button>
+    </h2>
+    <div
+      id="collapse1"
+      class="accordion-collapse collapsed show"
+      aria-labelledby="heading1"
+      data-bs-parent="#myBookshelfAccordion"
+    >
+      <div class="accordion-body filter-button-control__checkboxes">
+        {% include checkbox.html id="chk1" label="Romance Suspense" %}<!-- -->
+        {% include checkbox.html id="chk2" label="Small Town &amp; Rural Fiction"
+        checked="true" %}<!-- -->
+        {% include checkbox.html id="chk3" label="Western Romance" %}<!-- -->
+        {% include checkbox.html id="chk4" label="Holiday Romance"
+        checked="true" %}<!-- -->
+        {% include checkbox.html id="chk5" label="Crime Thriller" checked="true"
+        %}
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="heading2">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapse2"
+        aria-expanded="false"
+        aria-controls="collapse2"
+      >
+        Imprint/Series
+      </button>
+    </h2>
+    <div
+      id="collapse2"
+      class="accordion-collapse collapse"
+      aria-labelledby="heading2"
+      data-bs-parent="#myBookshelfAccordion"
+    >
+      <div class="accordion-body filter-button-control__checkboxes">
+        {% include checkbox.html id="chk6" label="Romance Suspense" %}<!-- -->
+        {% include checkbox.html id="chk7" label="Small Town &amp; Rural Fiction" checked="true" %}<!-- -->
+        {% include checkbox.html id="chk8" label="Western Romance" checked="true" %}<!-- -->
+        {% include checkbox.html id="chk9" label="Holiday Romance" checked="true" %}<!-- -->
+        {% include checkbox.html id="chk10" label="Crime Thriller" %}
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="heading3">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapse3"
+        aria-expanded="false"
+        aria-controls="collapse3"
+      >
+        Category/Genre
+      </button>
+    </h2>
+    <div
+      id="collapse3"
+      class="accordion-collapse collapse"
+      aria-labelledby="heading3"
+      data-bs-parent="#myBookshelfAccordion"
+    >
+      <div class="accordion-body filter-button-control__checkboxes">
+        {% include checkbox.html id="chk11" label="Romance Suspense" checked="true" %}<!-- -->
+        {% include checkbox.html id="chk12" label="Small Town &amp; Rural Fiction" checked="true" %}<!-- -->
+        {% include checkbox.html id="chk13" label="Western Romance" %}<!-- -->
+        {% include checkbox.html id="chk14" label="Holiday Romance" %}<!-- -->
+        {% include checkbox.html id="chk15" label="Crime Thriller" %}
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="heading4">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapse4"
+        aria-expanded="false"
+        aria-controls="collapse4"
+      >
+        Read/Unread
+      </button>
+    </h2>
+    <div
+      id="collapse4"
+      class="accordion-collapse collapse"
+      aria-labelledby="heading4"
+      data-bs-parent="#myBookshelfAccordion"
+    >
+      <div class="accordion-body filter-button-control__checkboxes">
+        {% include checkbox.html id="chk16" label="Romance Suspense" %}<!-- -->
+        {% include checkbox.html id="chk17" label="Small Town &amp; Rural Fiction" %}<!-- -->
+        {% include checkbox.html id="chk18" label="Western Romance" checked="true" %}<!-- -->
+        {% include checkbox.html id="chk19" label="Holiday Romance" %}<!-- -->
+        {% include checkbox.html id="chk20" label="Crime Thriller" %}
+      </div>
+    </div>
+  </div>
+</div>

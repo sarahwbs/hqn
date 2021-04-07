@@ -1,0 +1,49 @@
+.accordion-button {
+  @include small-text-v2;
+  color: var(--grey-v3);
+  padding: 1.7rem 2.2rem 1.4rem 2.2rem;
+  border-top: 0.1rem solid var(--grey-v7);
+  border-right: none;
+  border-left: none;
+  border-bottom: none;
+
+  &.collapsed {
+    border-top: 0.1rem solid var(--grey-v7);
+  }
+
+  &:not(.collapsed) {
+    background-color: unset;
+    color: var(--grey-v3);
+
+    &::after {
+      background: url("/assets/img/icons/down-arrow.svg") no-repeat center right;
+    }
+  }
+
+  &:focus {
+    border-top: 0.1rem solid var(--grey-v7);
+    box-shadow: unset;
+  }
+
+  &::after {
+    background: url("/assets/img/icons/down-arrow.svg") no-repeat center right;
+  }
+}
+
+.accordion-item {
+  &:first-of-type .accordion-button {
+    border-top: 0;
+  }
+
+  &:last-of-type .accordion-button {
+    border-bottom: 0;
+  }
+}
+
+.accordion-collapse {
+  border: none;
+}
+
+.accordion-body {
+  padding: 1.3rem 2.2rem;
+}

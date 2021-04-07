@@ -1,0 +1,11 @@
+.form-check-label {
+  @include small-text-v4;
+  margin-left: 1rem;
+  font-weight: 300;
+}
+
+.form-check-input,
+.form-check-input:checked,
+.form-check-input:active {
+  -webkit-appearance: none;
+}

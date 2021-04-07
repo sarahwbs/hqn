@@ -1,0 +1,48 @@
+<div class="filter-button-control">
+  <button
+    type="button"
+    class="btn btn-primary filter-sort-btns__filter-button"
+    data-bs-toggle="collapse"
+    data-bs-target="#filterButtonCtl"
+    aria-expanded="false"
+    aria-controls="filterButtonCtl"
+  >
+    <span class="filter-button__text">Filter</span>
+  </button>
+  <div
+    class="collapse filter-button-control__collapse drop-shadow-7"
+    id="filterButtonCtl"
+  >
+    <div class="card card-body px-0 py-0">
+      <section
+        class="filter-button-control__btns d-flex justify-content-between px-6 py-4"
+      >
+        <button
+          type="button"
+          class="btn filter-button-control__btn filter-button-control__btn-clear"
+        >
+          Clear all filters
+        </button>
+        <button
+          type="button"
+          class="btn filter-button-control__btn filter-button-control__btn-close"
+        >
+          Close
+        </button>
+      </section>
+
+      <section class="filter-button-control__filters p-0">
+        {% case include.page %}
+        <!-- -->{% when "movies" %}
+        <!-- --><!-- -->{% include filter/filter-movies.html %}
+        <!-- -->{% when "games" %}
+        <!-- --><!-- -->{% include filter/filter-games.html %}
+        <!-- -->{% when "ebook-lib" %}
+        <!-- --><!-- -->{% include filter/filter-ebook-lib.html %}
+        <!-- -->{% when "my-bookshelf" %}
+        <!-- --><!-- -->{% include filter/filter-my-bookshelf.html %}<!-- -->
+        {% endcase %}
+      </section>
+    </div>
+  </div>
+</div>

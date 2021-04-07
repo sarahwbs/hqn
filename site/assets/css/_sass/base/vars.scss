@@ -32,6 +32,8 @@
   --grey-v4: #00000066;
   --grey-v5: #00000029;
   --grey-v6: #0000004e;
+  --grey-v7: #d5d7da;
+  --grey-v8: #e2e8f0;
   --dark-grey: #2d3748;
   --red: #e65069;
   --red-v2: #ee3e72;
@@ -108,3 +110,20 @@ $spacers: (
 );
 
 $gutters: $spacers;
+
+// Checkboxes
+
+$form-check-input-width: 1.6rem;
+$form-check-label-color: var(--grey-v3);
+$form-check-input-border: 0.2rem solid var(--grey-v8);
+$form-check-input-border-radius: 0.4rem;
+$form-check-input-focus-box-shadow: unset;
+$form-check-input-checked-bg-color: var(--red-v2);
+$form-check-input-checked-color: transparent;
+$form-check-input-checked-border-color: transparent;
+$form-check-input-focus-border: var(--grey-v8);
+$form-check-margin-bottom: 1.7rem;
+
+// Accordion
+
+$accordion-button-focus-border-color: var(--grey-v7);
