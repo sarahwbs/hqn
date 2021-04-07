@@ -2,11 +2,13 @@
 layout: signed-in-sub
 ---
 
-<!-- Include bundle detail page when created -->
+{% include bundle-detail-view.html %}
+<!--  -->
 {% include modal.html modaltype="thank-you" title="Thank you for your eBook
 bundle selection!" bodyText="
 <p>
   The books in this bundle will now be found on the
   <strong>My Bookshelf</strong> page.
 </p>
-" buttonText="Browse more bundles" buttonText2="Visit My Bookshelf" %}
+" buttonText="Browse more bundles" buttonLink="/bundles" buttonText2="Visit My
+Bookshelf" buttonLink2="/my-bookshelf" %}

@@ -1,14 +1,33 @@
 window.addEventListener("load", function () {
-  // Clicking on the close button will remove the popup modal from DOM
-  const popupModal = document.querySelector(".popup-modal");
-  const popupModalCloseBtn = document.querySelector(".popup-modal__btn-close");
+  // Clicking on the close button, background, cancel button will remove the popup modal from DOM
+  const popupModals = document.querySelectorAll(".popup-modal");
 
-  if (popupModal) {
-    function closePopupModal() {
-      popupModal.setAttribute("aria-hidden", "true");
-      popupModal.classList.add("d-none");
+  if (popupModals && popupModals.length) {
+    function closePopupModal(modal) {
+      modal.setAttribute("aria-hidden", "true");
+      modal.classList.add("d-none");
     }
 
-    popupModalCloseBtn.addEventListener("click", closePopupModal);
+    popupModals.forEach((modal) => {
+      const popupModalCloseBtn = modal.querySelector(".popup-modal__btn-close");
+      const popupModalBackground = modal.querySelector(
+        ".popup-modal__background"
+      );
+      const popupModalCancelBtn = modal.querySelector(
+        ".popup-modal__cancel-button"
+      );
+
+      popupModalCloseBtn.addEventListener("click", () =>
+        closePopupModal(modal)
+      );
+
+      popupModalBackground.addEventListener("click", () =>
+        closePopupModal(modal)
+      );
+
+      popupModalCancelBtn.addEventListener("click", () =>
+        closePopupModal(modal)
+      );
+    });
   }
 });
