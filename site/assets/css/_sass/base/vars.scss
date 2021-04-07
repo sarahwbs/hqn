@@ -113,8 +113,8 @@ $gutters: $spacers;
 
 $form-check-input-width: 1.6rem;
 $form-check-label-color: var(--grey-v3);
-$form-check-input-border: 2px solid var(--grey-v8);
-$form-check-input-border-radius: 4px;
+$form-check-input-border: 0.2rem solid var(--grey-v8);
+$form-check-input-border-radius: 0.4rem;
 $form-check-input-focus-box-shadow: unset;
 $form-check-input-checked-bg-color: var(--red-v2);
 $form-check-input-checked-color: transparent;

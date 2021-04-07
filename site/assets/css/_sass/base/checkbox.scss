@@ -4,6 +4,8 @@
   font-weight: 300;
 }
 
-.form-check-input:checked {
+.form-check-input,
+.form-check-input:checked,
+.form-check-input:active {
   -webkit-appearance: none;
 }

@@ -2,13 +2,13 @@
   @include small-text-v2;
   color: var(--grey-v3);
   padding: 1.7rem 2.2rem 1.4rem 2.2rem;
-  border-top: 1px solid var(--grey-v7);
+  border-top: 0.1rem solid var(--grey-v7);
   border-right: none;
   border-left: none;
   border-bottom: none;
 
   &.collapsed {
-    border-top: 1px solid var(--grey-v7);
+    border-top: 0.1rem solid var(--grey-v7);
   }
 
   &:not(.collapsed) {
@@ -21,7 +21,7 @@
   }
 
   &:focus {
-    border-top: 1px solid var(--grey-v7);
+    border-top: 0.1rem solid var(--grey-v7);
     box-shadow: unset;
   }
 
