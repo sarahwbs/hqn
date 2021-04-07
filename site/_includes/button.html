@@ -7,8 +7,14 @@
 {% assign buttonClass = "default-button pink" %}<!--  -->
 {% endcase %}<!--  -->
 
+{% if include.buttonType %}<!--  -->
+{% assign buttonType = include.buttonType %}<!--  -->
+{% else %}<!--  -->
+{% assign buttonType = "button" %}<!--  -->
+{% endif %}<!--  -->
+
 <button
-  type="button"
+  type="{{ buttonType }}"
   class="btn btn-primary btn-lg {{ buttonClass }} {{ include.extraClasses }}"
   {%
   if
