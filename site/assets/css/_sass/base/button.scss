@@ -30,10 +30,22 @@
 
   &.pink {
     background-color: var(--pink);
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: var(--pink-v3);
+    }
   }
 
   &.red {
     background-color: var(--red-v3);
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: var(--red-v4);
+    }
   }
 }
 
@@ -45,6 +57,13 @@
   &.dark-grey {
     border-color: var(--light-grey-v4);
     color: var(--dark-grey);
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: var(--light-grey-v3);
+      border-color: var(--light-grey-v3);
+    }
   }
 
   &.white {
