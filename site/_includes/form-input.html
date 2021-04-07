@@ -6,7 +6,7 @@
     name="{{ include.id }}"
     id="{{ include.id }}"
   />
-  {% if include.errorMessage != nil %}
+  {% if include.errorMessage %}
   <div class="form__error mt-3 d-none" role="alert">
     {{ include.errorMessage }}
   </div>

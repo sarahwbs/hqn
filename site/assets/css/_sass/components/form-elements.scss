@@ -44,6 +44,7 @@
   }
 }
 
+.form__input .form__error-border,
 .form__error-border {
-  border-color: var(--red) !important;
+  border-color: var(--red);
 }
