@@ -109,3 +109,7 @@
     font-weight: 600;
   }
 }
+
+.edit-box {
+  @include box-edit;
+}
