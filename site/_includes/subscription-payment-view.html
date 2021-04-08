@@ -5,11 +5,17 @@
     </h1>
 
     <div class="main-content">
-      {% include body-copy.html copy="<strong
-        >Your next billing date is December 3, 2020.</strong
-      >" extraClasses="mb-6" %}
-
       <div class="subscription-payment-view__editable-content mb-11">
+        {% if include.subscription %}
+
+        <!--  -->
+
+        {% include body-copy.html copy="<strong
+          >Your next billing date is December 3, 2020.</strong
+        >" extraClasses="mb-6" %}
+
+        <!--  -->
+
         {% include edit-box.html heading="
         <strong>Monthly Subscription</strong>" content="$14.99/month"
         link="/subscription-payment-edit-subscription" heading2="<strong
@@ -21,6 +27,23 @@
 
         {% include edit-box.html content="Manage Credit Cards for Harlequin
         Plus." link="/subscription-payment-edit-credit"%}
+
+        <!--  -->
+
+        {% else %}
+
+        <div class="normal-box">
+          {% include body-copy.html copy="<strong
+            >You currently do not have an active subscription.</strong
+          >" extraClasses="mb-7" %}
+
+          <!--  -->
+
+          {% include button.html type="rounded-pink" label="Subscribe"
+          extraClasses="normal-text px-8" %}
+        </div>
+
+        {% endif %}
       </div>
 
       <div class="subscription-payment-view__contact mb-10 mb-lg-11">
@@ -33,10 +56,14 @@
         adipiscin:<br />555-555-5555" %}
       </div>
 
+      {% if include.subscription %}
+
       <div class="subscription-payment-view__delete_subscription">
         {% include button.html type="rounded-transparent" label="Delete
         Subscription" extraClasses="normal-text px-8" %}
       </div>
+
+      {% endif %}
     </div>
   </div>
 </div>

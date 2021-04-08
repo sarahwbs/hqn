@@ -1,8 +1,16 @@
-@mixin box-edit {
+@mixin box-background {
   background: var(--black-v4);
   padding: 3.5rem 7rem 3.5rem 2.5rem;
   border-radius: 0.4rem;
   position: relative;
+}
+
+@mixin box-normal {
+  @include box-background;
+}
+
+@mixin box-edit {
+  @include box-background;
 
   a {
     position: absolute;
@@ -108,6 +116,10 @@
   strong {
     font-weight: 600;
   }
+}
+
+.normal-box {
+  @include box-normal;
 }
 
 .edit-box {
