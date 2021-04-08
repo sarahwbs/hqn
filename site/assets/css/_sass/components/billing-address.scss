@@ -1,0 +1,21 @@
+.billing-address {
+  border-bottom: 0.2rem solid var(--white-v7);
+  margin-bottom: 3rem;
+  padding-bottom: 1.5rem;
+}
+
+.billing-address__heading {
+  @include large-text;
+  margin-bottom: 2rem;
+}
+
+.state-select {
+  .select-dropdown-control {
+    position: relative;
+  }
+
+  .select-dropdown-control-btn,
+  .select-dropdown-control-menu {
+    width: 100%;
+  }
+}

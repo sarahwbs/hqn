@@ -8,6 +8,7 @@
 
 .bundle-detail-view__availability {
   @include left-accent-line-text;
+  @include small-text;
   border-color: var(--pink);
 }
 

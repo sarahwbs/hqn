@@ -1,7 +1,9 @@
-<div class="card text-black-50 card-subscription-option">
+<div
+  class="card text-black-50 card-subscription-option subscription-option__{{ include.id }}"
+>
   <div class="card-header text-white p-7 subscription-option__header">
     <div class="subscription-option__price">{{ include.price }}</div>
-    <div class="subscription-option__type">{{ include.type }}</div>
+    <div class="subscription-option__name">{{ include.name }}</div>
   </div>
   <div class="card-body subscription-option__body">
     <ul class="subscription-option__feature-list">

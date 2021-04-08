@@ -15,27 +15,15 @@
       type="text/javascript"
       src="{{site.baseurl}}/assets/js/subscription-options.js"
     ></script>
-    <script
-      type="text/javascript"
-      src="{{site.baseurl}}/assets/js/select-dropdown.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="{{site.baseurl}}/assets/js/form.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="{{site.baseurl}}/assets/js/loader.js"
-    ></script>
     <link rel="stylesheet" href="{{site.baseurl}}/assets/css/styles.css" />
   </head>
-  <body class="bg-primary text-body">
+  <body class="bg-primary text-body landing-body">
     <div
-      class="container-fluid d-flex flex-column align-items-end h-100 px-5 main position-relative"
+      class="container-fluid d-flex flex-column align-items-end h-100 px-0 main position-relative landing"
     >
-      {% include header.html userstate="signed-out" %}
+      {% include header.html landingpage="true" userstate="signed-out" %}
       <div class="w-100">{{ content }}</div>
-      {% include footer.html %}
+      {% include footer.html landingpage="true" %}
     </div>
   </body>
 </html>

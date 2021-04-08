@@ -1,0 +1,27 @@
+<div class="billing-address">
+  <h2 class="billing-address__heading">Billing Address</h2>
+  <div>
+    {% include form-input.html label='Address' type='text' id='address1'
+    placeholder='Address Line 1' errorMessage='Please enter your address.'
+    type2='text' id2='address2' placeholder2='Address Line 2' %}
+  </div>
+  <div>
+    {% include form-input.html label="City" type="text" placeholder="City"
+    id="city" errorMessage="Please enter your city." %}
+  </div>
+  <div class="state-select">
+    {% include form-select.html label="State/Province" id="state"
+    options=site.data.states-provinces errorMessage="Please select your state or
+    province." selected='' %}
+  </div>
+  <div>
+    {% include form-input.html label="Postcode" type="text"
+    placeholder="Postcode" id="postcode" errorMessage="Please enter your zip or
+    postal code." %}
+  </div>
+  <div>
+    {% include form-input.html label="Phone Number" type="text"
+    placeholder="Phone Number" id="phone" errorMessage="Please enter your phone
+    number." %}
+  </div>
+</div>

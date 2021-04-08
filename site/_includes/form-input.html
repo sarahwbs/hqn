@@ -1,11 +1,21 @@
 <fieldset class="form__input">
+  {% if include.label %}
   <label for="{{ include.id }}">{{ include.label }}</label>
+  {% endif %}
   <input
     type="{{ include.type }}"
     placeholder="{{ include.placeholder }}"
     name="{{ include.id }}"
     id="{{ include.id }}"
   />
+  {% if include.id2 %}
+  <input
+    type="{{ include.type2 }}"
+    placeholder="{{ include.placeholder2 }}"
+    name="{{ include.id2 }}"
+    id="{{ include.id2 }}"
+  />
+  {% endif %}<!--  -->
   {% if include.errorMessage %}
   <div class="form__error mt-3 d-none" role="alert">
     {{ include.errorMessage }}
