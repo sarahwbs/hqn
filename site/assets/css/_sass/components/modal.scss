@@ -58,10 +58,6 @@
 
 .popup-modal__body-text {
   @include normal-text;
-
-  strong {
-    font-weight: 700;
-  }
 }
 
 .popup-modal__bundle-selection {
@@ -76,10 +72,6 @@
     &:last-child {
       margin-bottom: 0;
     }
-  }
-
-  strong {
-    font-weight: 700;
   }
 }
 

@@ -2,3 +2,83 @@
   @include large-text;
   margin-bottom: 2rem;
 }
+
+.credit-card {
+  @include normal-text-v2;
+  margin-right: -2rem;
+  margin-left: -2rem;
+  padding: 2.4rem 1.6rem;
+  border: 0.1rem solid var(--white-v7);
+
+  &.current {
+    border: 0.1rem solid var(--white);
+
+    .credit-card__new {
+      display: block;
+      margin-top: 4rem;
+    }
+  }
+
+  .form-check {
+    margin-bottom: 0;
+    margin-right: 1rem;
+    line-height: 0;
+  }
+
+  @media screen and (min-width: $screen-sm) {
+    border-radius: 1.3rem;
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+
+.credit-card__block {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.credit-card__current {
+  margin-bottom: 1.5rem;
+}
+
+.credit-card__different {
+  .billing-address {
+    border: none;
+  }
+
+  .subscription__cc-form {
+    margin-bottom: 3rem;
+  }
+
+  .credit-card__new {
+    display: none;
+  }
+}
+
+.credit-card__checkbox {
+  margin-right: 1rem;
+}
+
+.credit-card__icon {
+  margin: 0 1rem;
+}
+
+.credit-card__generic {
+  width: 4.6rem;
+  height: 3.2rem;
+  border: 1px solid var(--white-v7);
+  border-radius: 0.3rem;
+}
+
+.credit-card__number {
+  margin: 0 1rem;
+}
+
+.credit-card__expiry {
+  margin-left: 1rem;
+}
+
+.credit-card__different-card {
+  margin-left: auto;
+}

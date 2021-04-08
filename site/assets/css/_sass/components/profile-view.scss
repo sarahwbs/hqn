@@ -11,20 +11,6 @@
   }
 }
 
-.profile-view__contact {
-  strong {
-    font-weight: 600;
-  }
-
-  p {
-    @include small-text-v2;
-
-    @media screen and (min-width: $screen-lg) {
-      @include normal-text;
-    }
-  }
-}
-
 .profile-edit-box {
   @include box-edit;
 }

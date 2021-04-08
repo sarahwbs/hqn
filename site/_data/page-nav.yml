@@ -4,6 +4,8 @@
   link: /subscription-info
 - name: Signup Choose Subscription Page
   link: /signup-choose-subscription
+- name: Subscription Confirmation Page
+  link: /subscription-confirm
 - name: Subscriber Home Page (non-subscribed users)
   link: /subscriber-home
 - name: Subscriber Home Page (subscribed users)
@@ -26,12 +28,14 @@
   link: /movie-details
 - name: Order History Page
   link: /order-history
-- name: Subscription Confirmation Page
-  link: /subscription-confirm
 - name: User Profile Page
   link: /user-profile
 - name: Edit Email Page
   link: /user-edit-email
+- name: Change Subscription Page
+  link: /change-subscription
+- name: Change Subscription Page (no active subscription)
+  link: /change-subscription-new-sub
 - name: Selection Summary
   link: /selection-summary
 - name: Order Detail Page
