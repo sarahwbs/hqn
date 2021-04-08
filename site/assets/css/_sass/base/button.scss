@@ -190,6 +190,24 @@
   }
 }
 
+@mixin select-dropdown-v2 {
+  @include select-dropdown;
+
+  @media screen and (min-width: $screen-xs) {
+    min-width: 12.2rem;
+    padding-right: 5.5rem;
+  }
+}
+
+@mixin select-dropdown-options-v2 {
+  @include select-dropdown-options-menu;
+  min-width: 22rem;
+
+  a {
+    padding: 0.4rem 1.3rem;
+  }
+}
+
 .filter-button__text {
   padding-right: 7rem;
 }

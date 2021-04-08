@@ -1,6 +1,6 @@
 <div class="select-dropdown-control">
   <button
-    class="btn dropdown-toggle select-dropdown-control-btn"
+    class="btn dropdown-toggle select-dropdown-control-btn {{ include.btnExtraClasses }}"
     type="button"
     id="{{ include.id }}"
     data-bs-toggle="dropdown"
@@ -8,7 +8,7 @@
     aria-haspopup="listbox"
   ></button>
   <ul
-    class="dropdown-menu select-dropdown-control-menu"
+    class="dropdown-menu select-dropdown-control-menu {{ include.menuExtraClasses }}"
     aria-labelledby="{{ include.id }}"
     aria-haspopup="listbox"
   >
