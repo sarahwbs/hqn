@@ -125,22 +125,22 @@ window.addEventListener("load", function () {
 
     // Update the password strength visual element based on checks
     // (Min: 8 Chars, 1 lowercase, 1 uppercase, 1 number | Medium: min + 12 chars | Strong: min + 14 chars & symbols)
-    function updatePasswordStrength(e) {
+    function updatePasswordStrength() {
       const minStrengthRegex = /^(?=.{8,})(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9]).*$/g;
       const mediumStrengthRegex = /^(?=.{12,})(((?=.*[A-Z])(?=.*[a-z]))|((?=.*[A-Z])(?=.*[0-9]))|((?=.*[a-z])(?=.*[0-9]))).*$/g;
       const strongStrengthRegex = /^(?=.{14,})(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*]).*$/g;
 
-      if (strongStrengthRegex.test(e.target.value)) {
+      if (strongStrengthRegex.test(newPasswordInput.value)) {
         resetPasswordLevels();
         passwordStrengthElement.classList.add("level-4");
         passwordStrengthElement.querySelector(".body-copy").innerText =
           "Password Strength: Strong";
-      } else if (mediumStrengthRegex.test(e.target.value)) {
+      } else if (mediumStrengthRegex.test(newPasswordInput.value)) {
         resetPasswordLevels();
         passwordStrengthElement.classList.add("level-3");
         passwordStrengthElement.querySelector(".body-copy").innerText =
           "Password Strength: Medium";
-      } else if (minStrengthRegex.test(e.target.value)) {
+      } else if (minStrengthRegex.test(newPasswordInput.value)) {
         resetPasswordLevels();
         passwordStrengthElement.classList.add("level-2");
         passwordStrengthElement.querySelector(".body-copy").innerText =
@@ -154,5 +154,6 @@ window.addEventListener("load", function () {
     }
 
     newPasswordInput.addEventListener("input", updatePasswordStrength);
+    updatePasswordStrength();
   }
 });
