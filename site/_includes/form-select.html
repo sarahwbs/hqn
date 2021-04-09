@@ -1,0 +1,13 @@
+<fieldset class="form__select {{ include.extraClasses }}">
+  <label for="{{ include.id }}">{{ include.label }}</label>
+
+  {% include select-dropdown.html id="stateDropdown" options=include.options
+  selected=include.selected display=include.display %}
+
+  <!--  -->
+  {% if include.errorMessage %}
+  <div class="form__error mt-3 d-none" role="alert">
+    {{ include.errorMessage }}
+  </div>
+  {% endif %}
+</fieldset>

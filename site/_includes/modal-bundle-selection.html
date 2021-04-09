@@ -25,20 +25,66 @@
     {{ include.bodyText }}
   </div>
 
-  {% if include.error %}
-  <div class="popup-modal__error mb-10" role="alert">{{ include.error }}</div>
-  {% endif %}
+  <form class="popup-modal__form" novalidate>
+    {% if include.form == "shipping" %}
 
-  <div class="popup-modal__buttons d-flex justify-content-end">
-    {% include button.html type="rounded-transparent"
-    label=include.cancelButtonText extraClasses="popup-modal__cancel-button
-    normal-text dark-grey px-7 px-sm-8" %}
+    <div class="popup-modal__form-title mb-6">Enter Your Shipping Address</div>
+
+    <div class="popup-modal__shipping mb-12">
+      {% include form-input.html placeholder="5144 Morris St."
+      id="streetAddress" type="text" label="Address" placeholder2="Suite 202"
+      id2="suiteAddress" type2="text" errorMessage="Please enter an address." %}
+
+      <!--   -->
+
+      {% include form-input.html id="city" placeholder="New York" type="text"
+      label="City" errorMessage="Please enter a city." %}
+
+      <!--   -->
+
+      {% assign selectOptions="Alabama, Alaska, Arizona, Arkansas, California,
+      Colorado, Connecticut, Delaware, Florida, Georgia, Hawaii, Idaho,
+      Illinois, Indiana, Iowa, Kansas, Kentucky, Louisiana, Maine, Maryland,
+      Massachusetts, Michigan, Minnesota, Mississippi, Missouri, Montana,
+      Nebraska, Nevada New , Hampshire, New Jersey, New Mexico, New York, North
+      Carolina, North Dakota, Ohio, Oklahoma, Oregon, Pennsylvania, Rhode
+      Island, South Carolina, South Dakota, Tennessee, Texas, Utah, Vermont,
+      Virginia, Washington, West Virginia, Wisconsin, Wyoming" | split: ',' %}
+      <!-- -->
+      {% include form-select.html id="stateDropdown" options=selectOptions
+      extraClasses="popup-modal__state-dropdown" label="State" selected="32"
+      display="static" %}
+
+      <!--   -->
+
+      {% include form-input.html id="zipCode" placeholder="10011" type="text"
+      label="Zip Code" errorMessage="Please enter a valid zip code." %}
+
+      <!--   -->
+
+      {% include form-input.html id="phoneNumber" placeholder="555-555-5555"
+      type="tel" label="Phone Number" errorMessage="Please enter a valid phone
+      number." %}
+    </div>
+    {% endif %}
+
     <!--  -->
-    {% include button.html type="rounded-pink" label=include.mobileButtonText
-    extraClasses="normal-text d-lg-none px-7 px-sm-8" %}
-    <!--  -->
-    {% include button.html type="rounded-pink" label=include.buttonText
-    extraClasses="normal-text d-none d-lg-block popup-modal__desktop-button px-7
-    px-sm-8" %}
-  </div>
+
+    {% if include.error %}
+    <div class="popup-modal__error mb-10" role="alert">{{ include.error }}</div>
+    {% endif %}
+
+    <div class="popup-modal__buttons d-flex justify-content-end">
+      {% include button.html type="rounded-transparent"
+      label=include.cancelButtonText extraClasses="popup-modal__cancel-button
+      normal-text dark-grey px-7 px-sm-8" %}
+      <!--  -->
+      {% include button.html type="rounded-pink" label=include.mobileButtonText
+      extraClasses="normal-text d-lg-none px-7 px-sm-8" buttonType="submit" %}
+      <!--  -->
+      {% include button.html type="rounded-pink" label=include.buttonText
+      extraClasses="normal-text d-none d-lg-block popup-modal__desktop-button
+      px-7 px-sm-8" buttonType="submit" %}
+    </div>
+  </form>
 </div>

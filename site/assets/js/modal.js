@@ -1,4 +1,18 @@
 window.addEventListener("load", function () {
+  // Update the height of the html to match the height of the visible modal
+  function updateBodyHeightToMatchModal() {
+    const visibleModalHeight = document.querySelector(
+      '.popup-modal[aria-hidden="false"] .popup-modal__container'
+    );
+
+    if (visibleModalHeight) {
+      document.body.style.height = `${visibleModalHeight.clientHeight}px`;
+    }
+  }
+
+  updateBodyHeightToMatchModal();
+  window.addEventListener("resize", updateBodyHeightToMatchModal);
+
   // Clicking on the close button, background, cancel button will remove the popup modal from DOM
   const popupModals = document.querySelectorAll(".popup-modal");
 
@@ -6,6 +20,7 @@ window.addEventListener("load", function () {
     function closePopupModal(modal) {
       modal.setAttribute("aria-hidden", "true");
       modal.classList.add("d-none");
+      document.body.style.height = "auto";
     }
 
     popupModals.forEach((modal) => {

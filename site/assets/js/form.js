@@ -31,7 +31,7 @@ window.addEventListener("load", function () {
       const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
       if (emailInput && !emailRegex.test(emailInput.value.toLowerCase())) {
         errors = toggleErrorState(emailInput, true);
-      } else {
+      } else if (emailInput) {
         toggleErrorState(emailInput, false);
       }
 
@@ -39,10 +39,45 @@ window.addEventListener("load", function () {
       const passwordInput = e.srcElement.querySelector(
         'input[type="password"]'
       );
-      if (passwordInput.value !== "test") {
+      if (passwordInput && passwordInput.value !== "test") {
         errors = toggleErrorState(passwordInput, true);
-      } else {
+      } else if (passwordInput) {
         toggleErrorState(passwordInput, false);
+      }
+
+      // Address Validation
+      const addressInput = e.srcElement.querySelector(
+        'input[id="streetAddress"]'
+      );
+      if (addressInput && !addressInput.value) {
+        errors = toggleErrorState(addressInput, true);
+      } else if (addressInput) {
+        toggleErrorState(addressInput, false);
+      }
+
+      // City Validation
+      const cityInput = e.srcElement.querySelector('input[id="city"]');
+      if (cityInput && !cityInput.value) {
+        errors = toggleErrorState(cityInput, true);
+      } else if (cityInput) {
+        toggleErrorState(cityInput, false);
+      }
+
+      const phoneInput = e.srcElement.querySelector('input[type="tel"]');
+      const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
+      if (phoneInput && !phoneRegex.test(phoneInput.value)) {
+        errors = toggleErrorState(phoneInput, true);
+      } else if (phoneInput) {
+        toggleErrorState(phoneInput, false);
+      }
+
+      // US Zip Code Validation
+      const zipInput = e.srcElement.querySelector('input[id="zipCode"]');
+      const zipRegex = /(^\d{5}$)|(^\d{5}-\d{4}$)/;
+      if (zipInput && !zipRegex.test(zipInput.value)) {
+        errors = toggleErrorState(zipInput, true);
+      } else if (zipInput) {
+        toggleErrorState(zipInput, false);
       }
 
       // Submit the form if there are no errors
