@@ -93,10 +93,6 @@
   @include box-summary-count;
 }
 
-.bundle-detail-view__summary-description {
-  @include box-summary-description;
-}
-
 .bundle-detail-view__select-bundle-button {
   button {
     @media screen and (min-width: $screen-sm) and (max-width: $screen-lg-min) {
