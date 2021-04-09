@@ -42,18 +42,10 @@
 
       <!--   -->
 
-      {% assign selectOptions="Alabama, Alaska, Arizona, Arkansas, California,
-      Colorado, Connecticut, Delaware, Florida, Georgia, Hawaii, Idaho,
-      Illinois, Indiana, Iowa, Kansas, Kentucky, Louisiana, Maine, Maryland,
-      Massachusetts, Michigan, Minnesota, Mississippi, Missouri, Montana,
-      Nebraska, Nevada New , Hampshire, New Jersey, New Mexico, New York, North
-      Carolina, North Dakota, Ohio, Oklahoma, Oregon, Pennsylvania, Rhode
-      Island, South Carolina, South Dakota, Tennessee, Texas, Utah, Vermont,
-      Virginia, Washington, West Virginia, Wisconsin, Wyoming" | split: ',' %}
       <!-- -->
-      {% include form-select.html id="stateDropdown" options=selectOptions
-      extraClasses="popup-modal__state-dropdown" label="State" selected="32"
-      display="static" %}
+      {% include form-select.html id="stateDropdown" options=site.data.states
+      extraClasses="popup-modal__state-dropdown" label="State" display="static"
+      %}
 
       <!--   -->
 
