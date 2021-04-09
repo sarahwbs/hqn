@@ -3,19 +3,28 @@ window.addEventListener("load", function () {
   const forms = document.querySelectorAll("form");
 
   if (forms && forms.length) {
-    function toggleErrorState(element, errorState) {
+    function toggleErrorState(elements, errorState) {
+      // Check if it's a single element
+      if (!Array.isArray(elements)) {
+        elements = [elements];
+      }
+
       if (errorState) {
-        element
-          .closest(".form__input")
-          .querySelector(".form__error")
-          .classList.remove("d-none");
-        element.classList.add("form__error-border");
+        elements.forEach((ele) => {
+          ele
+            .closest(".form__input")
+            .querySelector(".form__error")
+            .classList.remove("d-none");
+          ele.classList.add("form__error-border");
+        });
       } else {
-        element
-          .closest(".form__input")
-          .querySelector(".form__error")
-          .classList.add("d-none");
-        element.classList.remove("form__error-border");
+        elements.forEach((ele) => {
+          ele
+            .closest(".form__input")
+            .querySelector(".form__error")
+            .classList.add("d-none");
+          ele.classList.remove("form__error-border");
+        });
       }
 
       return errorState;
