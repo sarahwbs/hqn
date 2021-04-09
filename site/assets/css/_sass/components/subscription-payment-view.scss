@@ -1,9 +1,9 @@
-.profile-view {
+.subscription-payment-view {
   max-width: 39.5rem;
   margin: 0 auto;
 }
 
-.profile-view__title {
+.subscription-payment-view__title {
   @include heading-playfair-mobile;
 
   @media screen and (min-width: $screen-lg) {
@@ -11,7 +11,7 @@
   }
 }
 
-.profile-view__contact {
+.subscription-payment-view__contact {
   strong {
     font-weight: 600;
   }

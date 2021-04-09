@@ -1,0 +1,64 @@
+<div class="container-md p-0">
+  <div class="subscription-payment-view mb-8 mb-lg-15">
+    <h1 class="subscription-payment-view__title mb-10 mb-lg-12">
+      Subscription &amp; Payment
+    </h1>
+
+    <div class="main-content">
+      <div class="subscription-payment-view__editable-content mb-11">
+        {% if include.subscription %}
+
+        <!--  -->
+
+        {% include body-copy.html copy="<strong
+          >Your next billing date is December 3, 2020.</strong
+        >" extraClasses="mb-6" %}
+
+        <!--  -->
+
+        {% include edit-box.html heading="
+        <strong>Monthly Subscription</strong>" content="$14.99/month"
+        link="/subscription-payment-edit-subscription" heading2="<strong
+          >Credit Card</strong
+        >
+        Info" content2="Visa **** **** **** 1234<br />Expires 02/24" %}
+
+        <!--  -->
+
+        {% else %}
+
+        <div class="normal-box">
+          {% include body-copy.html copy="<strong
+            >You currently do not have an active subscription.</strong
+          >" extraClasses="mb-7 pe-lg-7" %}
+
+          <!--  -->
+
+          {% include button.html type="rounded-pink" label="Subscribe"
+          extraClasses="normal-text px-8" %}
+        </div>
+
+        {% endif %}
+      </div>
+
+      <div class="subscription-payment-view__contact mb-10 mb-lg-11">
+        {% include body-copy.html copy="<strong>Customer Service</strong>"
+        extraClasses="mb-0" %}
+
+        <!--  -->
+
+        {% include body-copy.html copy="Lorem ipsum dolor sit amet consectetur
+        adipiscin:<br />555-555-5555" %}
+      </div>
+
+      {% if include.subscription %}
+
+      <div class="subscription-payment-view__delete_subscription">
+        {% include button.html type="rounded-transparent" label="Delete
+        Subscription" extraClasses="normal-text px-8" %}
+      </div>
+
+      {% endif %}
+    </div>
+  </div>
+</div>
