@@ -42,9 +42,69 @@
       opacity: 0.7;
     }
   }
+
+  input[data-password-toggle="true"] {
+    padding-right: 7.5rem;
+  }
 }
 
 .form__input .form__error-border,
 .form__error-border {
   border-color: var(--red);
+}
+
+.form__password-strength {
+  margin: 0 -0.2rem;
+
+  p {
+    @include small-text-v2;
+  }
+
+  &.level-1 {
+    .form__password-strength-bar:first-child {
+      background-color: var(--red-v3);
+      opacity: 1;
+    }
+  }
+
+  &.level-2 {
+    .form__password-strength-bar:nth-child(-n + 2) {
+      background-color: var(--orange-v2);
+      opacity: 1;
+    }
+  }
+
+  &.level-3 {
+    .form__password-strength-bar:nth-child(-n + 3) {
+      background-color: var(--yellow-v3);
+      opacity: 1;
+    }
+  }
+
+  &.level-4 {
+    .form__password-strength-bar {
+      background-color: var(--green);
+      opacity: 1;
+    }
+  }
+}
+
+.form__password-strength-bar {
+  height: 0.4rem;
+  background-color: var(--white);
+  opacity: 0.1;
+  margin: 0 0.2rem;
+}
+
+.form__input-password-toggle {
+  @include normal-text-v2;
+  position: absolute;
+  right: 1.3rem;
+  top: calc(50% - 1.4rem);
+  height: 2.8rem;
+  border-radius: 0.6rem;
+  border: none;
+  color: var(--dark-grey-v2);
+  font-weight: 600;
+  background: var(--grey-v9);
 }

@@ -30,6 +30,8 @@
   link: /user-profile
 - name: Edit Email Page
   link: /user-edit-email
+- name: Edit Password Page
+  link: /user-edit-password
 - name: Selection Summary
   link: /selection-summary
 - name: Order Detail Page
