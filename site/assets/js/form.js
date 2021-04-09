@@ -68,9 +68,12 @@ window.addEventListener("load", function () {
         const year = yearsDropdown.innerText;
 
         if (!isValidDate(day, month, year)) {
-          errors = toggleErrorState([dayDropdown], true);
+          errors = toggleErrorState(
+            [dayDropdown, monthsDropdown, yearsDropdown],
+            true
+          );
         } else {
-          toggleErrorState(dayDropdown, false);
+          toggleErrorState([dayDropdown, monthsDropdown, yearsDropdown], false);
         }
       }
 
