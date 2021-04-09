@@ -1,5 +1,5 @@
-<div class="profile-edit-box mb-4">
-  <div class="profle-edit-box__content">
+<div class="edit-box mb-4">
+  <div class="edit-box__content">
     {% if include.heading %}
     <!--  -->
     {% include body-copy.html copy=include.heading extraClasses="mb-0" %}
@@ -9,6 +9,21 @@
     <!--  -->
 
     {% include body-copy.html copy=include.content extraClasses="mb-0" %}
+
+    <!--  -->
+
+    {% if include.heading2 %}
+    <!--  -->
+    {% include body-copy.html copy=include.heading2 extraClasses="mb-0 mt-6" %}
+    <!--  -->
+    {% endif %}
+
+    <!--  -->
+    {% if include.content2 %}
+    <!--  -->
+    {% include body-copy.html copy=include.content2 extraClasses="mb-0" %}
+    <!--  -->
+    {% endif %}
   </div>
 
   <a href="{{ include.link }}" class="d-block">

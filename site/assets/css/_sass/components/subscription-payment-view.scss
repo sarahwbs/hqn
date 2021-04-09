@@ -1,0 +1,26 @@
+.subscription-payment-view {
+  max-width: 39.5rem;
+  margin: 0 auto;
+}
+
+.subscription-payment-view__title {
+  @include heading-playfair-mobile;
+
+  @media screen and (min-width: $screen-lg) {
+    @include heading-playfair;
+  }
+}
+
+.subscription-payment-view__contact {
+  strong {
+    font-weight: 600;
+  }
+
+  p {
+    @include small-text-v2;
+
+    @media screen and (min-width: $screen-lg) {
+      @include normal-text;
+    }
+  }
+}

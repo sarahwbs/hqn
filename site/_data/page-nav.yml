@@ -42,6 +42,12 @@
   link: /user-profile
 - name: Edit Email
   link: /user-edit-email
+- name: Subscription and Payment Info (non-subscribed users)
+  link: /subscription-payment-info
+- name: Subscription and Payment Info (subscribed users)
+  link: /subscription-payment-info-subbed
+- name: Subscription and Payment Info (subscribed in app)
+  link: /subscription-payment-info-subbed-in-app
 - name: Change Subscription
   link: /change-subscription
 - name: Change Subscription (non-subscribed users)
