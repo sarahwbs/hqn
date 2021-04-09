@@ -34,7 +34,15 @@
         data-val="{{ i }}"
         data-active="{% if include.selected == i %}true{% endif %}"
       >
+        {% if option.value %}
+        <!-- -->
         {{ option.name }}
+        <!-- -->
+        {% else %}
+        <!-- -->
+        {{ option }}
+        <!-- -->
+        {% endif %}
       </a>
     </li>
     {% endfor %}
