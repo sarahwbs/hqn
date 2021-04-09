@@ -58,22 +58,22 @@ window.addEventListener("load", function () {
       const monthsDropdown = e.srcElement.querySelector(
         "button#dobMonthsDropdown"
       );
-      const dayDropdown = e.srcElement.querySelector("button#dobDaysDropdown");
+      const daysDropdown = e.srcElement.querySelector("button#dobDaysDropdown");
       const yearsDropdown = e.srcElement.querySelector(
         "button#dobYearsDropdown"
       );
-      if (monthsDropdown && dayDropdown && yearsDropdown) {
-        const day = dayDropdown.innerText;
+      if (monthsDropdown && daysDropdown && yearsDropdown) {
+        const day = daysDropdown.innerText;
         const month = getMonthNumber(monthsDropdown.innerText);
         const year = yearsDropdown.innerText;
 
         if (!isValidDate(day, month, year)) {
           errors = toggleErrorState(
-            [dayDropdown, monthsDropdown, yearsDropdown],
+            [daysDropdown, monthsDropdown, yearsDropdown],
             true
           );
         } else {
-          toggleErrorState([dayDropdown, monthsDropdown, yearsDropdown], false);
+          toggleErrorState([daysDropdown, monthsDropdown, yearsDropdown], false);
         }
       }
 
