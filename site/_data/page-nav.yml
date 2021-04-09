@@ -2,47 +2,47 @@
   link: /landing
 - name: Subscription Info
   link: /subscription-info
-- name: Signup Choose Subscription Page
+- name: Signup Choose Subscription
   link: /signup-choose-subscription
-- name: Subscription Confirmation Page
+- name: Subscription Confirmation
   link: /subscription-confirm
-- name: Subscriber Home Page (non-subscribed users)
+- name: Subscriber Home (non-subscribed users)
   link: /subscriber-home
-- name: Subscriber Home Page (subscribed users)
+- name: Subscriber Home (subscribed users)
   link: /subscriber-home-subbed
-- name: Bundles Page
+- name: Bundles
   link: /bundles
-- name: Bundles Details Page
+- name: Bundle Details
   link: /bundle-details
-- name: eBook Library Page
+- name: eBook Library
   link: /ebooks
-- name: Games Page
-  link: /games
-- name: Movies Page
-  link: /movies
-- name: Movies Page (With Loader)
-  link: /movies-loader
-- name: Book Detail Page
+- name: eBook Details
   link: /ebook-details
-- name: Movie Detail Page
+- name: Games
+  link: /games
+- name: Movies
+  link: /movies
+- name: Movies (With Loader)
+  link: /movies-loader
+- name: Movie Details
   link: /movie-details
-- name: Order History Page
+- name: My Bookshelf
+  link: /my-bookshelf
+- name: My Bookshelf (Empty)
+  link: /my-bookshelf-empty
+- name: Order History
   link: /order-history
-- name: User Profile Page
-  link: /user-profile
-- name: Edit Email Page
-  link: /user-edit-email
-- name: Change Subscription Page
-  link: /change-subscription
-- name: Change Subscription Page (no active subscription)
-  link: /change-subscription-new-sub
+- name: Order Detail
+  link: /order-detail
+- name: Order Detail (Track Order)
+  link: /order-detail-tracking
 - name: Selection Summary
   link: /selection-summary
-- name: Order Detail Page
-  link: /order-detail
-- name: Order Detail Page (Track Order)
-  link: /order-detail-tracking
-- name: My Bookshelf Page
-  link: /my-bookshelf
-- name: My Bookshelf Page (Empty)
-  link: /my-bookshelf-empty
+- name: User Profile
+  link: /user-profile
+- name: Edit Email
+  link: /user-edit-email
+- name: Change Subscription
+  link: /change-subscription
+- name: Change Subscription (non-subscribed users)
+  link: /change-subscription-new-sub
