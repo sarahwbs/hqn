@@ -54,6 +54,24 @@ window.addEventListener("load", function () {
         toggleErrorState(passwordInput, false);
       }
 
+      // First Name Validation
+      const firstNameInput = e.srcElement.querySelector(
+        'input[id="firstName"]'
+      );
+      if (firstNameInput && !firstNameInput.value) {
+        errors = toggleErrorState(firstNameInput, true);
+      } else if (firstNameInput) {
+        toggleErrorState(firstNameInput, false);
+      }
+
+      // Last Name Validation
+      const lastNameInput = e.srcElement.querySelector('input[id="lastName"]');
+      if (lastNameInput && !lastNameInput.value) {
+        errors = toggleErrorState(lastNameInput, true);
+      } else if (lastNameInput) {
+        toggleErrorState(lastNameInput, false);
+      }
+
       // Date of Birth Validation
       const monthsDropdown = e.srcElement.querySelector(
         "button#dobMonthsDropdown"
@@ -73,7 +91,10 @@ window.addEventListener("load", function () {
             true
           );
         } else {
-          toggleErrorState([daysDropdown, monthsDropdown, yearsDropdown], false);
+          toggleErrorState(
+            [daysDropdown, monthsDropdown, yearsDropdown],
+            false
+          );
         }
       }
 
