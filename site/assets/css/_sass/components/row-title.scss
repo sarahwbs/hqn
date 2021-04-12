@@ -15,9 +15,12 @@
 }
 
 .row-title__sub-heading-text {
-  @include small-text;
-  line-height: unset;
+  @include xxsmall-text;
   margin-left: 1rem;
+
+  @media screen and (min-width: $screen-sm) {
+    @include small-text;
+  }
 }
 
 .row-title__sub-heading-rect {
