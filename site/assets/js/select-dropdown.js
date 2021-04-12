@@ -66,7 +66,10 @@ window.addEventListener("load", function () {
               }
             });
 
-            if (mainContentDiv.hasAttribute("style")) {
+            if (
+              document.body.contains(mainContentDiv) &&
+              mainContentDiv.hasAttribute("style")
+            ) {
               stackElements("removeStack");
             }
           });

@@ -3,19 +3,28 @@ window.addEventListener("load", function () {
   const forms = document.querySelectorAll("form");
 
   if (forms && forms.length) {
-    function toggleErrorState(element, errorState) {
+    function toggleErrorState(elements, errorState) {
+      // Check if it's a single element
+      if (!Array.isArray(elements)) {
+        elements = [elements];
+      }
+
       if (errorState) {
-        element
-          .closest(".form__input")
-          .querySelector(".form__error")
-          .classList.remove("d-none");
-        element.classList.add("form__error-border");
+        elements.forEach((ele) => {
+          ele
+            .closest(".form__input")
+            .querySelector(".form__error")
+            .classList.remove("d-none");
+          ele.classList.add("form__error-border");
+        });
       } else {
-        element
-          .closest(".form__input")
-          .querySelector(".form__error")
-          .classList.add("d-none");
-        element.classList.remove("form__error-border");
+        elements.forEach((ele) => {
+          ele
+            .closest(".form__input")
+            .querySelector(".form__error")
+            .classList.add("d-none");
+          ele.classList.remove("form__error-border");
+        });
       }
 
       return errorState;
@@ -31,7 +40,7 @@ window.addEventListener("load", function () {
       const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
       if (emailInput && !emailRegex.test(emailInput.value.toLowerCase())) {
         errors = toggleErrorState(emailInput, true);
-      } else {
+      } else if (emailInput) {
         toggleErrorState(emailInput, false);
       }
 
@@ -39,10 +48,54 @@ window.addEventListener("load", function () {
       const passwordInput = e.srcElement.querySelector(
         'input[type="password"]'
       );
-      if (passwordInput.value !== "test") {
+      if (passwordInput && passwordInput.value !== "test") {
         errors = toggleErrorState(passwordInput, true);
-      } else {
+      } else if (passwordInput) {
         toggleErrorState(passwordInput, false);
+      }
+
+      // First Name Validation
+      const firstNameInput = e.srcElement.querySelector(
+        'input[id="firstName"]'
+      );
+      if (firstNameInput && !firstNameInput.value) {
+        errors = toggleErrorState(firstNameInput, true);
+      } else if (firstNameInput) {
+        toggleErrorState(firstNameInput, false);
+      }
+
+      // Last Name Validation
+      const lastNameInput = e.srcElement.querySelector('input[id="lastName"]');
+      if (lastNameInput && !lastNameInput.value) {
+        errors = toggleErrorState(lastNameInput, true);
+      } else if (lastNameInput) {
+        toggleErrorState(lastNameInput, false);
+      }
+
+      // Date of Birth Validation
+      const monthsDropdown = e.srcElement.querySelector(
+        "button#dobMonthsDropdown"
+      );
+      const daysDropdown = e.srcElement.querySelector("button#dobDaysDropdown");
+      const yearsDropdown = e.srcElement.querySelector(
+        "button#dobYearsDropdown"
+      );
+      if (monthsDropdown && daysDropdown && yearsDropdown) {
+        const day = daysDropdown.innerText;
+        const month = getMonthNumber(monthsDropdown.innerText);
+        const year = yearsDropdown.innerText;
+
+        if (!isValidDate(day, month, year)) {
+          errors = toggleErrorState(
+            [daysDropdown, monthsDropdown, yearsDropdown],
+            true
+          );
+        } else {
+          toggleErrorState(
+            [daysDropdown, monthsDropdown, yearsDropdown],
+            false
+          );
+        }
       }
 
       // Submit the form if there are no errors

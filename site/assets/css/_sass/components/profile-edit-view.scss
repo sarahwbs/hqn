@@ -18,3 +18,11 @@
 .profile-edit-view__email-box-value {
   @include large-text-v4;
 }
+
+.profile-edit-view__dob-btn {
+  @include select-dropdown-v2;
+}
+
+.profile-edit-view__dob-menu {
+  @include select-dropdown-options-v2;
+}

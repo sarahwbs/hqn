@@ -1,14 +1,15 @@
 <div class="select-dropdown-control">
   <button
-    class="btn dropdown-toggle select-dropdown-control-btn"
+    class="btn dropdown-toggle select-dropdown-control-btn {{ include.btnExtraClasses }}"
     type="button"
     id="{{ include.id }}"
     data-bs-toggle="dropdown"
+    data-bs-offset="[0, -7]"
     aria-expanded="false"
     aria-haspopup="listbox"
   ></button>
   <ul
-    class="dropdown-menu select-dropdown-control-menu"
+    class="dropdown-menu select-dropdown-control-menu {{ include.menuExtraClasses }}"
     aria-labelledby="{{ include.id }}"
     aria-haspopup="listbox"
   >
@@ -18,7 +19,7 @@
       <a
         class="dropdown-item"
         href="#"
-        data-val="{{ i }}"
+        data-val="{{ option }}"
         data-active="{% if include.selected == i %}true{% endif %}"
         >
         {{ option }}
