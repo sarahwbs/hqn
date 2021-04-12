@@ -1,0 +1,94 @@
+<div class="container-md px-0 change-subscription">
+  <form method="post" novalidate>
+    <div class="row change-subscription__header">
+      <div class="col-12 col-md-6">
+        {% include components/button.html type="rounded-transparent"
+        label="Back" extraClasses="normal-text back-arrow-button px-8 mb-7
+        mb-lg-11" %}
+
+        <h1 class="change-subscription__heading mb-7">Your Subscription</h1>
+      </div>
+    </div>
+    {% if include.activeSub == false %}<!--  -->
+    {% include components/body-copy.html copy='<strong
+      >You currently do not have an active subscription.</strong
+    >
+    To begin your subscription please choose a subscription type and enter your
+    payment info below.' extraClasses='form__error mb-8' %}<!-- -->
+    {% endif %}
+    <div class="row">
+      <div class="col">
+        {% include components/body-copy.html copy='Please choose a subscription
+        type:' extraClasses='mb-6' %}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div
+          class="container-md px-0 px-lg-0 subscription-options change-subscription__options"
+        >
+          <div class="row g-5">
+            {% for option in site.data.subscription-options %}<!--  -->
+            {% assign selected = false %}<!--  -->
+            {% if option.id == "monthly" %}{% assign selected = true %}{% endif
+            %}
+            <div
+              class="col-12 col-sm-6 col-lg-3 text-center subscription-option{% if selected %} selected{% endif %}"
+            >
+              {% include components/subscription-option.html selected=selected
+              id=option.id price=option.price name=option.name type=option.type
+              features=option.features showSelector=true %}
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="subscription__form">
+        {% if include.activeSub == true %}<!--  -->
+        {% include forms/credit-card-current.html %}<!--  -->
+        {% include forms/credit-card-different.html %}<!--  -->
+        {% endif %}<!--  -->
+
+        {% if include.activeSub == false %}<!--  -->
+        <input type="hidden" id="validateBillingAddress" value="true" />
+        {% include forms/billing-address-form.html %}<!--  -->
+
+        {% include forms/credit-card-form.html %}<!--  -->
+        {% endif %}<!--  -->
+
+        {% if include.activeSub == true %}<!--  -->
+        {% include components/customer-service-block.html editForm=true %}<!--  -->
+        {% endif %}
+
+        <div class="subscription__buttons">
+          {% if include.activeSub %}<!--  -->
+
+          {% include components/button.html type="rounded-transparent"
+          label="Cancel" extraClasses="normal-text px-6 px-md-8 me-3 me-md-4" %}
+          {% include components/button.html type="rounded-pink" label="Save"
+          extraClasses="subscription-info__button px-6 px-md-8 drop-shadow-5"
+          buttonType="submit" %}<!--  -->
+
+          {% else %}<!--  -->
+
+          {% include components/button.html type="rounded-transparent"
+          label="Back" extraClasses="normal-text back-arrow-button px-6 px-md-8
+          me-3 me-md-4" %} {% include components/button.html type="rounded-pink"
+          label="Complete Sign Up" extraClasses="subscription-info__button px-6
+          px-md-8 drop-shadow-5" buttonType="submit" %}<!--  -->
+
+          {% endif %}
+        </div>
+
+        <div class="d-flex justify-content-end mb-16">
+          <img
+            src="{{site.baseurl}}/assets/img/norton.svg"
+            alt="Norton Secured"
+          />
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

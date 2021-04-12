@@ -3,8 +3,8 @@
   <label for="{{ include.id }}">{{ include.label }}</label>
   {% endif %}<!--  -->
 
-  {% include forms/select-dropdown.html id="stateDropdown"
-  options=include.options display=include.display %}<!--  -->
+  {% include forms/select-dropdown.html id=include.id options=include.options
+  display=include.display %}<!--  -->
 
   {% if include.errorMessage %}
   <div class="form__error mt-3 d-none" role="alert">

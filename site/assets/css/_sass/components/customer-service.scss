@@ -1,0 +1,15 @@
+.customer-service__contact {
+  p {
+    @include normal-text;
+  }
+}
+
+.customer-service__terms {
+  text-decoration: underline;
+
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none;
+  }
+}

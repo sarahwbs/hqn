@@ -22,23 +22,22 @@
     aria-haspopup="listbox"
   >
     {% for option in include.options %}<!-- -->
-    {% if option.value %}<!-- -->
-    {% capture i %}{{ option.value }}{% endcapture %}<!-- -->
+    {% if option.name and option.name != '' %}<!-- -->
+    {% capture optionValue %}{{ option.value }}{% endcapture %}<!-- -->
+    {% capture optionName %}{{ option.name }}{% endcapture %}<!-- -->
     {% else %}<!-- -->
-    {% capture i %}{{ forloop.index }}{% endcapture %}<!-- -->
+    {% capture optionValue %}{{ forloop.index }}{% endcapture %}<!-- -->
+    {% capture optionName %}{{ option }}{% endcapture %}<!-- -->
     {% endif %}
+
     <li>
       <a
         class="dropdown-item"
         href="#"
-        data-val="{{ option }}"
-        data-active="{% if include.selected == i %}true{% endif %}"
+        data-val="{{ option.optionValue }}"
+        data-active="{% if include.selected == optionValue %}true{% endif %}"
       >
-        {% if option.value %}<!-- -->
-        {{ option.name }}<!-- -->
-        {% else %}<!-- -->
-        {{ option }}<!-- -->
-        {% endif %}
+        {{ optionName }}
       </a>
     </li>
     {% endfor %}
