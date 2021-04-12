@@ -78,6 +78,8 @@ window.addEventListener("load", function () {
         errors = toggleErrorState(confirmNewPasswordInput, true);
       } else if (newPasswordInput && confirmNewPasswordInput) {
         toggleErrorState(confirmNewPasswordInput, false);
+      }
+
       // Address Validation
       const addressInput = e.srcElement.querySelector(
         'input[id="streetAddress"]'
