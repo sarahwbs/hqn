@@ -1,12 +1,9 @@
 <div class="form-check">
-  <input
-    class="form-check-input"
-    type="checkbox"
-    value="{{ include.value }}"
-    id="{{ include.id }}"
-    {% if include.checked == 'true' %}checked{% endif %}
-  />
+  <input class="form-check-input" type="checkbox" value="{{ include.value }}"
+  id="{{ include.id }}" {% if include.checked == 'true' %}checked{% endif %} />
+  {% if include.label %}
   <label class="form-check-label" for="{{ include.id }}">
     {{ include.label }}
   </label>
+  {% endif %}
 </div>

@@ -4,7 +4,7 @@
   >
     <div class="row flex-nowrap m-0 header-row">
       <div
-        class="col d-flex p-0 header__logo{% if include.landingpage == 'true' or include.infopage == 'true' %}-logged-out{% endif %}{% if include.landingpage == 'true' %} d-md-none{% endif %}"
+        class="col d-flex p-0 header__logo{% if include.userstate == 'signed-out' %}-logged-out{% endif %}{% if include.landingpage == 'true' %} d-md-none{% endif %}"
       >
         <a href="index" class="d-flex">
           <img

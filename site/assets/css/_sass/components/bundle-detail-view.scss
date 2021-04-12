@@ -8,6 +8,7 @@
 
 .bundle-detail-view__availability {
   @include left-accent-line-text;
+  @include small-text;
   border-color: var(--pink);
 }
 
@@ -64,10 +65,6 @@
     display: block !important;
   }
 
-  strong {
-    font-weight: 600;
-  }
-
   p {
     @include small-text-v2;
     margin-bottom: 2.2rem;
@@ -94,10 +91,6 @@
 
 .bundle-detail-view__summary-count {
   @include box-summary-count;
-}
-
-.bundle-detail-view__summary-description {
-  @include box-summary-description;
 }
 
 .bundle-detail-view__select-bundle-button {

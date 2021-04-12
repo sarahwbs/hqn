@@ -7,11 +7,12 @@
 
     <form method="post" novalidate>
       {% include form-input.html label="First Name" type="text"
-      placeholder="First Name" id="firstName" errorMessage="Please enter a first
-      name." %}<!-- -->
+      placeholder="First Name" value="Brennan" id="firstName"
+      errorMessage="Please enter a first name." %}<!-- -->
 
       {% include form-input.html label="Last Name" type="text" id="lastName"
-      placeholder="Last Name" errorMessage="Please enter a last name." %}
+      placeholder="Last Name" value="MacDonald" errorMessage="Please enter a
+      last name." %}
 
       <fieldset class="form__input">
         <label>Date of Birth</label>

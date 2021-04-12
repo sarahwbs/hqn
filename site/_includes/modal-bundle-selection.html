@@ -27,36 +27,34 @@
 
   <form class="popup-modal__form" novalidate>
     {% if include.form == "shipping" %}
+    <input type="hidden" id="validateBillingAddress" value="true" />
 
     <div class="popup-modal__form-title mb-6">Enter Your Shipping Address</div>
 
     <div class="popup-modal__shipping mb-12">
-      {% include form-input.html placeholder="5144 Morris St."
-      id="streetAddress" type="text" label="Address" placeholder2="Suite 202"
-      id2="suiteAddress" type2="text" errorMessage="Please enter an address." %}
-
+      {% include form-input.html id="streetAddress" placeholder="Address Line 1"
+      value="5144 Morris St." type="text" label="Address" id2="suiteAddress"
+      placeholder2="Address Line 2" value2="Suite 202" type2="text"
+      errorMessage="Please enter an address." %}
+      <!--   -->
+      {% include form-input.html id="city" placeholder="City" value="New York"
+      type="text" label="City" errorMessage="Please enter a city." %}
       <!--   -->
 
-      {% include form-input.html id="city" placeholder="New York" type="text"
-      label="City" errorMessage="Please enter a city." %}
-
-      <!--   -->
-
-      <!-- -->
       {% include form-select.html id="stateDropdown" options=site.data.states
       extraClasses="popup-modal__state-dropdown" label="State" display="static"
       %}
 
       <!--   -->
-
-      {% include form-input.html id="zipCode" placeholder="10011" type="text"
-      label="Zip Code" errorMessage="Please enter a valid zip code." %}
+      {% include form-input.html id="zipCode" placeholder="Zip Code"
+      value="10011" type="text" label="Zip Code" errorMessage="Please enter a
+      valid zip code." %}
 
       <!--   -->
 
       {% include form-input.html id="phoneNumber" placeholder="555-555-5555"
-      type="tel" label="Phone Number" errorMessage="Please enter a valid phone
-      number." %}
+      value="999-999-9999" type="tel" label="Phone Number" errorMessage="Please
+      enter a valid phone number." %}
     </div>
     {% endif %}
 
