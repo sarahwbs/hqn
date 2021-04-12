@@ -14,6 +14,17 @@ window.addEventListener("load", function () {
           if (ccOptionCheckbox === checkbox) {
             checkbox.checked = true;
             ccOption.classList.add("current");
+
+            // if using a new CC, enable billing address validation
+            if (ccOption.classList.contains("credit-card__different")) {
+              document
+                .getElementById("validateBillingAddress")
+                .setAttribute("value", true);
+            } else {
+              document
+                .getElementById("validateBillingAddress")
+                .setAttribute("value", false);
+            }
           } else {
             checkbox.checked = false;
             ccOption.classList.remove("current");

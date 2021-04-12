@@ -80,40 +80,46 @@ window.addEventListener("load", function () {
         toggleErrorState(confirmNewPasswordInput, false);
       }
 
-      // Address Validation
-      const addressInput = e.srcElement.querySelector(
-        'input[id="streetAddress"]'
-      );
-      if (addressInput && !addressInput.value) {
-        errors = toggleErrorState(addressInput, true);
-      } else if (addressInput) {
-        toggleErrorState(addressInput, false);
-      }
+      if (
+        document
+          .getElementById("validateBillingAddress")
+          .getAttribute("value") === "true"
+      ) {
+        // Address Validation
+        const addressInput = e.srcElement.querySelector(
+          'input[id="streetAddress"]'
+        );
+        if (addressInput && !addressInput.value) {
+          errors = toggleErrorState(addressInput, true);
+        } else if (addressInput) {
+          toggleErrorState(addressInput, false);
+        }
 
-      // City Validation
-      const cityInput = e.srcElement.querySelector('input[id="city"]');
-      if (cityInput && !cityInput.value) {
-        errors = toggleErrorState(cityInput, true);
-      } else if (cityInput) {
-        toggleErrorState(cityInput, false);
-      }
+        // City Validation
+        const cityInput = e.srcElement.querySelector('input[id="city"]');
+        if (cityInput && !cityInput.value) {
+          errors = toggleErrorState(cityInput, true);
+        } else if (cityInput) {
+          toggleErrorState(cityInput, false);
+        }
 
-      // Phone Validation
-      const phoneInput = e.srcElement.querySelector('input[type="tel"]');
-      const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
-      if (phoneInput && !phoneRegex.test(phoneInput.value)) {
-        errors = toggleErrorState(phoneInput, true);
-      } else if (phoneInput) {
-        toggleErrorState(phoneInput, false);
-      }
+        // Phone Validation
+        const phoneInput = e.srcElement.querySelector('input[type="tel"]');
+        const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
+        if (phoneInput && !phoneRegex.test(phoneInput.value)) {
+          errors = toggleErrorState(phoneInput, true);
+        } else if (phoneInput) {
+          toggleErrorState(phoneInput, false);
+        }
 
-      // US Zip Code Validation
-      const zipInput = e.srcElement.querySelector('input[id="zipCode"]');
-      const zipRegex = /(^\d{5}$)|(^\d{5}-\d{4}$)/;
-      if (zipInput && !zipRegex.test(zipInput.value)) {
-        errors = toggleErrorState(zipInput, true);
-      } else if (zipInput) {
-        toggleErrorState(zipInput, false);
+        // US Zip Code Validation
+        const zipInput = e.srcElement.querySelector('input[id="zipCode"]');
+        const zipRegex = /(^\d{5}$)|(^\d{5}-\d{4}$)/;
+        if (zipInput && !zipRegex.test(zipInput.value)) {
+          errors = toggleErrorState(zipInput, true);
+        } else if (zipInput) {
+          toggleErrorState(zipInput, false);
+        }
       }
 
       // Submit the form if there are no errors
