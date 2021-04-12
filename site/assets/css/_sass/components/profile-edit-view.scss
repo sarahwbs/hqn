@@ -11,7 +11,8 @@
   }
 }
 
-.profile-edit-view__email-box-heading {
+.profile-edit-view__email-box-heading,
+.profile-edit-view__password-instructions {
   @include small-text-v2;
 }
 

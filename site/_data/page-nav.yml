@@ -32,6 +32,16 @@
   link: /my-bookshelf-empty
 - name: Order History
   link: /order-history
+- name: Subscription Confirmation
+  link: /subscription-confirm
+- name: User Profile
+  link: /user-profile
+- name: Edit Email
+  link: /user-edit-email
+- name: Edit Password
+  link: /user-edit-password
+- name: Selection Summary
+  link: /selection-summary
 - name: Order Detail
   link: /order-detail
 - name: Order Detail (Track Order)

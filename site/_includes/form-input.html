@@ -2,12 +2,28 @@
   {% if include.label %}
   <label for="{{ include.id }}">{{ include.label }}</label>
   {% endif %}
-  <input
-    type="{{ include.type }}"
-    placeholder="{{ include.placeholder }}"
-    name="{{ include.id }}"
-    id="{{ include.id }}"
-  />
+  <div class="position-relative">
+    <input
+      type="{{ include.type }}"
+      placeholder="{{ include.placeholder }}"
+      name="{{ include.id }}"
+      id="{{ include.id }}"
+      {%
+      if
+      include.passwordToggle
+      %}
+      data-password-toggle="{{ include.passwordToggle }}"
+      {%
+      endif
+      %}
+    />
+
+    {% if include.passwordToggle %}
+    <button type="button" class="form__input-password-toggle">Hide</button>
+    {% endif %}
+  </div>
+
+  {% comment %} Checks if there is a second input {% endcomment %}<!--  -->
   {% if include.id2 %}
   <input
     type="{{ include.type2 }}"
@@ -16,6 +32,7 @@
     id="{{ include.id2 }}"
   />
   {% endif %}<!--  -->
+
   {% if include.errorMessage %}
   <div class="form__error mt-3 d-none" role="alert">
     {{ include.errorMessage }}

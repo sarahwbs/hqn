@@ -46,6 +46,16 @@
   }
 }
 
+.popup-modal__form-title {
+  @include normal-text;
+  font-weight: 600;
+
+  @media screen and (min-width: $screen-lg) {
+    @include large-text;
+    font-weight: 400;
+  }
+}
+
 .popup-modal__sub-title {
   @include large-text-v5;
   display: block;
@@ -208,5 +218,35 @@
         margin-bottom: 3rem;
       }
     }
+  }
+}
+
+.popup-modal__form {
+  .form__input input {
+    border-color: var(--light-grey-v5);
+  }
+}
+
+.popup-modal__state-dropdown {
+  @media screen and (min-width: $screen-sm) {
+    display: inline-block;
+  }
+
+  .select-dropdown-control {
+    position: relative;
+  }
+
+  button {
+    width: 100%;
+
+    @media screen and (min-width: $screen-sm) {
+      min-width: 29rem;
+    }
+  }
+
+  .dropdown-menu[data-bs-popper] {
+    max-height: 20rem;
+    margin-top: 4.3rem;
+    width: 100%;
   }
 }

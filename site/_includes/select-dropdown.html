@@ -1,14 +1,23 @@
 <div class="select-dropdown-control">
   <button
-    class="btn dropdown-toggle select-dropdown-control-btn"
+    class="btn dropdown-toggle select-dropdown-control-btn {{ include.btnExtraClasses }}"
     type="button"
     id="select-{{ include.id }}"
     data-bs-toggle="dropdown"
+    data-bs-offset="[0, -7]"
     aria-expanded="false"
     aria-haspopup="listbox"
+    {%
+    if
+    include.display
+    %}
+    data-bs-display="{{ include.display }}"
+    {%
+    endif
+    %}
   ></button>
   <ul
-    class="dropdown-menu select-dropdown-control-menu"
+    class="dropdown-menu select-dropdown-control-menu {{ include.menuExtraClasses }}"
     aria-labelledby="select-{{ include.id }}"
     aria-haspopup="listbox"
   >
@@ -25,7 +34,11 @@
         data-val="{{ i }}"
         data-active="{% if include.selected == i %}true{% endif %}"
       >
-        {{ option.name }}
+        {% if option.value %}<!-- -->
+        {{ option.name }}<!-- -->
+        {% else %}<!-- -->
+        {{ option }}<!-- -->
+        {% endif %}
       </a>
     </li>
     {% endfor %}
