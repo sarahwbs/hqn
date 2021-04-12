@@ -122,6 +122,50 @@ window.addEventListener("load", function () {
         }
       }
 
+      // First Name Validation
+      const firstNameInput = e.srcElement.querySelector(
+        'input[id="firstName"]'
+      );
+      if (firstNameInput && !firstNameInput.value) {
+        errors = toggleErrorState(firstNameInput, true);
+      } else if (firstNameInput) {
+        toggleErrorState(firstNameInput, false);
+      }
+
+      // Last Name Validation
+      const lastNameInput = e.srcElement.querySelector('input[id="lastName"]');
+      if (lastNameInput && !lastNameInput.value) {
+        errors = toggleErrorState(lastNameInput, true);
+      } else if (lastNameInput) {
+        toggleErrorState(lastNameInput, false);
+      }
+
+      // Date of Birth Validation
+      const monthsDropdown = e.srcElement.querySelector(
+        "button#dobMonthsDropdown"
+      );
+      const daysDropdown = e.srcElement.querySelector("button#dobDaysDropdown");
+      const yearsDropdown = e.srcElement.querySelector(
+        "button#dobYearsDropdown"
+      );
+      if (monthsDropdown && daysDropdown && yearsDropdown) {
+        const day = daysDropdown.innerText;
+        const month = getMonthNumber(monthsDropdown.innerText);
+        const year = yearsDropdown.innerText;
+
+        if (!isValidDate(day, month, year)) {
+          errors = toggleErrorState(
+            [daysDropdown, monthsDropdown, yearsDropdown],
+            true
+          );
+        } else {
+          toggleErrorState(
+            [daysDropdown, monthsDropdown, yearsDropdown],
+            false
+          );
+        }
+      }
+
       // Submit the form if there are no errors
       if (!errors) {
         e.target.submit();

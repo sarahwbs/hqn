@@ -36,6 +36,8 @@
   link: /subscription-confirm
 - name: User Profile
   link: /user-profile
+- name: Edit User Profile
+  link: /user-edit-info
 - name: Edit Email
   link: /user-edit-email
 - name: Edit Password
