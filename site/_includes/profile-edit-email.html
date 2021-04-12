@@ -1,37 +1,37 @@
 <div class="container-md p-0">
   <div class="profile-edit-view profile-edit-view__edit-email mb-8 mb-lg-15">
-    {% include button.html type="rounded-transparent" label="Back"
+    {% include components/button.html type="rounded-transparent" label="Back"
     extraClasses="normal-text back-arrow-button px-8 mb-7 mb-lg-11" %}
 
     <h1 class="profile-edit-view__title mb-6 mb-lg-7">Edit Your Email</h1>
 
     <div class="profile-edit-view__email-box mb-8">
-      {% include body-copy.html copy="Current Email Address"
+      {% include components/body-copy.html copy="Current Email Address"
       extraClasses="profile-edit-view__email-box-heading mb-4" %}
 
       <!--  -->
 
-      {% include body-copy.html copy="brennan.macdonald@redspace.com"
+      {% include components/body-copy.html copy="brennan.macdonald@redspace.com"
       extraClasses="profile-edit-view__email-box-value" %}
     </div>
 
     <form method="post" novalidate>
-      {% include form-input.html label="New Email Address" type="email"
+      {% include forms/form-input.html label="New Email Address" type="email"
       placeholder="New Email Address" id="newEmail" errorMessage="Email Address
       is incorrect." %}
 
       <!-- -->
-      {% include form-input.html label="Harlequin Plus Password" type="password"
-      placeholder="Harlequin Plus Password" id="confirmPassword"
+      {% include forms/form-input.html label="Harlequin Plus Password"
+      type="password" placeholder="Harlequin Plus Password" id="confirmPassword"
       errorMessage="Password is incorrect." %}
 
       <div class="d-flex justify-content-end mt-13 mt-lg-11">
         <!--  -->
-        {% include button.html type="rounded-transparent" label="Cancel"
-        extraClasses="normal-text white px-8 me-4" %}
+        {% include components/button.html type="rounded-transparent"
+        label="Cancel" extraClasses="normal-text white px-8 me-4" %}
 
         <!--  -->
-        {% include button.html type="rounded-pink" label="Save"
+        {% include components/button.html type="rounded-pink" label="Save"
         extraClasses="normal-text px-8 drop-shadow-5" buttonType="submit" %}
       </div>
     </form>

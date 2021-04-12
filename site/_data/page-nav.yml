@@ -2,51 +2,27 @@
   link: /landing
 - name: Subscription Info
   link: /subscription-info
-- name: Subscription and Payment Info (non-subscribed users)
-  link: /subscription-payment-info
-- name: Subscription and Payment Info (subscribed users)
-  link: /subscription-payment-info-subbed
-- name: Subscription and Payment Info (edit subscription)
-  link: /subscription-payment-info-subbed-in-app
-- name: Subscriber Home Page (non-subscribed users)
+- name: Subscriber Home (non-subscribed users)
   link: /subscriber-home
-- name: Subscriber Home Page (subscribed users)
+- name: Subscriber Home (subscribed users)
   link: /subscriber-home-subbed
-- name: Bundles Page
+- name: Bundles
   link: /bundles
-- name: Bundles Details Page
+- name: Bundle Details
   link: /bundle-details
-- name: eBook Library Page
+- name: eBook Library
   link: /ebooks
-- name: Games Page
+- name: Games
   link: /games
-- name: Movies Page
+- name: Movies
   link: /movies
-- name: Movies Page (With Loader)
+- name: Movies (With Loader)
   link: /movies-loader
-- name: Book Detail Page
+- name: Book Detail
   link: /ebook-details
-- name: Movie Detail Page
+- name: Movie Detail
   link: /movie-details
-- name: Order History Page
-  link: /order-history
-- name: Subscription Confirmation Page
-  link: /subscription-confirm
-- name: User Profile Page
-  link: /user-profile
-- name: Edit User Profile Page
-  link: /user-edit-info
-- name: Edit Email Page
-  link: /user-edit-email
-- name: Edit Password Page
-  link: /user-edit-password
-- name: Selection Summary
-  link: /selection-summary
-- name: Order Detail Page
-  link: /order-detail
-- name: Order Detail Page (Track Order)
-  link: /order-detail-tracking
-- name: My Bookshelf Page
+- name: My Bookshelf
   link: /my-bookshelf
-- name: My Bookshelf Page (Empty)
+- name: My Bookshelf (Empty)
   link: /my-bookshelf-empty

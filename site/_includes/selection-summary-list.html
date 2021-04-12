@@ -2,12 +2,12 @@
   <div class="selection-summary mb-8 mb-lg-14">
     <h1 class="selection-summary__title mb-8 mb-lg-14">Selection Summary</h1>
 
-    {% include body-copy.html copy="Below is a summary of all your available
-    monthly selections." extraClasses="mb-7 mb-lg-12" %}
+    {% include components/body-copy.html copy="Below is a summary of all your
+    available monthly selections." extraClasses="mb-7 mb-lg-12" %}
 
     <div class="main-content row gx-6">
       <div class="col-lg-3 mb-5 mb-lg-0 h-100">
-        {% include summary-box.html class="selection-summary" %}
+        {% include components/summary-box.html class="selection-summary" %}
       </div>
 
       <div class="col-lg-9">
@@ -31,8 +31,8 @@
 
         <!--  -->
 
-        {% include table.html tableHeader=tableHeader tableBody=tableBody
-        extraClasses="selection-summary__table" %}
+        {% include components/table.html tableHeader=tableHeader
+        tableBody=tableBody extraClasses="selection-summary__table" %}
       </div>
     </div>
   </div>

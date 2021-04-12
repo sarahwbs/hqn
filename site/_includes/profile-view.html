@@ -4,30 +4,22 @@
 
     <div class="main-content">
       <div class="profile-view__editable-content mb-11">
-        {% include edit-box.html heading="
+        {% include components/edit-box.html heading="
         <strong>Brennan MacDonald</strong>" content=" Date of Birth: 4/11/83"
         link="/user-edit-info" %}
 
         <!--  -->
 
-        {% include edit-box.html heading="<strong>Email:</strong>" content="
-        brennan.macdonald@redspace.com" link="/user-edit-email" %}
+        {% include components/edit-box.html heading="<strong>Email:</strong>"
+        content=" brennan.macdonald@redspace.com" link="/user-edit-email" %}
 
         <!--  -->
 
-        {% include edit-box.html content=" Password: ************"
+        {% include components/edit-box.html content=" Password: ************"
         link="/user-edit-password"%}
       </div>
 
-      <div class="profile-view__contact">
-        {% include body-copy.html copy="<strong>Customer Service</strong>"
-        extraClasses="mb-0" %}
-
-        <!--  -->
-
-        {% include body-copy.html copy="Lorem ipsum dolor sit amet consectetur
-        adipiscin:<br />555-555-5555" %}
-      </div>
+      {% include components/customer-service-block.html %}<!--  -->
     </div>
   </div>
 </div>

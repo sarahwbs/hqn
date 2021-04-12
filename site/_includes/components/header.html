@@ -4,7 +4,7 @@
   >
     <div class="row flex-nowrap m-0 header-row">
       <div
-        class="col d-flex p-0 header__logo{% if include.landingpage == 'true' or include.infopage == 'true' %}-logged-out{% endif %}{% if include.landingpage == 'true' %} d-md-none{% endif %}"
+        class="col d-flex p-0 header__logo{% if include.userstate == 'signed-out' %}-logged-out{% endif %}{% if include.landingpage == 'true' %} d-md-none{% endif %}"
       >
         <a href="index" class="d-flex">
           <img
@@ -97,8 +97,9 @@
 
       {% if include.userstate == "signed-in" and include.sub == "true" %}
       <div class="col d-flex d-none d-lg-block">
-        {% include button.html type="rounded-pink" label="My Bookshelf"
-        extraClasses="header-button drop-shadow-5" link="/my-bookshelf" %}
+        {% include components/button.html type="rounded-pink" label="My
+        Bookshelf" extraClasses="header-button drop-shadow-5"
+        link="/my-bookshelf" %}
       </div>
       {% endif %}<!--  -->
       {% elsif include.userstate != "logo-only" %}

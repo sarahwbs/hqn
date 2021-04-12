@@ -2,8 +2,8 @@
   <div class="bundles-list">
     <div class="row gx-0 align-items-end">
       <div class="col p-0">
-        {% include list-title.html title="December Bundles" subtitle="Make your
-        monthly selection by Dec. 31" %}
+        {% include components/list-title.html title="December Bundles"
+        subtitle="Make your monthly selection by Dec. 31" %}
       </div>
     </div>
 
@@ -11,11 +11,13 @@
       class="row bundles-list__container gx-0 d-flex justify-content-between"
     >
       <div class="col-lg-4 p-0">
-        {% include button-group-radio.html layout="two-radio-btns"
+        {% include forms/button-group-radio.html layout="two-radio-btns"
         radio1-label="eBook" radio2-label="Print" %}
       </div>
 
-      <div class="col-lg-8 p-0">{% include filter-sort-btns.html filterButton=false %}</div>
+      <div class="col-lg-8 p-0">
+        {% include forms/filter-sort-btns.html filterButton=false %}
+      </div>
     </div>
 
     <div
@@ -23,7 +25,7 @@
     >
       {% for i in (1..25) %}
       <div class="col mb-5 mb-sm-6 mb-md-7 mb-lg-8 mb-xl-13">
-        {% include bundle-card.html %}
+        {% include cards/bundle-card.html %}
       </div>
       {% endfor %}
     </div>

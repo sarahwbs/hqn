@@ -1,8 +1,7 @@
 <div class="container-md p-0">
   <div class="order-detail-view mb-8 mb-lg-17">
-    {% include button.html type="rounded-transparent" label="Back"
-    extraClasses="normal-text back-arrow-button ps-8 pe-8 mb-6 mb-sm-8 mb-lg-11"
-    %}
+    {% include components/button.html type="rounded-transparent" label="Back"
+    extraClasses="normal-text back-arrow-button px-8 mb-6 mb-sm-8 mb-lg-11" %}
 
     <h1 class="order-detail-view__title mb-6 mb-sm-8 mb-lg-9">Order Detail</h1>
 
@@ -37,8 +36,8 @@
 
         <!--  -->
 
-        {% include table.html tableHeader=tableHeader tableBody=tableBody
-        extraClasses="order-detail-view__table" %}
+        {% include components/table.html tableHeader=tableHeader
+        tableBody=tableBody extraClasses="order-detail-view__table" %}
       </div>
 
       <div class="col-lg-4 col-xl-3 order-1 order-lg-2 mb-11 mb-lg-0">
@@ -48,29 +47,35 @@
           <div class="order-detail-view__summary-info-wrapper">
             <div class="order-detail-view__summary-content">
               <div class="order-detail-view__summary-info">
-                {% include body-copy.html copy="<strong>Order #</strong>" %}
+                {% include components/body-copy.html copy="<strong
+                  >Order #</strong
+                >" %}
                 <!--  -->
-                {% include body-copy.html copy="511013459" %}
+                {% include components/body-copy.html copy="511013459" %}
               </div>
 
               <div class="order-detail-view__summary-info">
-                {% include body-copy.html copy="<strong>Order Type</strong>" %}
+                {% include components/body-copy.html copy="<strong
+                  >Order Type</strong
+                >" %}
                 <!--  -->
-                {% include body-copy.html copy="6 eBook Bundle" %}
+                {% include components/body-copy.html copy="6 eBook Bundle" %}
               </div>
 
               <div class="order-detail-view__summary-info">
-                {% include body-copy.html copy="<strong>Order Date</strong>" %}
+                {% include components/body-copy.html copy="<strong
+                  >Order Date</strong
+                >" %}
                 <!--  -->
-                {% include body-copy.html copy="December 1, 2020" %}
+                {% include components/body-copy.html copy="December 1, 2020" %}
               </div>
             </div>
 
             {% if include.buttonText %}
             <!--  -->
-            {% include button.html type="rounded-pink" label=include.buttonText
-            extraClasses="normal-text order-detail-view__track-order-button mt-7
-            mb-2 mb-sm-0 px-8" %}
+            {% include components/button.html type="rounded-pink"
+            label=include.buttonText extraClasses="normal-text
+            order-detail-view__track-order-button mt-7 mb-2 mb-sm-0 px-8" %}
             <!--  -->
             {% endif %}
           </div>

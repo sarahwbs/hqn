@@ -2,11 +2,11 @@
   <div class="movies-list">
     <div class="row mx-0 mb-lg-4 align-items-center">
       <div class="col-lg-4 p-0">
-        {% include list-title.html title="Movies" %}
+        {% include components/list-title.html title="Movies" %}
       </div>
 
       <div class="col-lg-8 mt-5 mb-10 my-lg-0 p-0">
-        {% include filter-sort-btns.html page="movies" %}
+        {% include forms/filter-sort-btns.html page="movies" %}
       </div>
     </div>
 
@@ -15,14 +15,14 @@
     >
       {% for i in (1..24) %}
       <div class="col mt-5 mt-sm-6 mt-md-7 mt-lg-8 mt-xl-13">
-        {% include movie-card.html %}
+        {% include cards/movie-card.html %}
       </div>
       {% endfor %}
     </div>
 
     {% if include.loader == true %}
     <!--  -->
-    {% include loader.html %}
+    {% include components/loader.html %}
     <!--  -->
     {% endif %}
   </div>

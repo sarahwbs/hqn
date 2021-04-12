@@ -11,16 +11,20 @@
       type="text/javascript"
       src="{{site.baseurl}}/assets/js/bootstrap.bundle.min.js"
     ></script>
+    <script
+      type="text/javascript"
+      src="{{site.baseurl}}/assets/js/subscription-options.js"
+    ></script>
     <link rel="stylesheet" href="{{site.baseurl}}/assets/css/styles.css" />
   </head>
-  <body class="bg-primary text-body">
+  <body class="bg-primary text-body landing-body">
     <div
-      class="container-fluid d-flex flex-column align-items-end h-100 px-5 main"
+      class="container-fluid d-flex flex-column align-items-end h-100 px-0 main position-relative landing"
     >
-      {% include components/header.html infopage="true" userstate="signed-out"
-      %}
+      {% include components/header.html landingpage="true"
+      userstate="signed-out" %}
       <div class="w-100">{{ content }}</div>
-      {% include components/footer.html %}
+      {% include components/footer.html landingpage="true" %}
     </div>
   </body>
 </html>
