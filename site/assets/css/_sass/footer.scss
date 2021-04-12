@@ -14,11 +14,20 @@
 
 .footer-nav-list {
   list-style: none;
+  justify-content: space-between;
 }
 
 .footer-nav-item {
+  &:last-of-type {
+    margin-right: auto;
+  }
+
   @media screen and (max-width: $screen-sm) {
     width: 50%;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
   }
 }
 
