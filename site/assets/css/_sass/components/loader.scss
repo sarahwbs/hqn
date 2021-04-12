@@ -11,6 +11,12 @@
 
 .loader__icon {
   @include spin-animation;
-  width: 3.4rem;
-  height: 3.567rem;
+  width: 4.4rem;
+  height: 4.567rem;
+
+  @media screen and (min-width: $screen-lg) {
+    margin-top: 2rem;
+    width: 5rem;
+    height: 5.25rem;
+  }
 }
