@@ -21,7 +21,7 @@
   &:hover,
   &:visited,
   &:focus {
-    color: var(--dark-grey);
+    color: var(--grey-v10);
   }
 }
 
@@ -177,7 +177,6 @@
   border: 0;
   border-radius: 0.4rem;
   box-shadow: 0 0.8rem 4rem var(--grey-v4);
-  top: -1rem !important;
   z-index: 1;
 
   a {
