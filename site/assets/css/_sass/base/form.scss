@@ -39,6 +39,7 @@
   }
 }
 
-input + input {
+input + input,
+.form__input-container + input {
   margin-top: 1.2rem;
 }

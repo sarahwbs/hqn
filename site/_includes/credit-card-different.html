@@ -1,0 +1,18 @@
+<div class="credit-card credit-card__different mb-11">
+  <div class="credit-card__block">
+    <div class="credit-card__checkbox">
+      {% include checkbox.html id="useDifferentCC" %}<!-- -->
+    </div>
+    <div class="credit-card__icon">
+      <div class="credit-card__generic"></div>
+    </div>
+    <div class="credit-card__different-card">Pay with a different card</div>
+  </div>
+
+  <div class="credit-card__new">
+    <input type="hidden" id="validateBillingAddress" value="false" />
+    {% include billing-address-form.html %}<!--  -->
+
+    {% include credit-card-form.html %}<!--  -->
+  </div>
+</div>

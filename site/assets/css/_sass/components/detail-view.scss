@@ -41,10 +41,6 @@
 }
 
 .detail-view__description {
-  strong {
-    font-weight: 600;
-  }
-
   p {
     @include small-text-v2;
     margin-bottom: 2.2rem;

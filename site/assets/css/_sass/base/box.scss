@@ -104,18 +104,11 @@
 
   strong {
     @include xlarge-text-v3;
-    font-weight: 700;
     display: block;
 
     @media screen and (min-width: $screen-lg) {
       @include large-headline-text;
     }
-  }
-}
-
-@mixin box-summary-description {
-  strong {
-    font-weight: 600;
   }
 }
 
