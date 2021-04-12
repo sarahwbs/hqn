@@ -10,7 +10,8 @@
   }
 }
 
-.form__input {
+.form__input,
+.form__select {
   margin-bottom: 2.5rem;
 
   label {
@@ -18,7 +19,9 @@
     display: block;
     margin-bottom: 0.8rem;
   }
+}
 
+.form__input {
   input {
     @include normal-text;
     color: var(--dark-grey);
@@ -44,6 +47,7 @@
   }
 }
 
+.popup-modal__form .form__input .form__error-border,
 .form__input .form__error-border,
 .form__error-border {
   border-color: var(--red);

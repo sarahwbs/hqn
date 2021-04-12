@@ -21,18 +21,26 @@ window.addEventListener("load", function () {
             "aria-labelledby"
           )}]`
         );
+        let associatedInput = dropdownMenu.parentNode.querySelector(
+          "input[type=hidden]"
+        );
 
         // Set the active option, if there is one.
         allOptions.forEach((option) => {
           if (option.getAttribute("data-active") === "true") {
             activeOpt = true;
             associatedButton.innerHTML = option.innerHTML;
+            associatedInput.setAttribute(
+              "value",
+              option.getAttribute("data-val")
+            );
           }
         });
 
         if (!activeOpt) {
           // Set the first option as the default option if there's no active option.
           associatedButton.innerHTML = activeOptionElement.innerHTML;
+          associatedInput.setAttribute("value", "");
         }
       });
     }
@@ -48,11 +56,18 @@ window.addEventListener("load", function () {
             "aria-labelledby"
           )}]`
         );
+        let associatedInput = dropdownMenu.parentNode.querySelector(
+          "input[type=hidden]"
+        );
 
         allOptions.forEach((option) => {
           option.addEventListener("click", (event) => {
             event.preventDefault();
             associatedButton.innerHTML = event.target.innerHTML;
+            associatedInput.setAttribute(
+              "value",
+              event.target.getAttribute("data-val")
+            );
 
             // Set element to active
             event.target.setAttribute("data-active", "true");
@@ -66,7 +81,7 @@ window.addEventListener("load", function () {
               }
             });
 
-            if (mainContentDiv.hasAttribute("style")) {
+            if (mainContentDiv && mainContentDiv.hasAttribute("style")) {
               stackElements("removeStack");
             }
           });
