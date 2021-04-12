@@ -30,6 +30,12 @@
 
   a {
     color: var(--red-v4);
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: var(--dark-red);
+    }
   }
 }
 
