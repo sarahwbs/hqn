@@ -2,6 +2,12 @@
   link: /landing
 - name: Subscription Info
   link: /subscription-info
+- name: Subscription and Payment Info (non-subscribed users)
+  link: /subscription-payment-info
+- name: Subscription and Payment Info (subscribed users)
+  link: /subscription-payment-info-subbed
+- name: Subscription and Payment Info (edit subscription)
+  link: /subscription-payment-info-subbed-in-app
 - name: Subscriber Home Page (non-subscribed users)
   link: /subscriber-home
 - name: Subscriber Home Page (subscribed users)

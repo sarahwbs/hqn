@@ -4,6 +4,8 @@
   link: /bundle-thank-you-modal-2
 - name: Bundles Details (Bundle Selection Modal)
   link: /bundle-selection-modal
+- name: Bundles Details (Bundle Selection Form Modal)
+  link: /bundle-selection-form-modal
 - name: Bundles Details (Bundle Selection Error Modal)
   link: /bundle-selection-error-modal
 - name: Bundles Details (Bundle Selection Error Modal 2)
