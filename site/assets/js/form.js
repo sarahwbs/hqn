@@ -154,11 +154,15 @@ window.addEventListener("load", function () {
         passwordStrengthElement.classList.add("level-2");
         passwordStrengthElement.querySelector(".body-copy").innerText =
           "Password Strength: Satisfactory";
-      } else {
+      } else if (newPasswordInput.value != "") {
         resetPasswordLevels();
         passwordStrengthElement.classList.add("level-1");
         passwordStrengthElement.querySelector(".body-copy").innerText =
           "Password Strength: Weak";
+      } else {
+        resetPasswordLevels();
+        passwordStrengthElement.querySelector(".body-copy").innerText =
+          "Password Strength: ";
       }
     }
 
