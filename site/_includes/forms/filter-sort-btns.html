@@ -4,9 +4,7 @@
 
   <div class="filter-sort-btns__sort d-flex">
     <div class="filter-sort-btns__sort__title">Sort:</div>
-    {% assign sortByOptions="Title A-Z,Title Z-A,Relevance,Most
-    Recent,Popularity" | split: ',' %}<!-- -->
-    {% include select-dropdown.html id="sortByDropdown" options=sortByOptions
-    selected="4" %}
+    {% include forms/select-dropdown.html id="sortByDropdown"
+    options=site.data.sort-by-options selected="4" %}
   </div>
 </div>

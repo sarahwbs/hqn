@@ -2,9 +2,9 @@
   <div class="order-history mb-8 mb-lg-13">
     <h1 class="order-history__title mb-8 mb-lg-11">Order History</h1>
 
-    {% include body-copy.html copy="Your current Harlequin Plus order status is
-    summarized below. Please note: Order Status details are accessible for 6
-    months." extraClasses="mb-8 mb-lg-10" %}
+    {% include components/body-copy.html copy="Your current Harlequin Plus order
+    status is summarized below. Please note: Order Status details are accessible
+    for 6 months." extraClasses="mb-8 mb-lg-10" %}
 
     <!--  -->
 
@@ -32,6 +32,7 @@
 
     <!--  -->
 
-    {% include table.html tableHeader=tableHeader tableBody=tableBody %}
+    {% include components/table.html tableHeader=tableHeader tableBody=tableBody
+    %}
   </div>
 </div>

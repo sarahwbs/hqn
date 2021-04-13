@@ -6,13 +6,15 @@
   </div>
 
   <div class="popup-modal__buttons d-md-flex justify-content-end">
-    {% include button.html type="rounded-pink" label=include.buttonText
-    extraClasses="normal-text px-md-8" link=include.buttonLink %}
+    {% include components/button.html type="rounded-pink"
+    label=include.buttonText extraClasses="normal-text px-md-8"
+    link=include.buttonLink %}
     <!--  -->
     {% if include.buttonText2 %}
     <!--  -->
-    {% include button.html type="rounded-pink" label=include.buttonText2
-    extraClasses="normal-text px-md-8" link=include.buttonLink2 %}
+    {% include components/button.html type="rounded-pink"
+    label=include.buttonText2 extraClasses="normal-text px-md-8"
+    link=include.buttonLink2 %}
     <!--  -->
     {% endif %}
   </div>

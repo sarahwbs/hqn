@@ -1,18 +1,18 @@
 <div class="container-md p-0">
   <div class="profile-edit-view profile-edit-view__edit-email mb-8 mb-lg-15">
-    {% include button.html type="rounded-transparent" label="Back"
+    {% include components/button.html type="rounded-transparent" label="Back"
     extraClasses="normal-text back-arrow-button px-8 mb-7 mb-lg-11" %}
 
     <h1 class="profile-edit-view__title mb-6 mb-lg-7">Edit Your Info</h1>
 
     <form method="post" novalidate>
-      {% include form-input.html label="First Name" type="text"
+      {% include forms/form-input.html label="First Name" type="text"
       placeholder="First Name" value="Brennan" id="firstName"
       errorMessage="Please enter a first name." %}<!-- -->
 
-      {% include form-input.html label="Last Name" type="text" id="lastName"
-      placeholder="Last Name" value="MacDonald" errorMessage="Please enter a
-      last name." %}
+      {% include forms/form-input.html label="Last Name" type="text"
+      id="lastName" placeholder="Last Name" value="MacDonald"
+      errorMessage="Please enter a last name." %}
 
       <fieldset class="form__input">
         <label>Date of Birth</label>
@@ -20,17 +20,17 @@
           {% assign selectOptions="January,February,March,April,
           May,June,July,August,September, October,November,December" | split:
           ',' %}<!-- -->
-          {% include select-dropdown.html id="dobMonthsDropdown"
+          {% include forms/select-dropdown.html id="dobMonthsDropdown"
           options=selectOptions btnExtraClasses="profile-edit-view__dob-btn"
           menuExtraClasses="profile-edit-view__dob-menu"%}<!-- -->
 
           {% assign selectOptions=(1..31) %}<!-- -->
-          {% include select-dropdown.html id="dobDaysDropdown"
+          {% include forms/select-dropdown.html id="dobDaysDropdown"
           options=selectOptions btnExtraClasses="profile-edit-view__dob-btn"
           menuExtraClasses="profile-edit-view__dob-menu"%}<!-- -->
 
           {% assign selectOptions=(1900..2021) %}<!-- -->
-          {% include select-dropdown.html id="dobYearsDropdown"
+          {% include forms/select-dropdown.html id="dobYearsDropdown"
           options=selectOptions btnExtraClasses="profile-edit-view__dob-btn"
           menuExtraClasses="profile-edit-view__dob-menu"%}
         </div>
@@ -41,11 +41,11 @@
 
       <div class="d-flex justify-content-end mt-13 mt-lg-11">
         <!--  -->
-        {% include button.html type="rounded-transparent" label="Cancel"
-        extraClasses="normal-text white px-8 me-4" %}
+        {% include components/button.html type="rounded-transparent"
+        label="Cancel" extraClasses="normal-text white px-8 me-4" %}
 
         <!--  -->
-        {% include button.html type="rounded-pink" label="Save"
+        {% include components/button.html type="rounded-pink" label="Save"
         extraClasses="normal-text px-8 drop-shadow-5" buttonType="submit" %}
       </div>
     </form>

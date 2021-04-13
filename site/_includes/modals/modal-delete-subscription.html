@@ -6,14 +6,16 @@
   </div>
 
   <div class="popup-modal__buttons d-flex justify-content-end">
-    {% include button.html type="rounded-transparent"
+    {% include components/button.html type="rounded-transparent"
     label=include.cancelButtonText extraClasses="popup-modal__cancel-button
     normal-text dark-grey px-7 px-sm-8" %}
     <!--  -->
-    {% include button.html type="rounded-pink" label=include.mobileButtonText
-    extraClasses="normal-text d-lg-none red px-7 px-sm-8" %}
+    {% include components/button.html type="rounded-pink"
+    label=include.mobileButtonText extraClasses="normal-text d-lg-none red px-7
+    px-sm-8" %}
     <!--  -->
-    {% include button.html type="rounded-red" label=include.buttonText
-    extraClasses="normal-text d-none d-lg-block red px-7 px-sm-8" %}
+    {% include components/button.html type="rounded-red"
+    label=include.buttonText extraClasses="normal-text d-none d-lg-block red
+    px-7 px-sm-8" %}
   </div>
 </div>

@@ -2,11 +2,11 @@
   <div class="games-list">
     <div class="row mx-0 mb-3 mb-lg-5 align-items-center">
       <div class="col-lg-4 p-0">
-        {% include list-title.html title='Games' %}
+        {% include components/list-title.html title='Games' %}
       </div>
 
       <div class="col-lg-8 my-5 my-lg-0 p-0">
-        {% include filter-sort-btns.html page="games" %}
+        {% include forms/filter-sort-btns.html page="games" %}
       </div>
     </div>
 
@@ -15,7 +15,7 @@
     >
       {% for i in (1..20) %}
       <div class="col mt-5 mt-sm-6 mt-md-7 mt-lg-8 mt-xl-11">
-        {% include game-card.html %}
+        {% include cards/game-card.html %}
       </div>
       {% endfor %}
     </div>

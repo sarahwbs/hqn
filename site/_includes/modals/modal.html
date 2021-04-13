@@ -22,14 +22,14 @@
       </button>
 
       {% if include.modaltype == "default" %}<!--  -->
-      {% include modal-default.html %}<!--  -->
+      {% include modals/modal-default.html %}<!--  -->
       {% elsif include.modaltype == "thank-you" or include.modaltype ==
       "thank-you-2"%}<!--  -->
-      {% include modal-thank-you.html %}<!--  -->
+      {% include modals/modal-thank-you.html %}<!--  -->
       {% elsif include.modaltype == "bundle-selection" %}<!--  -->
-      {% include modal-bundle-selection.html %}<!--  -->
+      {% include modals/modal-bundle-selection.html %}<!--  -->
       {% elsif include.modaltype == "delete-subscription" %}<!--  -->
-      {% include modal-delete-subscription.html %}<!--  -->
+      {% include modals/modal-delete-subscription.html %}<!--  -->
       {% endif %}
     </div>
   </div>

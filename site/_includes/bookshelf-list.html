@@ -2,16 +2,16 @@
   <div class="bookshelf-list">
     <div class="row mx-0 mb-lg-4 align-items-center">
       <div class="col-lg-4 p-0">
-        {% include list-title.html title="My Bookshelf" %}
+        {% include components/list-title.html title="My Bookshelf" %}
       </div>
     </div>
 
     <div class="row gx-0 d-flex mt-6 justify-content-between">
       <div class="col-lg-4 p-0">
-        {% include search-box.html label="Search your bookshelf" %}
+        {% include forms/search-box.html label="Search your bookshelf" %}
       </div>
 
-      <div class="col-lg-8 p-0 bookshelf-list__btns">{% include filter-sort-btns.html %}</div>
+      <div class="col-lg-8 p-0 bookshelf-list__btns">{% include forms/filter-sort-btns.html %}</div>
     </div>
 
     <div
@@ -28,8 +28,8 @@
             class="d-block"
           />
         </div>
-        {% include body-copy.html copy="Your bookshelf is empty."
-        extraClasses="bookshelf-empty-copy" %} {% include body-copy.html
+        {% include components/body-copy.html copy="Your bookshelf is empty."
+        extraClasses="bookshelf-empty-copy" %} {% include components/body-copy.html
         copy="<a href=\"/bundles\">Select your monthly bundle</a> to start your collection."
         extraClasses="bookshelf-select-bundle-copy" %}
       </div>
@@ -38,7 +38,7 @@
       <div class="col mt-5 mt-sm-6 mt-md-7 mt-lg-8 mt-xl-13">
         {% capture percentage %}{{ i | times: 10 }}{% endcapture %}<!-- -->
         <div class="col">
-          {% include ebook-card.html percentage=percentage %}<!-- -->
+          {% include cards/ebook-card.html percentage=percentage %}<!-- -->
         </div>
       </div>
       {% endfor %}<!-- -->

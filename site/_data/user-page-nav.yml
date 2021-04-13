@@ -1,0 +1,30 @@
+- name: Signup Choose Subscription
+  link: /signup-choose-subscription
+- name: Subscription Confirmation
+  link: /subscription-confirm
+- name: Order History
+  link: /order-history
+- name: Order Detail
+  link: /order-detail
+- name: Order Detail (Track Order)
+  link: /order-detail-tracking
+- name: Selection Summary
+  link: /selection-summary
+- name: User Profile
+  link: /user-profile
+- name: Edit User Profile
+  link: /user-edit-info
+- name: Edit Email
+  link: /user-edit-email
+- name: Edit Password
+  link: /user-edit-password
+- name: Subscription and Payment Info
+  link: /subscription-payment-info-subbed
+- name: Subscription and Payment Info (subscribed in app)
+  link: /subscription-payment-info-subbed-in-app
+- name: Subscription and Payment Info (non-subscribed users)
+  link: /subscription-payment-info
+- name: Change Subscription
+  link: /change-subscription
+- name: Change Subscription (non-subscribed users)
+  link: /change-subscription-new-sub

@@ -8,9 +8,17 @@ layout: default
   <h1 class="mb-8">Static HTML Page Templates</h1>
   <div class="row gx-11">
     <div class="col-6">
-      <h2>Pages</h2>
+      <h2>Content Pages</h2>
       <ul class="fs-4">
         {% for item in site.data.page-nav %}
+        <li><a href="{{ item.link }}">{{ item.name }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="col-6">
+      <h2>User Pages</h2>
+      <ul class="fs-4">
+        {% for item in site.data.user-page-nav %}
         <li><a href="{{ item.link }}">{{ item.name }}</a></li>
         {% endfor %}
       </ul>

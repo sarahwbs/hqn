@@ -2,17 +2,19 @@
   <div class="ebooks-list">
     <div class="row gx-0 align-items-end">
       <div class="col-lg-4 p-0 order-1">
-        {% include list-title.html title="eBook Library" subtitle="Available until Dec. 31" %}
+        {% include components/list-title.html title="eBook Library"
+        subtitle="Available until Dec. 31" %}
       </div>
 
       <div class="col-lg-8 p-0 mt-5 mb-10 my-lg-0 order-3 order-lg-2">
-        {% include filter-sort-btns.html page="ebook-lib" %}
+        {% include forms/filter-sort-btns.html page="ebook-lib" %}
       </div>
 
       <div class="col-lg-8 px-0 mt-5 mb-0 my-lg-11 order-2 order-lg-3">
-        {% include body-copy.html copy="Free ebooks available to read during a
-        limited time. These books can be found and read directly here, in the
-        Ebook Library, and will not be found in your personal Bookshelf." %}
+        {% include components/body-copy.html copy="Free ebooks available to read
+        during a limited time. These books can be found and read directly here,
+        in the Ebook Library, and will not be found in your personal Bookshelf."
+        %}
       </div>
     </div>
 
@@ -22,7 +24,7 @@
       {% for i in (1..24) %}
       <div class="col mb-5 mb-sm-6 mb-md-7 mb-lg-8 mb-xl-13">
         {% capture percentage %}{{ i | times: 10 }}{% endcapture %}<!-- -->
-        {% include ebook-card.html percentage=percentage %}
+        {% include cards/ebook-card.html percentage=percentage %}
       </div>
       {% endfor %}
     </div>

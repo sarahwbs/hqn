@@ -21,9 +21,10 @@
     <div
       class="container-fluid d-flex flex-column align-items-end h-100 px-0 main position-relative landing"
     >
-      {% include header.html landingpage="true" userstate="signed-out" %}
+      {% include components/header.html landingpage="true"
+      userstate="signed-out" %}
       <div class="w-100">{{ content }}</div>
-      {% include footer.html landingpage="true" %}
+      {% include components/footer.html landingpage="true" %}
     </div>
   </body>
 </html>
