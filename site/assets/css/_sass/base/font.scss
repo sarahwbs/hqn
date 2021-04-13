@@ -105,3 +105,8 @@
   font-size: 1.2rem;
   line-height: 1.8rem;
 }
+
+@mixin xxsmall-text {
+  font-size: 1rem;
+  line-height: 2rem;
+}

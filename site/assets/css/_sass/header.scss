@@ -75,6 +75,20 @@ a.header_nav__link {
   justify-content: flex-end;
 }
 
+.account__menu-button {
+  img {
+    opacity: 0.5;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    img {
+      opacity: 1;
+    }
+  }
+}
+
 .account__name {
   @include small-text;
   font-weight: normal;
@@ -134,6 +148,7 @@ a.header_nav__link {
 }
 
 .dropdown-item__selections_summary {
+  color: var(--white-v8);
   padding: 0 0 0.8rem 0;
 }
 
