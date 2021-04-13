@@ -1,12 +1,28 @@
-<div class="filter-sort-btns d-flex">
+<div class="filter-sort-btns">
   {% if include.filterButton != false %} {% include filter/filter-button.html
   page=include.page %} {% endif %}
 
-  <div class="filter-sort-btns__sort d-flex">
+  <div class="filter-sort-btns__sort">
     <div class="filter-sort-btns__sort__title">Sort:</div>
-    {% assign sortByOptions="Title A-Z,Title Z-A,Relevance,Most
-    Recent,Popularity" | split: ',' %}<!-- -->
+    {% case include.page %}<!-- -->
+
+    {% when "movies" %}<!-- -->
+    {% assign sortByOptions="Title A-Z,Title Z-A,Newest - Oldest Release,Oldest
+    - Newest Release" | split: ',' %}<!-- -->
+
+    {% when "games" %}<!--  -->
+    {% assign sortByOptions="Title A-Z,Title Z-A," | split: ',' %}<!-- -->
+
+    {% when "ebook" %}<!--  -->
+    {% assign sortByOptions="Newest Selection,Oldest Selection,Title A-Z,Title
+    Z-A" | split: ',' %}<!-- -->
+
+    {% when "my-bookshelf" %}<!--  -->
+    {% assign sortByOptions="Title A-Z,Title Z-A,Newest Selection,Oldest
+    Selection" | split: ',' %}<!-- -->
+    {% endcase %}<!--  -->
+
     {% include forms/select-dropdown.html id="sortByDropdown"
-    options=sortByOptions selected="4" %}
+    options=sortByOptions selected="1" %}
   </div>
 </div>

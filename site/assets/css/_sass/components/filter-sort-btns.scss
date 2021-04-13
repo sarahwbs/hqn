@@ -1,6 +1,12 @@
 .filter-sort-btns {
-  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
   margin: 2rem 0;
+
+  @media screen and (min-width: $screen-xs) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
   @media screen and (min-width: $screen-lg) {
     justify-content: flex-end;
@@ -10,11 +16,39 @@
 
 .filter-sort-btns__filter-button {
   @include filter-button;
+  text-align: left;
+  width: 100%;
 }
 
 .filter-sort-btns__sort {
-  align-items: center;
-  margin-left: 2%;
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  @media screen and (min-width: $screen-xs) {
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 2%;
+  }
+
+  .select-dropdown-control-btn {
+    width: 100%;
+
+    @media screen and (min-width: $screen-xs) {
+      width: auto;
+    }
+  }
+
+  .select-dropdown-control-menu {
+    padding-top: 2rem;
+    width: calc(100% - 4rem);
+
+    @media screen and (min-width: $screen-xs) {
+      width: auto;
+    }
+  }
 }
 
 .filter-sort-btns__sort__title {

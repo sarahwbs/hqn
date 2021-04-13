@@ -17,6 +17,18 @@ window.addEventListener("load", function () {
       ".filter-button-control__checkboxes input[type=checkbox]"
     );
 
+    function setCloseFilterOnOutsideClick() {
+      document.addEventListener("mouseup", function (e) {
+        // if the target of the click isn't the filter drop down, or a descendant of the filter drop down, collapse the filter drop down
+        if (
+          filterCollapsible !== e.target &&
+          !filterCollapsible.contains(e.target)
+        ) {
+          bsFilterCollapsible.hide();
+        }
+      });
+    }
+
     function setCloseButtonEventHandler() {
       closeButton.addEventListener("click", () => {
         bsFilterCollapsible.hide();
@@ -52,5 +64,6 @@ window.addEventListener("load", function () {
     setCloseButtonEventHandler();
     setClearFiltersButtonEventHandler();
     stackElements();
+    setCloseFilterOnOutsideClick();
   }
 });
