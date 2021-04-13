@@ -152,9 +152,14 @@
   @media screen and (min-width: $screen-lg) {
     margin-left: -4rem;
     margin-right: -4rem;
+    left: -1rem;
   }
 
   @media screen and (min-width: $screen-xl) {
+    left: -3rem;
+  }
+
+  @media screen and (min-width: $screen-xxl) {
     left: -4rem;
   }
 }
