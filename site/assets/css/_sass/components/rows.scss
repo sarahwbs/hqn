@@ -13,6 +13,13 @@ $bundle-shadow-size: 3.8rem;
     overflow-x: scroll;
     padding: $bundle-shadow-size;
 
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+
+    &:hover {
+      scrollbar-color: var(--medium-purple-v3-75) transparent;
+    }
+
     &::after {
       width: $bundle-shadow-size;
       content: "";
