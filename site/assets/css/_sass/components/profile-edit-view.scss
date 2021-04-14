@@ -21,9 +21,77 @@
 }
 
 .profile-edit-view__dob-btn {
-  @include select-dropdown-v2;
+  @include select-dropdown;
+  min-width: 100%;
+
+  @media screen and (min-width: $screen-xs) {
+    min-width: 100%;
+  }
+
+  &.show {
+    z-index: 4;
+  }
 }
 
 .profile-edit-view__dob-menu {
-  @include select-dropdown-options-v2;
+  @include select-dropdown-options-menu;
+  min-width: calc(100% - 4rem);
+
+  @media screen and (min-width: $screen-xs) {
+    min-width: 100%;
+  }
+
+  &.show {
+    z-index: 3;
+  }
+}
+
+.profile-edit-view__dob {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  @media screen and (min-width: $screen-xs) {
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .select-dropdown-control {
+    flex-grow: 1;
+
+    &:nth-child(1) {
+      &,
+      & .profile-edit-view__dob-menu {
+        @media screen and (min-width: $screen-xs) {
+          min-width: 15rem;
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      margin: 1rem 0;
+
+      @media screen and (min-width: $screen-xs) {
+        margin: 0 1.5rem;
+      }
+
+      &,
+      & .profile-edit-view__dob-menu {
+        @media screen and (min-width: $screen-xs) {
+          min-width: 9.5rem;
+        }
+      }
+    }
+
+    &:nth-child(3) {
+      &,
+      & .profile-edit-view__dob-menu {
+        @media screen and (min-width: $screen-xs) {
+          min-width: 12rem;
+        }
+      }
+    }
+  }
 }
