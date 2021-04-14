@@ -1,33 +1,66 @@
 .cta-carousel {
   margin-bottom: 3rem;
   padding-bottom: 3.7rem;
+  position: relative;
 
   @media screen and (min-width: $screen-lg) {
     margin-bottom: 4rem;
   }
 }
 
+.carousel-control {
+  bottom: 0.5rem;
+  position: absolute;
+  right: 7.1rem;
+}
+
 .carousel-indicators {
-  bottom: -3.7rem;
+  bottom: -5.2rem;
+  left: unset;
+  right: 0;
+  width: 7rem;
 
   & .carousel-dot {
-    border-radius: 4px;
-    height: 7px;
-    width: 7px;
+    background-color: transparent;
+    height: 2.4rem;
+    margin-left: 0.1rem;
+    margin-right: 0.1rem;
+    position: relative;
+    width: 2.1rem;
+
+    &::after {
+      background-color: var(--white);
+      border-radius: 0.4rem;
+      content: "";
+      height: 0.7rem;
+      left: 0.3rem;
+      position: absolute;
+      top: 0.8rem;
+      width: 0.7rem;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      opacity: 1;
+    }
   }
 }
 
 .carousel-pause-play {
-  height: 14px;
-  width: 12px;
+  border: none;
+  height: 2.4rem;
+  width: 3.2rem;
 }
 
 .carousel-pause {
-  background: url("../img/icons/pause.svg") center right / 12px 14px no-repeat;
+  background: url("../img/icons/pause.svg") center center / 1.2rem 1.4rem
+    no-repeat;
 }
 
 .carousel-play {
-  background: url("../img/icons/play.svg") center right / 12px 12px no-repeat;
+  background: url("../img/icons/play.svg") center center / 1.2rem 1.2rem
+    no-repeat;
 }
 
 .carousel-prev,
