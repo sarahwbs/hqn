@@ -6,26 +6,41 @@ window.addEventListener("load", function () {
       )
     ) {
       // Update buttons when mark as complete is clicked
-      function markBookAsComplete() {
-        document.querySelector(".detail-view__progress p").innerText =
-          "100% of Book Read";
-        document.querySelector(
+      function toggleBookComplete() {
+        const progressBar = document.querySelector(
           ".detail-view__progress .progress-bar"
-        ).style.width = "100%";
-        document
-          .querySelector(".detail-view__controls .detail-view__mark-button")
-          .classList.add("checked-button", "white");
-        document.querySelector(
+        );
+        const bookProgress = progressBar.getAttribute("aria-valuenow");
+        const percentReadText = document.querySelector(
+          ".detail-view__progress p"
+        );
+        const markReadButton = document.querySelector(
           ".detail-view__controls .detail-view__mark-button"
-        ).innerText = "I've Read This!";
-        document.querySelector(
+        );
+        const readBookButton = document.querySelector(
           ".detail-view__controls .detail-view__read-button"
-        ).innerText = "Continue Reading";
+        );
+
+        if (bookProgress < 100) {
+          progressBar.setAttribute("aria-valuenow", 100);
+          progressBar.style.width = "100%";
+          percentReadText.innerText = "100% of Book Read";
+          markReadButton.classList.add("checked-button", "white");
+          markReadButton.innerText = "I've Read This!";
+          readBookButton.innerText = "Continue Reading";
+        } else {
+          progressBar.setAttribute("aria-valuenow", 0);
+          progressBar.style.width = "0%";
+          percentReadText.innerText = "0% of Book Read";
+          markReadButton.classList.remove("checked-button", "white");
+          markReadButton.innerText = "Mark as Read";
+          readBookButton.innerText = "Read Now";
+        }
       }
 
       document
         .querySelector(".detail-view__controls .detail-view__mark-button")
-        .addEventListener("click", markBookAsComplete);
+        .addEventListener("click", toggleBookComplete);
     }
 
     // Shift the progress bar and action buttons into another column for mobile
