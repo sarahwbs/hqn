@@ -35,6 +35,7 @@
     &:active,
     &:focus {
       color: var(--dark-red);
+      text-decoration: underline;
     }
   }
 }
