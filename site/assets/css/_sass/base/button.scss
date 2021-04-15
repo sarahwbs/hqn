@@ -1,12 +1,9 @@
 @mixin button {
-  padding: 1.4rem 2rem 1.2rem;
+  @include normal-text;
+  font-weight: 600;
+  padding: 1.4rem 3.5rem 1.2rem;
   border-radius: var(--button-border-radius);
   border: 0.1rem solid transparent;
-
-  &.normal-text {
-    @include normal-text;
-    font-weight: 600;
-  }
 
   &:focus,
   &:focus:hover,
