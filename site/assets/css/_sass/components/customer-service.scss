@@ -11,5 +11,6 @@
   &:active,
   &:focus {
     text-decoration: none;
+    transition: text-decoration 300ms;
   }
 }

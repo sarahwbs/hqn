@@ -38,6 +38,31 @@ window.addEventListener("load", function () {
       button.classList.toggle("carousel-play");
     });
 
+    // when a user hovers over the prev/next buttons, add a hover class to the carousel item so the hover state doesn't get lost
+    const carouselPrevNext = document.querySelectorAll(
+      ".carousel-control-prev, .carousel-control-next"
+    );
+    if (carouselPrevNext) {
+      carouselPrevNext.forEach((btn) => {
+        btn.addEventListener("mouseover", () => {
+          btn
+            .closest(".carousel")
+            .querySelectorAll(".carousel-item .carousel-link")
+            .forEach((slide) => {
+              slide.classList.add("hover");
+            });
+        });
+        btn.addEventListener("mouseout", () => {
+          btn
+            .closest(".carousel")
+            .querySelectorAll(".carousel-item .carousel-link")
+            .forEach((slide) => {
+              slide.classList.remove("hover");
+            });
+        });
+      });
+    }
+
     // start the carousel cycling
     carousel.cycle();
   }

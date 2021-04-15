@@ -7,6 +7,20 @@
     @include normal-text;
     font-weight: 600;
   }
+
+  &:focus,
+  &:focus:hover,
+  &:active {
+    box-shadow: 0 0 0 0.25rem var(--purple-v3);
+  }
+
+  &.button-drop-shadow {
+    &:focus,
+    &:focus:hover,
+    &:active {
+      box-shadow: 0 0 0 0.25rem var(--purple-v3), 0 0.8rem 2rem var(--grey-v6);
+    }
+  }
 }
 
 @mixin input-button {
@@ -22,11 +36,19 @@
   &:visited,
   &:focus {
     color: var(--grey-v10);
+    transition: color 300ms;
   }
 }
 
 @mixin default-button {
   @include button;
+  transition: background-color 0ms;
+
+  &:hover,
+  &:active,
+  &:focus {
+    transition: background-color 300ms;
+  }
 
   &.pink {
     background-color: var(--pink);
@@ -35,6 +57,7 @@
     &:active,
     &:focus {
       background-color: var(--pink-v3);
+      border-color: transparent;
     }
   }
 
@@ -45,6 +68,7 @@
     &:active,
     &:focus {
       background-color: var(--red-v4);
+      border-color: transparent;
     }
   }
 }
@@ -53,6 +77,20 @@
   @include button;
   border-color: var(--white-v2);
   background-color: transparent;
+  transition: background-color 0ms;
+
+  &:hover,
+  &:active,
+  &:focus {
+    transition: background-color 300ms, border-color 300ms;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: var(--white-v2);
+    border-color: transparent;
+  }
 
   &.dark-grey {
     border-color: var(--light-grey-v4);
@@ -68,63 +106,79 @@
 
   &.white {
     color: var(--white);
+    border-color: transparent;
   }
 }
 
 @mixin full-width-button {
   @include button;
+  transition: background-color 0ms;
   width: 100%;
+
+  &:hover,
+  &:active,
+  &:focus {
+    transition: background-color 300ms, border-color 300ms, color 300ms;
+  }
 
   &.light-purple {
     background-color: var(--light-purple);
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: var(--light-purple-v2);
+      border-color: transparent;
+    }
   }
 
   &.black-v2 {
     background-color: var(--black-v2);
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: var(--black-v3);
+      border-color: transparent;
+    }
   }
 
   &.white {
     background: var(--white);
     color: var(--dark-purple-v4);
+
+    &:hover,
+    &:active,
+    &:focus {
+      background: var(--white);
+      border-color: transparent;
+      color: var(--medium-purple);
+    }
   }
 
   &.transparent {
     border-color: var(--white-v2);
     background-color: transparent;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: var(--white-v2);
+      border-color: transparent;
+    }
   }
 }
 
 .default-button {
   @include default-button;
-
-  // TODO: change that once we get a style guide
-  &:hover,
-  &:active,
-  &:focus {
-    @include default-button;
-  }
 }
 
 .transparent-button {
   @include transparent-button;
-
-  // TODO: change that once we get a style guide
-  &:hover,
-  &:active,
-  &:focus {
-    @include transparent-button;
-  }
 }
 
 .full-width-button {
   @include full-width-button;
-
-  // TODO: change that once we get a style guide
-  &:hover,
-  &:active,
-  &:focus {
-    @include full-width-button;
-  }
 }
 
 @mixin filter-button {
@@ -260,6 +314,7 @@
   &:active,
   &:focus {
     color: var(--dark-grey);
+    transition: color 300ms;
   }
 
   &.checked-button {
