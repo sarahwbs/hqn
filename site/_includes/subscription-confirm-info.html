@@ -1,40 +1,58 @@
 <div class="container-md p-0">
   <div class="subscription-confirm">
     <div class="main-content">
-      <h1 class="subscription-confirm__title mb-8 mb-lg-11 text-center text-lg-start">Welcome to HarlequinPlus!</h1>
+      <h1
+        class="subscription-confirm__title mb-8 mb-lg-11 text-center text-lg-start"
+      >
+        Welcome to HarlequinPlus!
+      </h1>
 
       <div class="row align-items-lg-end">
-        <div class="col-lg-6 subscription-confirm__col-1 text-center text-lg-start">
+        <div
+          class="col-lg-6 subscription-confirm__col-1 text-center text-lg-start"
+        >
           <h2 class="subscription-confirm__subtitle mb-5">
             Your subscription is confirmed.
           </h2>
 
           <div class="subscription-confirm__confirm-info">
-            {% include components/body-copy.html copy="<a href=\"#\"
+            {% include components/body-copy.html copy='<a href="#"
               >Learn more about what your subscription can offer you</a
             >
-            or hit the button below to begin exploring amazing books, movies, and
-            games." extraClasses="pb-7" %}
+            or hit the button below to begin exploring amazing books, movies,
+            and games.' extraClasses="pb-7" %}
           </div>
 
-          {% include components/button.html
-          label="Enter HarlequinPlus" extraClasses="normal-text px-7
-          px-sm-9 mb-13 mb-lg-16" %}
+          {% include components/button.html label="Enter HarlequinPlus"
+          extraClasses="px-7 px-sm-9 mb-13 mb-lg-16" %}
 
-          <div class="subscription-confirm__download-wrapper d-flex justify-content-center d-lg-block">
+          <div
+            class="subscription-confirm__download-wrapper d-flex justify-content-center d-lg-block"
+          >
             <div>
               <div class="subscription-confirm__download-info mb-8 text-start">
-                {% include components/body-copy.html copy="<strong>Download the app!</strong>" extraClasses="mb-0" %}
-                {% include components/body-copy.html copy="Lorem ipsum dolor sit amet, consectetur adipiscing." %}
+                {% include components/body-copy.html copy="<strong
+                  >Download the app!</strong
+                >" extraClasses="mb-0" %}<!--  -->
+                {% include components/body-copy.html copy="Lorem ipsum dolor sit
+                amet, consectetur adipiscing." %}
               </div>
 
               <div class="subscription-confirm__download d-flex">
                 <a href="#" target="_blank">
-                  <img src="{{ site.url }}/assets/img/icons/app-store.svg" alt="Download on App Store" class="w-100 d-block" />
+                  <img
+                    src="{{ site.url }}/assets/img/icons/app-store.svg"
+                    alt="Download on App Store"
+                    class="w-100 d-block"
+                  />
                 </a>
 
                 <a href="#" target="_blank">
-                  <img src="{{ site.url }}/assets/img/icons/google-play.svg" alt="Download on Google Play" class="w-100 d-block" />
+                  <img
+                    src="{{ site.url }}/assets/img/icons/google-play.svg"
+                    alt="Download on Google Play"
+                    class="w-100 d-block"
+                  />
                 </a>
               </div>
             </div>
@@ -42,7 +60,11 @@
         </div>
 
         <div class="col-lg-6 subscription-confirm__col-2 d-none d-lg-block">
-          <img src="{{ site.url }}/assets/img/laptop.png" alt="Laptop" class="w-100 d-block" />
+          <img
+            src="{{ site.url }}/assets/img/laptop.png"
+            alt="Laptop"
+            class="w-100 d-block"
+          />
         </div>
       </div>
     </div>

@@ -3,8 +3,7 @@
     <div class="row change-subscription__header">
       <div class="col-12 col-md-6">
         {% include components/button.html type="rounded-transparent"
-        label="Back" extraClasses="normal-text back-arrow-button px-8 mb-7
-        mb-lg-11" %}
+        label="Back" extraClasses="back-arrow-button mb-7 mb-lg-11" %}
 
         <h1 class="change-subscription__heading mb-7">Your Subscription</h1>
       </div>
@@ -66,7 +65,7 @@
           {% if include.activeSub %}<!--  -->
 
           {% include components/button.html type="rounded-transparent"
-          label="Cancel" extraClasses="normal-text px-6 px-md-8 me-3 me-md-4" %}
+          label="Cancel" extraClasses="px-6 px-md-8 me-3 me-md-4" %}<!--  -->
           {% include components/button.html label="Save"
           extraClasses="subscription-info__button px-6 px-md-8"
           buttonType="submit" %}<!--  -->
@@ -74,9 +73,10 @@
           {% else %}<!--  -->
 
           {% include components/button.html type="rounded-transparent"
-          label="Back" extraClasses="normal-text back-arrow-button px-6 px-md-8
-          me-3 me-md-4" %} {% include components/button.html label="Complete
-          Sign Up" extraClasses="subscription-info__button px-6 px-md-8"
+          label="Back" extraClasses="back-arrow-button px-6 px-md-8 me-3
+          me-md-4" %}<!--  -->
+          {% include components/button.html label="Complete Sign Up"
+          extraClasses="subscription-info__button px-6 px-md-8"
           buttonType="submit" %}<!--  -->
 
           {% endif %}
