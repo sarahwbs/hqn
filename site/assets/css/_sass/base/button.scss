@@ -13,14 +13,6 @@
   &:active {
     box-shadow: 0 0 0 0.25rem var(--purple-v3);
   }
-
-  &.button-drop-shadow {
-    &:focus,
-    &:focus:hover,
-    &:active {
-      box-shadow: 0 0 0 0.25rem var(--purple-v3), 0 0.8rem 2rem var(--grey-v6);
-    }
-  }
 }
 
 @mixin input-button {
@@ -42,12 +34,19 @@
 
 @mixin default-button {
   @include button;
+  box-shadow: 0 0.8rem 2rem var(--grey-v6);
   transition: background-color 0ms;
 
   &:hover,
   &:active,
   &:focus {
     transition: background-color 300ms;
+  }
+
+  &:focus,
+  &:focus:hover,
+  &:active {
+    box-shadow: 0 0.8rem 2rem var(--grey-v6), 0 0 0 0.25rem var(--purple-v3);
   }
 
   &.pink {
@@ -82,14 +81,9 @@
   &:hover,
   &:active,
   &:focus {
-    transition: background-color 300ms, border-color 300ms;
-  }
-
-  &:hover,
-  &:active,
-  &:focus {
     background-color: var(--white-v2);
     border-color: transparent;
+    transition: background-color 300ms, border-color 300ms;
   }
 
   &.dark-grey {
@@ -112,6 +106,7 @@
 
 @mixin full-width-button {
   @include button;
+  box-shadow: 0 0.8rem 2rem var(--grey-v6);
   transition: background-color 0ms;
   width: 100%;
 
@@ -119,6 +114,12 @@
   &:active,
   &:focus {
     transition: background-color 300ms, border-color 300ms, color 300ms;
+  }
+
+  &:focus,
+  &:focus:hover,
+  &:active {
+    box-shadow: 0 0.8rem 2rem var(--grey-v6), 0 0 0 0.25rem var(--purple-v3);
   }
 
   &.light-purple {
