@@ -15,18 +15,10 @@
         aria-live="polite"
         aria-atomic="true"
       ></div>
+
       <div
         class="carousel-indicators align-items-center justify-content-end mx-0 position-absolute"
       >
-        <button
-          type="button"
-          aria-label="Pause"
-          data-action="stop"
-          aria-controls="homePageCarousel"
-          class="carousel-pause-play carousel-pause me-3 border-0"
-        >
-          <span class="visually-hidden">Stop Animation</span>
-        </button>
         {% for i in (1..4) %}
         <button
           type="button"
@@ -34,7 +26,7 @@
           data-bs-slide-to="{{ i | minus: 1 }}"
           data-slide="{{ i }}"
           aria-label="Slide {{ i }}"
-          class="carousel-dot mx-2 border-0 {% if i == 1 %}active{% endif %}"
+          class="carousel-dot {% if i == 1 %}active{% endif %}"
           aria-current="{% if i == 1 %}true{% endif %}"
           aria-controls="homePageCarousel"
         >
@@ -102,6 +94,18 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
+    </div>
+
+    <div class="carousel-control">
+      <button
+        type="button"
+        aria-label="Pause"
+        data-action="stop"
+        aria-controls="homePageCarousel"
+        class="carousel-pause-play carousel-pause"
+      >
+        <span class="visually-hidden">Stop Animation</span>
+      </button>
     </div>
   </div>
 </div>
