@@ -43,8 +43,9 @@
       <!--   -->
 
       {% include forms/form-select.html id="stateDropdown"
-      options=site.data.states extraClasses="popup-modal__state-dropdown"
-      label="State" display="static" %}
+      options=site.data.states-provinces
+      extraClasses="popup-modal__state-dropdown" label="State/Province"
+      display="static" %}
 
       <!--   -->
       {% include forms/form-input.html id="zipCode" placeholder="Zip Code"
