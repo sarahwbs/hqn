@@ -11,7 +11,9 @@
         {% include forms/search-box.html label="Search your bookshelf" %}
       </div>
 
-      <div class="col-lg-8 p-0 bookshelf-list__btns">{% include forms/filter-sort-btns.html page="my-bookshelf" %}</div>
+      <div class="col-lg-8 p-0 bookshelf-list__btns">
+        {% include forms/filter-sort-btns.html page="my-bookshelf" %}
+      </div>
     </div>
 
     <div
@@ -29,9 +31,12 @@
           />
         </div>
         {% include components/body-copy.html copy="Your bookshelf is empty."
-        extraClasses="bookshelf-empty-copy" %} {% include components/body-copy.html
-        copy="<a href=\"/bundles\">Select your monthly bundle</a> to start your collection."
-        extraClasses="bookshelf-select-bundle-copy" %}
+        extraClasses="bookshelf-empty-copy" %}<!-- -->
+        {% include components/body-copy.html copy='<a href="/bundles"
+          >Select your monthly bundle</a
+        >
+        to start your collection.' extraClasses="bookshelf-select-bundle-copy"
+        %}
       </div>
       {% else %}<!-- -->
       {% for i in (1..24) %}<!-- -->
