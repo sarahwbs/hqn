@@ -43,6 +43,7 @@
     &:active,
     &:focus {
       opacity: 1;
+      transition: opacity 300ms;
     }
   }
 }
@@ -66,6 +67,7 @@
 .carousel-prev,
 .carousel-next {
   pointer-events: none;
+  z-index: 12;
 }
 
 .carousel-prev {
@@ -83,7 +85,8 @@
   pointer-events: auto;
 
   &:hover &-icon {
-    background-color: var(--medium-purple-v3-75);
+    background-color: var(--medium-purple-v3);
+    transition: background-color 300ms;
   }
 }
 
@@ -112,5 +115,13 @@
     background: url("../img/icons/right-arrow.svg") center right / 20px 9px
       no-repeat;
     transform: rotate(180deg);
+  }
+}
+
+.carousel-link {
+  @include hover-border;
+
+  &::after {
+    border-radius: 0.8rem;
   }
 }

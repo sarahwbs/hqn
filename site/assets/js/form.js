@@ -81,6 +81,7 @@ window.addEventListener("load", function () {
       }
 
       if (
+        document.getElementById("validateBillingAddress") &&
         document
           .getElementById("validateBillingAddress")
           .getAttribute("value") === "true"
@@ -142,11 +143,13 @@ window.addEventListener("load", function () {
 
       // Date of Birth Validation
       const monthsDropdown = e.srcElement.querySelector(
-        "button#dobMonthsDropdown"
+        "button#select-dobMonthsDropdown"
       );
-      const daysDropdown = e.srcElement.querySelector("button#dobDaysDropdown");
+      const daysDropdown = e.srcElement.querySelector(
+        "button#select-dobDaysDropdown"
+      );
       const yearsDropdown = e.srcElement.querySelector(
-        "button#dobYearsDropdown"
+        "button#select-dobYearsDropdown"
       );
       if (monthsDropdown && daysDropdown && yearsDropdown) {
         const day = daysDropdown.innerText;

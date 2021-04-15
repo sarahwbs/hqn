@@ -1,16 +1,18 @@
 <div class="card card-ebook bg-transparent">
-  <img
-    src="{{site.baseurl}}/assets/img/ebook-thumb-{{ i | modulo: 6 | plus: 1 }}.png"
-    alt="add alt text here"
-    class="card-img-top drop-shadow-1"
-  />
-
-  <div class="card-body pt-5 pb-0 px-0">
-    <div class="ebook-progress mb-3 mb-lg-4">
-      {% include components/progress-bar.html percentage=percentage %}
+  <a href="ebook-details" class="card-ebook__link"
+    ><div class="card-ebook__image">
+      <img
+        src="{{site.baseurl}}/assets/img/ebook-thumb-{{ i | modulo: 6 | plus: 1 }}.png"
+        alt="add alt text here"
+        class="card-img-top drop-shadow-1"
+      />
     </div>
-    <p class="card-text">
-      <a href="ebook-details" class="card-link stretched-link">Read Now</a>
-    </p>
-  </div>
+
+    <div class="card-body pt-5 pb-0 px-0">
+      <div class="ebook-progress mb-3 mb-lg-4">
+        {% include components/progress-bar.html percentage=percentage %}
+      </div>
+      <p class="card-text">Read Now</p>
+    </div></a
+  >
 </div>

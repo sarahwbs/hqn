@@ -32,9 +32,11 @@ $bundle-shadow-size: 3.8rem;
 
     &:hover {
       scrollbar-color: var(--medium-purple-v3-75) transparent;
+      transition: scrollbar-color 300ms;
 
       &::-webkit-scrollbar-thumb {
         background-color: var(--medium-purple-v3-75);
+        transition: background-color 300ms;
       }
     }
 

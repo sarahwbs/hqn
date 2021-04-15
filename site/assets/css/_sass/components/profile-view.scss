@@ -14,3 +14,16 @@
 .profile-edit-box {
   @include box-edit;
 }
+
+.edit-box__link {
+  .edit-box__image {
+    opacity: 0.5;
+
+    &:hover,
+    &:active,
+    &:focus {
+      opacity: 1;
+      transition: opacity 300ms;
+    }
+  }
+}
