@@ -236,6 +236,12 @@
     line-height: unset;
     padding: 0.7rem 1.3rem;
     color: var(--grey-v3);
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: var(--light-grey-v2);
+    }
   }
 
   li:last-of-type a {
