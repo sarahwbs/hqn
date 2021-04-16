@@ -1,0 +1,14 @@
+- name: Landing Page (non-logged in visitors)
+  link: /landing
+- name: Subscription Info
+  link: /subscription-info
+- name: Subscriber Home
+  link: /subscriber-home
+- name: Bundle Details<br /><span>Click "Select eBook Bundle" for "Membership Required" modal</span>
+  link: /bundle-details-unsubbed
+- name: Games<br /><span>Click a game thumbnail for "Membership Required" modal</span>
+  link: /games-unsubbed
+- name: eBook Details<br /><span>Click "Read Now" for "Membership Required" modal</span>
+  link: /ebook-details-unsubbed
+- name: Movie Details<br /><span>Click "Watch Movie" for "Membership Required" modal</span>
+  link: /movie-details-unsubbed
