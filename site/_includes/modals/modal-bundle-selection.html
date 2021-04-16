@@ -38,6 +38,7 @@
       id2="suiteAddress" placeholder2="Address Line 2" value2="Suite 202"
       type2="text" errorMessage="Please enter an address." %}
       <!--   -->
+
       {% include forms/form-input.html id="city" placeholder="City" type="text"
       value="New York" label="City" errorMessage="Please enter a city." %}
       <!--   -->
@@ -46,26 +47,23 @@
       options=site.data.states-provinces
       extraClasses="popup-modal__state-dropdown" label="State/Province"
       display="static" %}
-
       <!--   -->
+
       {% include forms/form-input.html id="zipCode" placeholder="Zip Code"
       value="10011" type="text" label="Zip Code" errorMessage="Please enter a
       valid zip code." %}
-
       <!--   -->
 
       {% include forms/form-input.html id="phoneNumber"
       placeholder="555-555-5555" value="999-999-9999" label="Phone Number"
-      type="tel" errorMessage="Please enter a valid phone number." %}
+      type="tel" errorMessage="Please enter a valid 10-digit phone number." %}
     </div>
     {% endif %}
-
     <!--  -->
 
     {% if include.error %}
     <div class="popup-modal__error mb-10" role="alert">{{ include.error }}</div>
-    {% endif %}
-
+    {% else %}
     <div class="popup-modal__buttons d-flex justify-content-end">
       {% include components/button.html type="rounded-transparent"
       label=include.cancelButtonText extraClasses="popup-modal__cancel-button
@@ -77,6 +75,8 @@
       {% include components/button.html label=include.buttonText
       extraClasses="d-none d-lg-block popup-modal__desktop-button px-7 px-sm-8"
       buttonType="submit" %}
+      <!--  -->
     </div>
+    {% endif %}
   </form>
 </div>
