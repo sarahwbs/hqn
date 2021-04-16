@@ -11,18 +11,16 @@ window.addEventListener("load", function () {
 
       if (errorState) {
         elements.forEach((ele) => {
-          ele
-            .closest(".form__input")
-            .querySelector(".form__error")
-            .classList.remove("d-none");
+          const container =
+            ele.closest(".form__input") || ele.closest(".form__select");
+          container.querySelector(".form__error").classList.remove("d-none");
           ele.classList.add("form__error-border");
         });
       } else {
         elements.forEach((ele) => {
-          ele
-            .closest(".form__input")
-            .querySelector(".form__error")
-            .classList.add("d-none");
+          const container =
+            ele.closest(".form__input") || ele.closest(".form__select");
+          container.querySelector(".form__error").classList.add("d-none");
           ele.classList.remove("form__error-border");
         });
       }
@@ -102,6 +100,14 @@ window.addEventListener("load", function () {
           errors = toggleErrorState(cityInput, true);
         } else if (cityInput) {
           toggleErrorState(cityInput, false);
+        }
+
+        // State/Province Validation
+        const stateInput = e.srcElement.querySelector('input[id="state"]');
+        if (stateInput && !stateInput.value) {
+          errors = toggleErrorState(stateInput, true);
+        } else if (stateInput) {
+          toggleErrorState(stateInput, false);
         }
 
         // Phone Validation
