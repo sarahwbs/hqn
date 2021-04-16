@@ -16,12 +16,9 @@
 
       {% if include.infopage == "true" %}
       <div class="col d-flex p-0 justify-content-end">
-        <button
-          type="button"
-          class="btn btn-primary btn-lg header-button transparent-button px-8"
-        >
-          Close
-        </button>
+        {% include components/button.html type="rounded-transparent"
+        label="Close" extraClasses="btn btn-primary btn-lg header-button
+        transparent-button px-8" link="/landing" %}
       </div>
 
       {% elsif include.userstate == "signed-in" %}<!-- -->
@@ -106,12 +103,8 @@
       {% elsif include.userstate != "logo-only" %}
 
       <div class="col d-flex p-0 justify-content-end">
-        <button
-          type="button"
-          class="btn btn-primary btn-lg header-button sign-in-button transparent-button px-9"
-        >
-          Sign In
-        </button>
+        {% include components/button.html type="rounded-transparent" label="Sign
+        In" extraClasses="header-button sign-in-button px-9" %}
       </div>
       {% endif %}
     </div>
