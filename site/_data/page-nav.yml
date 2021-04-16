@@ -1,14 +1,8 @@
-- name: Landing Page (non-logged in visitors)
-  link: /landing
-- name: Subscription Info
-  link: /subscription-info
-- name: Subscriber Home (non-subscribed users)
-  link: /subscriber-home
-- name: Subscriber Home (subscribed users)
+- name: Subscriber Home
   link: /subscriber-home-subbed
 - name: Bundles
   link: /bundles
-- name: Bundle Details
+- name: Bundle Details<br /><span>Click "Select eBook Bundle" for "Bundle Selection" modal</span>
   link: /bundle-details
 - name: eBook Library
   link: /ebooks
@@ -18,9 +12,9 @@
   link: /movies
 - name: Movies (With Loader)
   link: /movies-loader
-- name: Book Detail
+- name: eBook Details
   link: /ebook-details
-- name: Movie Detail
+- name: Movie Details
   link: /movie-details
 - name: My Bookshelf
   link: /my-bookshelf
