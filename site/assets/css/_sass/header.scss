@@ -112,6 +112,13 @@ a.header_nav__link {
   padding: 1.2rem 2.5rem 1.2rem 1.2rem;
   border-radius: 0.5rem;
   left: -195% !important;
+
+  @media screen and (max-width: $screen-lg) {
+    &,
+    &.show {
+      display: none;
+    }
+  }
 }
 
 .header__dropdown-menu-arrow-up {
