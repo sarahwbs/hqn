@@ -20,7 +20,6 @@ window.addEventListener("load", function () {
     }
 
     function unpauseCarousel() {
-      console.log(carouselPausePlay);
       // go to the next slide immediately, then start cycling
       carousel.next();
       carousel.cycle();
