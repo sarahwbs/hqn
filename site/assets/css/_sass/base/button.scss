@@ -97,7 +97,6 @@
 
   &.white {
     color: var(--white);
-    border-color: transparent;
   }
 }
 
@@ -136,7 +135,7 @@
     &:hover,
     &:active,
     &:focus {
-      background-color: var(--black-v3);
+      background-color: var(--black-v6);
       border-color: transparent;
     }
   }
@@ -148,7 +147,7 @@
     &:hover,
     &:active,
     &:focus {
-      background: var(--white);
+      background: var(--light-grey);
       border-color: transparent;
       color: var(--medium-purple);
     }
@@ -317,6 +316,7 @@
   &:hover,
   &:active,
   &:focus {
+    background-color: var(--light-grey-v6);
     color: var(--dark-grey);
     transition: color 300ms;
   }
