@@ -1,7 +1,7 @@
 <div class="container-md p-0">
   <div class="order-detail-view mb-8 mb-lg-17">
     {% include components/button.html type="rounded-transparent" label="Back"
-    extraClasses="normal-text back-arrow-button px-8 mb-6 mb-sm-8 mb-lg-11" %}
+    extraClasses="back-arrow-button mb-6 mb-sm-8 mb-lg-11" %}
 
     <h1 class="order-detail-view__title mb-6 mb-sm-8 mb-lg-9">Order Detail</h1>
 
@@ -73,9 +73,9 @@
 
             {% if include.buttonText %}
             <!--  -->
-            {% include components/button.html type="rounded-pink"
-            label=include.buttonText extraClasses="normal-text
-            order-detail-view__track-order-button mt-7 mb-2 mb-sm-0 px-8" %}
+            {% include components/button.html label=include.buttonText
+            extraClasses="order-detail-view__track-order-button mt-7 mb-2
+            mb-sm-0" %}
             <!--  -->
             {% endif %}
           </div>

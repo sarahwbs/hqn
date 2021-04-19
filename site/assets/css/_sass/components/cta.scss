@@ -1,7 +1,7 @@
 .cta {
   &,
   & img {
-    border-radius: 8px;
+    border-radius: 0.8rem;
   }
 }
 
@@ -13,4 +13,18 @@
     margin-bottom: 6rem;
     margin-top: 10rem;
   }
+}
+
+.cta-bottom__banner-link {
+  @include hover-border;
+  display: inline-block;
+  position: relative;
+
+  &::after {
+    border-radius: 0.8rem;
+  }
+}
+
+.cta-bottom__banner-image {
+  display: inline-block;
 }

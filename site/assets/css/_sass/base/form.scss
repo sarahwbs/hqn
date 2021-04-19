@@ -36,6 +36,7 @@
     &:focus {
       color: var(--dark-red);
       text-decoration: underline;
+      transition: color 300ms;
     }
   }
 }

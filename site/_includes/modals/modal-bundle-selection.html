@@ -43,8 +43,9 @@
       <!--   -->
 
       {% include forms/form-select.html id="stateDropdown"
-      options=site.data.states extraClasses="popup-modal__state-dropdown"
-      label="State" display="static" %}
+      options=site.data.states-provinces
+      extraClasses="popup-modal__state-dropdown" label="State/Province"
+      display="static" %}
 
       <!--   -->
       {% include forms/form-input.html id="zipCode" placeholder="Zip Code"
@@ -68,15 +69,14 @@
     <div class="popup-modal__buttons d-flex justify-content-end">
       {% include components/button.html type="rounded-transparent"
       label=include.cancelButtonText extraClasses="popup-modal__cancel-button
-      normal-text dark-grey px-7 px-sm-8" %}
+      dark-grey px-7 px-sm-8" %}
       <!--  -->
-      {% include components/button.html type="rounded-pink"
-      label=include.mobileButtonText extraClasses="normal-text d-lg-none px-7
-      px-sm-8" buttonType="submit" %}
+      {% include components/button.html label=include.mobileButtonText
+      extraClasses="d-lg-none px-7 px-sm-8" buttonType="submit" %}
       <!--  -->
-      {% include components/button.html type="rounded-pink"
-      label=include.buttonText extraClasses="normal-text d-none d-lg-block
-      popup-modal__desktop-button px-7 px-sm-8" buttonType="submit" %}
+      {% include components/button.html label=include.buttonText
+      extraClasses="d-none d-lg-block popup-modal__desktop-button px-7 px-sm-8"
+      buttonType="submit" %}
     </div>
   </form>
 </div>
