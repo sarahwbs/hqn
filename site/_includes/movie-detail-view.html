@@ -62,7 +62,7 @@
 </div>
 
 {% if include.userSub == "false" %}<!--  -->
-{% include modals/modal.html modaltype="default" bodyText="
-<p>You must have an active membership to access this feature.</p>
-" buttonText="Subscribe Now" buttonLink="/change-subscription-new-sub" %}<!--  -->
+
+{% include modals/modal-subscription-required.html %}<!--  -->
+
 {% endif %}<!--  -->

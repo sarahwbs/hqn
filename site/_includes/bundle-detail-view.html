@@ -95,6 +95,7 @@
 </div>
 
 {% if include.userSub == "true" %}<!--  -->
+
 {% include modals/modal.html modaltype="bundle-selection" title="Your Selection"
 bodyText="
 <p>
@@ -104,8 +105,9 @@ bodyText="
 " bundleSelectionText="6 eBook" bundleImage="bundle-image.png"
 cancelButtonText="Cancel" buttonText="Confirm Selection"
 mobileButtonText="Confirm" %}<!--  -->
+
 {% else %}<!--  -->
-{% include modals/modal.html modaltype="default" bodyText="
-<p>You must have an active membership to access this feature.</p>
-" buttonText="Subscribe Now" buttonLink="/change-subscription-new-sub" %}<!--  -->
+
+{% include modals/modal-subscription-required.html %}<!--  -->
+
 {% endif %}
