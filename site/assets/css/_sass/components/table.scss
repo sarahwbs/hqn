@@ -34,7 +34,7 @@
         }
 
         a {
-          color: var(--yellow);
+          @include yellow-link-style;
         }
       }
     }

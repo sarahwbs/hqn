@@ -20,6 +20,16 @@
   }
 }
 
+@mixin yellow-link-style {
+  color: var(--yellow);
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: var(--orange-v3);
+  }
+}
+
 // the class passed in as the $target is what will have the hover border added
 @mixin hover-border {
   &::after {
