@@ -7,6 +7,29 @@ window.addEventListener("load", function () {
     const carousel = new bootstrap.Carousel(homePageCarousel, {
       interval: 3000,
     });
+    const carouselPausePlay = document.querySelector(".carousel-pause");
+    const pausePlayText = carouselPausePlay.querySelector("span");
+
+    function pauseCarousel() {
+      carousel.pause();
+      pausePlayText.innerHTML = "Start Animation";
+      carouselPausePlay.setAttribute("aria-label", "Play");
+      carouselPausePlay.setAttribute("data-action", "start");
+      carouselPausePlay.classList.remove("carousel-pause");
+      carouselPausePlay.classList.add("carousel-play");
+    }
+
+    function unpauseCarousel() {
+      console.log(carouselPausePlay);
+      // go to the next slide immediately, then start cycling
+      carousel.next();
+      carousel.cycle();
+      pausePlayText.innerHTML = "Stop Animation";
+      carouselPausePlay.setAttribute("aria-label", "Pause");
+      carouselPausePlay.setAttribute("data-action", "stop");
+      carouselPausePlay.classList.add("carousel-pause");
+      carouselPausePlay.classList.remove("carousel-play");
+    }
 
     // when the slide updates, change the text in the live region for screen readers
     homePageCarousel.addEventListener("slide.bs.carousel", function (e) {
@@ -16,26 +39,19 @@ window.addEventListener("load", function () {
     });
 
     // add pause/play functionality to the pause/play button
-    const carouselPausePlay = document.querySelector(".carousel-pause");
     carouselPausePlay.addEventListener("click", function (e) {
-      const button = e.target;
-      const buttonSpan = button.querySelector("span");
-
       if (carousel._isPaused) {
-        // go to the next slide immediately, then start cycling
-        carousel.next();
-        carousel.cycle();
-        buttonSpan.innerHTML = "Stop Animation";
-        button.setAttribute("aria-label", "Pause");
-        button.setAttribute("data-action", "stop");
+        unpauseCarousel();
       } else {
-        carousel.pause();
-        buttonSpan.innerHTML = "Start Animation";
-        button.setAttribute("aria-label", "Play");
-        button.setAttribute("data-action", "start");
+        pauseCarousel();
       }
-      button.classList.toggle("carousel-pause");
-      button.classList.toggle("carousel-play");
+    });
+
+    // when a user interacts with the carousel using touch events, if the carousel is paused using the pause button, unpause it
+    homePageCarousel.addEventListener("touchend", () => {
+      if (carousel._isPaused) {
+        unpauseCarousel();
+      }
     });
 
     // when a user hovers over the prev/next buttons, add a hover class to the carousel item so the hover state doesn't get lost
