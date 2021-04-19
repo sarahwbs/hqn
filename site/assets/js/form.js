@@ -11,17 +11,29 @@ window.addEventListener("load", function () {
 
       if (errorState) {
         elements.forEach((ele) => {
-          const container =
-            ele.closest(".form__input") || ele.closest(".form__select");
+          let container = ele.closest(".form__input");
+          let errorField = ele;
+          if (!container) {
+            container = ele.closest(".form__select");
+            errorField = container.querySelector(
+              ".select-dropdown-control-btn"
+            );
+          }
           container.querySelector(".form__error").classList.remove("d-none");
-          ele.classList.add("form__error-border");
+          errorField.classList.add("form__error-border");
         });
       } else {
         elements.forEach((ele) => {
-          const container =
-            ele.closest(".form__input") || ele.closest(".form__select");
+          let container = ele.closest(".form__input");
+          let errorField = ele;
+          if (!container) {
+            container = ele.closest(".form__select");
+            errorField = container.querySelector(
+              ".select-dropdown-control-btn"
+            );
+          }
           container.querySelector(".form__error").classList.add("d-none");
-          ele.classList.remove("form__error-border");
+          errorField.classList.remove("form__error-border");
         });
       }
 
