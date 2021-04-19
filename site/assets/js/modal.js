@@ -17,12 +17,14 @@ window.addEventListener("load", function () {
     modal.setAttribute("aria-hidden", "false");
     modal.classList.add("d-block");
     modal.classList.remove("d-none");
+    updateBodyHeightToMatchModal();
   }
 
   function closePopupModal(modal) {
     modal.setAttribute("aria-hidden", "true");
     modal.classList.add("d-none");
     modal.classList.remove("d-block");
+    document.body.style.height = "auto";
   }
 
   // Clicking on the close button, background, cancel button will remove the popup modal from DOM

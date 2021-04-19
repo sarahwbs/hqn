@@ -1,7 +1,7 @@
 <div
   class="popup-modal modal-{{ include.modaltype }} {% if include.openOnLoad %}d-block{% else %}d-none{% endif %} w-100 h-100 position-absolute top-0 start-0"
   aria-modal="true"
-  aria-hidden="true"
+  aria-hidden="{% if include.openOnLoad %}false{% else %}true{% endif %}"
 >
   <div class="popup-modal__background" aria-hidden="true"></div>
   <div
