@@ -37,10 +37,8 @@
         <!-- --><!-- -->{% include filter/filter-movies.html %}
         <!-- -->{% when "games" %}
         <!-- --><!-- -->{% include filter/filter-games.html %}
-        <!-- -->{% when "ebook" %}
-        <!-- --><!-- -->{% include filter/filter-ebook-lib.html %}
-        <!-- -->{% when "my-bookshelf" %}
-        <!-- --><!-- -->{% include filter/filter-my-bookshelf.html %}<!-- -->
+        <!-- -->{% when "ebook" or "my-bookshelf" %}
+        <!-- --><!-- -->{% include filter/filter-ebook-lib.html %}<!-- -->
         {% endcase %}
       </section>
     </div>
