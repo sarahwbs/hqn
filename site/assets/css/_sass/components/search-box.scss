@@ -4,7 +4,7 @@
 
 .search-box-text {
   @include normal-text;
-  color: var(--light-grey-v4);
+  color: var(--dark-grey);
   padding-left: 1.25rem;
   border-radius: var(--input-border-radius);
   border: 0;
@@ -12,6 +12,7 @@
   &:focus {
     border: 0;
     box-shadow: none;
+    color: var(--dark-grey);
   }
 }
 
@@ -21,4 +22,3 @@
   padding: 1.375rem 1.5rem;
   border: 1px solid transparent;
 }
-
