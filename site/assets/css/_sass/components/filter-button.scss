@@ -6,13 +6,13 @@
 .filter-button-control__collapse {
   position: absolute;
   z-index: 1;
-  left: 1%;
   min-width: calc(100vw - 4rem);
   margin-top: 0.4rem;
   border-radius: 0.4rem;
   transition: 0.3s transform ease-in-out;
 
   @media screen and (min-width: $screen-xs) {
+    left: 1%;
     min-width: 36rem;
   }
 
