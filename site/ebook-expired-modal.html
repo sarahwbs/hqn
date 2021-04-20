@@ -1,0 +1,16 @@
+---
+layout: signed-in-sub
+---
+
+{% include components/carousel.html %}<!--  -->
+{% include bookshelf-row.html %}<!--  -->
+{% include bundles-row.html %}<!--  -->
+{% include ebooks-row.html %}<!--  -->
+{% include games-row.html %}<!--  -->
+{% include movies-row.html %}<!--  -->
+{% include components/banner.html %}<!--  -->
+
+{% include modals/modal.html modaltype="ebook-expired" openOnLoad="true"
+cancelButtonText="Browse Content" bodyText="
+<p>The eBook you were reading is no longer available.</p>
+" %}
