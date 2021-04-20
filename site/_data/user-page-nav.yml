@@ -18,5 +18,7 @@
   link: /subscription-payment-info-subbed
 - name: Subscription and Payment Info (subscribed in app)
   link: /subscription-payment-info-subbed-in-app
+- name: Subscription and Payment Info (subscription cancellation pending)
+  link: /subscription-payment-info-sub-cancelled
 - name: Change Subscription
   link: /change-subscription

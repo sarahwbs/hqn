@@ -30,6 +30,7 @@
     {% endif %}
   </div>
 
+  {% if include.hideEditLink == nil %}<!-- -->
   <a href="{{ include.link }}" class="d-block edit-box__link">
     <img
       src="{{ site.url }}/assets/img/icons/edit.svg"
@@ -37,4 +38,5 @@
       class="w-100 d-block edit-box__image"
     />
   </a>
+  {% endif %}<!--  -->
 </div>

@@ -2,9 +2,11 @@
 layout: signed-in-sub
 ---
 
-{% include subscription-payment-view.html subscription=true %} {% include
-modals/modal.html modaltype="delete-subscription" title="Are you sure?"
-bodyText="
+{% include subscription-payment-view.html subscription=true cancelPending=false
+%}<!--  -->
+
+{% include modals/modal.html modaltype="delete-subscription" title="Are you
+sure?" bodyText="
 <p>
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dui felis,
   mattis ac ligula non, congue scelerisque nulla. Duis mollis, urna in interdum
