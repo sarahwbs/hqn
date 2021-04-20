@@ -2,9 +2,9 @@
 layout: signed-in-sub
 ---
 
-{% include bundle-detail-view.html %}
+{% include bundle-detail-view.html userstate="signed-in" userSub="true" %}
 <!--  -->
-{% include modals/modal.html modaltype="bundle-selection" title="Your Selection"
+{% include modals/modal.html modaltype="bundle-selection" openOnLoad="true" title="Your Selection"
 bodyText="
 <p>
   Once you confirm your selection, the books in this bundle will be found on the
@@ -12,7 +12,7 @@ bodyText="
 </p>
 " bundleSelectionText="6 eBook" bundleImage="bundle-image.png" error="
 <p>
-  You already own this bundle. <a href=\"#\">Browse bundles</a> to find new
+  You already own this bundle. <a href=\"/bundles\">Browse bundles</a> to find new
   options.
 </p>
 " cancelButtonText="Cancel" buttonText="Confirm Selection"

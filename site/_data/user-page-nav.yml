@@ -1,7 +1,3 @@
-- name: Signup Choose Subscription
-  link: /signup-choose-subscription
-- name: Subscription Confirmation
-  link: /subscription-confirm
 - name: Order History
   link: /order-history
 - name: Order Detail
@@ -18,13 +14,9 @@
   link: /user-edit-email
 - name: Edit Password
   link: /user-edit-password
-- name: Subscription and Payment Info
+- name: Subscription and Payment Info<br /><span>Click "Delete Subscription" for "Delete Subscription" modal</span>
   link: /subscription-payment-info-subbed
 - name: Subscription and Payment Info (subscribed in app)
   link: /subscription-payment-info-subbed-in-app
-- name: Subscription and Payment Info (non-subscribed users)
-  link: /subscription-payment-info
 - name: Change Subscription
   link: /change-subscription
-- name: Change Subscription (non-subscribed users)
-  link: /change-subscription-new-sub

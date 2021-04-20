@@ -2,29 +2,55 @@
 layout: default
 ---
 
+<style>
+  .page-index {
+    max-width: 90rem;
+    margin: 0 auto;
+  }
+  .page-index span {
+    font-size: 1.2rem;
+    color: var(--white-v8);
+  }
+</style>
 <div
-  class="w-100 my-auto d-flex flex-column justify-content-center align-items-center"
+  class="page-index w-100 my-auto d-flex flex-column justify-content-center align-items-center"
 >
   <h1 class="mb-8">Static HTML Page Templates</h1>
   <div class="row gx-11">
-    <div class="col-12 col-md-6 col-xl-4">
-      <h2>Content Pages</h2>
+    <div class="col-12 col-md-6">
+      <h2>Content Pages - Subscribed Users</h2>
       <ul class="fs-4">
         {% for item in site.data.page-nav %}
         <li><a href="{{ item.link }}">{{ item.name }}</a></li>
         {% endfor %}
       </ul>
     </div>
-    <div class="col-12 col-md-6 col-xl-4">
-      <h2>User Pages</h2>
+    <div class="col-12 col-md-6">
+      <h2>Content Pages - Non-subscribed Users</h2>
+      <ul class="fs-4">
+        {% for item in site.data.page-nav-unsubbed %}
+        <li><a href="{{ item.link }}">{{ item.name }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="col-12 col-md-6">
+      <h2>User Pages - Subscribed Users</h2>
       <ul class="fs-4">
         {% for item in site.data.user-page-nav %}
         <li><a href="{{ item.link }}">{{ item.name }}</a></li>
         {% endfor %}
       </ul>
     </div>
-    <div class="col-12 col-md-6 col-xl-4">
-      <h2>Modals</h2>
+    <div class="col-12 col-md-6">
+      <h2>User Pages - Non-subscribed Users</h2>
+      <ul class="fs-4">
+        {% for item in site.data.user-page-nav-unsubbed %}
+        <li><a href="{{ item.link }}">{{ item.name }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="col-12 col-md-6">
+      <h2>Bundle Selection Modals</h2>
       <ul class="fs-4">
         {% for item in site.data.modal-nav %}
         <li><a href="{{ item.link }}">{{ item.name }}</a></li>
