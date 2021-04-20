@@ -21,3 +21,9 @@
     </div>
   </div>
 </div>
+
+{% if include.userSub == "false" %}<!--  -->
+
+{% include modals/modal-subscription-required.html %}<!--  -->
+
+{% endif %}

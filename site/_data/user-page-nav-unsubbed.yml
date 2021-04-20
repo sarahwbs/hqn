@@ -1,0 +1,8 @@
+- name: Signup Choose Subscription
+  link: /signup-choose-subscription
+- name: Subscription Confirmation
+  link: /subscription-confirm
+- name: Subscription and Payment Info
+  link: /subscription-payment-info
+- name: Change Subscription
+  link: /change-subscription-new-sub

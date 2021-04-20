@@ -1,7 +1,7 @@
 <div class="container-md p-0">
   <div class="detail-view mb-13">
     {% include components/button.html type="rounded-transparent" label="Back"
-    extraClasses="back-arrow-button" %}
+    extraClasses="back-arrow-button" link="/ebooks" %}
 
     <div class="row gx-5 mt-7">
       <div
@@ -66,3 +66,9 @@
     </div>
   </div>
 </div>
+
+{% if include.userSub == "false" %}<!--  -->
+
+{% include modals/modal-subscription-required.html %}<!--  -->
+
+{% endif %}<!--  -->

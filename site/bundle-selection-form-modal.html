@@ -2,10 +2,10 @@
 layout: signed-in-sub
 ---
 
-{% include bundle-detail-view.html %}
+{% include bundle-detail-view.html userstate="signed-in" userSub="true" %}
 <!--  -->
-{% include modals/modal.html modaltype="bundle-selection" title="Your Selection"
-bodyText="
+{% include modals/modal.html modaltype="bundle-selection" openOnLoad="true"
+title="Your Selection" bodyText="
 <p>
   Once you confirm your selection, the books in this bundle will be found on the
   <strong>My Bookshelf</strong> page.

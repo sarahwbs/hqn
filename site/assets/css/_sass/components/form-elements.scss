@@ -53,8 +53,10 @@
 
 .popup-modal__form .form__input .form__error-border,
 .form__input .form__error-border,
+.popup-modal__form .form__select .form__error-border,
+.form__select .form__error-border,
 .form__error-border {
-  border: 0.1rem solid var(--red)
+  border: 0.1rem solid var(--red);
 }
 
 .form__password-strength {
