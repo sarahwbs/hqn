@@ -39,11 +39,11 @@
       width: 0.7rem;
     }
 
-    &:hover,
-    &:active,
-    &:focus {
-      opacity: 1;
-      transition: opacity 300ms;
+    @media (hover: hover) {
+      &:hover {
+        opacity: 1;
+        transition: opacity 300ms;
+      }
     }
   }
 }
@@ -84,7 +84,14 @@
   width: 6rem;
   pointer-events: auto;
 
-  &:hover &-icon {
+  &:focus,
+  &:focus:not(:focus-visible) {
+    outline: var(--white) solid 0.1rem;
+    outline-offset: 0.1rem;
+  }
+
+  &:hover &-icon,
+  &:focus &-icon {
     background-color: var(--medium-purple-v3);
     transition: background-color 300ms;
   }
