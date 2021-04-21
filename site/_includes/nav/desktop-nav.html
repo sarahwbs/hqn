@@ -3,7 +3,13 @@
   aria-label="Top Navigation"
   role="navigation"
 >
-  {% for item in site.data.header-nav %}
+  {% if include.sub == "true" %}<!--  -->
+  {% assign headerLinks = site.data.header-nav %}<!--  -->
+  {% else %}<!--  -->
+  {% assign headerLinks = site.data.header-nav-unsubbed %}<!--  -->
+  {% endif %}<!--  -->
+
+  {% for item in headerLinks %}
   <a
     class="header_nav__link"
     href="{{ item.link }}"

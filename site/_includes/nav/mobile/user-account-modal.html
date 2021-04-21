@@ -42,7 +42,13 @@
       <div class="modal-body menu-modal__body">
         <div class="row menu-modal__nav-container mt-10">
           <nav class="col" aria-label="Mobile Navigation" role="navigation">
-            {% for item in site.data.header-account-nav %}
+            {% if include.sub == "true" %}<!--  -->
+            {% assign accountLinks = site.data.header-account-nav %}<!--  -->
+            {% else %}<!--  -->
+            {% assign accountLinks = site.data.header-account-nav-unsubbed %}<!--  -->
+            {% endif %}<!--  -->
+
+            {% for item in accountLinks %}
             <div class="row menu-modal__nav-row">
               <div class="col d-flex justify-content-between px-0">
                 <a class="menu-modal__link w-100" href="{{ item.link }}"
