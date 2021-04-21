@@ -79,7 +79,17 @@
                   <hr class="dropdown-divider header__dropdown-divider" />
                 </li>
                 {% endif %}<!--  -->
-                {% for item in site.data.header-account-nav %}
+
+                {% if include.userstate == "signed-in" and include.sub == "true"
+                %}<!--  -->
+                {% assign accountLinks = site.data.header-account-nav %}<!--  -->
+                {% elsif include.userstate == "signed-in" and include.sub ==
+                "false" %}<!--  -->
+                {% assign accountLinks = site.data.header-account-nav-unsubbed
+                %}<!--  -->
+                {% endif %}<!--  -->
+
+                {% for item in accountLinks %}
                 <li>
                   <a
                     class="dropdown-item header__dropdown-item"
