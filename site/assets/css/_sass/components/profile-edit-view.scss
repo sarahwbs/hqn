@@ -21,29 +21,18 @@
 }
 
 .profile-edit-view__dob-btn {
-  @include select-dropdown;
   min-width: 100%;
 
   @media screen and (min-width: $screen-xs) {
     min-width: 100%;
   }
-
-  &.show {
-    z-index: 4;
-  }
 }
 
 .profile-edit-view__dob-menu {
-  @include select-dropdown-options-menu;
   min-width: calc(100% - 4rem);
-  padding-top: 2rem;
 
   @media screen and (min-width: $screen-xs) {
     min-width: 100%;
-  }
-
-  &.show {
-    z-index: 3;
   }
 }
 

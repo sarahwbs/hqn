@@ -33,30 +33,37 @@
     <div class="popup-modal__form-title mb-6">Enter Your Shipping Address</div>
 
     <div class="popup-modal__shipping mb-12">
-      {% include forms/form-input.html id="streetAddress" type="text"
-      placeholder="Address Line 1" value="5144 Morris St." label="Address"
-      id2="suiteAddress" placeholder2="Address Line 2" value2="Suite 202"
-      type2="text" errorMessage="Please enter an address." %}
-      <!--   -->
+      <div>
+        {% include forms/form-input.html id="streetAddress" type="text"
+        placeholder="Address Line 1" value="5144 Morris St." label="Address"
+        id2="suiteAddress" placeholder2="Address Line 2" value2="Suite 202"
+        type2="text" errorMessage="Please enter an address." %}
+      </div>
 
-      {% include forms/form-input.html id="city" placeholder="City" type="text"
-      value="New York" label="City" errorMessage="Please enter a city." %}
-      <!--   -->
+      <div>
+        {% include forms/form-input.html id="city" placeholder="City"
+        type="text" value="New York" label="City" errorMessage="Please enter a
+        city." %}
+      </div>
 
-      {% include forms/form-select.html label="State/Province" id="state"
-      options=site.data.states-provinces errorMessage="Please select your state
-      or province." selected='NS' display="static"
-      extraClasses="popup-modal__state-dropdown" %}
-      <!--   -->
+      <div class="state-select">
+        {% include forms/form-select.html label="State/Province" id="state"
+        options=site.data.states-provinces errorMessage="Please select your
+        state or province." selected='NS'
+        extraClasses="popup-modal__state-dropdown" %}
+      </div>
 
-      {% include forms/form-input.html id="zipCode" placeholder="Zip Code"
-      value="10011" type="text" label="Zip Code" errorMessage="Please enter a
-      valid zip code." %}
-      <!--   -->
+      <div>
+        {% include forms/form-input.html id="zipCode" placeholder="Zip Code"
+        value="10011" type="text" label="Zip Code" errorMessage="Please enter a
+        valid zip code." %}
+      </div>
 
-      {% include forms/form-input.html id="phoneNumber"
-      placeholder="555-555-5555" value="999-999-9999" label="Phone Number"
-      type="tel" errorMessage="Please enter a valid 10-digit phone number." %}
+      <div>
+        {% include forms/form-input.html id="phoneNumber"
+        placeholder="555-555-5555" value="999-999-9999" label="Phone Number"
+        type="tel" errorMessage="Please enter a valid 10-digit phone number." %}
+      </div>
     </div>
     {% endif %}
     <!--  -->
