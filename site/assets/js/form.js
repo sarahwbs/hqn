@@ -133,11 +133,48 @@ window.addEventListener("load", function () {
 
         // US Zip Code Validation
         const zipInput = e.srcElement.querySelector('input[id="zipCode"]');
+        const zipError = e.srcElement.querySelector(
+          ".form__input-zipCode .form__error"
+        );
         const zipRegex = /(^\d{5}$)|(^\d{5}-\d{4}$)/;
-        if (zipInput && !zipRegex.test(zipInput.value)) {
+        const pcRegex = /[A-Za-z]\d[A-Za-z][ -]?\d[A-Za-z]\d/;
+        const provinces = [
+          "AB",
+          "BC",
+          "MB",
+          "NB",
+          "NL",
+          "NS",
+          "NT",
+          "NU",
+          "ON",
+          "PE",
+          "QC",
+          "SK",
+          "YT",
+        ];
+        if (
+          zipInput &&
+          stateInput &&
+          stateInput.value &&
+          provinces.includes(stateInput.value)
+        ) {
+          zipError.innerHTML = "Please enter a valid postal code.";
+          if (!pcRegex.test(zipInput.value)) {
+            errors = toggleErrorState(zipInput, true);
+          } else {
+            toggleErrorState(zipInput, false);
+          }
+        } else if (zipInput && zipInput.value) {
+          zipError.innerHTML = "Please enter a valid zip code.";
+          if (!zipRegex.test(zipInput.value)) {
+            errors = toggleErrorState(zipInput, true);
+          } else {
+            toggleErrorState(zipInput, false);
+          }
+        } else if (zipInput && !zipInput.value) {
+          zipError.innerHTML = "Please enter a zip or postal code.";
           errors = toggleErrorState(zipInput, true);
-        } else if (zipInput) {
-          toggleErrorState(zipInput, false);
         }
       }
 
