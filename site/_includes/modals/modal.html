@@ -23,6 +23,8 @@
 
       {% if include.modaltype == "default" %}<!--  -->
       {% include modals/modal-default.html %}<!--  -->
+      {% elsif include.modaltype == "ebook-expired" %}<!--  -->
+      {% include modals/modal-ebook-expired.html %}<!--  -->
       {% elsif include.modaltype == "thank-you" or include.modaltype ==
       "thank-you-2"%}<!--  -->
       {% include modals/modal-thank-you.html %}<!--  -->

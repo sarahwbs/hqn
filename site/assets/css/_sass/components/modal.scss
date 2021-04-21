@@ -103,7 +103,8 @@
     padding: 8rem 3rem;
   }
 
-  &.default {
+  &.default,
+  &.ebook-expired {
     max-width: 50rem;
 
     @media screen and (min-width: $screen-lg) {
