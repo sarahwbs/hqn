@@ -1,3 +1,5 @@
+- name: eBook Expired Modal
+  link: /ebook-expired-modal
 - name: Bundle Selection Form Modal
   link: /bundle-selection-form-modal
 - name: Bundle Selection Error Modal

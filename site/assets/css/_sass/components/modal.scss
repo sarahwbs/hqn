@@ -103,7 +103,8 @@
     padding: 8rem 3rem;
   }
 
-  &.default {
+  &.default,
+  &.ebook-expired {
     max-width: 50rem;
 
     @media screen and (min-width: $screen-lg) {
@@ -242,11 +243,6 @@
     @media screen and (min-width: $screen-sm) {
       min-width: 29rem;
     }
-  }
-
-  .select-dropdown-control-menu {
-    margin-top: -1rem;
-    padding-top: 2rem;
   }
 
   .dropdown-menu[data-bs-popper] {
