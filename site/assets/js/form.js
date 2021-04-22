@@ -316,10 +316,14 @@ window.addEventListener("load", function () {
         passwordStrengthElement.classList.add("level-1");
         passwordStrengthElement.querySelector(".body-copy").innerText =
           "Password Strength: Low";
-      } else {
+      } else if (passLen >= 1) {
         resetPasswordLevels();
         passwordStrengthElement.querySelector(".body-copy").innerText =
           "Password Strength: None";
+      } else {
+        resetPasswordLevels();
+        passwordStrengthElement.querySelector(".body-copy").innerText =
+          "Password Strength: ";
       }
     }
 
