@@ -133,9 +133,9 @@ window.addEventListener("load", function () {
 
         // US Zip Code Validation
         const zipInput = e.srcElement.querySelector('input[id="zipCode"]');
-        const zipError = e.srcElement.querySelector(
-          ".form__input-zipCode .form__error"
-        );
+        const zipError = zipInput
+          .closest(".form__input")
+          .querySelector(".form__error");
         const zipRegex = /(^\d{5}$)|(^\d{5}-\d{4}$)/;
         const pcRegex = /[A-Za-z]\d[A-Za-z][ -]?\d[A-Za-z]\d/;
         const provinces = [
@@ -210,8 +210,18 @@ window.addEventListener("load", function () {
         const day = daysDropdown.innerText;
         const month = getMonthNumber(monthsDropdown.innerText);
         const year = yearsDropdown.innerText;
+        const dobError = monthsDropdown
+          .closest(".form__input")
+          .querySelector(".form__error");
 
         if (!isValidDate(day, month, year)) {
+          dobError.innerHTML = "Please enter a valid date of birth.";
+          errors = toggleErrorState(
+            [daysDropdown, monthsDropdown, yearsDropdown],
+            true
+          );
+        } else if (!isOldEnough(day, month, year)) {
+          dobError.innerHTML = "You must be 18 years of age or above.";
           errors = toggleErrorState(
             [daysDropdown, monthsDropdown, yearsDropdown],
             true

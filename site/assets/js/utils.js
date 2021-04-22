@@ -31,6 +31,24 @@ const isValidDate = (d, m, y) => {
 };
 
 /**
+ * Check if birthdate is at least 18 years ago
+ * @param  {[type]}  d The day
+ * @param  {[type]}  m The month
+ * @param  {[type]}  y The year
+ * @return {bool}   Returns true if valid
+ */
+const isOldEnough = (d, m, y) => {
+  const today = new Date();
+  const minBirthDate = new Date(
+    today.getFullYear() - 18,
+    today.getMonth(),
+    today.getDate()
+  );
+  const birthDate = new Date(y, m - 1, d);
+  return minBirthDate - birthDate >= 0;
+};
+
+/**
  * Get a month's number
  * @param  {[string]} month name
  * @return {int} month number
