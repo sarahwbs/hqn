@@ -337,6 +337,8 @@
 
     span {
       @include visually-hidden;
+      background-color: var(--black);
+      color: var(--white);
     }
 
     &::before {
