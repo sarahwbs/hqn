@@ -204,7 +204,7 @@
     z-index: 4;
   }
 
-  &:after {
+  &::after {
     content: none;
   }
 
