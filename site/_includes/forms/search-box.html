@@ -8,11 +8,28 @@
     aria-describedby="search-box"
   />
   <span class="input-group-text search-box-img" id="search-box">
-    <a href="#">
+    <button
+      type="button"
+      class="search-box__btn search-box__btn-search"
+      aria-label="Search"
+    >
       <img
         src="{{ site.url }}/assets/img/icons/search.svg"
         alt="{{ include.label }}"
-        class="w-100 d-block"
-      /> </a
-  ></span>
+        class="d-block"
+      />
+    </button>
+
+    <button
+      type="button"
+      class="search-box__btn search-box__btn-close"
+      aria-label="Cancel Search"
+    >
+      <img
+        src="{{site.baseurl}}/assets/img/icons/close-dark-purple.svg"
+        class="d-block"
+        alt="Close Icon"
+      />
+    </button>
+  </span>
 </div>
