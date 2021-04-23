@@ -7,7 +7,8 @@
       {% for i in (1..6) %}<!--  -->
       {% capture percentage %}{{ i | times: 10 }}{% endcapture %}
       <div class="col">
-        {% include cards/ebook-card.html percentage=percentage %}
+        {% include cards/ebook-card.html percentage=percentage type="bookshelf"
+        %}
       </div>
       {% endfor %}
     </div>

@@ -11,11 +11,6 @@
   @include small-text;
 }
 
-.progress {
-  background-color: #00000020;
-  height: 3px;
-}
-
 .card-link {
   @include link-style;
 }
@@ -68,6 +63,16 @@
   }
 }
 
+.progress {
+  background-color: #00000020;
+  height: 0.3rem;
+}
+
+.progress__label {
+  display: block;
+}
+
 .progress-bar {
   background-color: var(--pink-v2);
+  height: 0.3rem;
 }
