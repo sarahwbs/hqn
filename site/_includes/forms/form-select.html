@@ -1,6 +1,6 @@
 <fieldset class="form__select {{ include.extraClasses }}">
   {% if include.label %}
-  <label for="{{ include.id }}">{{ include.label }}</label>
+  <label>{{ include.label }}</label>
   {% endif %}<!--  -->
 
   {% include forms/select-dropdown.html id=include.id options=include.options
