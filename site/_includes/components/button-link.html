@@ -1,0 +1,21 @@
+{% case include.type %}<!--  -->
+{% when "rounded-full-width" %}<!--  -->
+{% assign buttonClass = "full-width-button" %}<!--  -->
+{% when "rounded-transparent" %}<!--  -->
+{% assign buttonClass = "transparent-button" %}<!--  -->
+{% else %}<!--  -->
+{% assign buttonClass = "default-button pink" %}<!--  -->
+{% endcase %}<!--  -->
+
+{% if include.buttonType %}<!--  -->
+{% assign buttonType = include.buttonType %}<!--  -->
+{% else %}<!--  -->
+{% assign buttonType = "button" %}<!--  -->
+{% endif %}<!--  -->
+
+<a
+  class="btn btn-primary btn-lg btn-link-button {{ buttonClass }} {{ include.extraClasses }}"
+  href="{{include.link }}"
+>
+  {{ include.label }}
+</a>

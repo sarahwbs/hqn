@@ -3,11 +3,11 @@
     <div class="row change-subscription__header">
       <div class="col-12 col-md-6">
         {% if include.activeSub %}<!--  -->
-        {% include components/button.html type="rounded-transparent"
+        {% include components/button-link.html type="rounded-transparent"
         label="Back" extraClasses="back-arrow-button mb-7 mb-lg-11"
         link="/subscription-payment-info-subbed" %}<!--  -->
         {% else %}<!--  -->
-        {% include components/button.html type="rounded-transparent"
+        {% include components/button-link.html type="rounded-transparent"
         label="Back" extraClasses="back-arrow-button mb-7 mb-lg-11"
         link="/subscription-payment-info" %}<!--  -->
         {% endif %}
@@ -73,7 +73,7 @@
         <div class="subscription__buttons">
           {% if include.activeSub %}<!--  -->
 
-          {% include components/button.html type="rounded-transparent"
+          {% include components/button-link.html type="rounded-transparent"
           label="Cancel" extraClasses="px-6 px-md-8 me-3 me-md-4"
           link="/subscription-payment-info-subbed" %}<!--  -->
           {% include components/button.html label="Save"
@@ -82,7 +82,7 @@
 
           {% else %}<!--  -->
 
-          {% include components/button.html type="rounded-transparent"
+          {% include components/button-link.html type="rounded-transparent"
           label="Back" extraClasses="back-arrow-button px-6 px-md-8 me-3
           me-md-4" link="/subscription-payment-info" %}<!--  -->
           {% include components/button.html label="Complete Sign Up"
