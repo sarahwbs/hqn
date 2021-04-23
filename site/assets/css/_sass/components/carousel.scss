@@ -133,6 +133,10 @@
   }
 }
 
+.carousel-inner {
+  z-index: 7;
+}
+
 .carousel-link {
   @include hover-border;
 
