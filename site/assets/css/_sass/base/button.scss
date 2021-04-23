@@ -336,7 +336,7 @@
     background-color: var(--pink);
 
     span {
-      display: none;
+      @include visually-hidden;
     }
 
     &::before {
