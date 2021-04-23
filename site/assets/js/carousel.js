@@ -16,7 +16,7 @@ window.addEventListener("load", function () {
         carouselPausePlay.classList.add("carousel-play");
       }
       carousel.pause();
-      pausePlayText.innerHTML = "Start Animation";
+      pausePlayText.innerHTML = "Play";
       carouselPausePlay.setAttribute("aria-label", "Play");
       carouselPausePlay.setAttribute("data-action", "start");
     }
@@ -36,7 +36,7 @@ window.addEventListener("load", function () {
       }
 
       carousel.cycle();
-      pausePlayText.innerHTML = "Stop Animation";
+      pausePlayText.innerHTML = "Pause";
       carouselPausePlay.setAttribute("aria-label", "Pause");
       carouselPausePlay.setAttribute("data-action", "stop");
     }
