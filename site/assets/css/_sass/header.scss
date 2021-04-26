@@ -138,6 +138,10 @@ a.header_nav__link {
   left: 48%;
 }
 
+.header__dropdown-list-item {
+  list-style-type: none;
+}
+
 .header__dropdown-item {
   @include small-text-v4;
   color: var(--white);

@@ -60,7 +60,7 @@
               <ul>
                 {% if include.userstate == "signed-in" and include.sub == "true"
                 %}
-                <li>
+                <li class="header__dropdown-list-item">
                   <a
                     href="/selection-summary"
                     class="dropdown-item header__dropdown-item dropdown-item__selections"
@@ -69,14 +69,14 @@
                     Available Selections
                   </a>
                 </li>
-                <li>
+                <li class="header__dropdown-list-item">
                   <a
                     href="/selection-summary"
                     class="dropdown-item header__dropdown-item dropdown-item__selections_summary"
                     >Selection Summary</a
                   >
                 </li>
-                <li>
+                <li class="header__dropdown-list-item">
                   <hr class="dropdown-divider header__dropdown-divider" />
                 </li>
                 {% endif %}<!--  -->
@@ -91,7 +91,7 @@
                 {% endif %}<!--  -->
 
                 {% for item in accountLinks %}
-                <li>
+                <li class="header__dropdown-list-item">
                   <a
                     class="dropdown-item header__dropdown-item"
                     href="{{ item.link }}"
