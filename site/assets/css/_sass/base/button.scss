@@ -198,7 +198,6 @@
   border: 0;
   position: relative;
   z-index: 2;
-  line-height: unset;
 
   &.show {
     z-index: 4;
@@ -246,8 +245,7 @@
   }
 
   a {
-    @include small-text;
-    line-height: unset;
+    @include small-text-v2;
     padding: 0.7rem 1.3rem;
     color: var(--grey-v3);
 
