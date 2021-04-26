@@ -30,10 +30,9 @@
   }
 }
 
-// the class passed in as the $target is what will have the hover border added
 @mixin hover-border {
   &::after {
-    border: 2px solid var(--white);
+    border: 0.2rem solid var(--white);
     border-radius: 0.1rem;
     content: "";
     display: block;
@@ -51,6 +50,7 @@
   &:focus,
   &.hover {
     &::after {
+      border: 0.2rem solid var(--white);
       opacity: 1;
       transition: opacity 300ms;
     }
@@ -60,7 +60,7 @@
 // the class passed in as the $target is what will have the hover border added
 @mixin hover-border-target($target) {
   #{$target}::after {
-    border: 2px solid var(--white);
+    border: 0.2rem solid var(--white);
     border-radius: 0.1rem;
     content: "";
     display: block;
@@ -77,6 +77,7 @@
   &:active,
   &:focus {
     #{$target}::after {
+      border: 0.2rem solid var(--white);
       opacity: 1;
       transition: opacity 300ms;
     }
