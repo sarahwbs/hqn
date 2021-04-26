@@ -154,10 +154,19 @@ a.header_nav__link {
   font-weight: 100;
   padding: 0.8rem 0;
 
+  .dropdown-item__selections_summary {
+    color: var(--white-v8);
+    padding: 0 0 0.8rem 0;
+  }
+
   &:hover {
     color: var(--white-v8);
     background-color: transparent;
     transition: color 300ms;
+
+    .dropdown-item__selections_summary {
+      color: var(--white);
+    }
   }
 }
 
@@ -169,15 +178,6 @@ a.header_nav__link {
 .dropdown-item__selections {
   font-weight: 500;
   padding: 0.8rem 0 0 0;
-}
-
-.dropdown-item__selections_summary {
-  color: var(--white-v8);
-  padding: 0 0 0.8rem 0;
-
-  &:hover {
-    color: var(--white);
-  }
 }
 
 .dropdown-item__selections__number {
