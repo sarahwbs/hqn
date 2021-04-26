@@ -1,6 +1,6 @@
 .card-title {
   @include small-text;
-  font-weight: 700;
+  font-weight: 600;
 
   @media screen and (min-width: $screen-lg) {
     @include normal-text;
