@@ -115,9 +115,10 @@ a.header_nav__link {
 .header__dropdown-menu {
   background: var(--dark-purple-v2);
   box-shadow: 0 8px 40px var(--grey-v4);
-  padding: 1.2rem 2.5rem 1.2rem 1.2rem;
+  padding: 1.8rem 2rem;
   border-radius: 0.5rem;
-  left: -195% !important;
+  left: -8.6rem !important;
+  width: 21rem;
 
   @media screen and (max-width: $screen-lg) {
     &,
@@ -136,6 +137,11 @@ a.header_nav__link {
   position: absolute;
   top: -2%;
   left: 48%;
+}
+
+.header__dropdown-menu-list {
+  margin: 0;
+  padding: 0;
 }
 
 .header__dropdown-list-item {
