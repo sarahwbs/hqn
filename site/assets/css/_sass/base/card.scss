@@ -21,21 +21,15 @@
   &::after {
     border-radius: 0.3rem;
   }
-}
 
-.card-ebook__link {
-  @include hover-border-target(".card-ebook__image");
-
-  .card-ebook__image {
-    position: relative;
-
-    &::after {
-      border: 0.1rem solid var(--medium-purple);
-      opacity: 1;
-    }
+  &:hover,
+  &:active,
+  &:focus {
+    color: var(--white);
   }
 }
 
+.card-ebook__link,
 .card-game__link,
 .card-movie__link {
   @include hover-border;
@@ -44,6 +38,10 @@
     border: 0.1rem solid var(--medium-purple);
     opacity: 1;
   }
+}
+
+.card-ebook__image {
+  position: relative;
 }
 
 .card-bundle {
