@@ -1,4 +1,4 @@
-<fieldset class="form__input">
+<div class="form__input">
   {% if include.label %}
   <label for="{{ include.id }}">{{ include.label }}</label>
   {% endif %}
@@ -27,6 +27,12 @@
 
   {% comment %} Checks if there is a second input {% endcomment %}<!--  -->
   {% if include.id2 %}
+  <label for="{{ include.id2 }}"
+    ><span class="visually-hidden">
+      {% if include.label %}{{ include.label }}{% else %}Field 2{% endif
+      %}</span
+    ></label
+  >
   <input
     type="{{ include.type2 }}"
     placeholder="{{ include.placeholder2 }}"
@@ -42,4 +48,4 @@
     {{ include.errorMessage }}
   </div>
   {% endif %}
-</fieldset>
+</div>

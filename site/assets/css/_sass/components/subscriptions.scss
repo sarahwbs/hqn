@@ -142,7 +142,7 @@
 
   .subscription-option__monthly {
     .subscription-option__header {
-      background-color: var(--dark-yellow);
+      background-color: var(--orange-v4);
     }
   }
 
@@ -154,13 +154,13 @@
 
   .subscription-option__yearly {
     .subscription-option__header {
-      background-color: var(--salmon);
+      background-color: var(--pink-v2);
     }
   }
 
   .subscription-option__premiumyearly {
     .subscription-option__header {
-      background-color: var(--pink-v2);
+      background-color: var(--pink-v4);
     }
   }
 
@@ -168,7 +168,7 @@
     .subscription-option__monthly {
       .subscription-option__header,
       .subscription-option__body {
-        border-color: var(--dark-yellow);
+        border-color: var(--orange-v4);
       }
     }
 
@@ -182,14 +182,14 @@
     .subscription-option__yearly {
       .subscription-option__header,
       .subscription-option__body {
-        border-color: var(--salmon);
+        border-color: var(--pink-v2);
       }
     }
 
     .subscription-option__premiumyearly {
       .subscription-option__header,
       .subscription-option__body {
-        border-color: var(--pink-v2);
+        border-color: var(--pink-v4);
       }
     }
   }

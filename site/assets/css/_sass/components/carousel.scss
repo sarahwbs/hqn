@@ -25,6 +25,7 @@
     height: 2.4rem;
     margin-left: 0.1rem;
     margin-right: 0.1rem;
+    opacity: 1;
     position: relative;
     width: 2.1rem;
 
@@ -34,15 +35,22 @@
       content: "";
       height: 0.7rem;
       left: 0.3rem;
+      opacity: 0.5;
       position: absolute;
       top: 0.8rem;
       width: 0.7rem;
     }
 
+    &.active::after {
+      opacity: 1;
+    }
+
     @media (hover: hover) {
       &:hover {
-        opacity: 1;
-        transition: opacity 300ms;
+        &::after {
+          opacity: 1;
+          transition: opacity 300ms;
+        }
       }
     }
   }
@@ -123,6 +131,10 @@
       no-repeat;
     transform: rotate(180deg);
   }
+}
+
+.carousel-inner {
+  z-index: 7;
 }
 
 .carousel-link {

@@ -46,3 +46,8 @@ a {
 strong {
   font-weight: 600;
 }
+
+.visually-hidden {
+  color: var(--white);
+  opacity: 1;
+}

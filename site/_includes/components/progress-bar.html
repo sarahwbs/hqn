@@ -1,10 +1,18 @@
 <div class="progress w-100">
-  <div
-    class="progress-bar"
-    role="progressbar"
-    style="width: {{ include.percentage }}%"
-    aria-valuenow="{{ include.percentage }}"
-    aria-valuemin="0"
-    aria-valuemax="100"
-  ></div>
+  <label
+    class="progress__label w-100"
+    for="progress__{{include.type }}-{{ include.id }}"
+  >
+    <span class="visually-hidden">Progress: </span>
+    <div
+      class="progress-bar"
+      role="progressbar"
+      id="progress__{{include.type }}-{{ include.id }}"
+      style="width: {{ include.percentage }}%"
+      aria-valuenow="{{ include.percentage }}"
+      aria-valuemin="0"
+      aria-valuemax="100"
+      aria-label="Progress: {{ include.percentage }}%"
+    ></div>
+  </label>
 </div>

@@ -15,7 +15,7 @@
       <div
         class="col-12 col-md-6 d-flex justify-content-start justify-content-md-end align-items-end"
       >
-        {% include components/button.html label="Skip for now"
+        {% include components/button-link.html label="Skip for now"
         extraClasses="subscription-info__button" link="/subscriber-home" %}
       </div>
     </div>
@@ -29,6 +29,8 @@
       <div class="col">
         <div
           class="container-md px-0 px-lg-0 mb-11 mb-lg-17 subscription-options"
+          role="radiogroup"
+          title="Please choose a subscription type"
         >
           <div class="row g-5">
             {% for option in site.data.subscription-options %}<!--  -->
