@@ -287,32 +287,49 @@ window.addEventListener("load", function () {
     }
 
     // Update the password strength visual element based on checks
-    // (Min: 8 Chars, 1 lowercase, 1 uppercase, 1 number | Medium: min + 12 chars | Strong: min + 14 chars & symbols)
+    // (Low: 6 Chars | Fair: 8 Chars, 1 lowercase, 1 uppercase, 1 number | Good: Fair + 3 of lowercase/uppercase/number/special character | Excellent: Good + 10 chars + no repeated chars)
     function updatePasswordStrength() {
-      const minStrengthRegex = /^(?=.{8,})(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9]).*$/g;
-      const mediumStrengthRegex = /^(?=.{12,})(((?=.*[A-Z])(?=.*[a-z]))|((?=.*[A-Z])(?=.*[0-9]))|((?=.*[a-z])(?=.*[0-9]))).*$/g;
-      const strongStrengthRegex = /^(?=.{14,})(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*]).*$/g;
+      const newPass = newPasswordInput.value;
+      const passLen = newPass.length;
+      const lowercaseRegex = /[a-z]/;
+      const uppercaseRegex = /[A-Z]/;
+      const numberRegex = /[0-9]/;
+      const specialCharRegex = /[!@#$%^&*]/;
+      const repeatedCharRegex = /(.)\1/;
 
-      if (strongStrengthRegex.test(newPasswordInput.value)) {
+      const hasLower = lowercaseRegex.test(newPass);
+      const hasUpper = uppercaseRegex.test(newPass);
+      const hasNumber = numberRegex.test(newPass);
+      const hasSpecial = specialCharRegex.test(newPass);
+      const hasRepeated = repeatedCharRegex.test(newPass);
+
+      const minCharTypes = hasLower && hasUpper && hasNumber;
+      const charTypeCount = hasLower + hasUpper + hasNumber + hasSpecial;
+
+      if (passLen >= 10 && charTypeCount >= 3 && !hasRepeated) {
         resetPasswordLevels();
         passwordStrengthElement.classList.add("level-4");
         passwordStrengthElement.querySelector(".body-copy").innerText =
-          "Password Strength: Strong";
-      } else if (mediumStrengthRegex.test(newPasswordInput.value)) {
+          "Password Strength: Excellent";
+      } else if (passLen >= 8 && charTypeCount >= 3) {
         resetPasswordLevels();
         passwordStrengthElement.classList.add("level-3");
         passwordStrengthElement.querySelector(".body-copy").innerText =
-          "Password Strength: Medium";
-      } else if (minStrengthRegex.test(newPasswordInput.value)) {
+          "Password Strength: Good";
+      } else if (passLen >= 8 && minCharTypes) {
         resetPasswordLevels();
         passwordStrengthElement.classList.add("level-2");
         passwordStrengthElement.querySelector(".body-copy").innerText =
-          "Password Strength: Satisfactory";
-      } else if (newPasswordInput.value != "") {
+          "Password Strength: Fair";
+      } else if (passLen >= 6) {
         resetPasswordLevels();
         passwordStrengthElement.classList.add("level-1");
         passwordStrengthElement.querySelector(".body-copy").innerText =
-          "Password Strength: Weak";
+          "Password Strength: Low";
+      } else if (passLen >= 1) {
+        resetPasswordLevels();
+        passwordStrengthElement.querySelector(".body-copy").innerText =
+          "Password Strength: None";
       } else {
         resetPasswordLevels();
         passwordStrengthElement.querySelector(".body-copy").innerText =
