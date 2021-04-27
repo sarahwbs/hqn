@@ -42,6 +42,7 @@
 a.header_nav__link {
   @include small-text-v2;
   border-bottom: 0.2rem solid transparent;
+  border-top: 0.2rem solid transparent;
   color: var(--white);
   margin-right: 2.5rem;
   font-weight: 600;
@@ -109,7 +110,7 @@ a.header_nav__link {
 }
 
 .account__name {
-  @include small-text;
+  @include small-text-v2;
   font-weight: normal;
   margin-right: 0.25rem;
   white-space: nowrap;
