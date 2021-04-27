@@ -11,19 +11,29 @@ window.addEventListener("load", function () {
 
       if (errorState) {
         elements.forEach((ele) => {
-          ele
-            .closest(".form__input")
-            .querySelector(".form__error")
-            .classList.remove("d-none");
-          ele.classList.add("form__error-border");
+          let container = ele.closest(".form__input");
+          let errorField = ele;
+          if (!container) {
+            container = ele.closest(".form__select");
+            errorField = container.querySelector(
+              ".select-dropdown-control-btn"
+            );
+          }
+          container.querySelector(".form__error").classList.remove("d-none");
+          errorField.classList.add("form__error-border");
         });
       } else {
         elements.forEach((ele) => {
-          ele
-            .closest(".form__input")
-            .querySelector(".form__error")
-            .classList.add("d-none");
-          ele.classList.remove("form__error-border");
+          let container = ele.closest(".form__input");
+          let errorField = ele;
+          if (!container) {
+            container = ele.closest(".form__select");
+            errorField = container.querySelector(
+              ".select-dropdown-control-btn"
+            );
+          }
+          container.querySelector(".form__error").classList.add("d-none");
+          errorField.classList.remove("form__error-border");
         });
       }
 
@@ -81,6 +91,7 @@ window.addEventListener("load", function () {
       }
 
       if (
+        document.getElementById("validateBillingAddress") &&
         document
           .getElementById("validateBillingAddress")
           .getAttribute("value") === "true"
@@ -103,6 +114,14 @@ window.addEventListener("load", function () {
           toggleErrorState(cityInput, false);
         }
 
+        // State/Province Validation
+        const stateInput = e.srcElement.querySelector('input[id="state"]');
+        if (stateInput && !stateInput.value) {
+          errors = toggleErrorState(stateInput, true);
+        } else if (stateInput) {
+          toggleErrorState(stateInput, false);
+        }
+
         // Phone Validation
         const phoneInput = e.srcElement.querySelector('input[type="tel"]');
         const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
@@ -114,11 +133,48 @@ window.addEventListener("load", function () {
 
         // US Zip Code Validation
         const zipInput = e.srcElement.querySelector('input[id="zipCode"]');
+        const zipError = zipInput
+          .closest(".form__input")
+          .querySelector(".form__error");
         const zipRegex = /(^\d{5}$)|(^\d{5}-\d{4}$)/;
-        if (zipInput && !zipRegex.test(zipInput.value)) {
+        const pcRegex = /[A-Za-z]\d[A-Za-z][ -]?\d[A-Za-z]\d/;
+        const provinces = [
+          "AB",
+          "BC",
+          "MB",
+          "NB",
+          "NL",
+          "NS",
+          "NT",
+          "NU",
+          "ON",
+          "PE",
+          "QC",
+          "SK",
+          "YT",
+        ];
+        if (
+          zipInput &&
+          stateInput &&
+          stateInput.value &&
+          provinces.includes(stateInput.value)
+        ) {
+          zipError.innerHTML = "Please enter a valid postal code.";
+          if (!pcRegex.test(zipInput.value)) {
+            errors = toggleErrorState(zipInput, true);
+          } else {
+            toggleErrorState(zipInput, false);
+          }
+        } else if (zipInput && zipInput.value) {
+          zipError.innerHTML = "Please enter a valid zip code.";
+          if (!zipRegex.test(zipInput.value)) {
+            errors = toggleErrorState(zipInput, true);
+          } else {
+            toggleErrorState(zipInput, false);
+          }
+        } else if (zipInput && !zipInput.value) {
+          zipError.innerHTML = "Please enter a zip or postal code.";
           errors = toggleErrorState(zipInput, true);
-        } else if (zipInput) {
-          toggleErrorState(zipInput, false);
         }
       }
 
@@ -142,18 +198,30 @@ window.addEventListener("load", function () {
 
       // Date of Birth Validation
       const monthsDropdown = e.srcElement.querySelector(
-        "button#dobMonthsDropdown"
+        "button#select-dobMonthsDropdown"
       );
-      const daysDropdown = e.srcElement.querySelector("button#dobDaysDropdown");
+      const daysDropdown = e.srcElement.querySelector(
+        "button#select-dobDaysDropdown"
+      );
       const yearsDropdown = e.srcElement.querySelector(
-        "button#dobYearsDropdown"
+        "button#select-dobYearsDropdown"
       );
       if (monthsDropdown && daysDropdown && yearsDropdown) {
         const day = daysDropdown.innerText;
         const month = getMonthNumber(monthsDropdown.innerText);
         const year = yearsDropdown.innerText;
+        const dobError = monthsDropdown
+          .closest(".form__input")
+          .querySelector(".form__error");
 
         if (!isValidDate(day, month, year)) {
+          dobError.innerHTML = "Please enter a valid date of birth.";
+          errors = toggleErrorState(
+            [daysDropdown, monthsDropdown, yearsDropdown],
+            true
+          );
+        } else if (!isOldEnough(day, month, year)) {
+          dobError.innerHTML = "You must be 18 years of age or above.";
           errors = toggleErrorState(
             [daysDropdown, monthsDropdown, yearsDropdown],
             true
@@ -219,32 +287,49 @@ window.addEventListener("load", function () {
     }
 
     // Update the password strength visual element based on checks
-    // (Min: 8 Chars, 1 lowercase, 1 uppercase, 1 number | Medium: min + 12 chars | Strong: min + 14 chars & symbols)
+    // (Low: 6 Chars | Fair: 8 Chars, 1 lowercase, 1 uppercase, 1 number | Good: Fair + 3 of lowercase/uppercase/number/special character | Excellent: Good + 10 chars + no repeated chars)
     function updatePasswordStrength() {
-      const minStrengthRegex = /^(?=.{8,})(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9]).*$/g;
-      const mediumStrengthRegex = /^(?=.{12,})(((?=.*[A-Z])(?=.*[a-z]))|((?=.*[A-Z])(?=.*[0-9]))|((?=.*[a-z])(?=.*[0-9]))).*$/g;
-      const strongStrengthRegex = /^(?=.{14,})(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*]).*$/g;
+      const newPass = newPasswordInput.value;
+      const passLen = newPass.length;
+      const lowercaseRegex = /[a-z]/;
+      const uppercaseRegex = /[A-Z]/;
+      const numberRegex = /[0-9]/;
+      const specialCharRegex = /[!@#$%^&*]/;
+      const repeatedCharRegex = /(.)\1/;
 
-      if (strongStrengthRegex.test(newPasswordInput.value)) {
+      const hasLower = lowercaseRegex.test(newPass);
+      const hasUpper = uppercaseRegex.test(newPass);
+      const hasNumber = numberRegex.test(newPass);
+      const hasSpecial = specialCharRegex.test(newPass);
+      const hasRepeated = repeatedCharRegex.test(newPass);
+
+      const minCharTypes = hasLower && hasUpper && hasNumber;
+      const charTypeCount = hasLower + hasUpper + hasNumber + hasSpecial;
+
+      if (passLen >= 10 && charTypeCount >= 3 && !hasRepeated) {
         resetPasswordLevels();
         passwordStrengthElement.classList.add("level-4");
         passwordStrengthElement.querySelector(".body-copy").innerText =
-          "Password Strength: Strong";
-      } else if (mediumStrengthRegex.test(newPasswordInput.value)) {
+          "Password Strength: Excellent";
+      } else if (passLen >= 8 && charTypeCount >= 3) {
         resetPasswordLevels();
         passwordStrengthElement.classList.add("level-3");
         passwordStrengthElement.querySelector(".body-copy").innerText =
-          "Password Strength: Medium";
-      } else if (minStrengthRegex.test(newPasswordInput.value)) {
+          "Password Strength: Good";
+      } else if (passLen >= 8 && minCharTypes) {
         resetPasswordLevels();
         passwordStrengthElement.classList.add("level-2");
         passwordStrengthElement.querySelector(".body-copy").innerText =
-          "Password Strength: Satisfactory";
-      } else if (newPasswordInput.value != "") {
+          "Password Strength: Fair";
+      } else if (passLen >= 6) {
         resetPasswordLevels();
         passwordStrengthElement.classList.add("level-1");
         passwordStrengthElement.querySelector(".body-copy").innerText =
-          "Password Strength: Weak";
+          "Password Strength: Low";
+      } else if (passLen >= 1) {
+        resetPasswordLevels();
+        passwordStrengthElement.querySelector(".body-copy").innerText =
+          "Password Strength: None";
       } else {
         resetPasswordLevels();
         passwordStrengthElement.querySelector(".body-copy").innerText =

@@ -11,13 +11,28 @@
   @include small-text;
 }
 
-.progress {
-  background-color: #00000020;
-  height: 3px;
-}
-
 .card-link {
   @include link-style;
+}
+
+.card-bundle__link {
+  @include hover-border;
+  &::after {
+    border-radius: 0.3rem;
+  }
+}
+
+.card-ebook__link {
+  @include hover-border-target(".card-ebook__image");
+
+  .card-ebook__image {
+    position: relative;
+  }
+}
+
+.card-game__link,
+.card-movie__link {
+  @include hover-border;
 }
 
 .card-bundle {
@@ -48,6 +63,16 @@
   }
 }
 
+.progress {
+  background-color: #00000020;
+  height: 0.3rem;
+}
+
+.progress__label {
+  display: block;
+}
+
 .progress-bar {
   background-color: var(--pink-v2);
+  height: 0.3rem;
 }

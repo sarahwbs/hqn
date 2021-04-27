@@ -7,6 +7,39 @@ window.addEventListener("load", function () {
     const carousel = new bootstrap.Carousel(homePageCarousel, {
       interval: 3000,
     });
+    const carouselPausePlay = document.querySelector(".carousel-pause");
+    const pausePlayText = carouselPausePlay.querySelector("span");
+
+    function pauseCarousel(pauseSource) {
+      if (pauseSource && pauseSource === "pause-play") {
+        carouselPausePlay.classList.remove("carousel-pause");
+        carouselPausePlay.classList.add("carousel-play");
+      }
+      carousel.pause();
+      pausePlayText.innerHTML = "Play";
+      carouselPausePlay.setAttribute("aria-label", "Play");
+      carouselPausePlay.setAttribute("data-action", "start");
+    }
+
+    function unpauseCarousel(pauseSource) {
+      if (
+        pauseSource &&
+        (pauseSource === "pause-play" || pauseSource === "touchend")
+      ) {
+        carouselPausePlay.classList.add("carousel-pause");
+        carouselPausePlay.classList.remove("carousel-play");
+      }
+
+      if (pauseSource && pauseSource === "pause-play") {
+        // go to the next slide immediately before unpausing
+        carousel.next();
+      }
+
+      carousel.cycle();
+      pausePlayText.innerHTML = "Pause";
+      carouselPausePlay.setAttribute("aria-label", "Pause");
+      carouselPausePlay.setAttribute("data-action", "stop");
+    }
 
     // when the slide updates, change the text in the live region for screen readers
     homePageCarousel.addEventListener("slide.bs.carousel", function (e) {
@@ -16,27 +49,64 @@ window.addEventListener("load", function () {
     });
 
     // add pause/play functionality to the pause/play button
-    const carouselPausePlay = document.querySelector(".carousel-pause");
-    carouselPausePlay.addEventListener("click", function (e) {
-      const button = e.target;
-      const buttonSpan = button.querySelector("span");
-
+    carouselPausePlay.addEventListener("click", function () {
       if (carousel._isPaused) {
-        // go to the next slide immediately, then start cycling
-        carousel.next();
-        carousel.cycle();
-        buttonSpan.innerHTML = "Stop Animation";
-        button.setAttribute("aria-label", "Pause");
-        button.setAttribute("data-action", "stop");
+        unpauseCarousel("pause-play");
       } else {
-        carousel.pause();
-        buttonSpan.innerHTML = "Start Animation";
-        button.setAttribute("aria-label", "Play");
-        button.setAttribute("data-action", "start");
+        pauseCarousel("pause-play");
       }
-      button.classList.toggle("carousel-pause");
-      button.classList.toggle("carousel-play");
     });
+
+    // when a user interacts with the carousel using touch events, if the carousel is paused using the pause button, unpause it
+    homePageCarousel.addEventListener("touchend", () => {
+      if (carousel._isPaused) {
+        unpauseCarousel("touchend");
+      }
+    });
+
+    // when a slide receives keyboard focus, if the carousel isn't paused, pause it, when it loses focus, if it was paused due to focus, unpause it
+    const carouselSlideLinks = homePageCarousel.querySelectorAll(
+      ".carousel-link"
+    );
+    carouselSlideLinks.forEach((slide) => {
+      slide.addEventListener("focus", () => {
+        if (!carousel._isPaused) {
+          homePageCarousel.classList.add("focus-paused");
+          pauseCarousel();
+        }
+      });
+      slide.addEventListener("focusout", (e) => {
+        if (homePageCarousel.classList.contains("focus-paused")) {
+          homePageCarousel.classList.remove("focus-paused");
+          unpauseCarousel();
+        }
+      });
+    });
+
+    // when a user hovers over the prev/next buttons, add a hover class to the carousel item so the hover state doesn't get lost
+    const carouselPrevNext = document.querySelectorAll(
+      ".carousel-control-prev, .carousel-control-next"
+    );
+    if (carouselPrevNext) {
+      carouselPrevNext.forEach((btn) => {
+        btn.addEventListener("mouseover", () => {
+          btn
+            .closest(".carousel")
+            .querySelectorAll(".carousel-item .carousel-link")
+            .forEach((slide) => {
+              slide.classList.add("hover");
+            });
+        });
+        btn.addEventListener("mouseout", () => {
+          btn
+            .closest(".carousel")
+            .querySelectorAll(".carousel-item .carousel-link")
+            .forEach((slide) => {
+              slide.classList.remove("hover");
+            });
+        });
+      });
+    }
 
     // start the carousel cycling
     carousel.cycle();

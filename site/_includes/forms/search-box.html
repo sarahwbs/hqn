@@ -3,16 +3,33 @@
     type="text"
     class="form-control search-box-text"
     placeholder="{{ include.label }}"
+    maxlength="250"
     aria-label="{{ include.label }}"
     aria-describedby="search-box"
   />
   <span class="input-group-text search-box-img" id="search-box">
-    <a href="#" target="_blank">
+    <button
+      type="button"
+      class="search-box__btn search-box__btn-search"
+      aria-label="Search"
+    >
       <img
         src="{{ site.url }}/assets/img/icons/search.svg"
         alt="{{ include.label }}"
-        class="w-100 d-block"
+        class="d-block"
       />
-    </a
-  ></span>
+    </button>
+
+    <button
+      type="button"
+      class="search-box__btn search-box__btn-close"
+      aria-label="Cancel Search"
+    >
+      <img
+        src="{{site.baseurl}}/assets/img/icons/close-dark-purple.svg"
+        class="d-block"
+        alt="Close Icon"
+      />
+    </button>
+  </span>
 </div>

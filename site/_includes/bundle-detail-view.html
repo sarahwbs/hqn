@@ -1,7 +1,7 @@
 <div class="container-md p-0">
   <div class="bundle-detail-view mb-lg-13">
-    {% include components/button.html type="rounded-transparent" label="Back"
-    extraClasses="normal-text back-arrow-button px-8 mb-6" %}
+    {% include components/button-link.html type="rounded-transparent"
+    label="Back" extraClasses="back-arrow-button mb-6" link="/bundles" %}
 
     <h1 class="bundle-detail-view__title mb-3 mb-lg-4">
       Bundle Title Goes Here
@@ -49,12 +49,12 @@
                 {% include components/body-copy.html copy='
                 <strong class="text-uppercase">A Safe Haven</strong>' %}
                 <!--  -->
+
                 {% include components/body-copy.html copy="As the only doctor in
                 Buckhorn County, Kentucky, Sawyer Hudson knows a thing or two
                 about saving lives. But when he rescues the beautiful Honey
                 Malone from a car wreck and invites her to stay at his home so
                 he can nurse her back to health." %}
-
                 <!--  -->
 
                 {% include components/body-copy.html copy="Honey’s been on the
@@ -69,8 +69,7 @@
                 class="bundle-detail-view__read-more-button d-flex d-lg-block justify-content-center"
               >
                 {% include components/button.html type="rounded-transparent"
-                label="Read More" extraClasses="mt-lg-4 normal-text white px-8"
-                %}
+                label="Read More" extraClasses="mt-lg-4 white" %}
               </div>
             </div>
           </div>
@@ -79,16 +78,36 @@
       </div>
 
       <div class="col-lg-3 order-1 order-lg-2 mb-11 mb-lg-0 h-100">
-        {% include components/summary-box.html class="bundle-detail-view" %}
+        {% if include.userSub == "true" %}<!--  -->
+        {% include components/summary-box.html class="bundle-detail-view" %}<!--  -->
+        {% endif %}
 
         <div
-          class="bundle-detail-view__select-bundle-button d-flex d-lg-block justify-content-center"
+          class="bundle-detail-view__select-bundle-block d-flex d-lg-block justify-content-center"
         >
           {% include components/button.html type="rounded-full-width"
-          label="Select eBook Bundle" extraClasses=" normal-text light-purple
-          drop-shadow-5 px-8" %}
+          label="Select eBook Bundle" extraClasses="light-purple
+          bundle-detail-view__select-bundle-button" %}
         </div>
       </div>
     </div>
   </div>
 </div>
+
+{% if include.userSub == "true" %}<!--  -->
+
+{% include modals/modal.html modaltype="bundle-selection" title="Your Selection"
+bodyText="
+<p>
+  Once you confirm your selection, the books in this bundle will be found on the
+  <strong>My Bookshelf</strong> page.
+</p>
+" bundleSelectionText="6 eBook" bundleImage="bundle-image.png"
+cancelButtonText="Cancel" buttonText="Confirm Selection"
+mobileButtonText="Confirm" %}<!--  -->
+
+{% else %}<!--  -->
+
+{% include modals/modal-subscription-required.html %}<!--  -->
+
+{% endif %}

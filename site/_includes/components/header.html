@@ -6,6 +6,7 @@
       <div
         class="col d-flex p-0 header__logo{% if include.userstate == 'signed-out' %}-logged-out{% endif %}{% if include.landingpage == 'true' %} d-md-none{% endif %}"
       >
+        <!-- TODO: update this link to point to the home page -->
         <a href="index" class="d-flex">
           <img
             src="{{site.baseurl}}/assets/img/harlequin-plus-logo.svg"
@@ -16,12 +17,9 @@
 
       {% if include.infopage == "true" %}
       <div class="col d-flex p-0 justify-content-end">
-        <button
-          type="button"
-          class="btn btn-primary btn-lg header-button transparent-button px-8"
-        >
-          Close
-        </button>
+        {% include components/button-link.html type="rounded-transparent"
+        label="Close" extraClasses="btn btn-primary btn-lg header-button
+        transparent-button px-8" link="/landing" %}
       </div>
 
       {% elsif include.userstate == "signed-in" %}<!-- -->
@@ -64,7 +62,7 @@
                 %}
                 <li>
                   <a
-                    href="#"
+                    href="/selection-summary"
                     class="dropdown-item header__dropdown-item dropdown-item__selections"
                   >
                     <span class="dropdown-item__selections__number">8</span>
@@ -73,7 +71,7 @@
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="/selection-summary"
                     class="dropdown-item header__dropdown-item dropdown-item__selections_summary"
                     >Selection Summary</a
                   >
@@ -82,9 +80,21 @@
                   <hr class="dropdown-divider header__dropdown-divider" />
                 </li>
                 {% endif %}<!--  -->
-                {% for item in site.data.header-account-nav %}
+
+                {% if include.userstate == "signed-in" and include.sub == "true"
+                %}<!--  -->
+                {% assign accountLinks = site.data.header-account-nav %}<!--  -->
+                {% elsif include.userstate == "signed-in" and include.sub ==
+                "false" %}<!--  -->
+                {% assign accountLinks = site.data.header-account-nav-unsubbed
+                %}<!--  -->
+                {% endif %}<!--  -->
+
+                {% for item in accountLinks %}
                 <li>
-                  <a class="dropdown-item header__dropdown-item" href="#"
+                  <a
+                    class="dropdown-item header__dropdown-item"
+                    href="{{ item.link }}"
                     >{{ item.name }}</a
                   >
                 </li>
@@ -97,20 +107,16 @@
 
       {% if include.userstate == "signed-in" and include.sub == "true" %}
       <div class="col d-flex d-none d-lg-block">
-        {% include components/button.html type="rounded-pink" label="My
-        Bookshelf" extraClasses="header-button drop-shadow-5"
-        link="/my-bookshelf" %}
+        {% include components/button-link.html label="My Bookshelf"
+        extraClasses="header-button" link="/my-bookshelf" %}
       </div>
       {% endif %}<!--  -->
       {% elsif include.userstate != "logo-only" %}
 
       <div class="col d-flex p-0 justify-content-end">
-        <button
-          type="button"
-          class="btn btn-primary btn-lg header-button sign-in-button transparent-button px-9"
-        >
-          Sign In
-        </button>
+        {% include components/button-link.html label="Sign In"
+        type="rounded-transparent" extraClasses="header-button sign-in-button
+        px-9" %}
       </div>
       {% endif %}
     </div>

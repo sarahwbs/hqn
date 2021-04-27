@@ -1,4 +1,4 @@
-<fieldset class="form__input">
+<div class="form__input">
   {% if include.label %}
   <label for="{{ include.id }}">{{ include.label }}</label>
   {% endif %}
@@ -9,6 +9,7 @@
       name="{{ include.id }}"
       id="{{ include.id }}"
       value="{{ include.value }}"
+      maxlength="{% if include.maxlength %}include.maxlength{% else %}250{% endif %}"
       {%
       if
       include.passwordToggle
@@ -26,12 +27,19 @@
 
   {% comment %} Checks if there is a second input {% endcomment %}<!--  -->
   {% if include.id2 %}
+  <label for="{{ include.id2 }}"
+    ><span class="visually-hidden">
+      {% if include.label %}{{ include.label }}{% else %}Field 2{% endif
+      %}</span
+    ></label
+  >
   <input
     type="{{ include.type2 }}"
     placeholder="{{ include.placeholder2 }}"
     name="{{ include.id2 }}"
     id="{{ include.id2 }}"
     value="{{ include.value2 }}"
+    maxlength="{% if include.maxlength2 %}include.maxlength2{% else %}250{% endif %}"
   />
   {% endif %}<!--  -->
 
@@ -40,4 +48,4 @@
     {{ include.errorMessage }}
   </div>
   {% endif %}
-</fieldset>
+</div>

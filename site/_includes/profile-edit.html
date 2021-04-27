@@ -1,7 +1,8 @@
 <div class="container-md p-0">
   <div class="profile-edit-view profile-edit-view__edit-email mb-8 mb-lg-15">
-    {% include components/button.html type="rounded-transparent" label="Back"
-    extraClasses="normal-text back-arrow-button px-8 mb-7 mb-lg-11" %}
+    {% include components/button-link.html type="rounded-transparent"
+    label="Back" extraClasses="back-arrow-button mb-7 mb-lg-11"
+    link="/user-profile" %}
 
     <h1 class="profile-edit-view__title mb-6 mb-lg-7">Edit Your Info</h1>
 
@@ -15,6 +16,7 @@
       errorMessage="Please enter a last name." %}
 
       <fieldset class="form__input">
+        <legend class="visually-hidden">Date of Birth</legend>
         <label>Date of Birth</label>
         <div class="profile-edit-view__dob">
           {% assign selectOptions="January,February,March,April,
@@ -35,19 +37,17 @@
           menuExtraClasses="profile-edit-view__dob-menu"%}
         </div>
         <div class="form__error mt-3 d-none" role="alert">
-          Date of Birth is invalid.
+          Please enter a valid date of birth.
         </div>
       </fieldset>
 
       <div class="d-flex justify-content-end mt-13 mt-lg-11">
         <!--  -->
-        {% include components/button.html type="rounded-transparent"
-        label="Cancel" link="/user-profile" extraClasses="normal-text white px-8
-        me-4" %}
+        {% include components/button-link.html type="rounded-transparent"
+        label="Cancel" link="/user-profile" extraClasses="white me-4" %}
 
         <!--  -->
-        {% include components/button.html type="rounded-pink" label="Save"
-        extraClasses="normal-text px-8 drop-shadow-5" buttonType="submit" %}
+        {% include components/button.html label="Save" buttonType="submit" %}
       </div>
     </form>
   </div>

@@ -1,7 +1,7 @@
 <div class="container-md p-0">
   <div class="detail-view mb-13">
-    {% include components/button.html type="rounded-transparent" label="Back"
-    extraClasses="normal-text back-arrow-button px-8" %}
+    {% include components/button-link.html type="rounded-transparent"
+    label="Back" extraClasses="back-arrow-button" link="/ebooks" %}
 
     <div class="row gx-5 mt-7">
       <div
@@ -51,18 +51,25 @@
         <div class="detail-view__progress mb-8">
           {% include components/body-copy.html copy="80% of Book Read" %}
           <!--  -->
-          {% include components/progress-bar.html percentage=80 %}
+          {% include components/progress-bar.html percentage=80
+          id="ebook-detail-progress" %}
         </div>
         <div class="detail-view__controls mb-11 mb-lg-0">
           {% include components/button.html type="rounded-full-width"
-          label="Mark as Read" extraClasses="detail-view__mark-button
-          normal-text black-v2 checkmark-button mb-5" %}
+          label="Mark as Read" extraClasses="detail-view__mark-button black-v2
+          checkmark-button mb-5" %}
           <!--  -->
           {% include components/button.html type="rounded-full-width"
-          label="Read Now" extraClasses="detail-view__read-button normal-text
-          light-purple drop-shadow-5" %}
+          label="Read Now" extraClasses="detail-view__read-button light-purple"
+          %}
         </div>
       </div>
     </div>
   </div>
 </div>
+
+{% if include.userSub == "false" %}<!--  -->
+
+{% include modals/modal-subscription-required.html %}<!--  -->
+
+{% endif %}<!--  -->

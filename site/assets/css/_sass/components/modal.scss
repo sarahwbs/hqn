@@ -103,7 +103,8 @@
     padding: 8rem 3rem;
   }
 
-  &.default {
+  &.default,
+  &.ebook-expired {
     max-width: 50rem;
 
     @media screen and (min-width: $screen-lg) {
@@ -135,6 +136,7 @@
       max-width: 60rem;
     }
 
+    .popup-modal__buttons a,
     .popup-modal__buttons button {
       width: 100%;
       margin-bottom: 1rem;
@@ -177,6 +179,7 @@
       max-width: inherit;
     }
 
+    .popup-modal__buttons a,
     .popup-modal__buttons button {
       margin-left: 1.2rem;
 
@@ -199,6 +202,7 @@
       max-width: inherit;
     }
 
+    .popup-modal__buttons a,
     .popup-modal__buttons button {
       margin-left: 1.2rem;
 
@@ -242,11 +246,6 @@
     @media screen and (min-width: $screen-sm) {
       min-width: 29rem;
     }
-  }
-
-  .select-dropdown-control-menu {
-    margin-top: -1rem;
-    padding-top: 2rem;
   }
 
   .dropdown-menu[data-bs-popper] {

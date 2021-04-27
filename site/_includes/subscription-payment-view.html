@@ -6,36 +6,38 @@
 
     <div class="main-content">
       <div class="subscription-payment-view__editable-content mb-11">
-        {% if include.subscription %}
-
-        <!--  -->
+        {% if include.subscription and include.cancelPending == false %}<!--  -->
 
         {% include components/body-copy.html copy="<strong
           >Your next billing date is December 3, 2020.</strong
-        >" extraClasses="mb-6" %}
-
-        <!--  -->
+        >" extraClasses="mb-6" %}<!--  -->
 
         {% include components/edit-box.html heading="
         <strong>Monthly Subscription</strong>" content="$14.99/month"
-        link="/subscription-payment-edit-subscription" heading2="<strong
-          >Credit Card</strong
-        >
-        Info" content2="Visa **** **** **** 1234<br />Expires 02/24" %}
+        link="/change-subscription" heading2="<strong>Credit Card</strong> Info"
+        content2="Visa **** **** **** 1234<br />Expires 02/24" %}<!--  -->
 
-        <!--  -->
+        {% elsif include.subscription and include.cancelPending == true %}<!--  -->
+
+        {% include components/body-copy.html copy="<strong
+          >Your subscription will end on December 3, 2020.</strong
+        >" extraClasses="mb-6" %}<!--  -->
+
+        {% include components/edit-box.html heading="
+        <strong>Monthly Subscription</strong>" content="$14.99/month"
+        link="/change-subscription" heading2="<strong>Credit Card</strong> Info"
+        content2="Visa **** **** **** 1234<br />Expires 02/24" hideEditLink=true
+        %}<!--  -->
 
         {% else %}
 
         <div class="normal-box">
           {% include components/body-copy.html copy="<strong
             >You currently do not have an active subscription.</strong
-          >" extraClasses="mb-7 pe-lg-7" %}
+          >" extraClasses="mb-7 pe-lg-7" %}<!--  -->
 
-          <!--  -->
-
-          {% include components/button.html type="rounded-pink"
-          label="Subscribe" extraClasses="normal-text px-8" %}
+          {% include components/button-link.html label="Subscribe"
+          link="/change-subscription-new-sub" %}
         </div>
 
         {% endif %}
@@ -44,19 +46,18 @@
       <div class="subscription-payment-view__contact mb-10 mb-lg-11">
         {% include components/body-copy.html copy="<strong
           >Customer Service</strong
-        >" extraClasses="mb-0" %}
-
-        <!--  -->
+        >" extraClasses="mb-0" %}<!--  -->
 
         {% include components/body-copy.html copy="Lorem ipsum dolor sit amet
         consectetur adipiscin:<br />555-555-5555" %}
       </div>
 
-      {% if include.subscription %}
+      {% if include.subscription and include.cancelPending == false %}
 
       <div class="subscription-payment-view__delete_subscription">
         {% include components/button.html type="rounded-transparent"
-        label="Delete Subscription" extraClasses="normal-text px-8" %}
+        label="Delete Subscription"
+        extraClasses="subscription-payment-view__delete-button" %}
       </div>
 
       {% endif %}

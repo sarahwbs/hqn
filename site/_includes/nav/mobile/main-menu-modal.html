@@ -24,15 +24,21 @@
         {% if include.userstate == "signed-in" and include.sub == "true" %}
         <div class="row">
           <div class="col px-0">
-            {% include components/button.html type="rounded-pink" label="My
-            Bookshelf" extraClasses="menu-modal__pink-btn w-100" %}
+            {% include components/button-link.html label="My Bookshelf"
+            extraClasses="menu-modal__pink-btn w-100" link="/my-bookshelf" %}
           </div>
         </div>
         {% endif %}
 
         <div class="row menu-modal__nav-container mt-10">
           <nav class="col" aria-label="Mobile Navigation" role="navigation">
-            {% for item in site.data.mobile-nav %}
+            {% if include.sub == "true" %}<!--  -->
+            {% assign mobileLinks = site.data.mobile-nav %}<!--  -->
+            {% else %}<!--  -->
+            {% assign mobileLinks = site.data.mobile-nav-unsubbed %}<!--  -->
+            {% endif %}<!--  -->
+
+            {% for item in mobileLinks %}
             <div class="row menu-modal__nav-row">
               <div class="col d-flex justify-content-between px-0">
                 <a class="menu-modal__link w-100" href="{{ item.link }}"

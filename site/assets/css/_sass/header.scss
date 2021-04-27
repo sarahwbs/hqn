@@ -37,13 +37,16 @@
 
 a.header_nav__link {
   @include small-text-v2;
+  border-bottom: 0.2rem solid transparent;
   color: var(--white);
   margin-right: 2.5rem;
   font-weight: bold;
   text-transform: uppercase;
 
   &:hover {
+    border-bottom: 0.2rem solid var(--white);
     color: var(--white);
+    transition: border-bottom-color 300ms;
   }
 }
 
@@ -76,6 +79,8 @@ a.header_nav__link {
 }
 
 .account__menu-button {
+  transition: background-color 0ms;
+
   img {
     opacity: 0.5;
   }
@@ -85,6 +90,7 @@ a.header_nav__link {
   &:focus {
     img {
       opacity: 1;
+      transition: opacity 300ms;
     }
   }
 }
@@ -139,8 +145,9 @@ a.header_nav__link {
   padding: 0.8rem 0;
 
   &:hover {
-    color: var(--white);
+    color: var(--white-v8);
     background-color: transparent;
+    transition: color 300ms;
   }
 }
 
@@ -157,6 +164,10 @@ a.header_nav__link {
 .dropdown-item__selections_summary {
   color: var(--white-v8);
   padding: 0 0 0.8rem 0;
+
+  &:hover {
+    color: var(--white);
+  }
 }
 
 .dropdown-item__selections__number {

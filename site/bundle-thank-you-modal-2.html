@@ -2,10 +2,10 @@
 layout: signed-in-sub
 ---
 
-{% include bundle-detail-view.html %}
+{% include bundle-detail-view.html userstate="signed-in" userSub="true" %}
 <!--  -->
-{% include modals/modal.html modaltype="thank-you-2" title="Thank you for your
-Trade Print bundle selection!" bodyText="
+{% include modals/modal.html modaltype="thank-you-2" openOnLoad="true"
+title="Thank you for your Trade Print bundle selection!" bodyText="
 <p>
   Your new books will soon be delivered to you. Check your email for more
   details.

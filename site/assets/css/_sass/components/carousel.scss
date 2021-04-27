@@ -25,6 +25,7 @@
     height: 2.4rem;
     margin-left: 0.1rem;
     margin-right: 0.1rem;
+    opacity: 1;
     position: relative;
     width: 2.1rem;
 
@@ -34,15 +35,23 @@
       content: "";
       height: 0.7rem;
       left: 0.3rem;
+      opacity: 0.5;
       position: absolute;
       top: 0.8rem;
       width: 0.7rem;
     }
 
-    &:hover,
-    &:active,
-    &:focus {
+    &.active::after {
       opacity: 1;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        &::after {
+          opacity: 1;
+          transition: opacity 300ms;
+        }
+      }
     }
   }
 }
@@ -66,6 +75,7 @@
 .carousel-prev,
 .carousel-next {
   pointer-events: none;
+  z-index: 8;
 }
 
 .carousel-prev {
@@ -82,8 +92,16 @@
   width: 6rem;
   pointer-events: auto;
 
-  &:hover &-icon {
-    background-color: var(--medium-purple-v3-75);
+  &:focus,
+  &:focus:not(:focus-visible) {
+    outline: var(--white) solid 0.1rem;
+    outline-offset: 0.1rem;
+  }
+
+  &:hover &-icon,
+  &:focus &-icon {
+    background-color: var(--medium-purple-v3);
+    transition: background-color 300ms;
   }
 }
 
@@ -112,5 +130,17 @@
     background: url("../img/icons/right-arrow.svg") center right / 20px 9px
       no-repeat;
     transform: rotate(180deg);
+  }
+}
+
+.carousel-inner {
+  z-index: 7;
+}
+
+.carousel-link {
+  @include hover-border;
+
+  &::after {
+    border-radius: 0.8rem;
   }
 }

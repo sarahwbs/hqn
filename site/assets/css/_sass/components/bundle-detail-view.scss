@@ -93,7 +93,7 @@
   @include box-summary-count;
 }
 
-.bundle-detail-view__select-bundle-button {
+.bundle-detail-view__select-bundle-block {
   button {
     @media screen and (min-width: $screen-sm) and (max-width: $screen-lg-min) {
       width: 25rem;

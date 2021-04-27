@@ -1,7 +1,9 @@
 <div
-  class="popup-modal w-100 h-100 position-absolute top-0 start-0"
+  class="popup-modal modal-{{ include.modaltype }} {% if include.openOnLoad %}d-block{% else %}d-none{% endif %} w-100 h-100 position-absolute top-0 start-0"
+  role="dialog"
+  title="{{ include.title }}"
   aria-modal="true"
-  aria-hidden="false"
+  aria-hidden="{% if include.openOnLoad %}false{% else %}true{% endif %}"
 >
   <div class="popup-modal__background" aria-hidden="true"></div>
   <div
@@ -23,6 +25,8 @@
 
       {% if include.modaltype == "default" %}<!--  -->
       {% include modals/modal-default.html %}<!--  -->
+      {% elsif include.modaltype == "ebook-expired" %}<!--  -->
+      {% include modals/modal-ebook-expired.html %}<!--  -->
       {% elsif include.modaltype == "thank-you" or include.modaltype ==
       "thank-you-2"%}<!--  -->
       {% include modals/modal-thank-you.html %}<!--  -->

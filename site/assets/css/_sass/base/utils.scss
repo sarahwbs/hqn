@@ -5,24 +5,81 @@
   &:active,
   &:focus {
     color: var(--white-v3);
+    transition: color 300ms;
   }
 }
 
 @mixin footer-link-style {
-  color: var(--white-v3);
+  color: var(--white-v9);
 
   &:hover,
   &:active,
   &:focus {
     color: var(--white);
+    transition: color 300ms;
   }
 }
 
-@mixin link-hover($color) {
+@mixin yellow-link-style {
+  color: var(--yellow);
+
   &:hover,
   &:active,
   &:focus {
-    border-bottom: 0.2rem solid $color;
+    color: var(--orange-v3);
+  }
+}
+
+// the class passed in as the $target is what will have the hover border added
+@mixin hover-border {
+  &::after {
+    border: 2px solid var(--white);
+    border-radius: 0.1rem;
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 8;
+    opacity: 0;
+  }
+
+  &:hover,
+  &:active,
+  &:focus,
+  &.hover {
+    &::after {
+      opacity: 1;
+      transition: opacity 300ms;
+    }
+  }
+}
+
+// the class passed in as the $target is what will have the hover border added
+@mixin hover-border-target($target) {
+  #{$target}::after {
+    border: 2px solid var(--white);
+    border-radius: 0.1rem;
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 8;
+    opacity: 0;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    #{$target}::after {
+      opacity: 1;
+      transition: opacity 300ms;
+    }
   }
 }
 
@@ -61,17 +118,5 @@
 }
 
 .drop-shadow-5 {
-  box-shadow: 0 0.8rem 2rem var(--grey-v6);
-}
-
-.drop-shadow-6 {
-  box-shadow: 0 0.8rem 2rem var(--grey-v2);
-}
-
-.drop-shadow-7 {
   box-shadow: 0 0.8rem 4rem var(--grey-v4);
-}
-
-.flex-filler {
-  flex: 1 1 100%;
 }

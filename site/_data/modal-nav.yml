@@ -1,16 +1,12 @@
-- name: Bundles Details (Thank You Modal)
-  link: /bundle-thank-you-modal
-- name: Bundles Details (Thank You Modal 2)
-  link: /bundle-thank-you-modal-2
-- name: Bundles Details (Bundle Selection Modal)
-  link: /bundle-selection-modal
-- name: Bundles Details (Bundle Selection Form Modal)
+- name: eBook Expired Modal
+  link: /ebook-expired-modal
+- name: Bundle Selection Form Modal
   link: /bundle-selection-form-modal
-- name: Bundles Details (Bundle Selection Error Modal)
+- name: Bundle Selection Error Modal
   link: /bundle-selection-error-modal
-- name: Bundles Details (Bundle Selection Error Modal 2)
+- name: Bundle Selection Error Modal 2
   link: /bundle-selection-error-modal-2
-- name: Movie Detail Page (Access Modal)
-  link: /movie-details-modal
-- name: Payment &amp; Shipping (Delete Subscription Modal)
-  link: /delete-subscription-modal
+- name: Bundle Selection Thank You Modal
+  link: /bundle-thank-you-modal
+- name: Bundle Selection Thank You Modal 2
+  link: /bundle-thank-you-modal-2

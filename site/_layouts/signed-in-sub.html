@@ -2,7 +2,7 @@
 ---
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <title>Harlequin+</title>
@@ -21,6 +21,10 @@
     ></script>
     <script
       type="text/javascript"
+      src="{{site.baseurl}}/assets/js/menu.js"
+    ></script>
+    <script
+      type="text/javascript"
       src="{{site.baseurl}}/assets/js/carousel.js"
     ></script>
     <script
@@ -34,6 +38,10 @@
     <script
       type="text/javascript"
       src="{{site.baseurl}}/assets/js/select-dropdown.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="{{site.baseurl}}/assets/js/search.js"
     ></script>
     <script
       type="text/javascript"
@@ -67,7 +75,7 @@
       class="container-fluid d-flex flex-column align-items-end h-100 px-5 main"
     >
       {% include components/header.html userstate="signed-in" sub="true" %}
-      <div class="w-100">{{ content }}</div>
+      <div class="w-100" role="main">{{ content }}</div>
       {% include components/footer.html %}
     </div>
   </body>

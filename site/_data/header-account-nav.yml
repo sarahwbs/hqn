@@ -1,8 +1,8 @@
 - name: My Profile
-  link: /
+  link: /user-profile
 - name: Subscription & Payment
-  link: /
+  link: /subscription-payment-info-subbed
 - name: Order History
-  link: /
+  link: /order-history
 - name: Sign Out
-  link: /
+  link: /landing
