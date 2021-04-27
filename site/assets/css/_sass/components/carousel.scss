@@ -92,8 +92,7 @@
   width: 6rem;
   pointer-events: auto;
 
-  &:focus,
-  &:focus:not(:focus-visible) {
+  &:focus {
     outline: var(--white) solid 0.1rem;
     outline-offset: 0.1rem;
   }
