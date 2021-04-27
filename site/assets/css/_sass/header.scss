@@ -161,6 +161,17 @@ a.header_nav__link {
       display: none;
     }
   }
+
+  // Add a transparent pseudo element that is positioned behind the menu, and is slightly larger than the menu. This will create a buffer around the menu, preventing the mouseleave function being called accidentally.
+  &::after {
+    content: "";
+    height: calc(100% + 4rem);
+    left: -2rem;
+    position: absolute;
+    top: -2rem;
+    width: calc(100% + 4rem);
+    z-index: -1;
+  }
 }
 
 .header__dropdown-menu-arrow-up {
