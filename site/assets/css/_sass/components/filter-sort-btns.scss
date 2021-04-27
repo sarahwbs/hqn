@@ -16,6 +16,7 @@
 
 .filter-sort-btns__filter-button {
   @include filter-button;
+  @include dropshadow-v2;
   text-align: left;
   width: 100%;
 }
