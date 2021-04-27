@@ -1,6 +1,6 @@
 <header class="header w-100">
   <div
-    class="container-md p-0{% if include.landingpage == 'true' %} px-5{% endif %}"
+    class="container-md p-0{% if include.landingpage == 'true' %} px-5 px-lg-0{% endif %}"
   >
     <div class="row flex-nowrap m-0 header-row">
       <div
@@ -28,16 +28,16 @@
       {% include nav/desktop-nav.html %}
 
       <div
-        class="col account d-flex{% if include.sub == 'false' %} pe-0{% else %} me-lg-6{% endif %}"
+        class="col account d-flex{% if include.sub == 'true' %} me-lg-4{% endif %}"
       >
         <div class="account__inner d-flex">
           <div class="account__name d-flex align-self-center d-none d-lg-block">
-            Hi, Brennan
+            Hi, Samanthalynn
           </div>
 
           <div class="dropdown account__dropdown">
             <button
-              class="btn btn-default account__menu-button d-none d-lg-block{% if include.sub == 'false' %} pe-0{% endif %}"
+              class="btn btn-default account__menu-button d-none d-lg-block pt-lg-0{% if include.sub == 'false' %} pe-0{% endif %}"
               type="button"
               id="account-dropdown-menu"
               data-bs-toggle="dropdown"
@@ -53,30 +53,26 @@
             userstate=include.userstate sub=include.sub %}
 
             <div
-              class="dropdown-menu header__dropdown-menu"
+              class="dropdown-menu header__dropdown-menu{% if include.sub == 'false' %} unsub{% endif %}"
               aria-labelledby="account-dropdown-menu"
             >
               <div class="header__dropdown-menu-arrow-up"></div>
-              <ul>
+              <ul class="header__dropdown-menu-list">
                 {% if include.userstate == "signed-in" and include.sub == "true"
                 %}
-                <li>
+                <li class="header__dropdown-list-item">
                   <a
                     href="/selection-summary"
                     class="dropdown-item header__dropdown-item dropdown-item__selections"
                   >
                     <span class="dropdown-item__selections__number">8</span>
-                    Available Selections
+                    Available Selections<br />
+                    <span class="dropdown-item__selections_summary"
+                      >Selection Summary</span
+                    >
                   </a>
                 </li>
-                <li>
-                  <a
-                    href="/selection-summary"
-                    class="dropdown-item header__dropdown-item dropdown-item__selections_summary"
-                    >Selection Summary</a
-                  >
-                </li>
-                <li>
+                <li class="header__dropdown-list-item">
                   <hr class="dropdown-divider header__dropdown-divider" />
                 </li>
                 {% endif %}<!--  -->
@@ -91,7 +87,7 @@
                 {% endif %}<!--  -->
 
                 {% for item in accountLinks %}
-                <li>
+                <li class="header__dropdown-list-item">
                   <a
                     class="dropdown-item header__dropdown-item"
                     href="{{ item.link }}"
@@ -106,7 +102,7 @@
       </div>
 
       {% if include.userstate == "signed-in" and include.sub == "true" %}
-      <div class="col d-flex d-none d-lg-block">
+      <div class="col d-flex d-none d-lg-block pe-0">
         {% include components/button-link.html label="My Bookshelf"
         extraClasses="header-button" link="/my-bookshelf" %}
       </div>

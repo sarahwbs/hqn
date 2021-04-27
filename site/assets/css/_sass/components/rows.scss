@@ -11,7 +11,7 @@ $bundle-shadow-size: 3.8rem;
   @media screen and (max-width: $screen-md) {
     margin: -$bundle-shadow-size (-($bundle-shadow-size + 1));
     overflow-x: scroll;
-    padding: $bundle-shadow-size;
+    padding: 1.8rem $bundle-shadow-size $bundle-shadow-size;
 
     scrollbar-width: thin;
     scrollbar-color: transparent transparent;

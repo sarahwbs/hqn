@@ -92,18 +92,14 @@ window.addEventListener("load", function () {
         btn.addEventListener("mouseover", () => {
           btn
             .closest(".carousel")
-            .querySelectorAll(".carousel-item .carousel-link")
-            .forEach((slide) => {
-              slide.classList.add("hover");
-            });
+            .querySelector(".carousel-inner")
+            .classList.add("hover");
         });
         btn.addEventListener("mouseout", () => {
           btn
             .closest(".carousel")
-            .querySelectorAll(".carousel-item .carousel-link")
-            .forEach((slide) => {
-              slide.classList.remove("hover");
-            });
+            .querySelector(".carousel-inner")
+            .classList.remove("hover");
         });
       });
     }

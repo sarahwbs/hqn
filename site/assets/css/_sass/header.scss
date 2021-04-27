@@ -31,6 +31,10 @@
   }
 
   @media screen and (min-width: $screen-lg) {
+    width: 13rem;
+  }
+
+  @media screen and (min-width: $screen-xl) {
     width: 17.5rem;
   }
 }
@@ -38,9 +42,10 @@
 a.header_nav__link {
   @include small-text-v2;
   border-bottom: 0.2rem solid transparent;
+  border-top: 0.2rem solid transparent;
   color: var(--white);
   margin-right: 2.5rem;
-  font-weight: bold;
+  font-weight: 600;
   text-transform: uppercase;
 
   &:hover {
@@ -50,21 +55,36 @@ a.header_nav__link {
   }
 }
 
-.nav {
-  margin-left: 7rem;
+.header_nav {
+  margin-left: 4rem;
+
+  @media screen and (min-width: $screen-xl) {
+    margin-left: 7rem;
+  }
 }
 
 // Buttons
 
 .header-button {
-  @include medium-text;
-  padding: 1.3rem 4rem 1.2rem;
+  @include small-text-v2;
+  padding: 1.3rem 3rem 1.2rem;
   white-space: nowrap;
 
   &:hover,
   &:active,
   &:focus {
+    padding: 1.3rem 3rem 1.2rem;
+  }
+
+  @media screen and (min-width: $screen-xl) {
+    @include medium-text;
     padding: 1.3rem 4rem 1.2rem;
+
+    &:hover,
+    &:active,
+    &:focus {
+      padding: 1.3rem 4rem 1.2rem;
+    }
   }
 }
 
@@ -79,6 +99,8 @@ a.header_nav__link {
 }
 
 .account__menu-button {
+  padding-left: 0;
+  padding-right: 0;
   transition: background-color 0ms;
 
   img {
@@ -96,9 +118,10 @@ a.header_nav__link {
 }
 
 .account__name {
-  @include small-text;
+  @include small-text-v2;
   font-weight: normal;
   margin-right: 0.25rem;
+  padding-right: 0.75rem;
   white-space: nowrap;
 }
 
@@ -114,10 +137,23 @@ a.header_nav__link {
 
 .header__dropdown-menu {
   background: var(--dark-purple-v2);
-  box-shadow: 0 8px 40px var(--grey-v4);
-  padding: 1.2rem 2.5rem 1.2rem 1.2rem;
+  box-shadow: 0 0.8rem 4rem var(--grey-v4);
+  padding: 1.8rem 2rem;
   border-radius: 0.5rem;
-  left: -195% !important;
+  left: -9.5rem !important;
+  width: 21rem;
+
+  &[data-popper-placement="bottom-end"] {
+    left: 8.8rem !important;
+  }
+
+  &.unsub {
+    left: -17.5rem !important;
+
+    &[data-popper-placement="bottom-end"] {
+      left: 0.8rem !important;
+    }
+  }
 
   @media screen and (max-width: $screen-lg) {
     &,
@@ -125,17 +161,42 @@ a.header_nav__link {
       display: none;
     }
   }
+
+  // Add a transparent pseudo element that is positioned behind the menu, and is slightly larger than the menu. This will create a buffer around the menu, preventing the mouseleave function being called accidentally.
+  &::after {
+    content: "";
+    height: calc(100% + 4rem);
+    left: -2rem;
+    position: absolute;
+    top: -2rem;
+    width: calc(100% + 4rem);
+    z-index: -1;
+  }
 }
 
 .header__dropdown-menu-arrow-up {
   width: 0;
   height: 0;
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
-  border-bottom: 10px solid var(--dark-purple-v2);
+  border-left: 0.8rem solid transparent;
+  border-right: 0.8rem solid transparent;
+  border-bottom: 1rem solid var(--dark-purple-v2);
   position: absolute;
-  top: -2%;
+  top: -0.8rem;
   left: 48%;
+
+  .unsub & {
+    left: unset;
+    right: 1.2rem;
+  }
+}
+
+.header__dropdown-menu-list {
+  margin: 0;
+  padding: 0;
+}
+
+.header__dropdown-list-item {
+  list-style-type: none;
 }
 
 .header__dropdown-item {
@@ -144,10 +205,19 @@ a.header_nav__link {
   font-weight: 100;
   padding: 0.8rem 0;
 
+  .dropdown-item__selections_summary {
+    color: var(--white-v8);
+    padding: 0 0 0.8rem 0;
+  }
+
   &:hover {
     color: var(--white-v8);
     background-color: transparent;
     transition: color 300ms;
+
+    .dropdown-item__selections_summary {
+      color: var(--white);
+    }
   }
 }
 
@@ -159,15 +229,6 @@ a.header_nav__link {
 .dropdown-item__selections {
   font-weight: 500;
   padding: 0.8rem 0 0 0;
-}
-
-.dropdown-item__selections_summary {
-  color: var(--white-v8);
-  padding: 0 0 0.8rem 0;
-
-  &:hover {
-    color: var(--white);
-  }
 }
 
 .dropdown-item__selections__number {

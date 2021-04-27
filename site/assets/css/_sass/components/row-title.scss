@@ -31,11 +31,6 @@
 
 .row-title__view-all {
   margin-left: auto;
-  margin-bottom: 0.6rem;
-
-  @media screen and (min-width: $screen-lg) {
-    margin-bottom: 0;
-  }
 }
 
 .row-title__view-all-link {
@@ -44,8 +39,8 @@
   &::after {
     background: url("../img/icons/right-arrow.svg") center right no-repeat;
     content: "";
-    height: 9px;
-    width: 28px;
+    height: 0.9rem;
+    width: 2.8rem;
 
     @media screen and (min-width: $screen-lg) {
       @include normal-text-v2;

@@ -3,6 +3,17 @@ window.addEventListener("load", function () {
   const menuMainMobile = document.querySelector("#mainMenuModal");
   const menuAccountMobile = document.querySelector("#userAccountMenuModal");
 
+  if (menuHeaderDesktop) {
+    const headerAccountMenu = menuHeaderDesktop.closest(".dropdown");
+    const bsHeaderAccountMenu = new bootstrap.Dropdown(
+      headerAccountMenu.querySelector(".btn")
+    );
+
+    headerAccountMenu.addEventListener("mouseleave", () => {
+      bsHeaderAccountMenu.hide();
+    });
+  }
+
   if (menuHeaderDesktop && menuMainMobile && menuAccountMobile) {
     const headerAccountMenu = menuHeaderDesktop.closest(".dropdown");
     const bsHeaderAccountMenu = new bootstrap.Dropdown(

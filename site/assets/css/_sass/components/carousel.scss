@@ -92,8 +92,7 @@
   width: 6rem;
   pointer-events: auto;
 
-  &:focus,
-  &:focus:not(:focus-visible) {
+  &:focus {
     outline: var(--white) solid 0.1rem;
     outline-offset: 0.1rem;
   }
@@ -114,33 +113,32 @@
   width: 6rem;
 
   &::after {
-    background: url("../img/icons/right-arrow.svg") center right / 20px 9px
+    background: url("../img/icons/right-arrow.svg") center right / 2rem 0.9rem
       no-repeat;
     content: "";
     display: inline-block;
-    height: 9px;
+    height: 0.9rem;
     margin-bottom: auto;
     margin-top: auto;
-    width: 20px;
+    width: 2rem;
   }
 }
 
 .carousel-control-prev-icon {
   &::after {
-    background: url("../img/icons/right-arrow.svg") center right / 20px 9px
+    background: url("../img/icons/right-arrow.svg") center right / 2rem 0.9rem
       no-repeat;
     transform: rotate(180deg);
   }
 }
 
 .carousel-inner {
-  z-index: 7;
-}
-
-.carousel-link {
   @include hover-border;
+  border-radius: 0.8rem;
+  z-index: 7;
 
   &::after {
     border-radius: 0.8rem;
+    pointer-events: none;
   }
 }
