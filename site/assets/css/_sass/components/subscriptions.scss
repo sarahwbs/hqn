@@ -221,7 +221,7 @@
 }
 
 .subscription-option__name {
-  @include small-text;
+  @include large-text-v4;
   font-weight: 600;
   text-transform: uppercase;
 }
