@@ -132,12 +132,12 @@
 
 .subscription-option {
   .subscription-option__header {
-    border: 3px solid transparent;
+    border: 0.3rem solid transparent;
     border-width: 0.3rem 0.3rem 0;
   }
 
   .subscription-option__body {
-    border: 3px solid transparent;
+    border: 0.3rem solid transparent;
     border-width: 0 0.3rem 0.3rem;
   }
 
@@ -200,6 +200,7 @@
   border: none;
   border-radius: 0.8rem;
   background: var(--white);
+  box-shadow: 0 0.8rem 2rem var(--black-v7);
 }
 
 .subscription-option__header {
