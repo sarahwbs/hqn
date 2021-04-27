@@ -28,7 +28,7 @@
       {% include nav/desktop-nav.html %}
 
       <div
-        class="col account d-flex pe-0{% if include.sub == 'true' %} me-lg-4{% endif %}"
+        class="col account d-flex{% if include.sub == 'true' %} me-lg-4{% endif %}"
       >
         <div class="account__inner d-flex">
           <div class="account__name d-flex align-self-center d-none d-lg-block">
@@ -53,7 +53,7 @@
             userstate=include.userstate sub=include.sub %}
 
             <div
-              class="dropdown-menu header__dropdown-menu"
+              class="dropdown-menu header__dropdown-menu{% if include.sub == 'false' %} unsub{% endif %}"
               aria-labelledby="account-dropdown-menu"
             >
               <div class="header__dropdown-menu-arrow-up"></div>

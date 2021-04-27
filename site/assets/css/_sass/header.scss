@@ -93,6 +93,8 @@ a.header_nav__link {
 }
 
 .account__menu-button {
+  padding-left: 0;
+  padding-right: 0;
   transition: background-color 0ms;
 
   img {
@@ -113,6 +115,7 @@ a.header_nav__link {
   @include small-text-v2;
   font-weight: normal;
   margin-right: 0.25rem;
+  padding-right: 0.75rem;
   white-space: nowrap;
 }
 
@@ -131,8 +134,20 @@ a.header_nav__link {
   box-shadow: 0 0.8rem 4rem var(--grey-v4);
   padding: 1.8rem 2rem;
   border-radius: 0.5rem;
-  left: -8.7rem !important;
+  left: -9.5rem !important;
   width: 21rem;
+
+  &[data-popper-placement="bottom-end"] {
+    left: 8.8rem !important;
+  }
+
+  &.unsub {
+    left: -17.5rem !important;
+
+    &[data-popper-placement="bottom-end"] {
+      left: 0.8rem !important;
+    }
+  }
 
   @media screen and (max-width: $screen-lg) {
     &,
@@ -151,6 +166,11 @@ a.header_nav__link {
   position: absolute;
   top: -0.8rem;
   left: 48%;
+
+  .unsub & {
+    left: unset;
+    right: 1.2rem;
+  }
 }
 
 .header__dropdown-menu-list {
