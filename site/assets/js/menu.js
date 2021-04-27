@@ -3,17 +3,16 @@ window.addEventListener("load", function () {
   const menuMainMobile = document.querySelector("#mainMenuModal");
   const menuAccountMobile = document.querySelector("#userAccountMenuModal");
 
-  if (menuMainMobile) {
+  if (menuHeaderDesktop && menuMainMobile && menuAccountMobile) {
     const headerAccountMenu = menuHeaderDesktop.closest(".dropdown");
     const bsHeaderAccountMenu = new bootstrap.Dropdown(
       headerAccountMenu.querySelector(".btn")
     );
     const bsMobileMainMenu = new bootstrap.Modal(menuMainMobile);
     const bsMobileAccountMenu = new bootstrap.Modal(menuAccountMobile);
+    const mediaQueryList = window.matchMedia("(max-width: 992px)");
 
-    const mql = window.matchMedia("(max-width: 992px)");
-
-    mql.addEventListener("change", (e) => {
+    mediaQueryList.addEventListener("change", (e) => {
       // if less than 992px, hide the desktop dropdown menu
       if (e.matches) {
         bsHeaderAccountMenu.hide();
