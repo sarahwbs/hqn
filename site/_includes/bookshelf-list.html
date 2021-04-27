@@ -40,7 +40,7 @@
       </div>
       {% else %}<!-- -->
       {% for i in (1..24) %}<!-- -->
-      <div class="col mt-5 mt-sm-6 mt-md-7 mt-lg-8 mt-xl-13">
+      <div class="col mt-6 mt-md-7 mt-lg-8 mt-xl-13">
         {% capture percentage %}{{ i | times: 10 }}{% endcapture %}<!-- -->
         <div class="col">
           {% include cards/ebook-card.html percentage=percentage %}<!-- -->
