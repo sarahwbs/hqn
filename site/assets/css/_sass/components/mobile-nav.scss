@@ -10,6 +10,28 @@
   margin: 1rem 0 0 0;
 }
 
+.menu-modal .modal-dialog {
+  margin: 0;
+}
+
+// When fading in the main menu, animate it to slide from the left
+#mainMenuModal.modal.fade .modal-dialog {
+  @include transition($modal-transition);
+  transform: translate(-50px, 0);
+}
+#mainMenuModal.modal.show .modal-dialog {
+  transform: $modal-show-transform;
+}
+
+// When fading in the user menu modal, animate it to slide from the right
+#userAccountMenuModal.modal.fade .modal-dialog {
+  @include transition($modal-transition);
+  transform: translate(50px, 0);
+}
+#userAccountMenuModal.modal.show .modal-dialog {
+  transform: $modal-show-transform;
+}
+
 .menu-modal__modal-header {
   border: 0;
   margin: 0 1.5rem;
