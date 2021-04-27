@@ -178,6 +178,10 @@
   @include full-width-button;
 }
 
+.modal-button {
+  box-shadow: none;
+}
+
 @mixin filter-button {
   @include input-button;
   @include grey-gradient-with-image-bg(
