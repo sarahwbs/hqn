@@ -44,28 +44,7 @@
 }
 
 .search-box__btn-close {
-  border: 0.1rem solid var(--dark-purple-v5);
-  border-radius: 1.3rem;
   display: none;
-  padding: 0.35rem;
-
-  img {
-    opacity: 0.5;
-    height: 0.8rem;
-    width: 0.8rem;
-  }
-
-  &:hover,
-  &:active,
-  &:focus {
-    border: 0.1rem solid var(--dark-purple);
-    transition: border-color 300ms;
-
-    img {
-      opacity: 1;
-      transition: opacity 300ms;
-    }
-  }
 
   .searching & {
     display: flex;
