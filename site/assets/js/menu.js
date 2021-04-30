@@ -12,9 +12,9 @@ window.addEventListener("load", function () {
     const bsMobileAccountMenu = new bootstrap.Modal(menuAccountMobile);
     const mediaQueryList = window.matchMedia("(max-width: 992px)");
 
-    mediaQueryList.addEventListener("change", (e) => {
+    function showHideMenus() {
       // if less than 992px, hide the desktop dropdown menu
-      if (e.matches) {
+      if (window.innerWidth < 992) {
         bsHeaderAccountMenu.hide();
       }
       // if more than 992px, hide the mobile menus
@@ -22,6 +22,12 @@ window.addEventListener("load", function () {
         bsMobileMainMenu.hide();
         bsMobileAccountMenu.hide();
       }
-    });
+    }
+
+    if (mediaQueryList.addEventListener) {
+      mediaQueryList.addEventListener("change", () => showHideMenus());
+    } else if (mediaQueryList.addListener) {
+      mediaQueryList.addListener(() => showHideMenus());
+    }
   }
 });
