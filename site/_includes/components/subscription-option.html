@@ -19,11 +19,13 @@
         name="subscription-options"
         id="subscriptionOption{{ include.id }}"
         autocomplete="off"
+        tabindex="-1"
         checked="{% if include.selected %}checked{% endif %}"
       />
       <label
         class="btn subscription-option__button checkmark-button-2{% if include.selected %} checked-button{% endif %}"
         for="subscriptionOption{{ include.id }}"
+        tabindex="0"
         ><span class="subscription-option__button-text">Choose</span></label
       >
     </div>
