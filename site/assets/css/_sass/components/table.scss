@@ -1,6 +1,6 @@
 .list-table {
   thead {
-    border-bottom: 1px solid var(--white-v5);
+    border-bottom: 0.1rem solid var(--white-v5);
 
     th {
       @include xsmall-text-v2;
@@ -19,7 +19,7 @@
 
   tbody {
     tr {
-      border-bottom: 1px solid var(--white-v4);
+      border-bottom: 0.1rem solid var(--white-v4);
 
       td {
         @include xsmall-text-v2;
