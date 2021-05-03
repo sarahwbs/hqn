@@ -179,7 +179,12 @@
 }
 
 .modal-button {
-  box-shadow: none;
+  &,
+  &:hover,
+  &:active,
+  &:focus {
+    box-shadow: none;
+  }
 }
 
 @mixin filter-button {
