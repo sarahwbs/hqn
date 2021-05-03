@@ -1,10 +1,10 @@
 window.addEventListener("load", function () {
   // look for the carousel
   const homePageCarousel = document.querySelector("#homePageCarousel");
-  const carouselInner = homePageCarousel.querySelector(".carousel-inner");
 
   if (homePageCarousel) {
     // if it exists, initialize the carousel
+    const carouselInner = homePageCarousel.querySelector(".carousel-inner");
     const carousel = new bootstrap.Carousel(homePageCarousel, {
       interval: 3000,
     });
