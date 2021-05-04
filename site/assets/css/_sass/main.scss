@@ -65,13 +65,13 @@ a.skip-nav {
   &:focus,
   &:active {
     background-color: var(--white);
-    border: 0.2rem solid var(--light-purple);
+    border: 0.2rem solid var(--pink);
     border-radius: 0.5rem;
     color: var(--black);
     font-size: 1.6rem;
     height: auto;
-    left: auto;
-    margin: 1rem auto;
+    left: 0;
+    margin: 1rem;
     overflow: auto;
     padding: 0.5rem;
     text-align: center;
