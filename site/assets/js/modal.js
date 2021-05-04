@@ -36,13 +36,13 @@ window.addEventListener("load", function () {
         /* shift + tab */ if (
           document.activeElement === firstFocusableElementInModal
         ) {
-          lastFocusableElementInModal.focus();
           e.preventDefault();
+          lastFocusableElementInModal.focus();
         }
       } /* tab */ else {
         if (document.activeElement === lastFocusableElementInModal) {
-          firstFocusableElementInModal.focus();
           e.preventDefault();
+          firstFocusableElementInModal.focus();
         }
       }
     });

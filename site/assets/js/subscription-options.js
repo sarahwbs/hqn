@@ -27,9 +27,9 @@ window.addEventListener("load", function () {
 
       subscriptionOptionButton.addEventListener("keydown", (e) => {
         if (e.keyCode == 13 || e.keyCode == 32) {
-          selectSubscriptionOption(subscriptionOptionButton);
           e.preventDefault();
           e.stopPropagation();
+          selectSubscriptionOption(subscriptionOptionButton);
         }
       });
     });
