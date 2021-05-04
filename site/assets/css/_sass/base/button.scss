@@ -217,8 +217,8 @@
   }
 
   &.btn-check:focus + .btn,
-  &.btn:focus {
-    @include dropshadow-v2;
+  &.btn:not(.show):focus {
+    box-shadow: 0 0 0.3rem 0.3rem var(--pink);
   }
 
   @media screen and (min-width: $screen-xs) {

@@ -19,6 +19,10 @@
   @include dropshadow-v2;
   text-align: left;
   width: 100%;
+
+  &:focus {
+    box-shadow: 0 0 0.3rem 0.3rem var(--pink);
+  }
 }
 
 .filter-sort-btns__sort {
