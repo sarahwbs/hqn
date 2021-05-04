@@ -111,8 +111,17 @@ window.addEventListener("load", function () {
       }
     }
 
+    function focusOnClose() {
+      selectMenuBtns.forEach((selectMenuBtn) => {
+        selectMenuBtn.addEventListener("hide.bs.dropdown", () => {
+          selectMenuBtn.focus();
+        });
+      });
+    }
+
     setActiveOption();
     attachClickEventsToAllOptions();
     stackElements();
+    focusOnClose();
   }
 });
