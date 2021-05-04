@@ -51,3 +51,32 @@ strong {
   color: var(--white);
   opacity: 1;
 }
+
+// for skip to main/skip navigation links, make them visually hidden unless they receive focus from the keyboard
+a.skip-nav {
+  height: 1px;
+  left: -999px;
+  overflow: hidden;
+  position: absolute;
+  top: auto;
+  width: 1px;
+  z-index: -999;
+
+  &:focus,
+  &:active {
+    background-color: var(--white);
+    border: 0.2rem solid var(--light-purple);
+    border-radius: 0.5rem;
+    color: var(--black);
+    font-size: 1.6rem;
+    height: auto;
+    left: auto;
+    margin: 1rem auto;
+    overflow: auto;
+    padding: 0.5rem;
+    text-align: center;
+    top: auto;
+    width: auto;
+    z-index: 999;
+  }
+}
