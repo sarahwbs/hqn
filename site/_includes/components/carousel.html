@@ -3,12 +3,12 @@
     <div class="carousel-control">
       <button
         type="button"
-        aria-label="Pause"
+        aria-label="Pause carousel"
         data-action="stop"
         aria-controls="homePageCarousel"
         class="carousel-pause-play carousel-pause"
       >
-        <span class="visually-hidden">Pause</span>
+        <span class="visually-hidden">Pause carousel</span>
       </button>
     </div>
 
@@ -16,17 +16,13 @@
       id="homePageCarousel"
       class="carousel slide"
       aria-roledescription="carousel"
-      aria-label="Harlequin+ Featured Content"
+      aria-label="Harlequin+ Featured Content Carousel"
     >
       <h3 id="carouselheading" class="visually-hidden">
         Harlequin+ Featured Content
       </h3>
 
-      <div
-        class="liveregion visually-hidden"
-        aria-live="polite"
-        aria-atomic="true"
-      ></div>
+      <div class="liveregion visually-hidden" aria-atomic="true"></div>
 
       <div
         class="carousel-indicators align-items-center justify-content-end mx-0 position-absolute"
@@ -37,12 +33,12 @@
           data-bs-target="#homePageCarousel"
           data-bs-slide-to="{{ i | minus: 1 }}"
           data-slide="{{ i }}"
-          aria-label="Slide {{ i }}"
+          aria-label="Go to slide {{ i }}"
           class="carousel-dot {% if i == 1 %}active{% endif %}"
           aria-current="{% if i == 1 %}true{% endif %}"
           aria-controls="homePageCarousel"
         >
-          <span class="visually-hidden">Slide {{ i }}</span>
+          <span class="visually-hidden">Go to slide {{ i }}</span>
         </button>
         {% endfor %}
       </div>
@@ -55,14 +51,14 @@
           type="button"
           data-bs-target="#homePageCarousel"
           data-bs-slide="prev"
-          aria-label="Previous Slide"
+          aria-label="Go to previous slide"
           aria-controls="homePageCarousel"
         >
           <span
             class="carousel-control-prev-icon align-items-center d-inline-flex justify-content-center"
             aria-hidden="true"
           ></span>
-          <span class="visually-hidden">Previous</span>
+          <span class="visually-hidden">Go to previous slide</span>
         </button>
       </div>
       <div
@@ -73,14 +69,14 @@
           type="button"
           data-bs-target="#homePageCarousel"
           data-bs-slide="next"
-          aria-label="Next Slide"
+          aria-label="Go to next slide"
           aria-controls="homePageCarousel"
         >
           <span
             class="carousel-control-next-icon align-items-center d-inline-flex justify-content-center"
             aria-hidden="true"
           ></span>
-          <span class="visually-hidden">Next</span>
+          <span class="visually-hidden">Go to next slide</span>
         </button>
       </div>
 
@@ -100,8 +96,8 @@
             {% capture imageLarge2x %}assets/img/top-cta-{{ i }}@2x.png{%
             endcapture %}<!--  -->
             {% include components/picture.html image=image image2x=image2x
-            imageLarge=imageLarge imageLarge2x=imageLarge2x altText="alt text"
-            extraClasses="d-block carousel-image" %}
+            imageLarge=imageLarge imageLarge2x=imageLarge2x altText="TODO: add
+            alt text here" extraClasses="d-block carousel-image" %}
           </a>
         </div>
         {% endfor %}
