@@ -43,7 +43,7 @@
   &:focus,
   &:focus:hover,
   &:active {
-    box-shadow: 0 0.8rem 2rem var(--grey-v6), 0 0 0 0.25rem var(--purple-v3);
+    box-shadow: 0 0 0.3rem 0.3rem var(--purple-v3);
   }
 
   &.pink {
@@ -179,7 +179,12 @@
 }
 
 .modal-button {
-  box-shadow: none;
+  &,
+  &:hover,
+  &:active,
+  &:focus {
+    box-shadow: none;
+  }
 }
 
 @mixin filter-button {
@@ -212,8 +217,8 @@
   }
 
   &.btn-check:focus + .btn,
-  &.btn:focus {
-    @include dropshadow-v2;
+  &.btn:not(.show):focus {
+    box-shadow: 0 0 0.3rem 0.3rem var(--pink);
   }
 
   @media screen and (min-width: $screen-xs) {
@@ -251,13 +256,6 @@
   a {
     @include small-text-v2;
     padding: 0.7rem 1.3rem;
-    color: var(--grey-v3);
-
-    &:hover,
-    &:active,
-    &:focus {
-      background-color: var(--light-grey);
-    }
   }
 
   @media screen and (min-width: $screen-xs) {

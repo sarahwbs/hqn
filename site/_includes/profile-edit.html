@@ -23,18 +23,24 @@
           May,June,July,August,September, October,November,December" | split:
           ',' %}<!-- -->
           {% include forms/select-dropdown.html id="dobMonthsDropdown"
-          options=selectOptions btnExtraClasses="profile-edit-view__dob-btn"
-          menuExtraClasses="profile-edit-view__dob-menu"%}<!-- -->
+          selected="5" options=selectOptions
+          btnExtraClasses="profile-edit-view__dob-btn"
+          menuExtraClasses="profile-edit-view__dob-menu" %}<!-- -->
 
           {% assign selectOptions=(1..31) %}<!-- -->
           {% include forms/select-dropdown.html id="dobDaysDropdown"
-          options=selectOptions btnExtraClasses="profile-edit-view__dob-btn"
-          menuExtraClasses="profile-edit-view__dob-menu"%}<!-- -->
+          selected="23" options=selectOptions
+          btnExtraClasses="profile-edit-view__dob-btn"
+          menuExtraClasses="profile-edit-view__dob-menu" %}<!-- -->
 
-          {% assign selectOptions=(1900..2021) %}<!-- -->
+          {% capture currentYear %}{{ "now" | date: "%Y" }}{% endcapture %}<!--  -->
+          {% capture youngestYear %}{{ currentYear | minus: 17 }}{% endcapture
+          %}<!--  -->
+          {% assign selectOptions=(1900..youngestYear) | reverse %}<!-- -->
           {% include forms/select-dropdown.html id="dobYearsDropdown"
-          options=selectOptions btnExtraClasses="profile-edit-view__dob-btn"
-          menuExtraClasses="profile-edit-view__dob-menu"%}
+          selected="1978" options=selectOptions nameAsValue=true
+          btnExtraClasses="profile-edit-view__dob-btn"
+          menuExtraClasses="profile-edit-view__dob-menu" %}<!-- -->
         </div>
         <div class="form__error mt-3 d-none" role="alert">
           Please enter a valid date of birth.

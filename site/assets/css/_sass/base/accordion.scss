@@ -20,9 +20,13 @@
     }
   }
 
-  &:focus {
-    border-top: 0.1rem solid var(--grey-v7);
-    box-shadow: unset;
+  &,
+  &:first-of-type {
+    &:focus {
+      background-color: var(--light-grey);
+      border-top: 0.1rem solid var(--red-v2);
+      box-shadow: unset;
+    }
   }
 
   &::after {
@@ -32,7 +36,11 @@
 
 .accordion-item {
   &:first-of-type .accordion-button {
-    border-top: 0;
+    border-top: 0.1rem solid transparent;
+
+    &:focus {
+      border-top: 0.1rem solid var(--red-v2);
+    }
   }
 
   &:last-of-type .accordion-button {

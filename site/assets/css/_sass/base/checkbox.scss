@@ -9,3 +9,7 @@
 .form-check-input:active {
   -webkit-appearance: none;
 }
+
+.form-check-input:focus {
+  box-shadow: 0 0 0.2rem 0.1rem var(--pink);
+}

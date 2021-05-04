@@ -1,4 +1,6 @@
 window.addEventListener("load", function () {
+  let previousActiveElement = document.querySelector("#top");
+
   // Update the height of the html to match the height of the visible modal
   function updateBodyHeightToMatchModal() {
     const visibleModalHeight = document.querySelector(
@@ -13,10 +15,46 @@ window.addEventListener("load", function () {
   updateBodyHeightToMatchModal();
   window.addEventListener("resize", updateBodyHeightToMatchModal);
 
+  function trapFocus(element) {
+    const focusableElementsInModal = element.querySelectorAll(
+      'a[href]:not([disabled]), button:not([disabled]), textarea:not([disabled]), input[type="text"]:not([disabled]), input[type="radio"]:not([disabled]), input[type="checkbox"]:not([disabled]), select:not([disabled])'
+    );
+    const firstFocusableElementInModal = focusableElementsInModal[0];
+    const lastFocusableElementInModal =
+      focusableElementsInModal[focusableElementsInModal.length - 1];
+    lastFocusableElementInModal.focus();
+    const KEYCODE_TAB = 9;
+
+    element.addEventListener("keydown", function (e) {
+      const isTabPressed = e.key === "Tab" || e.keyCode === KEYCODE_TAB;
+
+      if (!isTabPressed) {
+        return;
+      }
+
+      if (e.shiftKey) {
+        /* shift + tab */ if (
+          document.activeElement === firstFocusableElementInModal
+        ) {
+          e.preventDefault();
+          lastFocusableElementInModal.focus();
+        }
+      } /* tab */ else {
+        if (document.activeElement === lastFocusableElementInModal) {
+          e.preventDefault();
+          firstFocusableElementInModal.focus();
+        }
+      }
+    });
+  }
+
   function openPopupModal(modal) {
+    previousActiveElement = document.activeElement;
+    const modalContainer = modal.querySelector(".popup-modal__container");
     modal.setAttribute("aria-hidden", "false");
     modal.classList.add("d-block");
     modal.classList.remove("d-none");
+    trapFocus(modalContainer);
     updateBodyHeightToMatchModal();
   }
 
@@ -25,6 +63,7 @@ window.addEventListener("load", function () {
     modal.classList.add("d-none");
     modal.classList.remove("d-block");
     document.body.style.height = "auto";
+    previousActiveElement.focus();
   }
 
   // Clicking on the close button, background, cancel button will remove the popup modal from DOM
@@ -39,6 +78,11 @@ window.addEventListener("load", function () {
       const popupModalCancelBtn = modal.querySelector(
         ".popup-modal__cancel-button"
       );
+
+      if (modal.getAttribute("aria-hidden") === "false") {
+        const modalContainer = modal.querySelector(".popup-modal__container");
+        trapFocus(modalContainer);
+      }
 
       popupModalCloseBtn.addEventListener("click", () =>
         closePopupModal(modal)

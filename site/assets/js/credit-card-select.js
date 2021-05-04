@@ -4,11 +4,7 @@ window.addEventListener("load", function () {
   if (ccOptions) {
     ccOptionCheckboxes = ccOptions.querySelectorAll(".form-check-input");
     ccOptionCheckboxes.forEach((ccOptionCheckbox) => {
-      ccOptionCheckbox.addEventListener("click", function (e) {
-        if (!ccOptionCheckbox.checked) {
-          e.preventDefault();
-          return;
-        }
+      function changeCCOption(e) {
         ccOptionCheckboxes.forEach((checkbox) => {
           const ccOption = checkbox.closest(".credit-card");
           if (ccOptionCheckbox === checkbox) {
@@ -30,6 +26,21 @@ window.addEventListener("load", function () {
             ccOption.classList.remove("current");
           }
         });
+      }
+      ccOptionCheckbox.addEventListener("click", function (e) {
+        if (!ccOptionCheckbox.checked) {
+          e.preventDefault();
+          return;
+        }
+        changeCCOption(e);
+      });
+
+      ccOptionCheckbox.addEventListener("keydown", (e) => {
+        if (e.keyCode == 13 || e.keyCode == 32) {
+          e.preventDefault();
+          e.stopPropagation();
+          changeCCOption(e);
+        }
       });
     });
   }
