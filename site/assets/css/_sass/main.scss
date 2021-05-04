@@ -32,6 +32,10 @@ body {
     z-index: -1;
     -webkit-transform: translate3d(0, 0, 0);
   }
+
+  @media screen and (max-width: $minRems) {
+    hyphens: auto;
+  }
 }
 
 .main {
