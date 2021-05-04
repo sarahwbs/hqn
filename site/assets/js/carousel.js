@@ -50,6 +50,10 @@ window.addEventListener("load", function () {
 
     // add pause/play functionality to the pause/play button
     carouselPausePlay.addEventListener("click", function () {
+      if (carousel.touchTimeout) {
+        clearTimeout(carousel.touchTimeout);
+      }
+
       if (carousel._isPaused) {
         unpauseCarousel("pause-play");
       } else {
