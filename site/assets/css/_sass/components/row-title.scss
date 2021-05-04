@@ -1,3 +1,9 @@
+.row-title__container {
+  @media screen and (max-width: $minRems) {
+    flex-direction: column;
+  }
+}
+
 .row-title__heading {
   @include heading-nunito-mobile;
   margin-bottom: 0;

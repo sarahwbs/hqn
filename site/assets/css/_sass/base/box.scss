@@ -37,6 +37,11 @@
   margin: 0 -2.4rem;
   height: 100%;
 
+  @media screen and (max-width: $minRems) {
+    align-items: flex-start !important;
+    flex-direction: column;
+  }
+
   @media screen and (min-width: $screen-sm) {
     height: inherit;
   }
@@ -69,6 +74,15 @@
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
+
+  @media screen and (max-width: $minRems) {
+    border-bottom: 0.1rem solid var(--white);
+    border-right: none;
+    margin-bottom: 2rem;
+    margin-right: 0 !important;
+    padding-bottom: 1rem;
+    padding-right: 0 !important;
+  }
 
   @media screen and (min-width: 350px) {
     min-width: 15.5rem;

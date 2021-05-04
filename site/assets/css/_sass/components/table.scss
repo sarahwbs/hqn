@@ -1,3 +1,9 @@
+.table__wrapper {
+  @media screen and (max-width: $minRems) {
+    overflow-x: auto;
+  }
+}
+
 .list-table {
   thead {
     border-bottom: 0.1rem solid var(--white-v5);
