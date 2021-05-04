@@ -295,7 +295,7 @@ window.addEventListener("load", function () {
       const uppercaseRegex = /[A-Z]/;
       const numberRegex = /[0-9]/;
       const specialCharRegex = /[!@#$%^&*]/;
-      const repeatedCharRegex = /(.)\1/;
+      const repeatedCharRegex = /(.)\1{2,}/;
 
       const hasLower = lowercaseRegex.test(newPass);
       const hasUpper = uppercaseRegex.test(newPass);
