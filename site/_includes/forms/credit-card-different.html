@@ -1,13 +1,15 @@
 <div class="credit-card credit-card__different mb-11">
   <div class="credit-card__block">
     <div class="credit-card__checkbox">
-      {% include forms/checkbox.html id="useDifferentCC" tabindex="0" %}<!-- -->
+      {% include forms/checkbox.html id="useDifferentCC" %}<!-- -->
     </div>
     <div class="credit-card__icon">
       <div class="credit-card__generic"></div>
     </div>
     <div class="credit-card__different-card">
-      <label for="useDifferentCC" tabindex="0">Pay with a different card</label>
+      <label for="useDifferentCC" tabindex="-1"
+        >Pay with a different card</label
+      >
     </div>
   </div>
 

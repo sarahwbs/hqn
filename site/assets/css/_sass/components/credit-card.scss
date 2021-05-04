@@ -21,6 +21,10 @@
     }
   }
 
+  &:focus-within {
+    box-shadow: 0 0 0.3rem 0.3rem var(--pink);
+  }
+
   .form-check {
     margin-bottom: 0;
     margin-right: 1rem;
