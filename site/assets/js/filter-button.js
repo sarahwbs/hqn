@@ -1,5 +1,8 @@
 window.addEventListener("load", function () {
-  if (document.querySelector(".filter-sort-btns__filter-button")) {
+  const filterButton = document.querySelector(
+    ".filter-sort-btns__filter-button"
+  );
+  if (filterButton) {
     const mainContentDiv = document.querySelector(".main-content");
     const filterCollapsible = document.querySelector(
       ".filter-button-control__collapse"
@@ -61,9 +64,16 @@ window.addEventListener("load", function () {
       }
     }
 
+    function focusOnClose() {
+      filterCollapsible.addEventListener("hide.bs.collapse", () => {
+        filterButton.focus();
+      });
+    }
+
     setCloseButtonEventHandler();
     setClearFiltersButtonEventHandler();
     stackElements();
     setCloseFilterOnOutsideClick();
+    focusOnClose();
   }
 });

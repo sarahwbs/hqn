@@ -67,9 +67,9 @@ a.header_nav__link {
 
 .header-button {
   @include small-text-v2;
-  padding: 1.3rem 3rem 1.2rem;
   white-space: nowrap;
 
+  &,
   &:hover,
   &:active,
   &:focus {
@@ -78,8 +78,8 @@ a.header_nav__link {
 
   @media screen and (min-width: $screen-xl) {
     @include medium-text;
-    padding: 1.3rem 4rem 1.2rem;
 
+    &,
     &:hover,
     &:active,
     &:focus {
@@ -217,6 +217,13 @@ a.header_nav__link {
 
     .dropdown-item__selections_summary {
       color: var(--white);
+    }
+  }
+
+  &:focus {
+    .dropdown-item__selections_summary {
+      color: var(--dark-grey);
+      transition: color 300ms;
     }
   }
 }

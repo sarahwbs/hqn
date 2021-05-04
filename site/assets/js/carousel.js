@@ -4,6 +4,7 @@ window.addEventListener("load", function () {
 
   if (homePageCarousel) {
     // if it exists, initialize the carousel
+    const carouselInner = homePageCarousel.querySelector(".carousel-inner");
     const carousel = new bootstrap.Carousel(homePageCarousel, {
       interval: 3000,
     });
@@ -50,6 +51,10 @@ window.addEventListener("load", function () {
 
     // add pause/play functionality to the pause/play button
     carouselPausePlay.addEventListener("click", function () {
+      if (carousel.touchTimeout) {
+        clearTimeout(carousel.touchTimeout);
+      }
+
       if (carousel._isPaused) {
         unpauseCarousel("pause-play");
       } else {
@@ -72,12 +77,14 @@ window.addEventListener("load", function () {
       slide.addEventListener("focus", () => {
         if (!carousel._isPaused) {
           homePageCarousel.classList.add("focus-paused");
+          carouselInner.classList.add("hover");
           pauseCarousel();
         }
       });
       slide.addEventListener("focusout", (e) => {
         if (homePageCarousel.classList.contains("focus-paused")) {
           homePageCarousel.classList.remove("focus-paused");
+          carouselInner.classList.remove("hover");
           unpauseCarousel();
         }
       });
@@ -90,16 +97,10 @@ window.addEventListener("load", function () {
     if (carouselPrevNext) {
       carouselPrevNext.forEach((btn) => {
         btn.addEventListener("mouseover", () => {
-          btn
-            .closest(".carousel")
-            .querySelector(".carousel-inner")
-            .classList.add("hover");
+          carouselInner.classList.add("hover");
         });
         btn.addEventListener("mouseout", () => {
-          btn
-            .closest(".carousel")
-            .querySelector(".carousel-inner")
-            .classList.remove("hover");
+          carouselInner.classList.remove("hover");
         });
       });
     }

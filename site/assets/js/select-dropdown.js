@@ -71,6 +71,7 @@ window.addEventListener("load", function () {
 
             // Set element to active
             event.target.setAttribute("data-active", "true");
+            event.target.classList.add("active");
             // Remove active attr from all other non-active elements
             allOptions.forEach((opt) => {
               if (
@@ -78,6 +79,7 @@ window.addEventListener("load", function () {
                 parseInt(event.target.getAttribute("data-val"), 10)
               ) {
                 opt.setAttribute("data-active", "false");
+                opt.classList.remove("active");
               }
             });
 
@@ -109,8 +111,17 @@ window.addEventListener("load", function () {
       }
     }
 
+    function focusOnClose() {
+      selectMenuBtns.forEach((selectMenuBtn) => {
+        selectMenuBtn.addEventListener("hide.bs.dropdown", () => {
+          selectMenuBtn.focus();
+        });
+      });
+    }
+
     setActiveOption();
     attachClickEventsToAllOptions();
     stackElements();
+    focusOnClose();
   }
 });

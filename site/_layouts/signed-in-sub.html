@@ -75,7 +75,7 @@
       class="container-fluid d-flex flex-column align-items-end h-100 px-5 main"
     >
       {% include components/header.html userstate="signed-in" sub="true" %}
-      <div class="w-100" role="main">{{ content }}</div>
+      <div class="w-100" role="main" id="main" tabindex="-1">{{ content }}</div>
       {% include components/footer.html %}
     </div>
   </body>

@@ -27,7 +27,7 @@
     >
       {% include components/header.html landingpage="true"
       userstate="signed-out" %}
-      <div class="w-100" role="main">{{ content }}</div>
+      <div class="w-100" role="main" id="main" tabindex="-1">{{ content }}</div>
       {% include components/footer.html landingpage="true" %}
     </div>
   </body>

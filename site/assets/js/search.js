@@ -16,6 +16,7 @@ window.addEventListener("load", function () {
     closeSearchButton.addEventListener("click", () => {
       searchInput.value = "";
       searchBox.classList.remove("searching");
+      searchBox.querySelector(".search-box-text").focus();
     });
   }
 });
