@@ -9,6 +9,10 @@
 .header-row {
   align-items: center;
   height: 5rem;
+
+  @media screen and (max-width: $minRems) {
+    flex-direction: column;
+  }
 }
 
 .header__logo {
@@ -28,6 +32,10 @@
 
   .header__logo-logged-out & {
     width: 16rem;
+  }
+
+  @media screen and (max-width: $minRems) {
+    width: 8rem;
   }
 
   @media screen and (min-width: $screen-lg) {
