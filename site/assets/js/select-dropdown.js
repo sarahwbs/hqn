@@ -7,6 +7,8 @@ window.addEventListener("load", function () {
       ".select-dropdown-control-menu"
     );
     const mainContentDiv = document.querySelector(".main-content");
+    let screenAspect =
+      window.innerWidth / window.innerHeight > 1 ? "landscape" : "portrait";
 
     /**
      * Set 'active' class for the relevant option on all the dropdowns on the page.
@@ -118,6 +120,31 @@ window.addEventListener("load", function () {
         });
       });
     }
+
+    /**
+     * Hide and re-show the dropdown on rotate (i.e. when the screen resizes and the aspect ratio changes), ensuring that the dropdown appears in the correct position.
+     */
+    function fixDropdowns() {
+      const newScreenAspect =
+        window.innerWidth / window.innerHeight > 1 ? "landscape" : "portrait";
+
+      selectMenuBtns.forEach((btn) => {
+        const selectMenu = new bootstrap.Dropdown(btn);
+        if (
+          btn.classList.contains("show") &&
+          screenAspect !== newScreenAspect
+        ) {
+          selectMenu.hide();
+          // setTimeout is required here to ensure the menu is re-shown after the resize is complete
+          window.setTimeout(() => {
+            selectMenu.show();
+          }, 0);
+        }
+      });
+
+      screenAspect = newScreenAspect;
+    }
+    window.addEventListener("resize", fixDropdowns);
 
     setActiveOption();
     attachClickEventsToAllOptions();
