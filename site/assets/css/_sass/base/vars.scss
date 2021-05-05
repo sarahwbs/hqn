@@ -111,7 +111,7 @@ $container-max-widths: (
 );
 
 // calculate the screen width in rems available when screen width is 360px at 200% zoom level, using 16px/rem as the base calculation
-$minRems: #{(360 / 16 / 2)}rem;
+$minRems: #{(360 / 16 / 1.5)}rem;
 
 $spacers: (
   0: 0,
