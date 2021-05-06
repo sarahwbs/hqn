@@ -113,6 +113,7 @@ window.addEventListener("load", function () {
         });
         btn.addEventListener("mouseout", () => {
           carouselInner.classList.remove("hover");
+          btn.blur();
         });
       });
     }
