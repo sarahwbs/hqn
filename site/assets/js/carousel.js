@@ -57,7 +57,6 @@ window.addEventListener("load", function () {
       );
       currentDot.classList.remove("active");
       nextDot.classList.add("active");
-      console.log("Slide " + nextSlide + " of " + slides.length);
       liveregion.textContent = "Slide " + nextSlide + " of " + slides.length;
     });
 
