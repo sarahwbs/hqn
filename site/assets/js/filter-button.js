@@ -70,10 +70,28 @@ window.addEventListener("load", function () {
       });
     }
 
+    function focusOnAccordionOpen() {
+      allAccordionButtons.forEach((accordionBtn) => {
+        accordionBtn.addEventListener("click", () => {
+          accordionBtn.focus();
+        });
+
+        accordionBtn.addEventListener("keydown", (e) => {
+          if (e.keyCode == 13 || e.keyCode == 32) {
+            e.stopPropagation();
+            window.setTimeout(() => {
+              accordionBtn.focus();
+            }, 0);
+          }
+        });
+      });
+    }
+
     setCloseButtonEventHandler();
     setClearFiltersButtonEventHandler();
     stackElements();
     setCloseFilterOnOutsideClick();
     focusOnClose();
+    focusOnAccordionOpen();
   }
 });
