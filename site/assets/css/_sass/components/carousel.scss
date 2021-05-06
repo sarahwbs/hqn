@@ -9,7 +9,7 @@
 }
 
 .carousel-control {
-  bottom: 0.5rem;
+  bottom: -0.5rem;
   position: absolute;
   right: 7.1rem;
 }
@@ -58,7 +58,9 @@
 
 .carousel-pause-play {
   border: none;
-  height: 2.4rem;
+  border-bottom: 1rem solid transparent;
+  border-top: 1rem solid transparent;
+  height: 4.4rem;
   width: 3.2rem;
 }
 
