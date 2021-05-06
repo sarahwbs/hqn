@@ -4,6 +4,7 @@ window.addEventListener("load", function () {
 
   if (homePageCarousel) {
     // if it exists, initialize the carousel
+    const carouselContainer = homePageCarousel.closest(".cta-carousel");
     const carouselInner = homePageCarousel.querySelector(".carousel-inner");
     const carousel = new bootstrap.Carousel(homePageCarousel, {
       interval: 3000,
@@ -44,9 +45,20 @@ window.addEventListener("load", function () {
 
     // when the slide updates, change the text in the live region for screen readers
     homePageCarousel.addEventListener("slide.bs.carousel", function (e) {
-      const liveregion = homePageCarousel.querySelector(".liveregion");
+      const liveregion = carouselContainer.querySelector(".liveregion");
       const slides = homePageCarousel.querySelectorAll(".carousel-item");
-      liveregion.textContent = "Slide " + (e.to + 1) + " of " + slides.length;
+      const currentSlide = e.from + 1;
+      const nextSlide = e.to + 1;
+      const currentDot = carouselContainer.querySelector(
+        ".carousel-dot-" + currentSlide
+      );
+      const nextDot = carouselContainer.querySelector(
+        ".carousel-dot-" + nextSlide
+      );
+      currentDot.classList.remove("active");
+      nextDot.classList.add("active");
+      console.log("Slide " + nextSlide + " of " + slides.length);
+      liveregion.textContent = "Slide " + nextSlide + " of " + slides.length;
     });
 
     // add pause/play functionality to the pause/play button
