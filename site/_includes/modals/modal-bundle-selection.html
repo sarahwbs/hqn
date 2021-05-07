@@ -78,12 +78,9 @@
       label=include.cancelButtonText extraClasses="popup-modal__cancel-button
       dark-grey px-7 px-sm-8" %}
       <!--  -->
-      {% include components/button.html label=include.mobileButtonText
-      extraClasses="d-lg-none px-7 px-sm-8 modal-button" buttonType="submit" %}
-      <!--  -->
       {% include components/button.html label=include.buttonText
-      extraClasses="d-none d-lg-block popup-modal__desktop-button modal-button
-      px-7 px-sm-8" buttonType="submit" %}
+      mobileLabel=include.mobileButtonText extraClasses="px-7 px-sm-8
+      modal-button" buttonType="submit" %}
       <!--  -->
     </div>
     {% endif %}

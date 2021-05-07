@@ -25,5 +25,10 @@
   endif
   %}
 >
-  {{ include.label }}
+  {% if include.mobileLabel %}<!--  -->
+  <span class="d-inline d-lg-none">{{ include.mobileLabel }}</span>
+  <span class="d-none d-lg-inline">{{ include.label }}</span>
+  {% else %}<!--  -->
+  {{ include.label }}<!--  -->
+  {% endif %}
 </button>
