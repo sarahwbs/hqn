@@ -16,6 +16,7 @@ window.addEventListener("load", function () {
     const clearFiltersButton = document.querySelector(
       ".filter-button-control__btn-clear"
     );
+    const allAccordionButtons = document.querySelectorAll(".accordion-button");
     const allCheckboxes = document.querySelectorAll(
       ".filter-button-control__checkboxes input[type=checkbox]"
     );
@@ -70,10 +71,41 @@ window.addEventListener("load", function () {
       });
     }
 
+    function focusOnAccordionOpen() {
+      allAccordionButtons.forEach((accordionBtn) => {
+        accordionBtn.addEventListener("click", () => {
+          accordionBtn.focus();
+        });
+
+        accordionBtn.addEventListener("keydown", (e) => {
+          if (e.keyCode == 13 || e.keyCode == 32) {
+            e.stopPropagation();
+            window.setTimeout(() => {
+              accordionBtn.focus();
+            }, 0);
+          }
+        });
+      });
+    }
+
+    function enterToCheck() {
+      allCheckboxes.forEach((chkbox) => {
+        chkbox.addEventListener("keydown", (e) => {
+          if (e.keyCode == 13 || e.keyCode == 32) {
+            e.preventDefault();
+            e.stopPropagation();
+            chkbox.checked = chkbox.checked ? false : true;
+          }
+        });
+      });
+    }
+
     setCloseButtonEventHandler();
     setClearFiltersButtonEventHandler();
     stackElements();
     setCloseFilterOnOutsideClick();
     focusOnClose();
+    focusOnAccordionOpen();
+    enterToCheck();
   }
 });
