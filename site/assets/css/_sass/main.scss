@@ -42,6 +42,10 @@ body {
   overflow-x: hidden;
 }
 
+#main:focus {
+  outline: none !important;
+}
+
 a {
   @include link-style;
   text-decoration: none;
