@@ -35,17 +35,8 @@ window.addEventListener("load", function () {
         selectSubscriptionOption(subscriptionOptionButton);
       });
 
-      subscriptionOptionCheckBox.addEventListener("touchstart", () => {
-        alert("touch checkbox");
-        selectSubscriptionOption(subscriptionOptionButton);
-      });
-
-      subscriptionOptionButton.addEventListener("touchstart", () => {
-        alert("touch button");
-        selectSubscriptionOption(subscriptionOptionButton);
-      });
-
       subscriptionOptionButton.addEventListener("keydown", (e) => {
+        alert("keypress");
         if (e.keyCode == 13 || e.keyCode == 32) {
           e.preventDefault();
           e.stopPropagation();
