@@ -33,9 +33,20 @@ window.addEventListener("load", function () {
       });
     }
 
+    function setCloseFilterOnKeyOut() {
+      const filterContainer = filterButton.closest(".filter-button-control");
+
+      filterContainer.addEventListener("focusout", function (e) {
+        if (!filterContainer.contains(e.relatedTarget)) {
+          bsFilterCollapsible.hide();
+        }
+      });
+    }
+
     function setCloseButtonEventHandler() {
       closeButton.addEventListener("click", () => {
         bsFilterCollapsible.hide();
+        filterButton.focus();
       });
     }
 
@@ -63,12 +74,6 @@ window.addEventListener("load", function () {
           });
         }
       }
-    }
-
-    function focusOnClose() {
-      filterCollapsible.addEventListener("hide.bs.collapse", () => {
-        filterButton.focus();
-      });
     }
 
     function focusOnAccordionOpen() {
@@ -104,7 +109,7 @@ window.addEventListener("load", function () {
     setClearFiltersButtonEventHandler();
     stackElements();
     setCloseFilterOnOutsideClick();
-    focusOnClose();
+    setCloseFilterOnKeyOut();
     focusOnAccordionOpen();
     enterToCheck();
   }
