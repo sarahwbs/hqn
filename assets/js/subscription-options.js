@@ -34,9 +34,15 @@ window.addEventListener("load", function () {
         selectSubscriptionOption(subscriptionOptionButton);
       });
 
-      // subscriptionOptionButton.addEventListener("touchstart", () => {
-      //   selectSubscriptionOption(subscriptionOptionButton);
-      // });
+      subscriptionOptionCheckBox.addEventListener("touchstart", () => {
+        console.log("touch checkbox");
+        selectSubscriptionOption(subscriptionOptionButton);
+      });
+
+      subscriptionOptionButton.addEventListener("touchstart", () => {
+        console.log("touch button");
+        selectSubscriptionOption(subscriptionOptionButton);
+      });
 
       subscriptionOptionButton.addEventListener("keydown", (e) => {
         if (e.keyCode == 13 || e.keyCode == 32) {
