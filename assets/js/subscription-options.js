@@ -21,22 +21,19 @@ window.addEventListener("load", function () {
     }
 
     subscriptionOptionButtons.forEach((subscriptionOptionButton) => {
-      subscriptionOptionButton.addEventListener("click", () => {
-        alert("click");
-        selectSubscriptionOption(subscriptionOptionButton);
-      });
-
       const subscriptionOptionCheckBox = subscriptionOptionButton
         .closest(".subscription-option__select")
         .querySelector(".subscription-option__checkmark");
 
+      subscriptionOptionButton.addEventListener("click", () => {
+        selectSubscriptionOption(subscriptionOptionButton);
+      });
+
       subscriptionOptionCheckBox.addEventListener("change", () => {
-        alert("change");
         selectSubscriptionOption(subscriptionOptionButton);
       });
 
       subscriptionOptionButton.addEventListener("keydown", (e) => {
-        alert("keypress");
         if (e.keyCode == 13 || e.keyCode == 32) {
           e.preventDefault();
           e.stopPropagation();
