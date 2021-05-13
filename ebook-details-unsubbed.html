@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Harlequin+</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+  rel="favicon"
+  type="image/ico"
+  href="/assets/img/icons/favicon-16x16.png"
+/>
+<link
+  rel="icon"
+  type="image/png"
+  sizes="32x32"
+  href="/assets/img/icons/favicon-32x32.png"
+/>
+<link
+  rel="icon"
+  type="image/png"
+  sizes="16x16"
+  href="/assets/img/icons/favicon-16x16.png"
+/>
+
+    <script
+      type="text/javascript"
+      src="/assets/js/bootstrap.bundle.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/assets/js/utils.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/assets/js/menu.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/assets/js/carousel.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/assets/js/modal.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/assets/js/select-dropdown.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/assets/js/bundle-detail-view.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/assets/js/subscription-options.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/assets/js/credit-card-select.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/assets/js/form.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/assets/js/loader.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/assets/js/filter-button.js"
+    ></script>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+  </head>
+  <body class="bg-primary text-body">
+    <div
+      class="container-fluid d-flex flex-column align-items-end h-100 px-5 main"
+    >
+      <header class="header w-100">
+  <a href="#main" class="skip-nav" id="top">Skip to main content</a>
+
+  <div
+    class="container-md p-0"
+  >
+    <div class="row flex-nowrap m-0 header-row">
+      <div
+        class="col d-flex p-0 header__logo"
+      >
+        <!-- TODO: update this link to point to the home page -->
+        <a href="index" class="d-flex">
+          <img
+            src="/assets/img/harlequin-plus-logo.svg"
+            alt="Harlequin Plus Logo"
+            title="Harlequin Plus Logo"
+            class="d-inline-block header__logo-image"
+        /></a>
+      </div>
+
+      <!-- -->
+      <div class="col d-flex d-lg-none align-items-center order-first">
+  <!-- Button trigger modal -->
+  
+  <button
+    type="button"
+    class="btn btn-primary menu-modal__btn bg-transparent"
+    data-bs-toggle="modal"
+    data-bs-target="#mainMenuModal"
+    data-bs-backdrop="false"
+  >
+    <img
+      src="/assets/img/icons/hamburger.svg"
+      alt="Menu Icon"
+      title="Menu Icon"
+    />
+  </button>
+
+  <div
+  class="modal fade md-effect-1 g-0 menu-modal"
+  id="mainMenuModal"
+  tabindex="-1"
+  aria-labelledby="mainMenuModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content menu-modal__content">
+      <div class="modal-header menu-modal__modal-header mb-8">
+        <button
+          type="button"
+          class="btn-close menu-modal__btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close menu"
+        >
+          <img
+            src="/assets/img/icons/close-white.svg"
+            alt="Menu Icon"
+            title="Menu Icon"
+          />
+        </button>
+      </div>
+      <div class="modal-body menu-modal__body">
+        
+
+        <div class="row menu-modal__nav-container mt-10">
+          <nav class="col" aria-label="Mobile Navigation" role="navigation">
+            <!--  -->
+            <!--  -->
+            <!--  -->
+
+            
+            <div class="row menu-modal__nav-row">
+              <div class="col px-0">
+                <a
+                  class="menu-modal__link w-100 d-flex justify-content-between"
+                  href="/subscriber-home"
+                >
+                  <span class="d-inline-block">Home</span>
+                  <img
+                    src="/assets/img/icons/right-arrow-thin.svg"
+                    alt="Menu Icon"
+                    title="Menu Icon"
+                  />
+                </a>
+              </div>
+            </div>
+            
+            <div class="row menu-modal__nav-row">
+              <div class="col px-0">
+                <a
+                  class="menu-modal__link w-100 d-flex justify-content-between"
+                  href="/bundles"
+                >
+                  <span class="d-inline-block">Shop Bundles</span>
+                  <img
+                    src="/assets/img/icons/right-arrow-thin.svg"
+                    alt="Menu Icon"
+                    title="Menu Icon"
+                  />
+                </a>
+              </div>
+            </div>
+            
+            <div class="row menu-modal__nav-row">
+              <div class="col px-0">
+                <a
+                  class="menu-modal__link w-100 d-flex justify-content-between"
+                  href="/ebooks"
+                >
+                  <span class="d-inline-block">eBook Library</span>
+                  <img
+                    src="/assets/img/icons/right-arrow-thin.svg"
+                    alt="Menu Icon"
+                    title="Menu Icon"
+                  />
+                </a>
+              </div>
+            </div>
+            
+            <div class="row menu-modal__nav-row">
+              <div class="col px-0">
+                <a
+                  class="menu-modal__link w-100 d-flex justify-content-between"
+                  href="/games-unsubbed"
+                >
+                  <span class="d-inline-block">Games</span>
+                  <img
+                    src="/assets/img/icons/right-arrow-thin.svg"
+                    alt="Menu Icon"
+                    title="Menu Icon"
+                  />
+                </a>
+              </div>
+            </div>
+            
+            <div class="row menu-modal__nav-row">
+              <div class="col px-0">
+                <a
+                  class="menu-modal__link w-100 d-flex justify-content-between"
+                  href="/movies"
+                >
+                  <span class="d-inline-block">Movies</span>
+                  <img
+                    src="/assets/img/icons/right-arrow-thin.svg"
+                    alt="Menu Icon"
+                    title="Menu Icon"
+                  />
+                </a>
+              </div>
+            </div>
+            
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- -->
+  
+</div>
+<!-- -->
+      <nav
+  class="col nav header_nav d-none d-lg-flex flex-fill align-items-center"
+  aria-label="Top Navigation"
+  role="navigation"
+>
+  <!--  -->
+  <!--  -->
+  <!--  -->
+
+  
+  <a
+    class="header_nav__link"
+    href="/bundles"
+    class=""
+    >Browse Bundles</a
+  >
+  
+  <a
+    class="header_nav__link"
+    href="/ebooks"
+    class=""
+    >eBook Library</a
+  >
+  
+  <a
+    class="header_nav__link"
+    href="/games-unsubbed"
+    class=""
+    >Games</a
+  >
+  
+  <a
+    class="header_nav__link"
+    href="/movies"
+    class=""
+    >Movies</a
+  >
+  
+</nav>
+
+
+      <div
+        class="col account d-flex"
+      >
+        <div class="account__inner d-flex">
+          <div class="account__name d-flex align-self-center d-none d-lg-block">
+            Hi, Samanthalynn
+          </div>
+
+          <div class="dropdown account__dropdown">
+            <button
+              class="btn btn-default account__menu-button d-none d-lg-block pt-lg-0 pe-0"
+              type="button"
+              id="account-dropdown-menu"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <img
+                src="/assets/img/icons/account.svg"
+                alt="Account menu"
+                title="Account menu"
+              />
+            </button>
+
+            <div class="col d-flex d-lg-none align-items-center order-first">
+  <!-- Button trigger modal -->
+  
+  <button
+    type="button"
+    class="btn btn-primary account__menu-button menu-modal__btn d-block d-lg-none bg-transparent"
+    data-bs-toggle="modal"
+    data-bs-target="#userAccountMenuModal"
+    data-bs-backdrop="false"
+  >
+    <img
+      src="/assets/img/icons/account.svg"
+      alt="Menu Icon"
+      title="Menu Icon"
+    />
+  </button>
+
+  <div
+  class="modal fade md-effect-1 g-0 menu-modal"
+  id="userAccountMenuModal"
+  tabindex="-1"
+  aria-labelledby="userAccountMenuModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content menu-modal__content">
+      <div
+        class="modal-header menu-modal__modal-header mb-8 justify-content-end"
+      >
+        <button
+          type="button"
+          class="btn-close menu-modal__btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close menu"
+        >
+          <img
+            src="/assets/img/icons/close-white.svg"
+            alt="Menu Icon"
+            title="Menu Icon"
+          />
+        </button>
+      </div>
+
+      
+
+      <div class="modal-body menu-modal__body">
+        <div class="row menu-modal__nav-container mt-10">
+          <nav class="col" aria-label="Mobile Navigation" role="navigation">
+            <!--  -->
+            <!--  -->
+            <!--  -->
+
+            
+            <div class="row menu-modal__nav-row">
+              <div class="col px-0">
+                <a class="menu-modal__link w-100 d-flex justify-content-between" href="/user-profile"
+                  >
+                  <span>My Profile</span>
+                  <img
+                    src="/assets/img/icons/right-arrow-thin.svg"
+                    alt="Menu Icon"
+                    title="Menu Icon"
+                  />
+                </a>
+              </div>
+            </div>
+            
+            <div class="row menu-modal__nav-row">
+              <div class="col px-0">
+                <a class="menu-modal__link w-100 d-flex justify-content-between" href="/subscription-payment-info"
+                  >
+                  <span>Subscription & Payment</span>
+                  <img
+                    src="/assets/img/icons/right-arrow-thin.svg"
+                    alt="Menu Icon"
+                    title="Menu Icon"
+                  />
+                </a>
+              </div>
+            </div>
+            
+            <div class="row menu-modal__nav-row">
+              <div class="col px-0">
+                <a class="menu-modal__link w-100 d-flex justify-content-between" href="/order-history"
+                  >
+                  <span>Order History</span>
+                  <img
+                    src="/assets/img/icons/right-arrow-thin.svg"
+                    alt="Menu Icon"
+                    title="Menu Icon"
+                  />
+                </a>
+              </div>
+            </div>
+            
+            <div class="row menu-modal__nav-row">
+              <div class="col px-0">
+                <a class="menu-modal__link w-100 d-flex justify-content-between" href="/landing"
+                  >
+                  <span>Sign Out</span>
+                  <img
+                    src="/assets/img/icons/right-arrow-thin.svg"
+                    alt="Menu Icon"
+                    title="Menu Icon"
+                  />
+                </a>
+              </div>
+            </div>
+            
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- -->
+  
+</div>
+
+
+            <div
+              class="dropdown-menu header__dropdown-menu unsub"
+              aria-labelledby="account-dropdown-menu"
+            >
+              <div class="header__dropdown-menu-arrow-up"></div>
+              <ul class="header__dropdown-menu-list">
+                <!--  -->
+
+                <!--  -->
+                <!--  -->
+                <!--  -->
+
+                
+                <li class="header__dropdown-list-item">
+                  <a
+                    class="dropdown-item header__dropdown-item"
+                    href="/user-profile"
+                    >My Profile</a
+                  >
+                </li>
+                
+                <li class="header__dropdown-list-item">
+                  <a
+                    class="dropdown-item header__dropdown-item"
+                    href="/subscription-payment-info"
+                    >Subscription & Payment</a
+                  >
+                </li>
+                
+                <li class="header__dropdown-list-item">
+                  <a
+                    class="dropdown-item header__dropdown-item"
+                    href="/order-history"
+                    >Order History</a
+                  >
+                </li>
+                
+                <li class="header__dropdown-list-item">
+                  <a
+                    class="dropdown-item header__dropdown-item"
+                    href="/landing"
+                    >Sign Out</a
+                  >
+                </li>
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--  -->
+      
+    </div>
+  </div>
+</header>
+
+      <div class="w-100" role="main" id="main" tabindex="-1"><div class="container-md p-0">
+  <div class="detail-view mb-13">
+    <!--  -->
+<!--  -->
+<!--  -->
+
+<!--  -->
+<!--  -->
+<!--  -->
+
+<a
+  class="btn btn-primary btn-lg btn-link-button transparent-button back-arrow-button"
+  href="/ebooks"
+>
+  Back
+</a>
+
+
+    <div class="row gx-5 mt-7">
+      <div
+        class="detail-view_col-1 col-lg-3 text-center text-lg-start mb-7 mb-lg-0"
+      >
+        <img
+          src="/assets/img/ebook-detail.png"
+          class="w-100 drop-shadow-1 detail-view__image"
+          alt="TODO: add alt text here"
+          title="TODO: add alt text here"
+        />
+      </div>
+
+      <div class="detail-view_col-2 col-lg-6">
+        <div class="detail-view_info px-6">
+          <h1 class="mb-6 text-center text-lg-start">
+            Sawyer &amp; Cowboy Above the Law
+          </h1>
+          <div class="detail-view__meta mb-11 text-center text-lg-start">
+            <p class="body-copy ">By Lori Foster / Pub
+            Month: December 2020<br />Genre: Western Romance</p>
+
+            <!--  -->
+            <p class="body-copy ">Miniseries: Albin Academy
+            (Book #2)</p>
+
+          </div>
+          <div class="detail-view__description">
+            <p class="body-copy ">
+            <strong class="text-uppercase">A Safe Haven</strong></p>
+
+            <!--  -->
+            <p class="body-copy ">As the only doctor in
+            Buckhorn County, Kentucky, Sawyer Hudson knows a thing or two about
+            saving lives. But when he rescues the beautiful Honey Malone from a
+            car wreck and invites her to stay at his home so he can nurse her
+            back to health, he finds himself dreading the day she’s well enough
+            to walk away. Because now that he’s met the woman of his dreams,
+            he’s not about to let her go.</p>
+
+            <!--  -->
+            <p class="body-copy ">Honey’s been on the run
+            for days, but when a car accident lands her in Sawyer’s arms, she’s
+            never felt safer. Can he convince her that it’s okay to stop
+            running—and build a future in the one place that’s finally felt like
+            home?</p>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="detail-view_col-3 col-lg-3">
+        <div class="detail-view__progress mb-8">
+          <p class="body-copy ">80% of Book Read</p>
+
+          <!--  -->
+          <div class="progress w-100">
+  <label
+    class="progress__label w-100"
+    for="progress__-ebook-detail-progress"
+  >
+    <span class="visually-hidden">Progress: </span>
+    <div
+      class="progress-bar"
+      role="progressbar"
+      id="progress__-ebook-detail-progress"
+      style="width: 80%"
+      aria-valuenow="80"
+      aria-valuemin="0"
+      aria-valuemax="100"
+      aria-label="Progress: 80%"
+    ></div>
+  </label>
+</div>
+
+        </div>
+        <div class="detail-view__controls mb-11 mb-lg-0">
+          <!--  -->
+<!--  -->
+<!--  -->
+
+<!--  -->
+<!--  -->
+<!--  -->
+
+<button
+  type="button"
+  class="btn btn-primary btn-lg full-width-button detail-view__mark-button black-v2
+          checkmark-button mb-5"
+  
+>
+  <!--  -->
+  Mark as Read<!--  -->
+  
+</button>
+
+          <!--  -->
+          <!--  -->
+<!--  -->
+<!--  -->
+
+<!--  -->
+<!--  -->
+<!--  -->
+
+<button
+  type="button"
+  class="btn btn-primary btn-lg full-width-button detail-view__read-button light-purple"
+  
+>
+  <!--  -->
+  Read Now<!--  -->
+  
+</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--  -->
+
+<div
+  class="popup-modal modal-default d-none w-100 h-100 position-absolute top-0 start-0"
+  role="dialog"
+  title="Membership Required"
+  aria-modal="true"
+  aria-hidden="true"
+>
+  <div class="popup-modal__background" aria-hidden="true"></div>
+  <div
+    class="popup-modal__container d-flex justify-content-center align-items-center min-vh-100"
+  >
+    <div class="popup-modal_content-wrapper my-11 default">
+      <button
+        type="button"
+        class="popup-modal__btn-close"
+        data-bs-dismiss="modal"
+        aria-label="Close modal"
+      >
+        <img
+          src="/assets/img/icons/close-dark-purple.svg"
+          class="w-100 d-block"
+          alt="Close Icon"
+          title="Close Icon"
+        />
+      </button>
+
+      <!--  -->
+      <div class="popup-modal__content text-center">
+  <div class="popup-modal__body-text mb-7 mb-lg-8">
+<p>You must have an active membership to access this feature.</p>
+</div>
+
+  <div class="popup-modal__buttons">
+    <!--  -->
+<!--  -->
+<!--  -->
+
+<!--  -->
+<!--  -->
+<!--  -->
+
+<a
+  class="btn btn-primary btn-lg btn-link-button default-button pink modal-button"
+  href="/change-subscription-new-sub"
+>
+  Subscribe Now
+</a>
+
+  </div>
+</div>
+<!--  -->
+      
+    </div>
+  </div>
+</div>
+
+<!--  -->
+
+<!--  -->
+
+</div>
+      <footer class="py-10 pb-lg-5 mt-auto w-100">
+  <div
+    class="container-md p-0"
+  >
+    <div
+      class="container footer-container position-relative p-0 pt-lg-7 pt-xl-13"
+    >
+      <a href="#footernavend" class="skip-nav">Skip footer navigation</a>
+      <div class="d-flex footer-logo pb-8 pb-lg-6">
+        <img
+          src="/assets/img/footer-logo.svg"
+          alt="Harlequin Logo"
+          title="Harlequin Logo"
+          class="d-block"
+        />
+      </div>
+      <nav aria-label="Legal menu">
+        <ul
+          role="menu"
+          aria-label="Legal links"
+          class="footer-nav-list d-flex flex-wrap p-0 my-0 mx-n3"
+        >
+          
+          <li role="menuitem" class="footer-nav-item px-3 pb-4">
+            <a
+              href="/subscription-info"
+              role="button"
+              class="footer-nav-link"
+              rel="noreferrer noopener"
+              class=""
+            >
+              About Subscriptions
+            </a>
+          </li>
+          
+          <li role="menuitem" class="footer-nav-item px-3 pb-4">
+            <a
+              href="/intellectual-property-notice"
+              role="button"
+              class="footer-nav-link"
+              rel="noreferrer noopener"
+              class=""
+            >
+              Intellectual Property Notice
+            </a>
+          </li>
+          
+          <li role="menuitem" class="footer-nav-item px-3 pb-4">
+            <a
+              href="/privacy-Notice"
+              role="button"
+              class="footer-nav-link"
+              rel="noreferrer noopener"
+              class=""
+            >
+              Privacy Notice
+            </a>
+          </li>
+          
+          <li role="menuitem" class="footer-nav-item px-3 pb-4">
+            <a
+              href="/membership-agreement"
+              role="button"
+              class="footer-nav-link"
+              rel="noreferrer noopener"
+              class=""
+            >
+              Membership Agreement
+            </a>
+          </li>
+          
+          <li role="menuitem" class="footer-nav-item px-3 pb-4">
+            <a
+              href="/privacy-rights"
+              role="button"
+              class="footer-nav-link"
+              rel="noreferrer noopener"
+              class=""
+            >
+              California Privacy Rights
+            </a>
+          </li>
+          
+          <li role="menuitem" class="footer-nav-item px-3 pb-4">
+            <a
+              href="/accessibility-policy"
+              role="button"
+              class="footer-nav-link"
+              rel="noreferrer noopener"
+              class=""
+            >
+              Accessibility Policy
+            </a>
+          </li>
+          
+          <li role="menuitem" class="footer-nav-item px-3 pb-4">
+            <a
+              href="/do-not-Sell"
+              role="button"
+              class="footer-nav-link"
+              rel="noreferrer noopener"
+              class=""
+            >
+              Do Not Sell My Personal Information
+            </a>
+          </li>
+          
+          <li role="menuitem" class="footer-nav-item px-3 pb-4">
+            <a
+              href="/report-piracy"
+              role="button"
+              class="footer-nav-link"
+              rel="noreferrer noopener"
+              class=""
+            >
+              Report Piracy
+            </a>
+          </li>
+          
+          <li role="menuitem" class="footer-nav-item px-3 pb-4">
+            <a
+              href="/terms-and-conditions"
+              role="button"
+              class="footer-nav-link"
+              rel="noreferrer noopener"
+              class=""
+            >
+              Terms &amp; Conditions
+            </a>
+          </li>
+          
+        </ul>
+      </nav>
+      <div class="copyright pt-5 pt-xl-0 pb-4" id="footernavend" tabindex="-1">
+        Copyright © 2000-2021 Harlequin Enterprises ULC. All Rights Reserved.
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+  </body>
+</html>
