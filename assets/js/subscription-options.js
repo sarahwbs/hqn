@@ -34,6 +34,7 @@ window.addEventListener("load", function () {
       // });
 
       subscriptionOptionButton.addEventListener("touchstart", () => {
+        alert("hi");
         selectSubscriptionOption(subscriptionOptionButton);
       });
 
