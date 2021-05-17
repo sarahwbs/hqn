@@ -21,19 +21,15 @@ window.addEventListener("load", function () {
     }
 
     subscriptionOptionButtons.forEach((subscriptionOptionButton) => {
-      subscriptionOptionButton.addEventListener("click", () => {
-        selectSubscriptionOption(subscriptionOptionButton);
-      });
-
       const subscriptionOptionCheckBox = subscriptionOptionButton
         .closest(".subscription-option__select")
         .querySelector(".subscription-option__checkmark");
 
-      // subscriptionOptionCheckBox.addEventListener("change", () => {
-      //   selectSubscriptionOption(subscriptionOptionButton);
-      // });
+      subscriptionOptionButton.addEventListener("click", () => {
+        selectSubscriptionOption(subscriptionOptionButton);
+      });
 
-      subscriptionOptionButton.addEventListener("touchstart", () => {
+      subscriptionOptionCheckBox.addEventListener("change", () => {
         selectSubscriptionOption(subscriptionOptionButton);
       });
 
