@@ -15,9 +15,16 @@ window.addEventListener("load", function () {
           let errorField = ele;
           if (!container) {
             container = ele.closest(".form__select");
-            errorField = container.querySelector(
-              ".select-dropdown-control-btn"
-            );
+            if (container) {
+              errorField = container.querySelector(
+                ".select-dropdown-control-btn"
+              );
+            } else {
+              container = ele.closest(".form-check");
+              if (container) {
+                errorField = container.querySelector(".form-check-input");
+              }
+            }
           }
           container.querySelector(".form__error").classList.remove("d-none");
           errorField.classList.add("form__error-border");
@@ -28,9 +35,16 @@ window.addEventListener("load", function () {
           let errorField = ele;
           if (!container) {
             container = ele.closest(".form__select");
-            errorField = container.querySelector(
-              ".select-dropdown-control-btn"
-            );
+            if (container) {
+              errorField = container.querySelector(
+                ".select-dropdown-control-btn"
+              );
+            } else {
+              container = ele.closest(".form-check");
+              if (container) {
+                errorField = container.querySelector(".form-check-input");
+              }
+            }
           }
           container.querySelector(".form__error").classList.add("d-none");
           errorField.classList.remove("form__error-border");
@@ -47,11 +61,32 @@ window.addEventListener("load", function () {
 
       // Email Validation
       const emailInput = e.srcElement.querySelector('input[type="email"]');
-      const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      const emailRegex =
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
       if (emailInput && !emailRegex.test(emailInput.value.toLowerCase())) {
         errors = toggleErrorState(emailInput, true);
       } else if (emailInput) {
         toggleErrorState(emailInput, false);
+      }
+
+      // Re-submit email validation
+      const resubmitEmailInput = e.srcElement.querySelector(
+        'input[id="profileEmailResubmit"]'
+      );
+      if (resubmitEmailInput && emailInput.value !== resubmitEmailInput.value) {
+        errors = toggleErrorState(resubmitEmailInput, true);
+      } else if (resubmitEmailInput) {
+        toggleErrorState(resubmitEmailInput, false);
+      }
+
+      // Member agreement validation
+      const memberAgreement = e.srcElement.querySelector(
+        'input[id="memberAgreement"]'
+      );
+      if (memberAgreement && !memberAgreement.checked) {
+        errors = toggleErrorState(memberAgreement, true);
+      } else if (memberAgreement) {
+        toggleErrorState(memberAgreement, false);
       }
 
       // Password Validation (Mock)
@@ -124,7 +159,8 @@ window.addEventListener("load", function () {
 
         // Phone Validation
         const phoneInput = e.srcElement.querySelector('input[type="tel"]');
-        const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
+        const phoneRegex =
+          /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
         if (phoneInput && !phoneRegex.test(phoneInput.value)) {
           errors = toggleErrorState(phoneInput, true);
         } else if (phoneInput) {

@@ -29,16 +29,16 @@ window.addEventListener("load", function () {
         selectSubscriptionOption(subscriptionOptionButton);
       });
 
-      subscriptionOptionCheckBox.addEventListener("change", () => {
-        selectSubscriptionOption(subscriptionOptionButton);
-      });
-
       subscriptionOptionButton.addEventListener("keydown", (e) => {
         if (e.keyCode == 13 || e.keyCode == 32) {
           e.preventDefault();
           e.stopPropagation();
           selectSubscriptionOption(subscriptionOptionButton);
         }
+      });
+
+      subscriptionOptionCheckBox.addEventListener("change", () => {
+        selectSubscriptionOption(subscriptionOptionButton);
       });
     });
   }

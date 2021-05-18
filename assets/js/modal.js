@@ -22,8 +22,11 @@ window.addEventListener("load", function () {
     const firstFocusableElementInModal = focusableElementsInModal[0];
     const lastFocusableElementInModal =
       focusableElementsInModal[focusableElementsInModal.length - 1];
-    lastFocusableElementInModal.focus();
     const KEYCODE_TAB = 9;
+
+    // to get the focus into the modal set focus on the first focusable element, then blur so the element doesn't immediately have a focus style
+    firstFocusableElementInModal.focus();
+    firstFocusableElementInModal.blur();
 
     element.addEventListener("keydown", function (e) {
       const isTabPressed = e.key === "Tab" || e.keyCode === KEYCODE_TAB;

@@ -27,7 +27,15 @@ const daysInMonth = (m, y) => {
  */
 const isValidDate = (d, m, y) => {
   m = parseInt(m, 10) - 1;
-  return m >= 0 && m < 12 && d > 0 && d <= daysInMonth(m, y);
+  return (
+    !isNaN(d) &&
+    !isNaN(m) &&
+    !isNaN(y) &&
+    m >= 0 &&
+    m < 12 &&
+    d > 0 &&
+    d <= daysInMonth(m, y)
+  );
 };
 
 /**
@@ -55,6 +63,7 @@ const isOldEnough = (d, m, y) => {
  */
 const getMonthNumber = (month) => {
   const months = [
+    "Month",
     "January",
     "February",
     "March",
@@ -69,5 +78,5 @@ const getMonthNumber = (month) => {
     "December",
   ];
 
-  return months.indexOf(month) + 1;
+  return months.indexOf(month);
 };

@@ -32,39 +32,11 @@
     ></script>
     <script
       type="text/javascript"
-      src="/assets/js/menu.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="/assets/js/carousel.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="/assets/js/detail-view.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="/assets/js/modal.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="/assets/js/select-dropdown.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="/assets/js/search.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="/assets/js/bundle-detail-view.js"
-    ></script>
-    <script
-      type="text/javascript"
       src="/assets/js/subscription-options.js"
     ></script>
     <script
       type="text/javascript"
-      src="/assets/js/credit-card-select.js"
+      src="/assets/js/select-dropdown.js"
     ></script>
     <script
       type="text/javascript"
@@ -74,16 +46,20 @@
       type="text/javascript"
       src="/assets/js/loader.js"
     ></script>
-    <script
-      type="text/javascript"
-      src="/assets/js/filter-button.js"
-    ></script>
     <link rel="stylesheet" href="/assets/css/styles.css" />
   </head>
-
-  <body class="bg-primary text-body ">
+  <body class="bg-primary text-body">
     <div
-      class="container-fluid d-flex flex-column align-items-end h-100 px-5 main"
+      class="
+        container-fluid
+        d-flex
+        flex-column
+        align-items-end
+        h-100
+        px-5
+        main
+        position-relative
+      "
     >
       <header class="header w-100">
   <a href="#main" class="skip-nav" id="top">Skip to main content</a>
@@ -93,7 +69,7 @@
   >
     <div class="row flex-nowrap m-0 header-row">
       <div
-        class="col d-flex p-0 header__logo"
+        class="col d-flex p-0 header__logo-logged-out"
       >
         <!-- TODO: update this link to point to the home page -->
         <a href="index" class="d-flex">
@@ -105,435 +81,9 @@
         /></a>
       </div>
 
-      <!-- -->
-      <div class="col d-flex d-lg-none align-items-center order-first">
-  <!-- Button trigger modal -->
-  
-  <button
-    type="button"
-    class="btn btn-primary menu-modal__btn bg-transparent"
-    data-bs-toggle="modal"
-    data-bs-target="#mainMenuModal"
-    data-bs-backdrop="false"
-  >
-    <img
-      src="/assets/img/icons/hamburger.svg"
-      alt="Menu Icon"
-      title="Menu Icon"
-    />
-  </button>
-
-  <div
-  class="modal fade md-effect-1 g-0 menu-modal"
-  id="mainMenuModal"
-  tabindex="-1"
-  aria-labelledby="mainMenuModalLabel"
-  aria-hidden="true"
->
-  <div class="modal-dialog modal-fullscreen">
-    <div class="modal-content menu-modal__content">
-      <div class="modal-header menu-modal__modal-header mb-8">
-        <button
-          type="button"
-          class="btn-close menu-modal__btn-close"
-          data-bs-dismiss="modal"
-          aria-label="Close menu"
-        >
-          <img
-            src="/assets/img/icons/close-white.svg"
-            alt="Menu Icon"
-            title="Menu Icon"
-          />
-        </button>
-      </div>
-      <div class="modal-body menu-modal__body">
-        
-        <div class="row">
-          <div class="col px-0">
-            <!--  -->
-<!--  -->
-<!--  -->
-
-<!--  -->
-<!--  -->
-<!--  -->
-
-<a
-  class="btn btn-primary btn-lg btn-link-button default-button pink menu-modal__pink-btn w-100"
-  href="/my-bookshelf"
->
-  My Bookshelf
-</a>
-
-          </div>
-        </div>
-        
-
-        <div class="row menu-modal__nav-container mt-10">
-          <nav class="col" aria-label="Mobile Navigation" role="navigation">
-            <!--  -->
-            <!--  -->
-            <!--  -->
-
-            
-            <div class="row menu-modal__nav-row">
-              <div class="col px-0">
-                <a
-                  class="menu-modal__link w-100 d-flex justify-content-between"
-                  href="/subscriber-home-subbed"
-                >
-                  <span class="d-inline-block">Home</span>
-                  <img
-                    src="/assets/img/icons/right-arrow-thin.svg"
-                    alt="Menu Icon"
-                    title="Menu Icon"
-                  />
-                </a>
-              </div>
-            </div>
-            
-            <div class="row menu-modal__nav-row">
-              <div class="col px-0">
-                <a
-                  class="menu-modal__link w-100 d-flex justify-content-between"
-                  href="/bundles"
-                >
-                  <span class="d-inline-block">Shop Bundles</span>
-                  <img
-                    src="/assets/img/icons/right-arrow-thin.svg"
-                    alt="Menu Icon"
-                    title="Menu Icon"
-                  />
-                </a>
-              </div>
-            </div>
-            
-            <div class="row menu-modal__nav-row">
-              <div class="col px-0">
-                <a
-                  class="menu-modal__link w-100 d-flex justify-content-between"
-                  href="/ebooks"
-                >
-                  <span class="d-inline-block">eBook Library</span>
-                  <img
-                    src="/assets/img/icons/right-arrow-thin.svg"
-                    alt="Menu Icon"
-                    title="Menu Icon"
-                  />
-                </a>
-              </div>
-            </div>
-            
-            <div class="row menu-modal__nav-row">
-              <div class="col px-0">
-                <a
-                  class="menu-modal__link w-100 d-flex justify-content-between"
-                  href="/games"
-                >
-                  <span class="d-inline-block">Games</span>
-                  <img
-                    src="/assets/img/icons/right-arrow-thin.svg"
-                    alt="Menu Icon"
-                    title="Menu Icon"
-                  />
-                </a>
-              </div>
-            </div>
-            
-            <div class="row menu-modal__nav-row">
-              <div class="col px-0">
-                <a
-                  class="menu-modal__link w-100 d-flex justify-content-between"
-                  href="/movies"
-                >
-                  <span class="d-inline-block">Movies</span>
-                  <img
-                    src="/assets/img/icons/right-arrow-thin.svg"
-                    alt="Menu Icon"
-                    title="Menu Icon"
-                  />
-                </a>
-              </div>
-            </div>
-            
-          </nav>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- -->
-  
-</div>
-<!-- -->
-      <nav
-  class="col nav header_nav d-none d-lg-flex flex-fill align-items-center"
-  aria-label="Top Navigation"
-  role="navigation"
->
-  <!--  -->
-  <!--  -->
-  <!--  -->
-
-  
-  <a
-    class="header_nav__link"
-    href="/bundles"
-    class=""
-    >Browse Bundles</a
-  >
-  
-  <a
-    class="header_nav__link"
-    href="/ebooks"
-    class=""
-    >eBook Library</a
-  >
-  
-  <a
-    class="header_nav__link"
-    href="/games"
-    class=""
-    >Games</a
-  >
-  
-  <a
-    class="header_nav__link"
-    href="/movies"
-    class=""
-    >Movies</a
-  >
-  
-</nav>
-
-
-      <div
-        class="col account d-flex me-lg-4"
-      >
-        <div class="account__inner d-flex">
-          <div class="account__name d-flex align-self-center d-none d-lg-block">
-            Hi, Samanthalynn
-          </div>
-
-          <div class="dropdown account__dropdown">
-            <button
-              class="btn btn-default account__menu-button d-none d-lg-block pt-lg-0"
-              type="button"
-              id="account-dropdown-menu"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              <img
-                src="/assets/img/icons/account.svg"
-                alt="Account menu"
-                title="Account menu"
-              />
-            </button>
-
-            <div class="col d-flex d-lg-none align-items-center order-first">
-  <!-- Button trigger modal -->
-  
-  <button
-    type="button"
-    class="btn btn-primary account__menu-button menu-modal__btn d-block d-lg-none bg-transparent"
-    data-bs-toggle="modal"
-    data-bs-target="#userAccountMenuModal"
-    data-bs-backdrop="false"
-  >
-    <img
-      src="/assets/img/icons/account.svg"
-      alt="Menu Icon"
-      title="Menu Icon"
-    />
-  </button>
-
-  <div
-  class="modal fade md-effect-1 g-0 menu-modal"
-  id="userAccountMenuModal"
-  tabindex="-1"
-  aria-labelledby="userAccountMenuModalLabel"
-  aria-hidden="true"
->
-  <div class="modal-dialog modal-fullscreen">
-    <div class="modal-content menu-modal__content">
-      <div
-        class="modal-header menu-modal__modal-header mb-8 justify-content-end"
-      >
-        <button
-          type="button"
-          class="btn-close menu-modal__btn-close"
-          data-bs-dismiss="modal"
-          aria-label="Close menu"
-        >
-          <img
-            src="/assets/img/icons/close-white.svg"
-            alt="Menu Icon"
-            title="Menu Icon"
-          />
-        </button>
-      </div>
-
-      
-      <div class="menu-modal__selections">
-        <div class="col py-8 d-flex align-items-end justify-content-between">
-          <a href="/selection-summary" class="d-block w-100">
-            <span class="d-block menu-modal__selections-number">8</span>
-            <span class="d-block menu-modal__selections-text"
-              >Available Selections</span
-            >
-          <span
-            class="d-block menu-modal__selections-text menu-modal__selections-summary"
-            >Selection Summary</a
-          >
-        </a>
-        </div>
-      </div>
       
 
-      <div class="modal-body menu-modal__body">
-        <div class="row menu-modal__nav-container mt-10">
-          <nav class="col" aria-label="Mobile Navigation" role="navigation">
-            <!--  -->
-            <!--  -->
-            <!--  -->
-
-            
-            <div class="row menu-modal__nav-row">
-              <div class="col px-0">
-                <a class="menu-modal__link w-100 d-flex justify-content-between" href="/user-profile"
-                  >
-                  <span>My Profile</span>
-                  <img
-                    src="/assets/img/icons/right-arrow-thin.svg"
-                    alt="Menu Icon"
-                    title="Menu Icon"
-                  />
-                </a>
-              </div>
-            </div>
-            
-            <div class="row menu-modal__nav-row">
-              <div class="col px-0">
-                <a class="menu-modal__link w-100 d-flex justify-content-between" href="/subscription-payment-info-subbed"
-                  >
-                  <span>Subscription & Payment</span>
-                  <img
-                    src="/assets/img/icons/right-arrow-thin.svg"
-                    alt="Menu Icon"
-                    title="Menu Icon"
-                  />
-                </a>
-              </div>
-            </div>
-            
-            <div class="row menu-modal__nav-row">
-              <div class="col px-0">
-                <a class="menu-modal__link w-100 d-flex justify-content-between" href="/order-history"
-                  >
-                  <span>Order History</span>
-                  <img
-                    src="/assets/img/icons/right-arrow-thin.svg"
-                    alt="Menu Icon"
-                    title="Menu Icon"
-                  />
-                </a>
-              </div>
-            </div>
-            
-            <div class="row menu-modal__nav-row">
-              <div class="col px-0">
-                <a class="menu-modal__link w-100 d-flex justify-content-between" href="/landing"
-                  >
-                  <span>Sign Out</span>
-                  <img
-                    src="/assets/img/icons/right-arrow-thin.svg"
-                    alt="Menu Icon"
-                    title="Menu Icon"
-                  />
-                </a>
-              </div>
-            </div>
-            
-          </nav>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- -->
-  
-</div>
-
-
-            <div
-              class="dropdown-menu header__dropdown-menu"
-              aria-labelledby="account-dropdown-menu"
-            >
-              <div class="header__dropdown-menu-arrow-up"></div>
-              <ul class="header__dropdown-menu-list">
-                
-                <li class="header__dropdown-list-item">
-                  <a
-                    href="/selection-summary"
-                    class="dropdown-item header__dropdown-item dropdown-item__selections"
-                  >
-                    <span class="dropdown-item__selections__number">8</span>
-                    Available Selections<br />
-                    <span class="dropdown-item__selections_summary"
-                      >Selection Summary</span
-                    >
-                  </a>
-                </li>
-                <li class="header__dropdown-list-item">
-                  <hr class="dropdown-divider header__dropdown-divider" />
-                </li>
-                <!--  -->
-
-                <!--  -->
-                <!--  -->
-                <!--  -->
-
-                
-                <li class="header__dropdown-list-item">
-                  <a
-                    class="dropdown-item header__dropdown-item"
-                    href="/user-profile"
-                    >My Profile</a
-                  >
-                </li>
-                
-                <li class="header__dropdown-list-item">
-                  <a
-                    class="dropdown-item header__dropdown-item"
-                    href="/subscription-payment-info-subbed"
-                    >Subscription & Payment</a
-                  >
-                </li>
-                
-                <li class="header__dropdown-list-item">
-                  <a
-                    class="dropdown-item header__dropdown-item"
-                    href="/order-history"
-                    >Order History</a
-                  >
-                </li>
-                
-                <li class="header__dropdown-list-item">
-                  <a
-                    class="dropdown-item header__dropdown-item"
-                    href="/landing"
-                    >Sign Out</a
-                  >
-                </li>
-                
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      
-      <div class="col d-flex d-none d-lg-block pe-0">
+      <div class="col d-flex p-0 justify-content-end">
         <!--  -->
 <!--  -->
 <!--  -->
@@ -543,41 +93,43 @@
 <!--  -->
 
 <a
-  class="btn btn-primary btn-lg btn-link-button default-button pink header-button"
-  href="/my-bookshelf"
+  class="btn btn-primary btn-lg btn-link-button transparent-button header-button sign-in-button
+        px-9"
+  href=""
 >
-  My Bookshelf
+  Sign In
 </a>
 
       </div>
-      <!--  -->
       
     </div>
   </div>
 </header>
 
-      <div class="w-100" role="main" id="main" tabindex="-1"><div class="container-md p-0">
-  <div class="profile-edit-view profile-edit-view__edit-email mb-8 mb-lg-15">
-    <!--  -->
-<!--  -->
-<!--  -->
+      <div class="w-100" role="main" id="main" tabindex="-1"><div class="container-md p-0 profile-create">
+  <!-- TODO: update form method to post -->
+  <form action="/signup-create-password" method="get" novalidate>
+    <div class="mb-8 mb-lg-15">
+      <div class="row">
+        <ul class="breadcrumbs mb-4">
+          <li class="breadcrumb__item current"><span>Your Info</span></li>
+        </ul>
+      </div>
 
-<!--  -->
-<!--  -->
-<!--  -->
+      <div class="row profile-create__header">
+        <div class="col">
+          <h1 class="profile-create__heading mb-5 mb-lg-6">Your Info</h1>
 
-<a
-  class="btn btn-primary btn-lg btn-link-button transparent-button back-arrow-button mb-7 mb-lg-11"
-  href="/user-profile"
->
-  Back
-</a>
+          <p class="body-copy mb-0">Text explaining why
+          Harlequin has to collect this information. Lorem ipsum dolor sit amet,
+          consectetur adipiscing elit. Maecenas ut odio a dolor vehicula
+          fermentum.</p>
 
+        </div>
+      </div>
 
-    <h1 class="profile-edit-view__title mb-6 mb-lg-7">Edit Your Info</h1>
-
-    <form method="post" novalidate>
-      <div class="form__input">
+      <div class="profile-create__profile-info row">
+        <div class="form__input">
   
   <label for="firstName">First Name</label>
   
@@ -587,7 +139,7 @@
       placeholder="First Name"
       name="firstName"
       id="firstName"
-      value="Brennan"
+      value=""
       maxlength="250"
       
     />
@@ -600,13 +152,14 @@
 
   
   <div class="form__error mt-3 d-none" role="alert">
-    Please enter a first name.
+    Please
+        enter a first name.
   </div>
   
 </div>
 <!-- -->
 
-      <div class="form__input">
+        <div class="form__input">
   
   <label for="lastName">Last Name</label>
   
@@ -616,7 +169,7 @@
       placeholder="Last Name"
       name="lastName"
       id="lastName"
-      value="MacDonald"
+      value=""
       maxlength="250"
       
     />
@@ -629,18 +182,19 @@
 
   
   <div class="form__error mt-3 d-none" role="alert">
-    Please enter a last name.
+    Please
+        enter a last name.
   </div>
   
 </div>
 
 
-      <fieldset class="form__input">
-        <legend class="visually-hidden">Date of Birth</legend>
-        <label>Date of Birth</label>
-        <div class="profile-edit-view__dob">
-          <!-- -->
-          <div class="select-dropdown-control">
+        <fieldset class="form__input">
+          <legend class="visually-hidden">Date of Birth</legend>
+          <label>Date of Birth</label>
+          <div class="profile-edit-view__dob">
+            <!-- -->
+            <div class="select-dropdown-control">
   <button
     class="btn dropdown-toggle select-dropdown-control-btn profile-edit-view__dob-btn"
     type="button"
@@ -737,10 +291,10 @@
 
     <li>
       <a
-        class="dropdown-item active"
+        class="dropdown-item"
         href="#"
         data-val="5"
-        data-active="true"
+        data-active=""
       >
         April
       </a>
@@ -761,7 +315,7 @@
         data-active=""
       >
         
-          May
+            May
       </a>
     </li>
 
@@ -897,13 +451,13 @@
     type="hidden"
     name="dobMonthsDropdown"
     id="dobMonthsDropdown"
-    value="5"
+    value=""
   />
 </div>
 <!-- -->
 
-          <!-- -->
-          <div class="select-dropdown-control">
+            <!-- -->
+            <div class="select-dropdown-control">
   <button
     class="btn dropdown-toggle select-dropdown-control-btn profile-edit-view__dob-btn"
     type="button"
@@ -1324,10 +878,10 @@
 
     <li>
       <a
-        class="dropdown-item active"
+        class="dropdown-item"
         href="#"
         data-val="23"
-        data-active="true"
+        data-active=""
       >
         22
       </a>
@@ -1501,332 +1055,332 @@
     type="hidden"
     name="dobDaysDropdown"
     id="dobDaysDropdown"
-    value="23"
+    value=""
   />
 </div>
 <!-- -->
 
-          <!--  -->
-          <!--  -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <div class="select-dropdown-control">
+            <!--  -->
+            <!--  -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <!-- -->
+            <div class="select-dropdown-control">
   <button
     class="btn dropdown-toggle select-dropdown-control-btn profile-edit-view__dob-btn"
     type="button"
@@ -2337,10 +1891,10 @@
 
     <li>
       <a
-        class="dropdown-item active"
+        class="dropdown-item"
         href="#"
         data-val="1978"
-        data-active="true"
+        data-active=""
       >
         1978
       </a>
@@ -3756,18 +3310,104 @@
     type="hidden"
     name="dobYearsDropdown"
     id="dobYearsDropdown"
-    value="1978"
+    value=""
   />
 </div>
 <!-- -->
-        </div>
-        <div class="form__error mt-3 d-none" role="alert">
-          Please enter a valid date of birth.
-        </div>
-      </fieldset>
+          </div>
+          <div class="form__error mt-3 d-none" role="alert">
+            Please enter a valid date of birth.
+          </div>
+        </fieldset>
+      </div>
+
+      <p class="body-copy mb-6">Text explaining that the email
+      the user enters will be used for login once they have subscribed.</p>
+
+      <!-- -->
+
+      <div class="form__input">
+  
+  <label for="profileEmail">Your Email</label>
+  
+  <div class="form__input-container position-relative">
+    <input
+      type="email"
+      placeholder="Your Email"
+      name="profileEmail"
+      id="profileEmail"
+      value=""
+      maxlength="250"
+      
+    />
+
+    
+  </div>
+
+  <!--  -->
+  <!--  -->
+
+  
+  <div class="form__error mt-3 d-none" role="alert">
+    Please enter an
+      email address.
+  </div>
+  
+</div>
+
+      <!-- -->
+
+      <div class="form__input">
+  
+  <label for="profileEmailResubmit">Re-submit Email Address</label>
+  
+  <div class="form__input-container position-relative">
+    <input
+      type="email"
+      placeholder="Re-submit Email Address"
+      name="profileEmailResubmit"
+      id="profileEmailResubmit"
+      value=""
+      maxlength="250"
+      
+    />
+
+    
+  </div>
+
+  <!--  -->
+  <!--  -->
+
+  
+  <div class="form__error mt-3 d-none" role="alert">
+    Email addresses do not match.
+  </div>
+  
+</div>
+
+      <!-- -->
+
+      <div class="profile-create__member-agreement">
+        <div class="form-check">
+  <input class="form-check-input" type="checkbox" value=""
+  id="memberAgreement"  />
+  
+  <label class="form-check-label" for="memberAgreement">
+    I acknowledge
+        that I agree to the terms of the <a href="#">Member Agreement</a>.
+  </label>
+  <!--  -->
+
+  
+  <div class="form__error mt-3 d-none" role="alert">
+    You must agree to the terms of the Member Agreement.
+  </div>
+  
+</div>
+
+      </div>
 
       <div class="d-flex justify-content-end mt-13 mt-lg-11">
-        <!--  -->
         <!--  -->
 <!--  -->
 <!--  -->
@@ -3778,13 +3418,13 @@
 
 <a
   class="btn btn-primary btn-lg btn-link-button transparent-button white me-4"
-  href="/user-profile"
+  href="/landing"
 >
   Cancel
 </a>
 
-
         <!--  -->
+
         <!--  -->
 <!--  -->
 <!--  -->
@@ -3799,13 +3439,13 @@
   
 >
   <!--  -->
-  Save<!--  -->
+  Continue<!--  -->
   
 </button>
 
       </div>
-    </form>
-  </div>
+    </div>
+  </form>
 </div>
 
 </div>
