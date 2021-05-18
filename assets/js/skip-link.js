@@ -8,10 +8,8 @@ window.addEventListener("load", function () {
     skipLink.addEventListener("focus", () => {
       skipLink.classList.add("focus");
     });
-    skipLink.addEventListener("focusout", () => {
-      if (homePageCarousel.classList.contains("focus-paused")) {
-        skipLink.classList.remove("focus");
-      }
+    skipLink.addEventListener("blur", () => {
+      skipLink.classList.remove("focus");
     });
   });
 });
