@@ -2753,7 +2753,9 @@ a.skip-nav { height: 1px; left: -999px; overflow: hidden; position: absolute; to
 
 a.skip-nav { background-color: var(--white); border: 0.2rem solid var(--pink); border-radius: 0.5rem; color: var(--black); display: inline-block; font-size: 1.6rem; height: auto; left: auto; margin: 1rem auto; overflow: auto; padding: 0.5rem; text-align: center; width: auto; z-index: 999; }
 
-a.skip-nav:focus, a.skip-nav:active { background-color: red; color: green; }
+a.skip-nav.focus, a.skip-nav:focus, a.skip-nav:active { background-color: red; color: green; }
+
+a.skip-nav.focus { background-color: pink; color: blue; }
 
 .header { margin: 2rem 0 4rem; }
 
