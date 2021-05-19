@@ -6,6 +6,7 @@ window.addEventListener("load", function () {
     //   document.querySelector("#main").focus();
     // });
     skipLink.addEventListener("focus", () => {
+      alert("hi...");
       skipLink.classList.add("focus");
     });
     skipLink.addEventListener("blur", () => {
